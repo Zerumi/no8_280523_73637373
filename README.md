@@ -1,5 +1,6 @@
-# no6_150323_3846274761835 [![CodeFactor](https://www.codefactor.io/repository/github/zerumi/no6_150323_3846274761835/badge)](https://www.codefactor.io/repository/github/zerumi/no6_150323_3846274761835)
-Lab #6, ITMO SE (var no 3846274761835)
+# no7_220423_863847963 [![CodeFactor](https://www.codefactor.io/repository/github/zerumi/no7_220423_863847963/badge)](https://www.codefactor.io/repository/github/zerumi/no7_220423_863847963)
+
+Lab #7, ITMO SE (var no 863847963)
 
 See javadoc --------------------------------------->
 
