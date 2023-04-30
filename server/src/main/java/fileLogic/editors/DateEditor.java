@@ -11,10 +11,12 @@ import java.util.Date;
  * Example of editor, that uses in fileLogic to convert String into object.
  * You should register your editor class in Loader by using their static method.
  *
+ * @author zerumi
  * @see java.beans.PropertyEditorManager
  * @since 1.0
- * @author zerumi
+ * @deprecated out of support since 3.0 / now we're maintaining database logic
  */
+@Deprecated
 public class DateEditor implements PropertyEditor {
 
     private Date result;

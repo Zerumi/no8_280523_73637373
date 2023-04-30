@@ -6,10 +6,12 @@ import java.util.LinkedHashMap;
 /**
  * Base Reader interface. Should be implemented for using in Loader class.
  *
+ * @author zerumi
  * @see Loader
  * @since 1.0
- * @author zerumi
+ * @deprecated out of support since 3.0 / now we're maintaining database logic
  */
+@Deprecated
 public interface BaseReader {
 
     /**

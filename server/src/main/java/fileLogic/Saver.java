@@ -6,8 +6,11 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 /**
- * Abstract saver class. (Under construction)
+ * Abstract saver class.
+ *
+ * @deprecated out of support since 3.0 / now we're maintaining database logic
  */
+@Deprecated
 public class Saver<T extends Collection<E>, E> {
 
 

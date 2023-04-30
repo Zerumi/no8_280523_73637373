@@ -12,10 +12,12 @@ import java.util.logging.Logger;
  * XML Writer class for <code>Saver</code> class. It writes XML file by given path and consume
  * collection of paths and values, transforming it into XML file.
  *
+ * @author zerumi
  * @see LinkedHashMap
  * @since 1.0
- * @author zerumi
+ * @deprecated out of support since 3.0 / now we're maintaining database logic
  */
+@Deprecated
 public class XMLWriter implements BaseWriter {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");

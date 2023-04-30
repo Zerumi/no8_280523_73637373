@@ -36,6 +36,8 @@ public class DatagramServerConnection implements ServerConnection {
             return StatusRequestBuilder.initialize().setObjectStream(new ByteArrayInputStream(dp.getData())).setCallerBack(new CallerBack(dp.getAddress(), dp.getPort())).setCode(200).build();
         } catch (IOException e) {
             logger.error("Something went wrong during I/O.", e);
+        } catch (RuntimeException e) {
+            logger.fatal(e);
         }
         return StatusRequestBuilder.initialize().setCode(-501).build();
     }

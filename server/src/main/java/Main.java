@@ -1,9 +1,5 @@
-package main;
-
-import clientLogic.ClientHandler;
-import commandManager.commands.SaveCommand;
+import databaseLogic.DBCollectionManager;
 import exceptions.NotAvailableException;
-import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -19,8 +15,8 @@ import responses.ErrorResponse;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
-import javax.swing.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashSet;
 
 @SuppressWarnings("InfiniteLoopStatement")
@@ -38,14 +34,15 @@ public class Main {
 
         logger.trace("This is a server!");
 
-        // setup background tasks
-        var timer = new Timer(600000, event -> new SaveCommand().execute(new String[0]));
-        timer.start();
-
         // load collection
-        @SuppressWarnings("unchecked")
-        Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
-        handler.setCollection(loader.loadFromXMLbyEnvKey(ENV_KEY));
+        try {
+            HashSet<Route> loadedCollection = new HashSet<>();
+            DBCollectionManager<HashSet<Route>> loader = new DBCollectionManager<>(loadedCollection);
+            loader.loadFromDB();
+            handler.setCollection(loadedCollection);
+        } catch (SQLException | IOException e) {
+            logger.error("Something went wrong during collection load: ", e);
+        }
         System.out.println("Loaded " + handler.getCollection().size() + " elements total.");
         System.out.println();
 
@@ -62,9 +59,6 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
-
-                ClientHandler.getInstance().approveCallerBack(rq.getCallerBack());
-                ClientHandler.getInstance().restartTimer();
 
                 RequestReader rqReader = new RequestReader(rq.getInputStream());
                 BaseRequest baseRequest = rqReader.readObject();

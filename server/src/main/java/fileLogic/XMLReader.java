@@ -11,10 +11,12 @@ import java.util.regex.Pattern;
  * XML Reader class for <code>Loader</code> class. It reads XML file by given path and provides
  * <code>LinkedHashMap&#8249;String[], String></code>, where <code>String[]</code> is XML path to <code>String</code> value.
  *
+ * @author zerumi
  * @see LinkedHashMap
  * @since 1.0
- * @author zerumi
+ * @deprecated out of support since 3.0 / now we're maintaining database logic
  */
+@Deprecated
 public class XMLReader implements BaseReader {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");

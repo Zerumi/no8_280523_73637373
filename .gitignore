@@ -42,3 +42,6 @@ client/out/
 /server/build
 /server/.gradle/
 /server/out/
+
+### Config file ###
+server/src/main/resources/db.cfg

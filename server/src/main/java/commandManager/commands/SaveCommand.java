@@ -16,6 +16,7 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
+@Deprecated
 public class SaveCommand implements BaseCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.save");
     private CommandStatusResponse response;

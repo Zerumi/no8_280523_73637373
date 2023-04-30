@@ -17,14 +17,17 @@ import java.util.regex.Pattern;
 /**
  * Abstract loader class. It uses <code>java.lang.reflect</code> API for changing fields taken from XML file
  * and converted by <code>java.beans.PropertyEditor</code>. It fills Elements of type E to collection of type T
+ *
  * @param <T> Collection to fill
  * @param <E> Type of collection elements
+ * @author zerumi
  * @see java.lang.reflect
  * @see java.beans.PropertyEditor
  * @since 1.0
- * @author zerumi
+ * @deprecated Deprecated since 3.0 / Now collection are loading from Database.
  */
 
+@Deprecated
 public class Loader<T extends Collection<E>, E> {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
