@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-30T11:55:37.647Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="2CN_eyOsUsrFbHEkT8oL" version="21.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-30T13:17:26.699Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="EgAFFfTXZMZLXjpRygCD" version="21.2.3" type="github">
   <diagram name="Страница 1" id="GUNmsK6rfVd0PpZ0VB04">
     <mxGraphModel dx="954" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-4" value="route_id SERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-2">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-4" value="route_id BIGSERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-2">
           <mxGeometry x="30" width="258" height="30" as="geometry">
             <mxRectangle width="258" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -43,7 +43,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-10" value="coordinates_id integer NOT NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-8">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-10" value="coordinates_id bigint NOT NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-8">
           <mxGeometry x="30" width="258" height="30" as="geometry">
             <mxRectangle width="258" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -69,7 +69,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-16" value="location_from_id integer NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-14">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-16" value="location_from_id bigint NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-14">
           <mxGeometry x="30" width="258" height="30" as="geometry">
             <mxRectangle width="258" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -82,7 +82,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-19" value="location_to_id&amp;nbsp;integer NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-17">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-19" value="location_to_id&amp;nbsp;bigint NULL UNIQUE" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-17">
           <mxGeometry x="30" width="258" height="30" as="geometry">
             <mxRectangle width="258" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -111,7 +111,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-32" value="location_id SERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-30">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-32" value="location_id BIGSERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-30">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -179,7 +179,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ORBtFncb1htVYzsSQS-g-50" value="coord_id SERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-48">
+        <mxCell id="ORBtFncb1htVYzsSQS-g-50" value="coord_id BIGSERIAL" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" vertex="1" parent="ORBtFncb1htVYzsSQS-g-48">
           <mxGeometry x="30" width="220" height="30" as="geometry">
             <mxRectangle width="220" height="30" as="alternateBounds" />
           </mxGeometry>
