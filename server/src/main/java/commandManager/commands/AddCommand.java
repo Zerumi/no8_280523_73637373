@@ -1,16 +1,14 @@
 package commandManager.commands;
 
+import databaseElementLogic.DBIntegrationUtility;
 import models.Route;
-import models.handlers.CollectionHandler;
 import models.handlers.RouteIDHandler;
-import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
 
 import java.time.Instant;
 import java.util.Date;
-import java.util.HashSet;
 
 /**
  * Adds new element to collection.
@@ -48,11 +46,7 @@ public class AddCommand implements BaseCommand, ArgumentConsumer<Route> {
 
     @Override
     public void execute(String[] args) {
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-
-        collectionHandler.addElementToCollection(obj);
-
-        response = CommandStatusResponse.ofString("Element added!");
+        response = DBIntegrationUtility.addRouteToDBAndCollection(obj).toCommandResponse();
         logger.info(response.getResponse());
     }
 

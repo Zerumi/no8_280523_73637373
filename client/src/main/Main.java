@@ -7,9 +7,11 @@ import commandManager.CommandMode;
 import exceptions.CommandsNotLoadedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requests.authCredentials.AuthenticationData;
 import serverLogic.*;
 
 import javax.swing.*;
+import java.io.Console;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -38,6 +40,13 @@ public class Main {
             ServerConnection connection = new UdpConnectionBlockDecorator((UdpServerConnection) new UdpServerConnectionFactory().openConnection(InetAddress.getLocalHost(), PORT), true);
             ServerConnectionHandler.setServerConnection(connection);
             connection.openConnection();
+
+            // authorisation
+            Console console = System.console();
+            String username = console.readLine("Username: ");
+            char[] password = console.readPassword("Password: ");
+            AuthenticationData data = new AuthenticationData(username, password);
+
 
             // request commands
             boolean commandsNotLoaded = true;

@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import databaseElementLogic.DBIntegrationUtility;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
@@ -44,8 +45,7 @@ public class AddIfMaxCommand implements BaseCommand, ArgumentConsumer<Route> {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         if (obj.compareTo(collectionHandler.getMax(new RouteDistanceComparator())) > 0) {
-            collectionHandler.addElementToCollection(obj);
-            response = CommandStatusResponse.ofString("Element added!");
+            response = DBIntegrationUtility.addRouteToDBAndCollection(obj).toCommandResponse();
         } else {
             response = new CommandStatusResponse("Element not added: it's not greater than max value.", 3);
         }

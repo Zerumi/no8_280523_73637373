@@ -38,7 +38,6 @@ public class CommandManager {
         commands.put("update", new UpdateCommand());
         commands.put("remove_by_id", new RemoveByIdCommand());
         commands.put("clear", new ClearCommand());
-        commands.put("save", new SaveCommand());
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
         commands.put("add_if_max", new AddIfMaxCommand());

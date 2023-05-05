@@ -15,12 +15,12 @@ import java.util.HashSet;
  *
  * @author Zerumi
  * @since 1.0
+ * @deprecated Deprecated since 2.0 because file logic now are out of support
  */
 @Deprecated
 public class SaveCommand implements BaseCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.save");
     private CommandStatusResponse response;
-
     @Override
     public String getName() {
         return "save";

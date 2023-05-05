@@ -1,4 +1,4 @@
-import databaseLogic.DBCollectionManager;
+import databaseElementLogic.DBCollectionLoader;
 import models.Route;
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +10,8 @@ public class JDBCLoadDBTest {
     @Test
     public void test() throws SQLException, IOException {
         HashSet<Route> toSet = new HashSet<>();
-        DBCollectionManager<HashSet<Route>> dbCollectionManager = new DBCollectionManager<>(toSet);
-        dbCollectionManager.loadFromDB();
+        DBCollectionLoader<HashSet<Route>> dbCollectionLoader = new DBCollectionLoader<>(toSet);
+        dbCollectionLoader.loadFromDB();
         System.out.println(toSet.size());
         //System.out.println(toSet.stream().findFirst().get());
     }

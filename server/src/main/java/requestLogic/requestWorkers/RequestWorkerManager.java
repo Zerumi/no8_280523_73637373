@@ -4,10 +4,7 @@ import exceptions.UnsupportedRequestException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.requests.ServerRequest;
-import requests.ArgumentCommandClientRequest;
-import requests.BaseRequest;
-import requests.CommandClientRequest;
-import requests.CommandDescriptionsRequest;
+import requests.*;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -23,10 +20,13 @@ public class RequestWorkerManager {
         workers.put(CommandClientRequest.class, new CommandClientRequestWorker());
         workers.put(ArgumentCommandClientRequest.class, new ArgumentCommandClientRequestWorker<>());
         workers.put(CommandDescriptionsRequest.class, new CommandConfigureRequestWorker());
+        workers.put(AuthorizationRequest.class, new AuthorizationRequestWorker());
+        workers.put(RegistrationRequest.class, new RegistrationRequestWorker());
     }
 
     public void workWithRequest(ServerRequest request) {
         try {
+            // todo: handle login
             Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(()
                     -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
         } catch (UnsupportedRequestException ex) {

@@ -1,6 +1,6 @@
 package responseLogic;
 
-import exceptions.ServerNotAvailableException;
+import exceptions.GotAnErrorResponseException;
 import responses.BaseResponse;
 import responses.ErrorResponse;
 
@@ -15,11 +15,11 @@ public class ResponseReader {
         this.in = in;
     }
 
-    public BaseResponse readObject() throws IOException, ClassNotFoundException, ServerNotAvailableException {
+    public BaseResponse readObject() throws IOException, ClassNotFoundException, GotAnErrorResponseException {
         ObjectInputStream ois = new ObjectInputStream(in);
         BaseResponse result = (BaseResponse) ois.readObject();
         if (result instanceof ErrorResponse)
-            throw new ServerNotAvailableException(((ErrorResponse) result).getMsg());
+            throw new GotAnErrorResponseException(((ErrorResponse) result).getMsg());
         return result;
     }
 }

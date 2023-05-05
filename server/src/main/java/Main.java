@@ -1,4 +1,4 @@
-import databaseLogic.DBCollectionManager;
+import databaseElementLogic.DBCollectionLoader;
 import exceptions.NotAvailableException;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -24,11 +24,6 @@ public class Main {
     public static final int PORT = 50456;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    /**
-     * Environment key to XML file for store collection.
-     */
-    public static final String ENV_KEY = "lab5";
-
     public static void main(String[] args) {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
 
@@ -37,7 +32,7 @@ public class Main {
         // load collection
         try {
             HashSet<Route> loadedCollection = new HashSet<>();
-            DBCollectionManager<HashSet<Route>> loader = new DBCollectionManager<>(loadedCollection);
+            DBCollectionLoader<HashSet<Route>> loader = new DBCollectionLoader<>(loadedCollection);
             loader.loadFromDB();
             handler.setCollection(loadedCollection);
         } catch (SQLException | IOException e) {
