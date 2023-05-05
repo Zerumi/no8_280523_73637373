@@ -17,6 +17,8 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation 'org.modelmapper:modelmapper:3.1.1'
     implementation project(":shared")
+    implementation 'org.webjars.npm:Base64:1.1.0'
+    implementation 'org.webjars.npm:Base64:1.1.0'
 }
 
 application {

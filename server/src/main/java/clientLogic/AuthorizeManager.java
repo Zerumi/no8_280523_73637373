@@ -1,15 +1,13 @@
 package clientLogic;
 
 import authorization.AuthorizedUserData;
+import authorization.authCredentials.AuthenticationData;
+import authorization.authCredentials.RegistrationData;
 import databaseUsersLogic.DBUserManager;
 import databaseUsersLogic.PasswordEncryptionImplSHA512;
-import exceptions.AuthorizationException;
-import exceptions.AuthorizeException;
-import exceptions.RegistrationFailedException;
-import exceptions.UnauthorizedException;
+import exceptions.authorizationExceptions.AuthorizeException;
+import exceptions.authorizationExceptions.UnauthorizedException;
 import requestLogic.CallerBack;
-import requests.authCredentials.AuthenticationData;
-import requests.authCredentials.RegistrationData;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -19,7 +17,7 @@ public class AuthorizeManager {
         AuthorizedUserData userData;
         try (DBUserManager manager = new DBUserManager(new PasswordEncryptionImplSHA512())) {
             userData = manager.addUserToDatabase(requester, regData);
-        } catch (SQLException | RegistrationFailedException | IOException e) {
+        } catch (SQLException | IOException e) {
             throw new AuthorizeException(e);
         }
         return userData;
@@ -31,13 +29,15 @@ public class AuthorizeManager {
             userData = manager.getUserFromDatabase(regData);
             AuthorizedCallerBack callerBack = new AuthorizedCallerBack(userData, requester);
             SessionHandler.getInstance().registerSession(callerBack);
-        } catch (SQLException | AuthorizationException | IOException e) {
+        } catch (SQLException | IOException e) {
             throw new AuthorizeException(e);
         }
         return userData;
     }
 
-    public static AuthorizedCallerBack login(CallerBack requester, AuthenticationData regData) throws UnauthorizedException {
+    public static AuthorizedCallerBack login(CallerBack requester) throws UnauthorizedException {
+        // todo: annotation processor!
+        // todo: now we can sign requests with that annotation and check callerback by this method!
         return SessionHandler.getInstance().getSession(requester).getAuthorizedCallerBack();
     }
 }

@@ -15,6 +15,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.webjars.npm:Base64:1.1.0'
+    implementation 'org.webjars.npm:Base64:1.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     implementation 'com.github.yangtu222:BeanUtils:1.0.11'
@@ -24,6 +26,8 @@ dependencies {
     implementation 'org.modelmapper:modelmapper:3.1.1'
     implementation 'org.postgresql:postgresql:42.2.27'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'org.webjars.npm:Base64:1.1.0'
     implementation project(":shared")
 }
 

@@ -1,12 +1,14 @@
 package databaseUsersLogic;
 
 import authorization.AuthorizedUserData;
-import exceptions.AuthorizationException;
-import exceptions.RegistrationFailedException;
+import authorization.authCredentials.AuthenticationData;
+import authorization.authCredentials.RegistrationData;
+import exceptions.authorizationExceptions.AuthorizeException;
+import exceptions.authorizationExceptions.RegistrationFailedException;
+import exceptions.authorizationExceptions.UnregisteredException;
+import exceptions.authorizationExceptions.WrongPasswordException;
 import org.apache.commons.lang3.ArrayUtils;
 import requestLogic.CallerBack;
-import requests.authCredentials.AuthenticationData;
-import requests.authCredentials.RegistrationData;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -49,18 +51,57 @@ public class DBUserManager implements Closeable {
         preparedStatement.setTimestamp(7, lastLogin);
 
         preparedStatement.execute();
+        preparedStatement.close();
 
         long userID;
         Statement getUserID = connection.createStatement();
-        ResultSet rs = getUserID.executeQuery("SELECT currval('User_user_id_seq');");
+        ResultSet rs = getUserID.executeQuery("SELECT currval('usr_id_seq');");
         if (rs.next()) {
             userID = rs.getLong(1);
-        } else throw new RegistrationFailedException();
+        } else {
+            rs.close();
+            getUserID.close();
+            throw new RegistrationFailedException("Cannot register user!");
+        }
+        rs.close();
+        getUserID.close();
         return new AuthorizedUserData(userID, name, login, LocalDate.ofInstant(lastLogin.toInstant(), ZoneOffset.UTC), regIP, LocalDate.ofInstant(regTime.toInstant(), ZoneOffset.UTC));
     }
 
-    public AuthorizedUserData getUserFromDatabase(AuthenticationData regData) throws AuthorizationException {
-        return null; // todo: authorize in db
+    public AuthorizedUserData getUserFromDatabase(AuthenticationData authData) throws AuthorizeException, SQLException {
+
+        PreparedStatement statement = connection.prepareStatement("SELECT * FROM \"User\" " +
+                "WHERE login = ?", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+        statement.setString(1, authData.getLogin());
+        ResultSet rs = statement.executeQuery();
+        if (rs.next()) {
+            long id = rs.getLong("user_id");
+            String login = rs.getString("login");
+            String name = rs.getString("name");
+            String passHash = rs.getString("pass_hash");
+            char[] passSalt = rs.getString("pass_salt").toCharArray();
+            String regIp = rs.getString("reg_ip");
+            LocalDate regTime = LocalDate.ofInstant(rs.getTimestamp("reg_time").toInstant(), ZoneOffset.UTC);
+            LocalDate lastLogin = LocalDate.ofInstant(rs.getTimestamp("last_login").toInstant(), ZoneOffset.UTC);
+
+            // check password
+            String userPassHash = encryptionAlg.encrypt(ArrayUtils.addAll(PasswordEncryption.getPepper(),
+                    ArrayUtils.addAll(authData.getPassword(), passSalt)));
+            if (userPassHash.equals(passHash)) {
+                AuthorizedUserData userData = new AuthorizedUserData(id, name, login, lastLogin, regIp, regTime);
+                rs.updateTimestamp("last_login", Timestamp.from(Instant.now()));
+                rs.updateRow();
+                rs.close();
+                statement.close();
+                return userData;
+            } else {
+                rs.close();
+                statement.close();
+                throw new WrongPasswordException("Incorrect password!");
+            }
+        } else {
+            throw new UnregisteredException("User cannot be found in database");
+        }
     }
 
     @Override

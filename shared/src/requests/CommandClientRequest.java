@@ -1,7 +1,9 @@
 package requests;
 
 import commandLogic.CommandDescription;
+import requests.requestAnnotations.Authorize;
 
+@Authorize
 public class CommandClientRequest extends BaseRequest {
     private final CommandDescription command;
     private final String[] lineArgs;

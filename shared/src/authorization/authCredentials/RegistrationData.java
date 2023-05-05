@@ -1,4 +1,4 @@
-package requests.authCredentials;
+package authorization.authCredentials;
 
 public class RegistrationData extends AuthenticationData {
 

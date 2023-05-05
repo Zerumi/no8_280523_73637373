@@ -1,7 +1,9 @@
 package requests;
 
 import commandLogic.CommandDescription;
+import requests.requestAnnotations.Authorize;
 
+@Authorize
 public class ArgumentCommandClientRequest<T> extends CommandClientRequest {
     private final T argument;
 

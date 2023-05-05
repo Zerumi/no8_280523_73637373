@@ -1,5 +1,6 @@
 package main;
 
+import authorization.authCredentials.AuthenticationData;
 import commandManager.CommandDescriptionHolder;
 import commandManager.CommandExecutor;
 import commandManager.CommandLoaderUtility;
@@ -7,7 +8,6 @@ import commandManager.CommandMode;
 import exceptions.CommandsNotLoadedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requests.authCredentials.AuthenticationData;
 import serverLogic.*;
 
 import javax.swing.*;

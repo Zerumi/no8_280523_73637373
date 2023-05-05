@@ -1,5 +1,6 @@
 package requestLogic.requests;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import requestLogic.CallerBack;
 import requests.BaseRequest;
 import serverLogic.ServerConnection;
@@ -9,7 +10,7 @@ public class ServerRequest {
     private final CallerBack from;
     private final ServerConnection connection;
 
-    public ServerRequest(BaseRequest request, CallerBack from, ServerConnection connection) {
+    public ServerRequest(@NonNull BaseRequest request, @NonNull CallerBack from, @NonNull ServerConnection connection) {
         this.request = request;
         this.from = from;
         this.connection = connection;

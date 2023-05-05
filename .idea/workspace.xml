@@ -7,51 +7,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: remove single client restriction, add database load logic, changed project folder structure">
-      <change afterPath="$PROJECT_DIR$/client/src/exceptions/GotAnErrorResponseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/authentication/AuthDataHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizedCallerBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBCollectionLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBCollectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBIntegrationUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryptionImplSHA512.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/AuthorizationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/AuthorizeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/ElementNotAddedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/RegistrationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/AuthorizationRequestWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RegistrationRequestWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/StatusResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/SuppressIOResponseSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/JDBCAddElementToDBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/AuthorizationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/RegistrationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/authCredentials/AuthenticationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/authCredentials/RegistrationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/responses/AuthorizeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: authorization part 2">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/ResourceStreamLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/CannotProceedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/authorizationExceptions/UnregisteredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/authorizationExceptions/WrongPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/AnnotationProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/RequestAnnotationProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/pepper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/LoginAndTryToSendCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/RegisterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/authorization/UserRoles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/requests/requestAnnotations/Authorize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/exceptions/GotAnErrorResponseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/exceptions/GotAnErrorResponseException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/authentication/AuthDataHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/authentication/AuthDataHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/DBCollectionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryptionImplSHA512.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryptionImplSHA512.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/AuthorizationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/AuthorizeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/authorizationExceptions/AuthorizeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/RegistrationFailedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/authorizationExceptions/RegistrationFailedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/UnauthorizedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/authorizationExceptions/UnauthorizedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/AuthorizationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/AuthorizationRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RegistrationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RegistrationRequestWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/JDBCLoadDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/JDBCLoadDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requests/ServerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requests/ServerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/ArgumentCommandClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/ArgumentCommandClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/AuthorizationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/AuthorizationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/CommandClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/CommandClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/CommandDescriptionsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/CommandDescriptionsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/RegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/authCredentials/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/authCredentials/AuthenticationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/requests/authCredentials/RegistrationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/authCredentials/RegistrationData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,8 +146,8 @@
       <list>
         <option value="Enum" />
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -247,7 +246,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no7_220423_863847963:server [run]">
+  <component name="RunManager" selected="Gradle.no7_220423_863847963 [test]">
     <configuration name="no7_220423_863847963 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -388,8 +387,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
         <item itemvalue="Gradle.no7_220423_863847963 [test]" />
+        <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
         <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
         <item itemvalue="Gradle.no7_220423_863847963 [run]" />
         <item itemvalue="Gradle.no7_220423_863847963 [build]" />
@@ -432,7 +431,7 @@
       <workItem from="1681736180458" duration="8720000" />
       <workItem from="1682195109455" duration="3573000" />
       <workItem from="1682886324403" duration="8440000" />
-      <workItem from="1682894888391" duration="55312000" />
+      <workItem from="1682894888391" duration="76291000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -658,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682896091729</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="feat: authorization part 1">
+      <created>1683295421001</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1683295421002</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,8 +687,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commands, part 2" />
-    <MESSAGE value="critical solid violate fixed, building objects by nonCLI added" />
     <MESSAGE value="bug fixes, part 4" />
     <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
     <MESSAGE value="bug &amp; docs fixes, part 6" />
@@ -706,7 +710,9 @@
     <MESSAGE value="bug fixes (approved version)" />
     <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="feat: remove single client restriction, add database load logic, changed project folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: remove single client restriction, add database load logic, changed project folder structure" />
+    <MESSAGE value="feat: authorization part 1" />
+    <MESSAGE value="feat: authorization part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: authorization part 2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -748,6 +754,16 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java</url>
           <line>28</line>
           <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

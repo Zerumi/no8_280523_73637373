@@ -19,7 +19,7 @@ public class ResponseReader {
         ObjectInputStream ois = new ObjectInputStream(in);
         BaseResponse result = (BaseResponse) ois.readObject();
         if (result instanceof ErrorResponse)
-            throw new GotAnErrorResponseException(((ErrorResponse) result).getMsg());
+            throw new GotAnErrorResponseException((ErrorResponse) result);
         return result;
     }
 }

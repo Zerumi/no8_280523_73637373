@@ -2,7 +2,7 @@ package requestLogic.requestWorkers;
 
 import authorization.AuthorizedUserData;
 import clientLogic.AuthorizeManager;
-import exceptions.AuthorizeException;
+import exceptions.authorizationExceptions.AuthorizeException;
 import requestLogic.requests.ServerRequest;
 import requests.AuthorizationRequest;
 import responseLogic.responseSenders.SuppressIOResponseSender;

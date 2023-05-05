@@ -1,5 +1,6 @@
 package requestLogic.requestSenders;
 
+import exceptions.GotAnErrorResponseException;
 import exceptions.ServerNotAvailableException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,6 +32,8 @@ public class RequestSender {
             } else logger.info("Received null");
         } catch (ClassNotFoundException e) {
             logger.error("Response class not found.");
+        } catch (GotAnErrorResponseException e) {
+            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
         }
         return response;
     }

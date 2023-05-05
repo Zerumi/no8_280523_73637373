@@ -1,8 +1,10 @@
 package requestLogic.requestWorkers;
 
+import exceptions.CannotProceedException;
 import exceptions.UnsupportedRequestException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.requestAnnotationProcessors.AnnotationProcessor;
 import requestLogic.requests.ServerRequest;
 import requests.*;
 
@@ -26,11 +28,14 @@ public class RequestWorkerManager {
 
     public void workWithRequest(ServerRequest request) {
         try {
-            // todo: handle login
-            Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(()
-                    -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
-        } catch (UnsupportedRequestException ex) {
-            logger.error("Got an invalid request.");
+            request = new AnnotationProcessor(request).proceedAnnotations();
+            RequestWorker requestWorker = Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(()
+                    -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
+            requestWorker.workWithRequest(request);
+        } catch (UnsupportedRequestException e) {
+            logger.error("Got an invalid request.", e);
+        } catch (CannotProceedException e) {
+            logger.error("Request can't be proceed / passed some checks.", e);
         }
     }
 }
