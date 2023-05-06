@@ -38,7 +38,7 @@ public class DBUserManager implements Closeable {
                 ArrayUtils.addAll(data.getPassword(), passSalt))); // combining 3 arrays okda...
         String regIP = callerBack.getAddress().toString();
         Timestamp regTime = Timestamp.from(Instant.now());
-        Timestamp lastLogin = Timestamp.from(Instant.EPOCH);
+        Timestamp lastLogin = Timestamp.from(Instant.now());
         PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO \"User\"" +
                 "(user_id, login, name, pass_hash, pass_salt, reg_ip, reg_time, last_login) " +
                 "VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?);");

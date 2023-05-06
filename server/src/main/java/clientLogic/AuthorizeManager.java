@@ -17,6 +17,8 @@ public class AuthorizeManager {
         AuthorizedUserData userData;
         try (DBUserManager manager = new DBUserManager(new PasswordEncryptionImplSHA512())) {
             userData = manager.addUserToDatabase(requester, regData);
+            AuthorizedCallerBack callerBack = new AuthorizedCallerBack(userData, requester);
+            SessionHandler.getInstance().registerSession(callerBack);
         } catch (SQLException | IOException e) {
             throw new AuthorizeException(e);
         }

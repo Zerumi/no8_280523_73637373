@@ -7,26 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: test class name">
-      <change afterPath="$PROJECT_DIR$/client/src/exceptions/SessionExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/AuthorizationRequestSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RegistrationRequestSender.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: authorisation part 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/ServerNotAvailableException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/authorization/authCredentials/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/authCredentials/AuthenticationData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/authorization/authCredentials/RegistrationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/authCredentials/RegistrationData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,7 +392,7 @@
       <workItem from="1681736180458" duration="8720000" />
       <workItem from="1682195109455" duration="3573000" />
       <workItem from="1682886324403" duration="8440000" />
-      <workItem from="1682894888391" duration="80829000" />
+      <workItem from="1682894888391" duration="81679000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -654,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683326802670</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="feat: authorisation part 3">
+      <created>1683331420014</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1683331420014</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +669,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
     <MESSAGE value="bug &amp; docs fixes, part 6" />
     <MESSAGE value="docs fixes, final" />
     <MESSAGE value="prepare client-server architecture" />
@@ -702,7 +693,8 @@
     <MESSAGE value="feat: authorization part 1" />
     <MESSAGE value="feat: authorization part 2" />
     <MESSAGE value="fix: test class name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: test class name" />
+    <MESSAGE value="feat: authorisation part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: authorisation part 3" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -747,12 +739,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java</url>
-          <line>48</line>
+          <line>47</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java</url>
-          <line>76</line>
+          <line>75</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>

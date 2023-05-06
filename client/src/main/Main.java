@@ -19,7 +19,6 @@ import java.io.Console;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
@@ -78,7 +77,7 @@ public class Main {
             } while (response == null);
             System.out.println("Authorization successful!");
             System.out.println("Authorized as: " + response.getAuthorizedAs().getName() + " (login: " + response.getAuthorizedAs().getLogin() + ")");
-            System.out.println("Last login: " + response.getAuthorizedAs().getLastLogin().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+            System.out.println("Last login: " + response.getAuthorizedAs().getLastLogin());
 
             // request commands
             boolean commandsNotLoaded = true;
