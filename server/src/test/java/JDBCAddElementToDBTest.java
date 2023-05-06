@@ -1,4 +1,4 @@
-import databaseElementLogic.DBCollectionManager;
+import databaseLogic.databaseElementLogic.DBCollectionManager;
 import models.Coordinates;
 import models.Route;
 import org.junit.jupiter.api.Test;

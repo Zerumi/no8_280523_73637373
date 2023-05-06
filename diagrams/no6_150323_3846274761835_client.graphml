@@ -2779,13 +2779,13 @@
       <data key="d7">
         <uml:UMLNodeStyle fill="#FF607D8B" highlightFill="#FFA3F1BB">
           <uml:UMLNodeStyle.model>
-            <uml:UMLClassModel stereotype="" constraint="" className="Utilities" attributesOpen="true" operationsOpen="true">
+            <uml:UMLClassModel stereotype="" constraint="" className="models.handlers.Utilities" attributesOpen="true" operationsOpen="true">
               <uml:UMLClassModel.attributes>
                 <x:Array Type="sys:Object" />
               </uml:UMLClassModel.attributes>
               <uml:UMLClassModel.operations>
                 <x:Array Type="sys:Object">
-                  <sys:String>+ Utilities():</sys:String>
+                  <sys:String>+ models.handlers.Utilities():</sys:String>
                   <sys:String>+ hasNextLineOrThrow(Scanner): boolean</sys:String>
                   <sys:String>+ handleUserInputID(String): Long</sys:String>
                   <sys:String>+ isNotNumeric(String): boolean</sys:String>

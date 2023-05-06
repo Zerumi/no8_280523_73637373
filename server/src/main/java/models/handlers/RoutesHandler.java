@@ -53,7 +53,6 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     @Override
     public void setCollection(HashSet<Route> routes) {
         this.routes = routes;
-        validateElements();
         sort();
     }
 
@@ -124,28 +123,6 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
             result = route;
         }
         return result;
-    }
-
-    /**
-     * Validates all elements in collection
-     */
-    @Override
-    @SuppressWarnings("CommentedOutCode")
-    public void validateElements() {
-        // All elements are valid
-        /* HashSet<Long> ids = new HashSet<>(getCollection().size());
-
-        for (Iterator<Route> it = getCollection().iterator(); it.hasNext(); ) {
-            Route toValid = it.next();
-            Validator<Route> validator = new RouteValidator();
-
-            if (!validator.validate(toValid) || !ids.add(toValid.getId()))
-            {
-                it.remove();
-                System.out.println("Element removed from collection: " + toValid);
-                System.out.println("This element violates the restriction of some fields. Check your file and fix it manually.");
-            }
-        } */
     }
 
     /**

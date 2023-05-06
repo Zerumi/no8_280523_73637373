@@ -1,6 +1,6 @@
 package commandManager.commands;
 
-import databaseElementLogic.DBIntegrationUtility;
+import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;

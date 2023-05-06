@@ -6,8 +6,6 @@ version '3.0'
 
 applicationDefaultJvmArgs = ["-Dlog4j.configurationFile=./log4j2.xml"]
 
-sourceSets.main.java.srcDirs = ['src']
-
 repositories {
     mavenCentral()
 }

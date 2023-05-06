@@ -1,6 +1,6 @@
 package commandManager.commands;
 
-import databaseElementLogic.DBIntegrationUtility;
+import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import models.Route;
 import models.handlers.RouteIDHandler;
 import org.apache.logging.log4j.LogManager;

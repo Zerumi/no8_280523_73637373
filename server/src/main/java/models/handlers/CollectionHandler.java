@@ -76,11 +76,6 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
     E getLastElement();
 
     /**
-     * Provides method for validate elements in collection. You can ignore this method
-     */
-    void validateElements();
-
-    /**
      * Gets min element by given comparator
      *
      * @param comparator Comparator to compare.

@@ -14,7 +14,7 @@ public class AuthorizeProcessor implements RequestAnnotationProcessor {
     public ServerRequest proceedRequest(ServerRequest requestToProceed) throws CannotProceedException {
         try {
             AuthorizedCallerBack authorizedCallerBack = AuthorizeManager.login(requestToProceed.getFrom());
-            logger.info("Successfully authorized " + authorizedCallerBack.getUserData().getLogin());
+            logger.info("Successfully authorized " + authorizedCallerBack.getUserData().login());
             return new ServerRequest(requestToProceed.getUserRequest(),
                     authorizedCallerBack,
                     requestToProceed.getConnection());

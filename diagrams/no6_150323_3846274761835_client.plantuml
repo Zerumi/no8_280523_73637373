@@ -384,8 +384,8 @@ class UpdateCommand {
 class UpdateCommandDTO {
   + UpdateCommandDTO(): 
 }
-class Utilities {
-  + Utilities(): 
+class models.handlers.Utilities {
+  + models.handlers.Utilities():
   + hasNextLineOrThrow(Scanner): boolean
   + handleUserInputID(String): Long
   + isNotNumeric(String): boolean

@@ -1,4 +1,4 @@
-import databaseElementLogic.DBCollectionLoader;
+import databaseLogic.databaseElementLogic.DBCollectionLoader;
 import models.Route;
 import org.junit.jupiter.api.Test;
 
@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashSet;
 
+@SuppressWarnings("resource")
 public class JDBCLoadDBTest {
     @Test
     public void test() throws SQLException, IOException {

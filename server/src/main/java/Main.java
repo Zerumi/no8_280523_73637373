@@ -1,5 +1,4 @@
-import databaseElementLogic.DBCollectionLoader;
-import exceptions.NotAvailableException;
+import databaseLogic.databaseElementLogic.DBCollectionLoader;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -10,8 +9,6 @@ import requestLogic.StatusRequest;
 import requestLogic.requestWorkers.RequestWorkerManager;
 import requestLogic.requests.ServerRequest;
 import requests.BaseRequest;
-import responseLogic.responseSenders.ResponseSender;
-import responses.ErrorResponse;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
@@ -30,9 +27,8 @@ public class Main {
         logger.trace("This is a server!");
 
         // load collection
-        try {
-            HashSet<Route> loadedCollection = new HashSet<>();
-            DBCollectionLoader<HashSet<Route>> loader = new DBCollectionLoader<>(loadedCollection);
+        HashSet<Route> loadedCollection = new HashSet<>();
+        try (DBCollectionLoader<HashSet<Route>> loader = new DBCollectionLoader<>(loadedCollection)) {
             loader.loadFromDB();
             handler.setCollection(loadedCollection);
         } catch (SQLException | IOException e) {
@@ -66,13 +62,6 @@ public class Main {
                 logger.error("Class not Found", e);
             } catch (RuntimeException e) {
                 logger.fatal(e);
-            } catch (NotAvailableException e) {
-                try {
-                    ErrorResponse response = new ErrorResponse("Server is busy right now...");
-                    ResponseSender.sendResponse(response, connection, e.getDeniedClient());
-                } catch (IOException ex) {
-                    logger.fatal("Can't send response", e);
-                }
             }
         }
     }
