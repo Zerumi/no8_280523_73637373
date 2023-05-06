@@ -1,18 +1,18 @@
 package authorization;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class AuthorizedUserData implements Serializable {
     private final long userID;
     private final String name;
     private final String login;
-    private final LocalDate lastLogin;
+    private final LocalDateTime lastLogin;
     private final String registerIP;
-    private final LocalDate registerDate;
+    private final LocalDateTime registerDate;
 
-    public AuthorizedUserData(long userID, String name, String login, LocalDate lastLogin, String registerIP, LocalDate registerDate) {
+    public AuthorizedUserData(long userID, String name, String login, LocalDateTime lastLogin, String registerIP, LocalDateTime registerDate) {
         this.userID = userID;
         this.name = name;
         this.login = login;
@@ -25,11 +25,11 @@ public class AuthorizedUserData implements Serializable {
         return name;
     }
 
-    public LocalDate getLastLogin() {
+    public LocalDateTime getLastLogin() {
         return lastLogin;
     }
 
-    public LocalDate getRegisterDate() {
+    public LocalDateTime getRegisterDate() {
         return registerDate;
     }
 

@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import requestLogic.requestAnnotationProcessors.AnnotationProcessor;
 import requestLogic.requests.ServerRequest;
 import requests.*;
+import responseLogic.responseSenders.SuppressIOResponseSender;
+import responses.ErrorResponse;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -33,8 +35,12 @@ public class RequestWorkerManager {
                     -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
             requestWorker.workWithRequest(request);
         } catch (UnsupportedRequestException e) {
+            ErrorResponse response = new ErrorResponse("Server understood Request class, but didn't know how to handle it.");
+            SuppressIOResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
             logger.error("Got an invalid request.", e);
         } catch (CannotProceedException e) {
+            ErrorResponse response = new ErrorResponse("Request can't be proceed / passed some checks: " + e.getMessage());
+            SuppressIOResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
             logger.error("Request can't be proceed / passed some checks.", e);
         }
     }

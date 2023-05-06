@@ -36,8 +36,6 @@ public class AuthorizeManager {
     }
 
     public static AuthorizedCallerBack login(CallerBack requester) throws UnauthorizedException {
-        // todo: annotation processor!
-        // todo: now we can sign requests with that annotation and check callerback by this method!
         return SessionHandler.getInstance().getSession(requester).getAuthorizedCallerBack();
     }
 }

@@ -21,7 +21,6 @@ import java.util.Optional;
  * @since 1.0
  */
 public class CommandManager {
-
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab5");
     final LinkedHashMap<String, BaseCommand> commands;
 
@@ -65,7 +64,8 @@ public class CommandManager {
     public void executeCommand(CommandClientRequest command, CallerBack requester, ServerConnection answerConnection) {
         CommandStatusResponse response;
         try {
-            BaseCommand baseCommand = Optional.ofNullable(commands.get(command.getCommandDescription().getName())).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена"));
+            BaseCommand baseCommand = Optional.ofNullable(commands.get(command.getCommandDescription().getName())).orElseThrow(()
+                    -> new UnknownCommandException("Указанная команда не была обнаружена"));
             baseCommand.execute(command.getLineArgs());
             response = baseCommand.getResponse();
         } catch (IllegalArgumentException | NullPointerException e) {

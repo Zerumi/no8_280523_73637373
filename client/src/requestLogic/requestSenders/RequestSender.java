@@ -1,7 +1,6 @@
 package requestLogic.requestSenders;
 
 import exceptions.GotAnErrorResponseException;
-import exceptions.ServerNotAvailableException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.BaseRequest;
@@ -17,7 +16,7 @@ import java.io.ObjectOutputStream;
 public class RequestSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public BaseResponse sendRequest(BaseRequest request, ServerConnection connection) throws IOException, ServerNotAvailableException {
+    public BaseResponse sendRequest(BaseRequest request, ServerConnection connection) throws IOException, GotAnErrorResponseException {
         BaseResponse response = null;
         try {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -32,8 +31,6 @@ public class RequestSender {
             } else logger.info("Received null");
         } catch (ClassNotFoundException e) {
             logger.error("Response class not found.");
-        } catch (GotAnErrorResponseException e) {
-            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
         }
         return response;
     }

@@ -14,7 +14,7 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
 import java.time.Instant;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Properties;
 
@@ -65,7 +65,7 @@ public class DBUserManager implements Closeable {
         }
         rs.close();
         getUserID.close();
-        return new AuthorizedUserData(userID, name, login, LocalDate.ofInstant(lastLogin.toInstant(), ZoneOffset.UTC), regIP, LocalDate.ofInstant(regTime.toInstant(), ZoneOffset.UTC));
+        return new AuthorizedUserData(userID, name, login, LocalDateTime.ofInstant(lastLogin.toInstant(), ZoneOffset.UTC), regIP, LocalDateTime.ofInstant(regTime.toInstant(), ZoneOffset.UTC));
     }
 
     public AuthorizedUserData getUserFromDatabase(AuthenticationData authData) throws AuthorizeException, SQLException {
@@ -81,8 +81,8 @@ public class DBUserManager implements Closeable {
             String passHash = rs.getString("pass_hash");
             char[] passSalt = rs.getString("pass_salt").toCharArray();
             String regIp = rs.getString("reg_ip");
-            LocalDate regTime = LocalDate.ofInstant(rs.getTimestamp("reg_time").toInstant(), ZoneOffset.UTC);
-            LocalDate lastLogin = LocalDate.ofInstant(rs.getTimestamp("last_login").toInstant(), ZoneOffset.UTC);
+            LocalDateTime regTime = LocalDateTime.ofInstant(rs.getTimestamp("reg_time").toInstant(), ZoneOffset.UTC);
+            LocalDateTime lastLogin = LocalDateTime.ofInstant(rs.getTimestamp("last_login").toInstant(), ZoneOffset.UTC);
 
             // check password
             String userPassHash = encryptionAlg.encrypt(ArrayUtils.addAll(PasswordEncryption.getPepper(),

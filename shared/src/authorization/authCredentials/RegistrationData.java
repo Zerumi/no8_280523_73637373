@@ -1,6 +1,8 @@
 package authorization.authCredentials;
 
-public class RegistrationData extends AuthenticationData {
+import java.io.Serializable;
+
+public class RegistrationData extends AuthenticationData implements Serializable {
 
     private final String name;
 

@@ -1,7 +1,7 @@
 package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
-import exceptions.ServerNotAvailableException;
+import exceptions.GotAnErrorResponseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.ArgumentCommandClientRequest;
@@ -24,10 +24,8 @@ public class ArgumentRequestSender<T extends Serializable> {
             response = (CommandStatusResponse) new RequestSender().sendRequest(rq, connection);
         } catch (PortUnreachableException e) {
             logger.warn("Server is unavailable. Please, wait until server will came back.");
-        } catch (ServerNotAvailableException e) {
-            logger.error("Your session was expired. Please, wait until server will come back.");
-            logger.warn("The application will be terminated.");
-            System.exit(0);
+        } catch (GotAnErrorResponseException e) {
+            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
         } catch (IOException e) {
             logger.error("Something went wrong during I/O operations.");
         }
