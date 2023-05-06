@@ -1,90 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
     <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: bug fixes with registration &amp; auth">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandDescriptionHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandDescriptionHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandLoaderUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandLoaderUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/ExecuteScriptReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/ExecuteScriptReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/ExitReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/ExitReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/NonArgumentReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/BuildObjectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/BuildObjectException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/CommandInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/CommandInterruptedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/CommandsNotLoadedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/CommandsNotLoadedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/GotAnErrorResponseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/GotAnErrorResponseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/StreamInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/StreamInterruptedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/UnknownCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/UnknownCommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/UnsupportedResponseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/UnsupportedResponseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/exceptions/WrongAmountOfArgumentsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/WrongAmountOfArgumentsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/CoordXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/CoordXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/CoordYValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/CoordYValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/DistanceValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/DistanceValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/LocationNameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/LocationNameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/LocationXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/LocationXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/LocationYZValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/LocationYZValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/NameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/validators/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/validators/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/authentication/AuthDataHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/authentication/AuthDataHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/AuthorizationRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/AuthorizationRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RegistrationRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RegistrationRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpConnectionBlockDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpConnectionBlockDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.dot" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.graphml" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.graphml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.md" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/Utilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/Utilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBCollectionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBCollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseElementLogic/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/DBUserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/PasswordEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/PasswordEncryptionImplSHA512.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/PasswordEncryptionImplSHA512.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseUsersLogic/ResourceStreamLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/ResourceStreamLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/JDBCAddElementToDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/JDBCAddElementToDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/JDBCLoadDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/JDBCLoadDBTest.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: restructured client + some inspections">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/client/no7_220423_863847963.client.main.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +125,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KH3VVGvDeszCgxIhDcF5NvZAzm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -210,36 +135,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
+    "last_opened_file_path": "D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exceptions" />
@@ -465,7 +391,7 @@
       <workItem from="1681736180458" duration="8720000" />
       <workItem from="1682195109455" duration="3573000" />
       <workItem from="1682886324403" duration="8440000" />
-      <workItem from="1682894888391" duration="82656000" />
+      <workItem from="1682894888391" duration="82974000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -726,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683332453471</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="chore: restructured client + some inspections">
+      <created>1683333436014</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1683333436014</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -749,7 +682,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="docs fixes, final" />
     <MESSAGE value="prepare client-server architecture" />
     <MESSAGE value="apply some fixes" />
     <MESSAGE value="client moved, client-server part 3" />
@@ -774,7 +706,8 @@
     <MESSAGE value="fix: test class name" />
     <MESSAGE value="feat: authorisation part 3" />
     <MESSAGE value="fix: bug fixes with registration &amp; auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bug fixes with registration &amp; auth" />
+    <MESSAGE value="chore: restructured client + some inspections" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: restructured client + some inspections" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

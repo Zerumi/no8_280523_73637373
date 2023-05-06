@@ -1,3 +1,6 @@
+unnamed package
+authorization
+authorization.authCredentials
 clientLogic
 commandLogic
 commandLogic.commandReceiverLogic
@@ -8,7 +11,10 @@ commandLogic.commandReceiverLogic.receivers
 commandManager
 commandManager.commands
 commandManager.externalRecievers
+databaseLogic.databaseElementLogic
+databaseLogic.databaseUsersLogic
 exceptions
+exceptions.authorizationExceptions
 fileLogic
 fileLogic.editors
 main
@@ -19,10 +25,14 @@ models.handlers.nonUserMode
 models.handlers.userMode
 models.validators
 requestLogic
+requestLogic.authentication
+requestLogic.requestAnnotationProcessors
+requestLogic.requestAnnotationProcessors.processors
 requestLogic.requests
 requestLogic.requestSenders
 requestLogic.requestWorkers
 requests
+requests.requestAnnotations
 responseLogic
 responseLogic.responseSenders
 responses
