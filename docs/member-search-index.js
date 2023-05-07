@@ -3,6 +3,11 @@ memberSearchIndex = [{
     "c": "AddCommand",
     "l": "AddCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBElementCreatorLogic",
+    "l": "addCreatorToDB(long, long)",
+    "u": "addCreatorToDB(long,long)"
 }, {"p": "models.handlers", "c": "CollectionHandler", "l": "addElementToCollection(E)"}, {
     "p": "models.handlers",
     "c": "RoutesHandler",
@@ -46,10 +51,10 @@ memberSearchIndex = [{
 }, {"p": "serverLogic", "c": "UdpServerConnection", "l": "address"}, {
     "p": "databaseLogic.databaseElementLogic",
     "c": "DBIntegrationUtility",
-    "l": "addRouteToDBAndCollection(Route)",
-    "u": "addRouteToDBAndCollection(models.Route)"
+    "l": "addRouteToDBAndCollection(Route, long)",
+    "u": "addRouteToDBAndCollection(models.Route,long)"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "DBUserManager",
     "l": "addUserToDatabase(CallerBack, RegistrationData)",
     "u": "addUserToDatabase(requestLogic.CallerBack,authorization.authCredentials.RegistrationData)"
@@ -58,6 +63,11 @@ memberSearchIndex = [{
     "c": "AnnotationProcessor",
     "l": "AnnotationProcessor(ServerRequest)",
     "u": "%3Cinit%3E(requestLogic.requests.ServerRequest)"
+}, {
+    "p": "exceptions",
+    "c": "AreYouSeriousException",
+    "l": "AreYouSeriousException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
 }, {
     "p": "requests",
     "c": "ArgumentCommandClientRequest",
@@ -212,10 +222,15 @@ memberSearchIndex = [{
     "c": "Utilities",
     "l": "checkArgumentsOrThrow(int, int)",
     "u": "checkArgumentsOrThrow(int,int)"
-}, {"p": "models.handlers", "c": "CollectionHandler", "l": "clearCollection()"}, {
-    "p": "models.handlers",
-    "c": "RoutesHandler",
-    "l": "clearCollection()"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBElementCreatorLogic",
+    "l": "checkNonAccessory(long, long)",
+    "u": "checkNonAccessory(long,long)"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBIntegrationUtility",
+    "l": "clearCollectionInDBAndMemory(long)"
 }, {
     "p": "commandManager.commands",
     "c": "ClearCommand",
@@ -229,7 +244,11 @@ memberSearchIndex = [{
     "p": "databaseLogic.databaseElementLogic",
     "c": "DBCollectionManager",
     "l": "close()"
-}, {"p": "databaseLogic.databaseUsersLogic", "c": "DBUserManager", "l": "close()"}, {
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBElementCreatorLogic",
+    "l": "close()"
+}, {"p": "databaseLogic.databaseUserLogic", "c": "DBUserManager", "l": "close()"}, {
     "p": "serverLogic",
     "c": "ServerConnection",
     "l": "closeConnection()"
@@ -237,6 +256,11 @@ memberSearchIndex = [{
     "p": "responseLogic",
     "c": "StatusResponse",
     "l": "code()"
+}, {
+    "p": "commandManager.commandPreProcessing.preProcessors",
+    "c": "CommandAuthorizePreProcessor",
+    "l": "CommandAuthorizePreProcessor()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "requests",
     "c": "CommandClientRequest",
@@ -296,6 +320,11 @@ memberSearchIndex = [{
     "p": "commandManager",
     "c": "CommandManager",
     "l": "CommandManager()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commandPreProcessing",
+    "c": "CommandPreProcessorManager",
+    "l": "CommandPreProcessorManager()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "requestLogic.requestSenders",
@@ -384,14 +413,19 @@ memberSearchIndex = [{
     "u": "%3Cinit%3E()"
 }, {
     "p": "databaseLogic.databaseElementLogic",
+    "c": "DBElementCreatorLogic",
+    "l": "DBElementCreatorLogic()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
     "c": "DBIntegrationUtility",
     "l": "DBIntegrationUtility()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "DBUserManager",
     "l": "DBUserManager(PasswordEncryption)",
-    "u": "%3Cinit%3E(databaseLogic.databaseUsersLogic.PasswordEncryption)"
+    "u": "%3Cinit%3E(databaseLogic.databaseUserLogic.PasswordEncryption)"
 }, {
     "p": "models.validators",
     "c": "DistanceValidator",
@@ -403,11 +437,11 @@ memberSearchIndex = [{
     "l": "ElementNotAddedException()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "PasswordEncryption",
     "l": "encrypt(char[])"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "PasswordEncryptionImplSHA512",
     "l": "encrypt(char[])"
 }, {
@@ -566,13 +600,18 @@ memberSearchIndex = [{
     "l": "fromDescription(CommandDescription)",
     "u": "fromDescription(commandLogic.CommandDescription)"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "PasswordEncryption",
     "l": "generateSalt()"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "PasswordEncryptionImplSHA512",
     "l": "generateSalt()"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBIntegrationUtility",
+    "l": "getAccessibleCollection(long, Supplier<T>)",
+    "u": "getAccessibleCollection(long,java.util.function.Supplier)"
 }, {"p": "requestLogic", "c": "CallerBack", "l": "getAddress()"}, {
     "p": "commandManager.commands",
     "c": "AddCommand",
@@ -707,21 +746,17 @@ memberSearchIndex = [{
     "l": "getInstance()"
 }, {"p": "commandManager", "c": "CommandDescriptionHolder", "l": "getInstance()"}, {
     "p": "models.handlers",
-    "c": "RouteIDHandler",
+    "c": "RoutesHandler",
     "l": "getInstance()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInstance()"}, {
-    "p": "requestLogic.authentication",
-    "c": "AuthDataHolder",
-    "l": "getInstance()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getJavaInitializationString()"}, {
+}, {"p": "requestLogic.authentication", "c": "AuthDataHolder", "l": "getInstance()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getJavaInitializationString()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getLastElement()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getLastElement()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getLastElement()"}, {
-    "p": "requests",
-    "c": "CommandClientRequest",
-    "l": "getLineArgs()"
-}, {
+}, {"p": "requests", "c": "CommandClientRequest", "l": "getLineArgs()"}, {
     "p": "serverLogic",
     "c": "UdpConnectionBlockDecorator",
     "l": "getLockState()"
@@ -790,14 +825,10 @@ memberSearchIndex = [{
     "c": "Location",
     "l": "getName()"
 }, {"p": "models", "c": "Route", "l": "getName()"}, {
-    "p": "models.handlers",
-    "c": "RouteIDHandler",
-    "l": "getNextID()"
-}, {
     "p": "authorization.authCredentials",
     "c": "AuthenticationData",
     "l": "getPassword()"
-}, {"p": "databaseLogic.databaseUsersLogic", "c": "PasswordEncryption", "l": "getPepper()"}, {
+}, {"p": "databaseLogic.databaseUserLogic", "c": "PasswordEncryption", "l": "getPepper()"}, {
     "p": "requestLogic",
     "c": "CallerBack",
     "l": "getPort()"
@@ -823,7 +854,7 @@ memberSearchIndex = [{
     "l": "getReceivers(ReceiverType)",
     "u": "getReceivers(commandLogic.commandReceiverLogic.enums.ReceiverType)"
 }, {"p": "requests", "c": "RegistrationRequest", "l": "getRegData()"}, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "ResourceStreamLogic",
     "l": "getResourceStream()"
 }, {"p": "commandManager.commands", "c": "AddCommand", "l": "getResponse()"}, {
@@ -888,7 +919,7 @@ memberSearchIndex = [{
     "c": "AuthorizedCallerBack",
     "l": "getUserData()"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "DBUserManager",
     "l": "getUserFromDatabase(AuthenticationData)",
     "u": "getUserFromDatabase(authorization.authCredentials.AuthenticationData)"
@@ -949,8 +980,8 @@ memberSearchIndex = [{
 }, {
     "p": "exceptions",
     "c": "InvalidRequestException",
-    "l": "InvalidRequestException(String)",
-    "u": "%3Cinit%3E(java.lang.String)"
+    "l": "InvalidRequestException()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "main",
     "c": "LibUtilities",
@@ -969,7 +1000,11 @@ memberSearchIndex = [{
     "c": "Loader",
     "l": "Loader(Class<T>, Class<E>)",
     "u": "%3Cinit%3E(java.lang.Class,java.lang.Class)"
-}, {"p": "databaseLogic.databaseElementLogic", "c": "DBCollectionLoader", "l": "loadFromDB()"}, {
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBCollectionLoader",
+    "l": "loadFromDB()"
+}, {"p": "databaseLogic.databaseElementLogic", "c": "DBCollectionLoader", "l": "loadFromDB(long)"}, {
     "p": "fileLogic",
     "c": "Loader",
     "l": "loadFromFile(String, BaseReader)",
@@ -1073,15 +1108,35 @@ memberSearchIndex = [{
     "l": "paintValue(Graphics, Rectangle)",
     "u": "paintValue(java.awt.Graphics,java.awt.Rectangle)"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "PasswordEncryptionImplSHA512",
     "l": "PasswordEncryptionImplSHA512()",
     "u": "%3Cinit%3E()"
 }, {"p": "<Unnamed>", "c": "Main", "l": "PORT"}, {
+    "p": "commandManager.commandPreProcessing",
+    "c": "CommandPreProcessorManager",
+    "l": "preProceed(BaseCommand, CallerBack, ServerConnection)",
+    "u": "preProceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
+}, {
+    "p": "exceptions",
+    "c": "PreProceedingFailedException",
+    "l": "PreProceedingFailedException()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "PrintFieldDistanceAscendingCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commandPreProcessing.preProcessors",
+    "c": "CommandAuthorizePreProcessor",
+    "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
+    "u": "proceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
+}, {
+    "p": "commandManager.commandPreProcessing.preProcessors",
+    "c": "CommandPreProcessor",
+    "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
+    "u": "proceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "requestLogic.requestAnnotationProcessors",
     "c": "AnnotationProcessor",
@@ -1096,6 +1151,11 @@ memberSearchIndex = [{
     "c": "RequestAnnotationProcessor",
     "l": "proceedRequest(ServerRequest)",
     "u": "proceedRequest(requestLogic.requests.ServerRequest)"
+}, {
+    "p": "exceptions",
+    "c": "ProcessionInterruptedException",
+    "l": "ProcessionInterruptedException()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "fileLogic",
     "c": "BaseReader",
@@ -1196,6 +1256,16 @@ memberSearchIndex = [{
     "l": "RemoveByIdCommand()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBCollectionManager",
+    "l": "removeElementFromDatabase(Long)",
+    "u": "removeElementFromDatabase(java.lang.Long)"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBIntegrationUtility",
+    "l": "removeFromCollectionAndDB(long, long)",
+    "u": "removeFromCollectionAndDB(long,long)"
+}, {
     "p": "commandManager.commands",
     "c": "RemoveGreaterCommand",
     "l": "RemoveGreaterCommand()",
@@ -1221,7 +1291,7 @@ memberSearchIndex = [{
     "l": "RequestWorkerManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseUsersLogic",
+    "p": "databaseLogic.databaseUserLogic",
     "c": "ResourceStreamLogic",
     "l": "ResourceStreamLogic(String)",
     "u": "%3Cinit%3E(java.lang.String)"
@@ -1259,11 +1329,6 @@ memberSearchIndex = [{
     "p": "models.comparators",
     "c": "RouteDistanceComparator",
     "l": "RouteDistanceComparator()",
-    "u": "%3Cinit%3E()"
-}, {
-    "p": "models.handlers",
-    "c": "RouteIDHandler",
-    "l": "RouteIDHandler()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "models.handlers.nonUserMode",
@@ -1373,6 +1438,26 @@ memberSearchIndex = [{
     "c": "StatusRequestBuilder",
     "l": "setCallerBack(CallerBack)",
     "u": "setCallerBack(requestLogic.CallerBack)"
+}, {"p": "commandManager.commands", "c": "AddCommand", "l": "setCallerID(long)"}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "setCallerID(long)"
+}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "setCallerID(long)"}, {
+    "p": "commandManager.commands",
+    "c": "AuthorizableCommand",
+    "l": "setCallerID(long)"
+}, {"p": "commandManager.commands", "c": "ClearCommand", "l": "setCallerID(long)"}, {
+    "p": "commandManager.commands",
+    "c": "RemoveByIdCommand",
+    "l": "setCallerID(long)"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "setCallerID(long)"
+}, {
+    "p": "commandManager.commands",
+    "c": "UpdateCommand",
+    "l": "setCallerID(long)"
 }, {
     "p": "requestLogic.authentication",
     "c": "AuthDataHolder",
@@ -1558,8 +1643,18 @@ memberSearchIndex = [{
 }, {
     "p": "databaseLogic.databaseElementLogic",
     "c": "DBCollectionManager",
-    "l": "updateElementInDataBase(Route)",
-    "u": "updateElementInDataBase(models.Route)"
+    "l": "updateElementInDataBase(Route, Long)",
+    "u": "updateElementInDataBase(models.Route,java.lang.Long)"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBIntegrationUtility",
+    "l": "updateElementInDBAndCollection(Route, long, long)",
+    "u": "updateElementInDBAndCollection(models.Route,long,long)"
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBCollectionManager",
+    "l": "updateNullableLocation(Location, ResultSet, int)",
+    "u": "updateNullableLocation(models.Location,java.sql.ResultSet,int)"
 }, {"p": "authorization", "c": "UserRoles", "l": "User"}, {
     "p": "authorization",
     "c": "AuthorizedUserData",

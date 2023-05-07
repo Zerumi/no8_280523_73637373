@@ -9,6 +9,8 @@ commandLogic.commandReceiverLogic.enums
 commandLogic.commandReceiverLogic.handlers
 commandLogic.commandReceiverLogic.receivers
 commandManager
+commandManager.commandPreProcessing
+commandManager.commandPreProcessing.preProcessors
 commandManager.commands
 commandManager.externalRecievers
 databaseLogic.databaseElementLogic
