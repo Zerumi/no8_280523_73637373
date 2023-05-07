@@ -1,14 +1,9 @@
 package commandManager.commands;
 
-import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
-
-import java.util.HashSet;
-import java.util.Objects;
 
 /**
  * Removes element from collection by id.
@@ -16,9 +11,10 @@ import java.util.Objects;
  * @author Zerumi
  * @since 1.0
  */
-public class RemoveByIdCommand implements BaseCommand {
+public class RemoveByIdCommand implements BaseCommand, AuthorizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmByID");
     private CommandStatusResponse response;
+    private long callerID;
 
     @Override
     public String getName() {
@@ -37,11 +33,8 @@ public class RemoveByIdCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) {
-
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-
-        if (collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), Long.valueOf(args[1]))))
-            response = CommandStatusResponse.ofString("Element with that id doesn't exists.");
+        if (!DBIntegrationUtility.removeFromCollectionAndDB(callerID, Long.parseLong(args[1])))
+            response = new CommandStatusResponse("Element with that id doesn't exists or you don't have access to edit this object.", -922);
         else
             response = CommandStatusResponse.ofString("Executed.");
 
@@ -51,5 +44,10 @@ public class RemoveByIdCommand implements BaseCommand {
     @Override
     public CommandStatusResponse getResponse() {
         return response;
+    }
+
+    @Override
+    public void setCallerID(long id) {
+        this.callerID = id;
     }
 }

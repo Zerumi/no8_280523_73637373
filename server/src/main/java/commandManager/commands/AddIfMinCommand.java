@@ -4,7 +4,6 @@ import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
-import models.handlers.RouteIDHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,10 +19,11 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route> {
+public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.addIfMin");
     private CommandStatusResponse response;
     private Route obj;
+    private long callerID;
 
     @Override
     public String getName() {
@@ -45,7 +45,7 @@ public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route> {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         if (obj.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
-            response = DBIntegrationUtility.addRouteToDBAndCollection(obj).toCommandResponse();
+            response = DBIntegrationUtility.addRouteToDBAndCollection(obj, callerID).toCommandResponse();
         } else {
             response = new CommandStatusResponse("Element not added: it's not lower than min value.", 3);
         }
@@ -61,7 +61,11 @@ public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route> {
     @Override
     public void setObj(Route obj) {
         this.obj = obj;
-        obj.setId(RouteIDHandler.getInstance().getNextID());
         obj.setCreationDate(Date.from(Instant.now()));
+    }
+
+    @Override
+    public void setCallerID(long id) {
+        this.callerID = id;
     }
 }

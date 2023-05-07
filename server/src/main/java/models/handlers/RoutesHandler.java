@@ -67,11 +67,6 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
         sort();
     }
 
-    @Override
-    public void clearCollection() {
-        routes.clear();
-    }
-
     /**
      * Sorts elements by ID Field in Route.
      */

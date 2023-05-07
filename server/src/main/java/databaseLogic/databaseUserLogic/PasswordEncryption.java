@@ -1,4 +1,4 @@
-package databaseLogic.databaseUsersLogic;
+package databaseLogic.databaseUserLogic;
 
 import org.apache.logging.log4j.LogManager;
 

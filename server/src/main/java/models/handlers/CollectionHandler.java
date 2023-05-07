@@ -35,11 +35,6 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
     void addElementToCollection(E value);
 
     /**
-     * Provides method for fast clear element in collection.
-     */
-    void clearCollection();
-
-    /**
      * Provides method for fast sorting collection. You can ignore this method.
      */
     default void sort() {

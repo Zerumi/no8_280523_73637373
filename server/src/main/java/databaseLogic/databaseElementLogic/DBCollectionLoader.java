@@ -33,6 +33,26 @@ public class DBCollectionLoader<T extends Collection<Route>> implements Closeabl
                         "LEFT JOIN Coordinates coords ON coordinates_id = coord_id " +
                         "LEFT JOIN location lto ON location_to_id = lto.location_id " +
                         "LEFT JOIN location lfrom ON location_from_id = lfrom.location_id");
+        loadFromDB(rs);
+        statement.close();
+    }
+
+    protected void loadFromDB(long callerID) throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery(
+                "SELECT route.route_id, route.name AS name, coords.x AS coord_x, coords.y AS coord_y, route.creation_date, lto.x AS lto_x, lto.y AS lto_y, lto.z AS lto_z," +
+                        " lto.name AS lto_name, lfrom.x AS lfrom_x, lfrom.y AS lfrom_y, lfrom.z AS lfrom_z, lfrom.name AS lfrom_name, route.distance, coordinates_id, location_to_id, location_from_id " +
+                        "FROM Route " +
+                        "LEFT JOIN Coordinates coords ON coordinates_id = coord_id " +
+                        "LEFT JOIN location lto ON location_to_id = lto.location_id " +
+                        "LEFT JOIN location lfrom ON location_from_id = lfrom.location_id " +
+                        "LEFT JOIN route_creator rc on route.route_id = rc.route_id " +
+                        "WHERE user_id = " + callerID);
+        loadFromDB(rs);
+        statement.close();
+    }
+
+    private void loadFromDB(ResultSet rs) throws SQLException {
         while (rs.next()) {
             Route toAdd = new Route();
             toAdd.setId(rs.getLong("route_id"));
@@ -67,8 +87,6 @@ public class DBCollectionLoader<T extends Collection<Route>> implements Closeabl
             collectionToWrite.add(toAdd);
         }
         rs.close();
-        statement.close();
-        connection.close();
     }
 
     @Override

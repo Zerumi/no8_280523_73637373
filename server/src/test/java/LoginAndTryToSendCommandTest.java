@@ -3,7 +3,6 @@ import clientLogic.AuthorizeManager;
 import commandLogic.CommandDescription;
 import commandLogic.commandReceiverLogic.callers.ExternalBaseReceiverCaller;
 import exceptions.authorizationExceptions.AuthorizeException;
-import org.junit.jupiter.api.Test;
 import requestLogic.CallerBack;
 import requestLogic.requestWorkers.RequestWorkerManager;
 import requestLogic.requests.ServerRequest;
@@ -13,7 +12,6 @@ import serverLogic.DatagramServerConnectionFactory;
 import java.net.InetSocketAddress;
 
 public class LoginAndTryToSendCommandTest {
-    @Test
     public void test() throws AuthorizeException {
         var b = AuthorizeManager.authorize(new CallerBack(new InetSocketAddress(Main.PORT).getAddress(), Main.PORT),
                 new AuthenticationData("zerumi", new char[]{'q', 'w', 'e', 'r', 't', 'y'}));

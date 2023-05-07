@@ -1,6 +1,7 @@
 package commandManager;
 
 import commandLogic.CommandDescription;
+import commandManager.commandPreProcessing.CommandPreProcessorManager;
 import commandManager.commands.*;
 import exceptions.UnknownCommandException;
 import org.apache.logging.log4j.LogManager;
@@ -64,8 +65,10 @@ public class CommandManager {
     public void executeCommand(CommandClientRequest command, CallerBack requester, ServerConnection answerConnection) {
         CommandStatusResponse response;
         try {
+            CommandPreProcessorManager manager = new CommandPreProcessorManager();
             BaseCommand baseCommand = Optional.ofNullable(commands.get(command.getCommandDescription().getName())).orElseThrow(()
                     -> new UnknownCommandException("Указанная команда не была обнаружена"));
+            manager.preProceed(baseCommand, requester, answerConnection);
             baseCommand.execute(command.getLineArgs());
             response = baseCommand.getResponse();
         } catch (IllegalArgumentException | NullPointerException e) {

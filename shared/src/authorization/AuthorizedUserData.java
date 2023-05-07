@@ -16,6 +16,11 @@ public record AuthorizedUserData(long userID, String name, String login, LocalDa
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(userID, name, login, lastLogin, registerIP, registerDate);
+    }
+
+    @Override
     public String toString() {
         return "AuthorizedUserData{" +
                 "userID=" + userID +

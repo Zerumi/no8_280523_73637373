@@ -12,7 +12,7 @@ commandManager
 commandManager.commands
 commandManager.externalRecievers
 databaseLogic.databaseElementLogic
-databaseLogic.databaseUsersLogic
+databaseLogic.databaseUserLogic
 exceptions
 exceptions.authorizationExceptions
 fileLogic

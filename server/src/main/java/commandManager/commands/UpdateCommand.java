@@ -1,17 +1,13 @@
 package commandManager.commands;
 
+import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RouteIDHandler;
-import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
 
 import java.time.Instant;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Objects;
 
 /**
  * Updates element by its ID.
@@ -19,10 +15,11 @@ import java.util.Objects;
  * @author Zerumi
  * @since 1.0
  */
-public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route> {
+public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.update");
     private CommandStatusResponse response;
     private Route obj;
+    private long callerID;
 
     @Override
     public String getName() {
@@ -41,22 +38,7 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route> {
 
     @Override
     public void execute(String[] args) {
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-
-        Long finalId = Long.valueOf(args[1]);
-
-        if (!collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), finalId))) {
-            response = new CommandStatusResponse("Element with that id doesn't exists.", 2);
-            logger.warn(response.getResponse());
-            return;
-        }
-
-        logger.info("Updated ID value: " + finalId);
-        obj.setId(finalId);
-
-        collectionHandler.addElementToCollection(obj);
-
-        response = CommandStatusResponse.ofString("Object updated!");
+        response = DBIntegrationUtility.updateElementInDBAndCollection(obj, Long.parseLong(args[1]), callerID).toCommandResponse();
         logger.info(response.getResponse());
     }
 
@@ -68,7 +50,11 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route> {
     @Override
     public void setObj(Route obj) {
         this.obj = obj;
-        obj.setId(RouteIDHandler.getInstance().getNextID());
         obj.setCreationDate(Date.from(Instant.now()));
+    }
+
+    @Override
+    public void setCallerID(long id) {
+        this.callerID = id;
     }
 }

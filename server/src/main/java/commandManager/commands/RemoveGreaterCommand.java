@@ -1,17 +1,18 @@
 package commandManager.commands;
 
+import databaseLogic.databaseElementLogic.DBIntegrationUtility;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
-import models.handlers.CollectionHandler;
-import models.handlers.RouteIDHandler;
-import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * Removes elements from collection greater than given in argument.
@@ -19,10 +20,11 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route> {
+public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmGreater");
     private CommandStatusResponse response;
     private Route obj;
+    private long callerID;
 
     @Override
     public String getName() {
@@ -43,11 +45,15 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
     public void execute(String[] args) {
         RouteDistanceComparator comparator = new RouteDistanceComparator();
 
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-
         logger.debug("Distance: " + obj.getDistance());
 
-        var iterator = collectionHandler.getCollection().iterator();
+        Iterator<Route> iterator;
+        try {
+            iterator = DBIntegrationUtility.getAccessibleCollection(callerID, HashSet::new).iterator();
+        } catch (SQLException | IOException e) {
+            response = new CommandStatusResponse("We can't got accessible collection", -501);
+            return;
+        }
 
         int count = 0;
 
@@ -55,14 +61,14 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
             var current = iterator.next();
             logger.debug("Comparing: current -- " + current.getDistance() + " vs " + obj.getDistance());
             if (comparator.compare(current, obj) > 0) {
-                logger.debug(" -- Greater / Will be removed...");
-                count++;
+                logger.debug(" -- Greater / Removing...");
+                if (DBIntegrationUtility.removeFromCollectionAndDB(callerID, current.getId())) {
+                    count++;
+                } else logger.warn("Element isn't removed...");
             } else {
                 logger.debug(" -- Lower.");
             }
         }
-
-        collectionHandler.getCollection().removeIf(current -> comparator.compare(current, obj) > 0);
         response = CommandStatusResponse.ofString("Removed " + count + " elements");
         logger.info(response.getResponse());
     }
@@ -75,7 +81,11 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
     @Override
     public void setObj(Route obj) {
         this.obj = obj;
-        obj.setId(RouteIDHandler.getInstance().getNextID());
         obj.setCreationDate(Date.from(Instant.now()));
+    }
+
+    @Override
+    public void setCallerID(long id) {
+        this.callerID = id;
     }
 }

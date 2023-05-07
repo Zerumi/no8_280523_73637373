@@ -1,4 +1,4 @@
-package databaseLogic.databaseUsersLogic;
+package databaseLogic.databaseUserLogic;
 
 import com.google.common.hash.Hashing;
 

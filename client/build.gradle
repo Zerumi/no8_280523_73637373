@@ -20,7 +20,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'main.Main'
+    mainClass = 'Main'
 }
 
 run {
@@ -30,7 +30,7 @@ run {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'main.Main',
+                'Main-Class': 'Main',
                 'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' ')
         )
     }

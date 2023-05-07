@@ -8,8 +8,70 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: restructured client + some inspections">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/client/no7_220423_863847963.client.main.iml" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="critical: reformed commands + authorization">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/client/no7_220423_863847963.client.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/CommandPreProcessorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/PreProcessingCommandInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AuthorizableCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBElementCreatorLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/PreProceedingFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/ProcessionInterruptedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/JDBCRemoveElementFromDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/JDBCUpdateElementInDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/exceptions/AreYouSeriousException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/server/no7_220423_863847963.server.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/server/no7_220423_863847963.server.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/DBUserManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/DBUserManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/PasswordEncryption.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/PasswordEncryption.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/PasswordEncryptionImplSHA512.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/PasswordEncryptionImplSHA512.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/ResourceStreamLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/ResourceStreamLogic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/PasswordEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/PasswordEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/PasswordEncryptionImplSHA512.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/PasswordEncryptionImplSHA512.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/ResourceStreamLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/ResourceStreamLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/InvalidRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/fileLogic/editors/DateEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/models/handlers/RouteIDHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/models/handlers/RoutesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/JDBCAddElementToDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/JDBCAddElementToDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/LoginAndTryToSendCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/LoginAndTryToSendCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/authorization/AuthorizedUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +187,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2KH3VVGvDeszCgxIhDcF5NvZAzm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -135,44 +197,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exceptions" />
+      <recent name="commandManager.commandPreProcessing" />
+      <recent name="commandManager.commands" />
       <recent name="responses" />
       <recent name="requestLogic" />
-      <recent name="models.handlers" />
-      <recent name="models.validators" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/responseLogic" />
@@ -348,8 +410,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
         <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
+        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
         <item itemvalue="Gradle.no7_220423_863847963 [run]" />
         <item itemvalue="Gradle.no7_220423_863847963 [build]" />
       </list>
@@ -391,7 +453,7 @@
       <workItem from="1681736180458" duration="8720000" />
       <workItem from="1682195109455" duration="3573000" />
       <workItem from="1682886324403" duration="8440000" />
-      <workItem from="1682894888391" duration="82974000" />
+      <workItem from="1682894888391" duration="132883000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -659,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683333436014</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="chore: rerun javadoc">
+      <created>1683333487464</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683333487464</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +751,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="prepare client-server architecture" />
     <MESSAGE value="apply some fixes" />
     <MESSAGE value="client moved, client-server part 3" />
     <MESSAGE value="client-server part 3" />
@@ -699,7 +767,6 @@
     <MESSAGE value="feat: simplification part 1" />
     <MESSAGE value="feat: simplification part 2" />
     <MESSAGE value="bug fixes (approved version)" />
-    <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="feat: remove single client restriction, add database load logic, changed project folder structure" />
     <MESSAGE value="feat: authorization part 1" />
     <MESSAGE value="feat: authorization part 2" />
@@ -707,7 +774,9 @@
     <MESSAGE value="feat: authorisation part 3" />
     <MESSAGE value="fix: bug fixes with registration &amp; auth" />
     <MESSAGE value="chore: restructured client + some inspections" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: restructured client + some inspections" />
+    <MESSAGE value="chore: rerun javadoc" />
+    <MESSAGE value="critical: reformed commands + authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="critical: reformed commands + authorization" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -751,14 +820,34 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/DBUserManager.java</url>
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java</url>
           <line>47</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUsersLogic/DBUserManager.java</url>
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java</url>
           <line>75</line>
           <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionManager.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBCollectionManager.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/commandManager/commands/RemoveByIdCommand.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
