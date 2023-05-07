@@ -113,20 +113,9 @@ public class Main {
                         }
                     };
 
-                    /*Runnable forceInterrupt = () -> {
-                        try {
-                            int ignored = System.in.read();
-                            latch.countDown();
-                        } catch (IOException ex) {
-                            logger.error("Something went wrong during i/o.");
-                        }
-                    };*/
-
                     Thread tWait = new Thread(wait);
-                    //Thread tForceInt = new Thread(forceInterrupt);
 
                     tWait.start();
-                    //tForceInt.start();
 
                     try {
                         latch.await();

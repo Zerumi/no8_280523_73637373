@@ -11,6 +11,7 @@ public class Utilities {
             throw new WrongAmountOfArgumentsException("Provided " + (provided - 1) + " arguments, expected " + expected);
     }
 
+    @SuppressWarnings("SameReturnValue")
     public static boolean hasNextLineOrThrow(Scanner scanner) throws StreamInterruptedException {
         if (scanner.hasNextLine()) return true;
         else throw new StreamInterruptedException("Поток ввода был преждевременно остановлен.");

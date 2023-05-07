@@ -26,10 +26,7 @@ public class ExitCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) {
-        logger.trace("Invoked exit command. Saving a collection...");
-        /*logger.info("Someone is disconnected... Saving a collection...");
-        SaveCommand saveCommand = new SaveCommand();
-        saveCommand.execute(new String[0]);*/
+        logger.trace("Invoked exit command.");
         response = CommandStatusResponse.ofString("Prepared for exit!");
     }
 

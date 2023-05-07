@@ -21,10 +21,6 @@ public class DateEditor implements PropertyEditor {
 
     private Date result;
 
-    /**
-     * Default constructor
-     */
-    public DateEditor()
     {
         result = new Date();
     }
