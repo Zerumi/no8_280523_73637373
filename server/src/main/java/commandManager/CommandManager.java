@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.CallerBack;
 import requests.CommandClientRequest;
-import responseLogic.responseSenders.CommandResponseSender;
+import responseLogic.responseSenders.ResponseSender;
 import responses.CommandStatusResponse;
 import serverLogic.ServerConnection;
 
@@ -81,7 +81,7 @@ public class CommandManager {
             response = new CommandStatusResponse("В командном менеджере произошла непредвиденная ошибка!", -92);
             logger.fatal(response.getResponse(), e);
         }
-        CommandResponseSender.sendResponse(response, answerConnection, requester);
+        ResponseSender.sendResponse(response, answerConnection, requester);
     }
 
     public BaseCommand fromDescription(CommandDescription description) {

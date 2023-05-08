@@ -49,7 +49,7 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
 
         Iterator<Route> iterator;
         try {
-            iterator = DBIntegrationUtility.getAccessibleCollection(callerID, HashSet::new).iterator();
+            iterator = DBIntegrationUtility.getInstance().getAccessibleCollection(callerID, HashSet::new).iterator();
         } catch (SQLException | IOException e) {
             response = new CommandStatusResponse("We can't got accessible collection", -501);
             return;
@@ -62,7 +62,7 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
             logger.debug("Comparing: current -- " + current.getDistance() + " vs " + obj.getDistance());
             if (comparator.compare(current, obj) > 0) {
                 logger.debug(" -- Greater / Removing...");
-                if (DBIntegrationUtility.removeFromCollectionAndDB(callerID, current.getId())) {
+                if (DBIntegrationUtility.getInstance().removeFromCollectionAndDB(callerID, current.getId())) {
                     count++;
                 } else logger.warn("Element isn't removed...");
             } else {

@@ -2,6 +2,7 @@ import databaseLogic.databaseElementLogic.DBCollectionLoader;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import multiThreadLogic.RequestReadMTLogic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.RequestReader;
@@ -50,17 +51,20 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
-
-                RequestReader rqReader = new RequestReader(rq.getInputStream());
-                BaseRequest baseRequest = rqReader.readObject();
-                var request = new ServerRequest(baseRequest, rq.getCallerBack(), connection);
-                RequestWorkerManager worker = new RequestWorkerManager();
-                worker.workWithRequest(request);
-            } catch (IOException e) {
-                logger.error("Something went wrong during I/O", e);
-            } catch (ClassNotFoundException e) {
-                logger.error("Class not Found", e);
-            } catch (RuntimeException e) {
+                RequestReadMTLogic.getExecutor().execute(() -> {
+                    try {
+                        RequestReader rqReader = new RequestReader(rq.getInputStream());
+                        BaseRequest baseRequest = rqReader.readObject();
+                        var request = new ServerRequest(baseRequest, rq.getCallerBack(), connection);
+                        RequestWorkerManager worker = new RequestWorkerManager();
+                        worker.workWithRequest(request);
+                    } catch (IOException e) {
+                        logger.error("Something went wrong during I/O", e);
+                    } catch (ClassNotFoundException e) {
+                        logger.error("Class not Found", e);
+                    }
+                });
+            } catch (Exception e) {
                 logger.fatal(e);
             }
         }

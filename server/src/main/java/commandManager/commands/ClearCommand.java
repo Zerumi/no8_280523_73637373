@@ -29,7 +29,7 @@ public class ClearCommand implements BaseCommand, AuthorizableCommand {
 
     @Override
     public void execute(String[] args) {
-        response = DBIntegrationUtility.clearCollectionInDBAndMemory(callerID).toCommandResponse();
+        response = DBIntegrationUtility.getInstance().clearCollectionInDBAndMemory(callerID).toCommandResponse();
         logger.info(response.getResponse());
     }
 

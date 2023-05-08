@@ -45,7 +45,7 @@ public class AddIfMaxCommand implements BaseCommand, ArgumentConsumer<Route>, Au
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         if (obj.compareTo(collectionHandler.getMax(new RouteDistanceComparator())) > 0) {
-            response = DBIntegrationUtility.addRouteToDBAndCollection(obj, callerID).toCommandResponse();
+            response = DBIntegrationUtility.getInstance().addRouteToDBAndCollection(obj, callerID).toCommandResponse();
         } else {
             response = new CommandStatusResponse("Element not added: it's not greater than max value.", 3);
         }

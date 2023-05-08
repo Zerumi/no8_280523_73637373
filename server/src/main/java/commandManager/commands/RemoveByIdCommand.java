@@ -33,7 +33,7 @@ public class RemoveByIdCommand implements BaseCommand, AuthorizableCommand {
 
     @Override
     public void execute(String[] args) {
-        if (!DBIntegrationUtility.removeFromCollectionAndDB(callerID, Long.parseLong(args[1])))
+        if (!DBIntegrationUtility.getInstance().removeFromCollectionAndDB(callerID, Long.parseLong(args[1])))
             response = new CommandStatusResponse("Element with that id doesn't exists or you don't have access to edit this object.", -922);
         else
             response = CommandStatusResponse.ofString("Executed.");

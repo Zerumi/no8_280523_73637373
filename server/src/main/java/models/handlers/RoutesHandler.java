@@ -2,9 +2,11 @@ package models.handlers;
 
 import models.Route;
 import models.comparators.RouteComparator;
+import multiThreadLogic.CollectinonSyncronize;
 
 import java.time.Instant;
 import java.util.*;
+import java.util.concurrent.locks.Lock;
 import java.util.stream.Collectors;
 
 /**
@@ -18,10 +20,14 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     private static RoutesHandler singletoneMoment;
     private final Date initDate;
     private HashSet<Route> routes;
+    private final Lock readLock;
+    private final Lock writeLock;
 
     private RoutesHandler() {
         routes = new HashSet<>();
         initDate = Date.from(Instant.now());
+        readLock = CollectinonSyncronize.getInstance().getLock().readLock();
+        writeLock = CollectinonSyncronize.getInstance().getLock().writeLock();
     }
 
     /**
@@ -42,7 +48,10 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public HashSet<Route> getCollection() {
-        return routes;
+        readLock.lock();
+        var result = routes;
+        readLock.unlock();
+        return result;
     }
 
     /**
@@ -52,8 +61,10 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void setCollection(HashSet<Route> routes) {
+        writeLock.lock();
         this.routes = routes;
         sort();
+        writeLock.unlock();
     }
 
     /**
@@ -63,8 +74,10 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void addElementToCollection(Route e) {
+        writeLock.lock();
         routes.add(e);
         sort();
+        writeLock.unlock();
     }
 
     /**
@@ -72,6 +85,7 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public void sort() {
+        writeLock.lock();
         HashSet<Route> sorted = new HashSet<>();
 
         for (Iterator<Route> it = routes.stream().sorted(new RouteComparator()).iterator(); it.hasNext(); ) {
@@ -81,11 +95,15 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
         }
 
         this.routes = sorted;
+        writeLock.unlock();
     }
 
     @Override
     public HashSet<Route> getSorted() {
-        return routes.stream().sorted(new RouteComparator()).collect(Collectors.toCollection(LinkedHashSet::new));
+        readLock.lock();
+        var result = routes.stream().sorted(new RouteComparator()).collect(Collectors.toCollection(LinkedHashSet::new));
+        readLock.unlock();
+        return result;
     }
 
     /**
@@ -95,10 +113,14 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public Route getFirstOrNew() {
+        Route result;
+        readLock.lock();
         if (routes.iterator().hasNext())
-            return routes.iterator().next();
+            result = routes.iterator().next();
         else
-            return new Route();
+            result = new Route();
+        readLock.unlock();
+        return result;
     }
 
     @Override
@@ -114,9 +136,11 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     @Override
     public Route getLastElement() {
         Route result = null;
+        readLock.lock();
         for (Route route : routes) {
             result = route;
         }
+        readLock.unlock();
         return result;
     }
 
@@ -128,8 +152,10 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public Route getMin(Comparator<Route> comparator) {
-
-        return getCollection().stream().min(comparator).orElse(null);
+        readLock.lock();
+        var result = getCollection().stream().min(comparator).orElse(null);
+        readLock.unlock();
+        return result;
     }
 
     /**
@@ -140,6 +166,9 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
      */
     @Override
     public Route getMax(Comparator<Route> comparator) {
-        return getCollection().stream().max(comparator).orElse(null);
+        readLock.lock();
+        var result = getCollection().stream().max(comparator).orElse(null);
+        readLock.unlock();
+        return result;
     }
 }

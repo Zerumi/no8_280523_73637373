@@ -5,7 +5,7 @@ import clientLogic.AuthorizeManager;
 import exceptions.authorizationExceptions.AuthorizeException;
 import requestLogic.requests.ServerRequest;
 import requests.RegistrationRequest;
-import responseLogic.responseSenders.SuppressIOResponseSender;
+import responseLogic.responseSenders.ResponseSender;
 import responses.AuthorizeResponse;
 import responses.BaseResponse;
 import responses.ErrorResponse;
@@ -21,7 +21,7 @@ public class RegistrationRequestWorker implements RequestWorker {
         } catch (AuthorizeException e) {
             response = new ErrorResponse(e.getMessage());
         } finally {
-            SuppressIOResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
+            ResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
         }
     }
 }

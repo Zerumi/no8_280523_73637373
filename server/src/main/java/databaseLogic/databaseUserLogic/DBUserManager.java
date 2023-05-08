@@ -7,6 +7,7 @@ import exceptions.authorizationExceptions.AuthorizeException;
 import exceptions.authorizationExceptions.RegistrationFailedException;
 import exceptions.authorizationExceptions.UnregisteredException;
 import exceptions.authorizationExceptions.WrongPasswordException;
+import multiThreadLogic.CollectinonSyncronize;
 import org.apache.commons.lang3.ArrayUtils;
 import requestLogic.CallerBack;
 
@@ -17,20 +18,26 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Properties;
+import java.util.concurrent.locks.Lock;
 
 public class DBUserManager implements Closeable {
 
     private final PasswordEncryption encryptionAlg;
     private final Connection connection;
+    private final Lock writeLock;
+    private final Lock readLock;
 
     public DBUserManager(PasswordEncryption encryptionAlg) throws IOException, SQLException {
         this.encryptionAlg = encryptionAlg;
         Properties info = new Properties();
         info.load(this.getClass().getResourceAsStream("/db.cfg"));
         connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/studs", info);
+        readLock = CollectinonSyncronize.getInstance().getLock().readLock();
+        writeLock = CollectinonSyncronize.getInstance().getLock().writeLock();
     }
 
     public AuthorizedUserData addUserToDatabase(CallerBack callerBack, RegistrationData data) throws SQLException, RegistrationFailedException {
+        writeLock.lock();
         String login = data.getLogin();
         String name = data.getName();
         char[] passSalt = encryptionAlg.generateSalt();
@@ -65,11 +72,12 @@ public class DBUserManager implements Closeable {
         }
         rs.close();
         getUserID.close();
+        writeLock.unlock();
         return new AuthorizedUserData(userID, name, login, LocalDateTime.ofInstant(lastLogin.toInstant(), ZoneOffset.UTC), regIP, LocalDateTime.ofInstant(regTime.toInstant(), ZoneOffset.UTC));
     }
 
     public AuthorizedUserData getUserFromDatabase(AuthenticationData authData) throws AuthorizeException, SQLException {
-
+        readLock.lock();
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM \"User\" " +
                 "WHERE login = ?", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
         statement.setString(1, authData.getLogin());
@@ -93,13 +101,16 @@ public class DBUserManager implements Closeable {
                 rs.updateRow();
                 rs.close();
                 statement.close();
+                readLock.unlock();
                 return userData;
             } else {
                 rs.close();
                 statement.close();
+                readLock.unlock();
                 throw new WrongPasswordException("Incorrect password!");
             }
         } else {
+            readLock.unlock();
             throw new UnregisteredException("User cannot be found in database");
         }
     }

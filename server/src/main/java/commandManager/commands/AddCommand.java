@@ -44,7 +44,7 @@ public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, Authori
 
     @Override
     public void execute(String[] args) {
-        response = DBIntegrationUtility.addRouteToDBAndCollection(obj, callerID).toCommandResponse();
+        response = DBIntegrationUtility.getInstance().addRouteToDBAndCollection(obj, callerID).toCommandResponse();
         logger.info(response.getResponse());
     }
 

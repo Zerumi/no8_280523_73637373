@@ -45,7 +45,7 @@ public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, Au
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         if (obj.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
-            response = DBIntegrationUtility.addRouteToDBAndCollection(obj, callerID).toCommandResponse();
+            response = DBIntegrationUtility.getInstance().addRouteToDBAndCollection(obj, callerID).toCommandResponse();
         } else {
             response = new CommandStatusResponse("Element not added: it's not lower than min value.", 3);
         }

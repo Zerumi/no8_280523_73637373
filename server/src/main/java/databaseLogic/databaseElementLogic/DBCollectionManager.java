@@ -4,6 +4,7 @@ import exceptions.ElementNotAddedException;
 import models.Coordinates;
 import models.Location;
 import models.Route;
+import multiThreadLogic.CollectinonSyncronize;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,19 +12,25 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
+import java.util.concurrent.locks.Lock;
 
 public class DBCollectionManager implements Closeable {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     private final Connection connection;
+    private final Lock readLock;
+    private final Lock writeLock;
 
     protected DBCollectionManager() throws SQLException, IOException {
         Properties info = new Properties();
         info.load(this.getClass().getResourceAsStream("/db.cfg"));
         connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/studs", info);
+        readLock = CollectinonSyncronize.getInstance().getLock().readLock();
+        writeLock = CollectinonSyncronize.getInstance().getLock().writeLock();
     }
 
     protected boolean updateElementInDataBase(Route route, Long id) throws SQLException {
         try {
+            writeLock.lock();
             Coordinates coordinates = route.getCoordinates();
             PreparedStatement updateCoordStatement = connection.prepareStatement("UPDATE Coordinates AS c " +
                     "SET x = ?, " +
@@ -65,11 +72,14 @@ public class DBCollectionManager implements Closeable {
             return true;
         } catch (ElementNotAddedException e) {
             logger.error("Something went wrong during fetching ID: ", e);
+        } finally {
+            writeLock.unlock();
         }
         return false;
     }
 
     protected void updateNullableLocation(Location location, ResultSet lastLocationIdRs, int columnIndex) throws ElementNotAddedException, SQLException {
+        writeLock.lock();
         Long toId = getIdFromStatement(lastLocationIdRs, columnIndex);
         if (toId == null) {
             Long newId = addLocation(location);
@@ -78,9 +88,11 @@ public class DBCollectionManager implements Closeable {
                 lastLocationIdRs.updateRow();
             }
         } else updateNonNullLocation(location, toId);
+        writeLock.unlock();
     }
 
     private void updateNonNullLocation(Location location, long locationId) throws SQLException {
+        writeLock.lock();
         PreparedStatement updateLocationStatement = connection.prepareStatement(
                 "UPDATE Location AS l " +
                         "SET x = ?," +
@@ -95,9 +107,11 @@ public class DBCollectionManager implements Closeable {
         updateLocationStatement.setLong(5, locationId);
         updateLocationStatement.executeUpdate();
         updateLocationStatement.close();
+        writeLock.unlock();
     }
 
     protected boolean addElementToDataBase(Route route) throws SQLException {
+        writeLock.lock();
         try {
             Long coordId = addCoordinates(route.getCoordinates());
             Long fromId = addLocation(route.getFrom());
@@ -121,12 +135,15 @@ public class DBCollectionManager implements Closeable {
             return true;
         } catch (ElementNotAddedException e) {
             logger.error("We couldn't push element to a database");
+        } finally {
+            writeLock.unlock();
         }
         return false;
     }
 
     private Long addCoordinates(Coordinates coordinates) throws SQLException, ElementNotAddedException {
         if (coordinates == null) return null;
+        writeLock.lock();
         // add coords
         PreparedStatement preparedStatementCoordinates = connection.prepareStatement("INSERT INTO coordinates(coord_id, x, y) " +
                 "VALUES(DEFAULT, ?, ?)");
@@ -139,11 +156,13 @@ public class DBCollectionManager implements Closeable {
         ResultSet rs = getLastIdStatement.executeQuery("SELECT currval('coordinates_coord_id_seq');");
         var coordId = getIdFromStatement(rs, 1);
         logger.debug("gen coordid: " + coordId);
+        writeLock.unlock();
         return coordId;
     }
 
     private Long addLocation(Location location) throws SQLException, ElementNotAddedException {
         if (location == null) return null;
+        writeLock.lock();
         // add coords
         PreparedStatement preparedStatementLocation = connection.prepareStatement("INSERT INTO location(location_id, x, y, z, name) " +
                 "VALUES(DEFAULT, ?, ?, ?, ?)");
@@ -158,19 +177,28 @@ public class DBCollectionManager implements Closeable {
         ResultSet rs = getLastIdStatement.executeQuery("SELECT currval('location_location_id_seq1');");
         var locationID = getIdFromStatement(rs, 1);
         logger.debug("gen locID: " + locationID);
+        writeLock.unlock();
         return locationID;
     }
 
     private Long getIdFromStatement(ResultSet statementResult, int columnIndex) throws SQLException, ElementNotAddedException {
+        readLock.lock();
         long result;
         if (statementResult.next()) {
             result = statementResult.getLong(columnIndex);
-            if (statementResult.wasNull()) return null;
-        } else throw new ElementNotAddedException();
+            if (statementResult.wasNull()) {
+                readLock.unlock();
+                return null;
+            } else readLock.unlock();
+        } else {
+            readLock.unlock();
+            throw new ElementNotAddedException();
+        }
         return result;
     }
 
     protected boolean removeElementFromDatabase(Long id) throws SQLException {
+        writeLock.lock();
         Statement getRouteToRemove = connection.createStatement();
         ResultSet rs = getRouteToRemove.executeQuery("SELECT * FROM route " +
                 "WHERE route_id = " + id);
@@ -193,7 +221,7 @@ public class DBCollectionManager implements Closeable {
             removeLocationsStatement.executeUpdate("DELETE FROM location " +
                     "WHERE location_id = " + toId + " OR location_id = " + fromId);
             removeLocationsStatement.close();
-
+            writeLock.unlock();
             return true;
         } else return false;
     }

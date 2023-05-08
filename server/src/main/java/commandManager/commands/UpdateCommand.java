@@ -38,7 +38,7 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
 
     @Override
     public void execute(String[] args) {
-        response = DBIntegrationUtility.updateElementInDBAndCollection(obj, Long.parseLong(args[1]), callerID).toCommandResponse();
+        response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, Long.parseLong(args[1]), callerID).toCommandResponse();
         logger.info(response.getResponse());
     }
 

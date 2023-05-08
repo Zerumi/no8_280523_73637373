@@ -2,12 +2,13 @@ package requestLogic.requestWorkers;
 
 import exceptions.CannotProceedException;
 import exceptions.UnsupportedRequestException;
+import multiThreadLogic.RequestHandleMTLogic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.requestAnnotationProcessors.AnnotationProcessor;
 import requestLogic.requests.ServerRequest;
 import requests.*;
-import responseLogic.responseSenders.SuppressIOResponseSender;
+import responseLogic.responseSenders.ResponseSender;
 import responses.ErrorResponse;
 
 import java.util.LinkedHashMap;
@@ -29,19 +30,22 @@ public class RequestWorkerManager {
     }
 
     public void workWithRequest(ServerRequest request) {
-        try {
-            request = new AnnotationProcessor(request).proceedAnnotations();
-            RequestWorker requestWorker = Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(()
-                    -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
-            requestWorker.workWithRequest(request);
-        } catch (UnsupportedRequestException e) {
-            ErrorResponse response = new ErrorResponse("Server understood Request class, but didn't know how to handle it.");
-            SuppressIOResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
-            logger.error("Got an invalid request.", e);
-        } catch (CannotProceedException e) {
-            ErrorResponse response = new ErrorResponse("Request can't be proceed / passed some checks: " + e.getMessage());
-            SuppressIOResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
-            logger.error("Request can't be proceed / passed some checks.", e);
-        }
+        RequestHandleMTLogic.getExecutor().execute(() -> {
+            var finalRequest = request;
+            try {
+                finalRequest = new AnnotationProcessor(finalRequest).proceedAnnotations();
+                RequestWorker requestWorker = Optional.ofNullable(workers.get(finalRequest.getUserRequest().getClass())).orElseThrow(()
+                        -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
+                requestWorker.workWithRequest(finalRequest);
+            } catch (UnsupportedRequestException e) {
+                ErrorResponse response = new ErrorResponse("Server understood Request class, but didn't know how to handle it.");
+                ResponseSender.sendResponse(response, finalRequest.getConnection(), finalRequest.getFrom());
+                logger.error("Got an invalid request.", e);
+            } catch (CannotProceedException e) {
+                ErrorResponse response = new ErrorResponse("Request can't be proceed / passed some checks: " + e.getMessage());
+                ResponseSender.sendResponse(response, finalRequest.getConnection(), finalRequest.getFrom());
+                logger.error("Request can't be proceed / passed some checks.", e);
+            }
+        });
     }
 }
