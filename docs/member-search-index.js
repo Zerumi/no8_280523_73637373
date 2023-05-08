@@ -257,6 +257,11 @@ memberSearchIndex = [{
     "c": "StatusResponse",
     "l": "code()"
 }, {
+    "p": "multiThreadLogic",
+    "c": "CollectinonSyncronize",
+    "l": "CollectinonSyncronize()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commandPreProcessing.preProcessors",
     "c": "CommandAuthorizePreProcessor",
     "l": "CommandAuthorizePreProcessor()",
@@ -275,11 +280,6 @@ memberSearchIndex = [{
     "p": "requestLogic.requestWorkers",
     "c": "CommandConfigureRequestWorker",
     "l": "CommandConfigureRequestWorker()",
-    "u": "%3Cinit%3E()"
-}, {
-    "p": "responseLogic.responseSenders",
-    "c": "CommandConfigureResponseSender",
-    "l": "CommandConfigureResponseSender()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "commandLogic",
@@ -330,11 +330,6 @@ memberSearchIndex = [{
     "p": "requestLogic.requestSenders",
     "c": "CommandRequestSender",
     "l": "CommandRequestSender()",
-    "u": "%3Cinit%3E()"
-}, {
-    "p": "responseLogic.responseSenders",
-    "c": "CommandResponseSender",
-    "l": "CommandResponseSender()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "exceptions",
@@ -725,28 +720,40 @@ memberSearchIndex = [{
     "c": "Route",
     "l": "getDistance()"
 }, {"p": "exceptions", "c": "GotAnErrorResponseException", "l": "getErrorResponse()"}, {
+    "p": "multiThreadLogic",
+    "c": "RequestHandleMTLogic",
+    "l": "getExecutor()"
+}, {"p": "multiThreadLogic", "c": "RequestReadMTLogic", "l": "getExecutor()"}, {
+    "p": "multiThreadLogic",
+    "c": "ResponseSendMTLogic",
+    "l": "getExecutor()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getFirstOrNew()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getFirstOrNew()"
+}, {"p": "models", "c": "Route", "l": "getFrom()"}, {
+    "p": "requestLogic.requests",
+    "c": "ServerRequest",
+    "l": "getFrom()"
+}, {"p": "models", "c": "Route", "l": "getId()"}, {
     "p": "models.handlers",
     "c": "CollectionHandler",
-    "l": "getFirstOrNew()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getFirstOrNew()"}, {
-    "p": "models",
-    "c": "Route",
-    "l": "getFrom()"
-}, {"p": "requestLogic.requests", "c": "ServerRequest", "l": "getFrom()"}, {
-    "p": "models",
-    "c": "Route",
-    "l": "getId()"
-}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getInitDate()"}, {
-    "p": "models.handlers",
-    "c": "RoutesHandler",
     "l": "getInitDate()"
-}, {"p": "requestLogic", "c": "StatusRequest", "l": "getInputStream()"}, {
-    "p": "clientLogic",
-    "c": "SessionHandler",
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInitDate()"}, {
+    "p": "requestLogic",
+    "c": "StatusRequest",
+    "l": "getInputStream()"
+}, {"p": "clientLogic", "c": "SessionHandler", "l": "getInstance()"}, {
+    "p": "commandManager",
+    "c": "CommandDescriptionHolder",
     "l": "getInstance()"
-}, {"p": "commandManager", "c": "CommandDescriptionHolder", "l": "getInstance()"}, {
-    "p": "models.handlers",
-    "c": "RoutesHandler",
+}, {
+    "p": "databaseLogic.databaseElementLogic",
+    "c": "DBIntegrationUtility",
+    "l": "getInstance()"
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInstance()"}, {
+    "p": "multiThreadLogic",
+    "c": "CollectinonSyncronize",
     "l": "getInstance()"
 }, {"p": "requestLogic.authentication", "c": "AuthDataHolder", "l": "getInstance()"}, {
     "p": "fileLogic.editors",
@@ -757,6 +764,10 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "getLastElement()"
 }, {"p": "requests", "c": "CommandClientRequest", "l": "getLineArgs()"}, {
+    "p": "multiThreadLogic",
+    "c": "CollectinonSyncronize",
+    "l": "getLock()"
+}, {
     "p": "serverLogic",
     "c": "UdpConnectionBlockDecorator",
     "l": "getLockState()"
@@ -1276,10 +1287,20 @@ memberSearchIndex = [{
     "l": "removePropertyChangeListener(PropertyChangeListener)",
     "u": "removePropertyChangeListener(java.beans.PropertyChangeListener)"
 }, {
+    "p": "multiThreadLogic",
+    "c": "RequestHandleMTLogic",
+    "l": "RequestHandleMTLogic()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "requestLogic",
     "c": "RequestReader",
     "l": "RequestReader(InputStream)",
     "u": "%3Cinit%3E(java.io.InputStream)"
+}, {
+    "p": "multiThreadLogic",
+    "c": "RequestReadMTLogic",
+    "l": "RequestReadMTLogic()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "requestLogic.requestSenders",
     "c": "RequestSender",
@@ -1304,6 +1325,11 @@ memberSearchIndex = [{
     "p": "responseLogic.responseSenders",
     "c": "ResponseSender",
     "l": "ResponseSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "multiThreadLogic",
+    "c": "ResponseSendMTLogic",
+    "l": "ResponseSendMTLogic()",
     "u": "%3Cinit%3E()"
 }, {"p": "requests.requestAnnotations", "c": "Authorize", "l": "roles()"}, {
     "p": "models",
@@ -1393,21 +1419,6 @@ memberSearchIndex = [{
     "c": "ResponseSender",
     "l": "sendResponse(BaseResponse, ServerConnection, CallerBack)",
     "u": "sendResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
-}, {
-    "p": "responseLogic.responseSenders",
-    "c": "SuppressIOResponseSender",
-    "l": "sendResponse(BaseResponse, ServerConnection, CallerBack)",
-    "u": "sendResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
-}, {
-    "p": "responseLogic.responseSenders",
-    "c": "CommandConfigureResponseSender",
-    "l": "sendResponse(CommandDescriptionsResponse, ServerConnection, CallerBack)",
-    "u": "sendResponse(responses.CommandDescriptionsResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
-}, {
-    "p": "responseLogic.responseSenders",
-    "c": "CommandResponseSender",
-    "l": "sendResponse(CommandStatusResponse, ServerConnection, CallerBack)",
-    "u": "sendResponse(responses.CommandStatusResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
 }, {
     "p": "serverLogic",
     "c": "ServerConnectionHandler",
@@ -1575,27 +1586,22 @@ memberSearchIndex = [{
     "l": "StreamInterruptedException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {"p": "fileLogic.editors", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
-    "p": "responseLogic.responseSenders",
-    "c": "SuppressIOResponseSender",
-    "l": "SuppressIOResponseSender()",
-    "u": "%3Cinit%3E()"
-}, {"p": "clientLogic", "c": "Session", "l": "TIMEOUT"}, {
-    "p": "responseLogic",
-    "c": "StatusResponse",
-    "l": "toCommandResponse()"
-}, {"p": "authorization", "c": "AuthorizedUserData", "l": "toString()"}, {
+    "p": "clientLogic",
+    "c": "Session",
+    "l": "TIMEOUT"
+}, {"p": "responseLogic", "c": "StatusResponse", "l": "toCommandResponse()"}, {
+    "p": "authorization",
+    "c": "AuthorizedUserData",
+    "l": "toString()"
+}, {"p": "models", "c": "Coordinates", "l": "toString()"}, {
     "p": "models",
-    "c": "Coordinates",
+    "c": "Location",
     "l": "toString()"
-}, {"p": "models", "c": "Location", "l": "toString()"}, {
-    "p": "models",
-    "c": "Route",
+}, {"p": "models", "c": "Route", "l": "toString()"}, {
+    "p": "requestLogic",
+    "c": "CallerBack",
     "l": "toString()"
-}, {"p": "requestLogic", "c": "CallerBack", "l": "toString()"}, {
-    "p": "responseLogic",
-    "c": "StatusResponse",
-    "l": "toString()"
-}, {
+}, {"p": "responseLogic", "c": "StatusResponse", "l": "toString()"}, {
     "p": "serverLogic",
     "c": "UdpConnectionBlockDecorator",
     "l": "UdpConnectionBlockDecorator(UdpServerConnection, boolean)",
