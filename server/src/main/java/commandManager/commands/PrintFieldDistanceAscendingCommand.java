@@ -28,7 +28,7 @@ public class PrintFieldDistanceAscendingCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Prints all distance fields in ascending sorting.";
+        return "Prints all distance fields in ascending sorting";
     }
 
     @Override

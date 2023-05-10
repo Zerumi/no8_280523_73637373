@@ -29,7 +29,7 @@ public class MinByCreationDateCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Returns element from collection with min creation date.";
+        return "Returns element from collection with min creation date";
     }
 
     @Override

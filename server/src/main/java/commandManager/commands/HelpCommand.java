@@ -24,7 +24,7 @@ public class HelpCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Shows reference about available commands.";
+        return "Shows reference about available commands";
     }
 
     @Override

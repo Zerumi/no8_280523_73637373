@@ -26,7 +26,7 @@ public class InfoCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Shows information about the collection.";
+        return "Shows information about the collection";
     }
 
     @Override

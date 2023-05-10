@@ -33,7 +33,8 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
 
     @Override
     public String getDescr() {
-        return "Removes elements from collection greater than given in argument. Comparing is set by distance.";
+        return "Removes elements from collection greater than given in argument. Comparing is set by distance. " +
+                "N/B: you may only remove elements belongs to you";
     }
 
     @Override

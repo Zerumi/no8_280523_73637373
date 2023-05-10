@@ -13,7 +13,7 @@ public class ExecuteScriptCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Reads and executes script from file.";
+        return "Reads and executes script from file";
     }
 
     @Override

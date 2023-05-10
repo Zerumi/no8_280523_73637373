@@ -24,7 +24,7 @@ public class ClearCommand implements BaseCommand, AuthorizableCommand {
 
     @Override
     public String getDescr() {
-        return "Clears collection";
+        return "Clears the collection. N/B: you may only remove elements belongs to you";
     }
 
     @Override

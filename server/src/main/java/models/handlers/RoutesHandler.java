@@ -2,11 +2,12 @@ package models.handlers;
 
 import models.Route;
 import models.comparators.RouteComparator;
-import multiThreadLogic.CollectinonSyncronize;
 
 import java.time.Instant;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.stream.Collectors;
 
 /**
@@ -26,8 +27,9 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     private RoutesHandler() {
         routes = new HashSet<>();
         initDate = Date.from(Instant.now());
-        readLock = CollectinonSyncronize.getInstance().getLock().readLock();
-        writeLock = CollectinonSyncronize.getInstance().getLock().writeLock();
+        ReadWriteLock rwl = new ReentrantReadWriteLock();
+        readLock = rwl.readLock();
+        writeLock = rwl.writeLock();
     }
 
     /**

@@ -28,7 +28,7 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
 
     @Override
     public String getDescr() {
-        return "Updates element by it ID.";
+        return "Updates element by it ID. N/B: you may only edit elements belongs to you";
     }
 
     @Override

@@ -34,7 +34,8 @@ public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, Authori
 
     @Override
     public String getDescr() {
-        return "Adds new element to collection.";
+        return "Adds new element to collection. It also attach created element with user " +
+                "who created it";
     }
 
     @Override

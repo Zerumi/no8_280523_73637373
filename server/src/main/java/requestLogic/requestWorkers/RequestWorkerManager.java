@@ -2,7 +2,6 @@ package requestLogic.requestWorkers;
 
 import exceptions.CannotProceedException;
 import exceptions.UnsupportedRequestException;
-import multiThreadLogic.RequestHandleMTLogic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.requestAnnotationProcessors.AnnotationProcessor;
@@ -13,11 +12,13 @@ import responses.ErrorResponse;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class RequestWorkerManager {
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
-
+    private static final Executor handleRqMtExecutor = Executors.newWorkStealingPool();
     private final LinkedHashMap<Class<?>, RequestWorker> workers = new LinkedHashMap<>();
 
     public RequestWorkerManager() {
@@ -30,7 +31,7 @@ public class RequestWorkerManager {
     }
 
     public void workWithRequest(ServerRequest request) {
-        RequestHandleMTLogic.getExecutor().execute(() -> {
+        handleRqMtExecutor.execute(() -> {
             var finalRequest = request;
             try {
                 finalRequest = new AnnotationProcessor(finalRequest).proceedAnnotations();

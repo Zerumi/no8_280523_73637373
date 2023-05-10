@@ -2,7 +2,6 @@ import databaseLogic.databaseElementLogic.DBCollectionLoader;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
-import multiThreadLogic.RequestReadMTLogic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.RequestReader;
@@ -16,11 +15,14 @@ import serverLogic.ServerConnection;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashSet;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 @SuppressWarnings("InfiniteLoopStatement")
 public class Main {
     public static final int PORT = 50456;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
+    private static final Executor readRqMtExecutor = Executors.newCachedThreadPool();
 
     public static void main(String[] args) {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
@@ -51,7 +53,7 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
-                RequestReadMTLogic.getExecutor().execute(() -> {
+                readRqMtExecutor.execute(() -> {
                     try {
                         RequestReader rqReader = new RequestReader(rq.getInputStream());
                         BaseRequest baseRequest = rqReader.readObject();

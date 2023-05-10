@@ -27,7 +27,7 @@ public class CountGreaterThanDistanceCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Shows count of the elements greater than distance value.";
+        return "Shows count of the elements greater than distance value";
     }
 
     @Override

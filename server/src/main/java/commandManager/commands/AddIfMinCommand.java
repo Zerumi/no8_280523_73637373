@@ -32,7 +32,7 @@ public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, Au
 
     @Override
     public String getDescr() {
-        return "Adds element if it's value lower than min value.";
+        return "Adds element if it's value lower than min value. Min value takes from full collection";
     }
 
     @Override

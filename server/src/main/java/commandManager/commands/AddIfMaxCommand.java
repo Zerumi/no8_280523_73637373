@@ -32,7 +32,7 @@ public class AddIfMaxCommand implements BaseCommand, ArgumentConsumer<Route>, Au
 
     @Override
     public String getDescr() {
-        return "Add element if it's value greater than max value.";
+        return "Add element if it's value greater than max value. Max value takes from all collection";
     }
 
     @Override

@@ -23,7 +23,7 @@ public class RemoveByIdCommand implements BaseCommand, AuthorizableCommand {
 
     @Override
     public String getDescr() {
-        return "Removes element from collection by id.";
+        return "Removes element from collection by id. N/B: you may only remove elements belongs to you";
     }
 
     @Override

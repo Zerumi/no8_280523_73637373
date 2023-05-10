@@ -3,7 +3,6 @@ package databaseLogic.databaseElementLogic;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
-import multiThreadLogic.CollectinonSyncronize;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responseLogic.StatusResponse;
@@ -14,6 +13,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Supplier;
 
 public class DBIntegrationUtility {
@@ -29,8 +30,9 @@ public class DBIntegrationUtility {
     private final Lock readLock;
 
     {
-        writeLock = CollectinonSyncronize.getInstance().getLock().writeLock();
-        readLock = CollectinonSyncronize.getInstance().getLock().readLock();
+        ReadWriteLock rwl = new ReentrantReadWriteLock();
+        writeLock = rwl.writeLock();
+        readLock = rwl.readLock();
     }
 
     public static DBIntegrationUtility getInstance() {

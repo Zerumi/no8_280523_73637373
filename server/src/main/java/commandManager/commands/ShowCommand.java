@@ -26,7 +26,7 @@ public class ShowCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Shows every element of the collection in toString() interpretation.";
+        return "Shows every element of the collection in toString() interpretation";
     }
 
     @Override
