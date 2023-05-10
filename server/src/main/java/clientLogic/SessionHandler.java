@@ -27,11 +27,24 @@ public class SessionHandler {
     }
 
     public Session getSession(CallerBack callerBack) throws UnauthorizedException {
-        return sessions.stream().filter(x -> x.getAuthorizedCallerBack().getCallerBack().equals(callerBack)).findAny()
+        Session session = sessions.stream().filter(x -> x.getAuthorizedCallerBack().getCallerBack().equals(callerBack)).findAny()
                 .orElseThrow(() -> new UnauthorizedException("Client is unauthorized"));
+        session.updateTimer();
+        return session;
     }
 
     public void registerSession(AuthorizedCallerBack callerBack) {
         sessions.add(new Session(callerBack));
+    }
+
+    public void removeSession(long callerBackID) {
+        sessions.remove(sessions.stream()
+                .filter(x -> x.getAuthorizedCallerBack().getUserData().userID() == callerBackID)
+                .findAny()
+                .orElse(null));
+    }
+
+    protected void removeSession(Session session) {
+        sessions.remove(session);
     }
 }
