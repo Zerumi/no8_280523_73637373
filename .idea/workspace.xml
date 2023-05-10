@@ -9,10 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add logout">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/utils/Utilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,9 +359,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.no7_220423_863847963:server [installDist]" />
+        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
         <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
         <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
         <item itemvalue="Gradle.no7_220423_863847963 [run]" />
       </list>
     </recent_temporary>
@@ -402,7 +403,8 @@
       <workItem from="1682195109455" duration="3573000" />
       <workItem from="1682886324403" duration="8440000" />
       <workItem from="1682894888391" duration="143974000" />
-      <workItem from="1683538805840" duration="7631000" />
+      <workItem from="1683538805840" duration="17057000" />
+      <workItem from="1683737079840" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -719,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683677465369</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="feat: add logout">
+      <created>1683678348707</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1683678348707</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

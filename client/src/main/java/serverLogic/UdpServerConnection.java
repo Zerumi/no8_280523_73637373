@@ -67,9 +67,9 @@ public class UdpServerConnection implements ServerConnection {
         if (channel.isConnected() && channel.isOpen()) {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
+            Callable<ByteArrayInputStream> callable = this::listenServer;
 
             if (lastRequestSuccess) {
-                Callable<ByteArrayInputStream> callable = this::listenServer;
                 bosFuture = service.submit(callable);
             }
 

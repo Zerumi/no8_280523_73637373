@@ -6,6 +6,7 @@ import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
+import utils.Utilities;
 
 import java.util.HashSet;
 
@@ -25,8 +26,13 @@ public class ShowCommand implements BaseCommand {
     }
 
     @Override
+    public String getArgs() {
+        return "[page]";
+    }
+
+    @Override
     public String getDescr() {
-        return "Shows every element of the collection in toString() interpretation";
+        return "Shows elements (up to 50 elements) of the collection in toString() interpretation.";
     }
 
     @Override
@@ -35,10 +41,28 @@ public class ShowCommand implements BaseCommand {
 
         StringBuilder sb = new StringBuilder();
 
-        handler.getSorted().forEach(e -> sb.append(e.toString()).append('\n'));
+        Long pageNumber = 0L;
+
+        if (handler.getCollection().size() > 15 && args.length == 1) {
+            sb.append("The collection is too large. Sending only 10 elements. " +
+                    "Use show [page] for variate displaying.");
+        }
+
+        if (args.length > 1) {
+            pageNumber = Utilities.handleUserInputID(args[1]);
+
+            if (pageNumber == null) {
+                response = new CommandStatusResponse(
+                        "You must enter a valid page number", -6);
+                return;
+            }
+        }
+
+        handler.getSorted().stream().skip(pageNumber * 15).limit(15)
+                .forEach(e -> sb.append(e.toString()).append('\n'));
         response = CommandStatusResponse.ofString(sb.toString());
 
-        if (handler.getCollection().isEmpty()) {
+        if (sb.isEmpty()) {
             response = CommandStatusResponse.ofString("There's nothing to show.");
         }
 

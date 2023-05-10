@@ -5,9 +5,11 @@ import models.Route;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
+import utils.Utilities;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.Optional;
 
 /**
  * Updates element by its ID.
@@ -38,7 +40,11 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
 
     @Override
     public void execute(String[] args) {
-        response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, Long.parseLong(args[1]), callerID).toCommandResponse();
+        long id = Optional.ofNullable(Utilities.handleUserInputID(args[1])).orElse(-1L);
+        if (id < 0) {
+            response = new CommandStatusResponse("You must enter a valid ID", -7);
+        }
+        response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, id, callerID).toCommandResponse();
         logger.info(response.getResponse());
     }
 
