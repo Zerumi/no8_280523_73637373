@@ -2,6 +2,7 @@ package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
 import exceptions.GotAnErrorResponseException;
+import exceptions.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.CommandClientRequest;
@@ -22,10 +23,12 @@ public class CommandRequestSender {
             response = (CommandStatusResponse) new RequestSender().sendRequest(rq, connection);
         } catch (PortUnreachableException e) {
             logger.warn("Server is unavailable. Please, wait until server will come back.");
-        } catch (IOException e) {
-            logger.error("Something went wrong during I/O operations", e);
+        } catch (ProceedException e) {
+            logger.error("We've lost some packets during getting response: " + e.getMessage());
         } catch (GotAnErrorResponseException e) {
             logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
+        } catch (IOException e) {
+            logger.error("Something went wrong during I/O operations", e);
         }
         return response;
     }

@@ -43,8 +43,8 @@ public class ShowCommand implements BaseCommand {
 
         Long pageNumber = 0L;
 
-        if (handler.getCollection().size() > 15 && args.length == 1) {
-            sb.append("The collection is too large. Sending only 10 elements. " +
+        if (handler.getCollection().size() > 50 && args.length == 1) {
+            sb.append("The collection is too large. Sending only 50 elements. " +
                     "Use show [page] for variate displaying.");
         }
 
@@ -58,7 +58,7 @@ public class ShowCommand implements BaseCommand {
             }
         }
 
-        handler.getSorted().stream().skip(pageNumber * 15).limit(15)
+        handler.getSorted().stream().skip(pageNumber * 50).limit(50)
                 .forEach(e -> sb.append(e.toString()).append('\n'));
         response = CommandStatusResponse.ofString(sb.toString());
 

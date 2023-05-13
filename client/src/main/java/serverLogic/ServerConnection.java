@@ -1,5 +1,6 @@
 package serverLogic;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -33,4 +34,6 @@ public interface ServerConnection {
      * @throws IOException if I/O occurs
      */
     InputStream sendData(byte[] bytesToSend) throws IOException;
+
+    ByteArrayInputStream listenServer() throws IOException;
 }

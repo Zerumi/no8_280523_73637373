@@ -2,6 +2,7 @@ package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
 import exceptions.GotAnErrorResponseException;
+import exceptions.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.CommandDescriptionsRequest;
@@ -29,6 +30,8 @@ public class CommandDescriptionsRequestSender {
             logger.fatal("We can't get available commands because the server is unavailable.");
         } catch (GotAnErrorResponseException e) {
             logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
+        } catch (ProceedException e) {
+            logger.error("We've lost some packets during getting response: " + e.getMessage());
         } catch (IOException e) {
             logger.error("Something went wrong during I/O operations.");
         }

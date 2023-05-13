@@ -91,7 +91,7 @@ public class UdpServerConnection implements ServerConnection {
         return bos;
     }
 
-    private ByteArrayInputStream listenServer() throws IOException {
+    public ByteArrayInputStream listenServer() throws IOException {
         ByteArrayInputStream res = null;
         if (channel.isConnected() && channel.isOpen()) {
             ByteBuffer buf = ByteBuffer.allocate(BUFFER_SIZE);

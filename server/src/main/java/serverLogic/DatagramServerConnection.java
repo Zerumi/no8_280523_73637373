@@ -15,7 +15,7 @@ import java.net.SocketException;
 import java.util.Arrays;
 
 public class DatagramServerConnection implements ServerConnection {
-    private final int BUFFER_SIZE = 4096;
+    public final int BUFFER_SIZE = 4096;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     private final DatagramSocket ds;
 

@@ -8,12 +8,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add logout">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/utils/Utilities.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: teacher's edits">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/ProceedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/responses/ByteArrayPacketResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/responses/IntermediateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/responses/SaveStatusResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +71,38 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="distribution" type="c8890929:TasksNode$1" />
               </path>
@@ -217,51 +262,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no7_220423_863847963:server [installDist]">
-    <configuration name="no7_220423_863847963 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="installDist" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="no7_220423_863847963 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.no7_220423_863847963:client [installDist]">
     <configuration name="no7_220423_863847963 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -295,6 +296,50 @@
         </option>
         <option name="taskNames">
           <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="no7_220423_863847963:client [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="installDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="no7_220423_863847963:client [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
@@ -350,19 +395,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.no7_220423_863847963" />
+      <item itemvalue="Gradle.no7_220423_863847963:client [installDist]" />
+      <item itemvalue="Gradle.no7_220423_863847963:client [run]" />
       <item itemvalue="Gradle.no7_220423_863847963:server [installDist]" />
-      <item itemvalue="Gradle.no7_220423_863847963 [run]" />
       <item itemvalue="Gradle.no7_220423_863847963 [test]" />
-      <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
       <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.no7_220423_863847963:client [installDist]" />
+        <item itemvalue="Gradle.no7_220423_863847963:client [run]" />
         <item itemvalue="Gradle.no7_220423_863847963:server [installDist]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
         <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [run]" />
+        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +449,8 @@
       <workItem from="1682886324403" duration="8440000" />
       <workItem from="1682894888391" duration="143974000" />
       <workItem from="1683538805840" duration="17057000" />
-      <workItem from="1683737079840" duration="598000" />
+      <workItem from="1683737079840" duration="1850000" />
+      <workItem from="1683810991856" duration="6871000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -728,7 +774,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683678348707</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fix: teacher's edits">
+      <created>1683742904020</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1683742904020</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,7 +804,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="client-server part 5" />
     <MESSAGE value="client-server part 6, final" />
     <MESSAGE value="add diagrams" />
     <MESSAGE value="rerun javadoc" />
@@ -776,7 +828,8 @@
     <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="fix: remove static, redundant locks and updated command descriptions" />
     <MESSAGE value="feat: add logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add logout" />
+    <MESSAGE value="fix: teacher's edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: teacher's edits" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -843,6 +896,11 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java</url>
           <line>110</line>
           <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

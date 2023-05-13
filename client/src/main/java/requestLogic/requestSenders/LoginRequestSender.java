@@ -1,6 +1,7 @@
 package requestLogic.requestSenders;
 
 import exceptions.GotAnErrorResponseException;
+import exceptions.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.BaseRequest;
@@ -21,6 +22,8 @@ public class LoginRequestSender {
             logger.error("Something went wrong during I/O ", e);
         } catch (GotAnErrorResponseException e) {
             logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
+        } catch (ProceedException e) {
+            logger.error("We've lost some packets during getting response: " + e.getMessage());
         }
         return response;
     }
