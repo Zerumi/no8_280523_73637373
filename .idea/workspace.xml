@@ -8,25 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: teacher's edits">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/ProceedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/responses/ByteArrayPacketResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/responses/IntermediateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/responses/SaveStatusResponse.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add server packet dividing">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/ServerCommandManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/commands/ShowSessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/ShowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,8 +151,8 @@
         <option value="Enum" />
         <option value="Tag Library Descriptor" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -262,8 +251,8 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no7_220423_863847963:client [installDist]">
-    <configuration name="no7_220423_863847963 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.no7_220423_863847963 [installDist]">
+    <configuration name="no7_220423_863847963 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -274,7 +263,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="installDist" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -398,16 +387,16 @@
       <item itemvalue="Gradle.no7_220423_863847963:client [installDist]" />
       <item itemvalue="Gradle.no7_220423_863847963:client [run]" />
       <item itemvalue="Gradle.no7_220423_863847963:server [installDist]" />
-      <item itemvalue="Gradle.no7_220423_863847963 [test]" />
+      <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
       <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.no7_220423_863847963 [installDist]" />
+        <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
         <item itemvalue="Gradle.no7_220423_863847963:client [installDist]" />
         <item itemvalue="Gradle.no7_220423_863847963:client [run]" />
         <item itemvalue="Gradle.no7_220423_863847963:server [installDist]" />
-        <item itemvalue="Gradle.no7_220423_863847963:server [run]" />
-        <item itemvalue="Gradle.no7_220423_863847963 [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -450,7 +439,7 @@
       <workItem from="1682894888391" duration="143974000" />
       <workItem from="1683538805840" duration="17057000" />
       <workItem from="1683737079840" duration="1850000" />
-      <workItem from="1683810991856" duration="6871000" />
+      <workItem from="1683810991856" duration="11530000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -781,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683742904020</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="feat: add server packet dividing">
+      <created>1683978521066</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1683978521066</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -804,7 +800,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="client-server part 6, final" />
     <MESSAGE value="add diagrams" />
     <MESSAGE value="rerun javadoc" />
     <MESSAGE value="logger fix" />
@@ -829,7 +824,8 @@
     <MESSAGE value="fix: remove static, redundant locks and updated command descriptions" />
     <MESSAGE value="feat: add logout" />
     <MESSAGE value="fix: teacher's edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: teacher's edits" />
+    <MESSAGE value="feat: add server packet dividing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add server packet dividing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -901,6 +897,36 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java</url>
           <line>25</line>
           <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/ServerCommandManager.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/commands/ShowSessions.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -47,4 +47,8 @@ public class SessionHandler {
     protected void removeSession(Session session) {
         sessions.remove(session);
     }
+
+    public HashSet<Session> getAllSessions() {
+        return sessions;
+    }
 }

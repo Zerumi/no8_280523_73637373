@@ -1,4 +1,6 @@
+import commandManager.serverCommands.ServerCommandManager;
 import databaseLogic.databaseElementLogic.DBCollectionLoader;
+import exceptions.UnknownCommandException;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -15,6 +17,7 @@ import serverLogic.ServerConnection;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -28,6 +31,24 @@ public class Main {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
 
         logger.trace("This is a server!");
+
+        // server command manager
+        Thread readServerCommands = new Thread(() -> {
+            logger.info("Started server command reader");
+            ServerCommandManager manager = new ServerCommandManager();
+            Scanner cmdScanner = new Scanner(System.in);
+            while (cmdScanner.hasNext()) {
+                String line = cmdScanner.nextLine();
+                if (line.isEmpty()) continue;
+                try {
+                    manager.executeCommand(line.split(" "));
+                } catch (UnknownCommandException ex) {
+                    logger.warn("Unknown command!");
+                }
+            }
+        });
+
+        readServerCommands.start();
 
         // load collection
         HashSet<Route> loadedCollection = new HashSet<>();
