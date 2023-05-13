@@ -8,15 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add server packet dividing">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/ServerCommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/commands/ShowSessions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: authorization bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -439,7 +431,7 @@
       <workItem from="1682894888391" duration="143974000" />
       <workItem from="1683538805840" duration="17057000" />
       <workItem from="1683737079840" duration="1850000" />
-      <workItem from="1683810991856" duration="11530000" />
+      <workItem from="1683810991856" duration="11934000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -777,7 +769,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683978521066</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix: authorization bug">
+      <created>1683983405406</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1683983405406</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -800,7 +799,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add diagrams" />
     <MESSAGE value="rerun javadoc" />
     <MESSAGE value="logger fix" />
     <MESSAGE value="bug fix, part 1" />
@@ -825,7 +823,8 @@
     <MESSAGE value="feat: add logout" />
     <MESSAGE value="fix: teacher's edits" />
     <MESSAGE value="feat: add server packet dividing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add server packet dividing" />
+    <MESSAGE value="fix: authorization bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: authorization bug" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -900,22 +899,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
-          <line>41</line>
+          <line>40</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
-          <line>80</line>
+          <line>79</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
-          <line>72</line>
+          <line>71</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/Main.java</url>
-          <line>36</line>
+          <line>35</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

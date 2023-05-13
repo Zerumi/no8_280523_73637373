@@ -11,7 +11,6 @@ public class Session implements ActionListener {
     private final long sessionId;
     private final AuthorizedCallerBack callerBack;
     private final javax.swing.Timer timer;
-    private final int connectedClients = 0;
 
     public Session(AuthorizedCallerBack callerBack) {
         sessionId = nextSessionId++;
@@ -41,12 +40,12 @@ public class Session implements ActionListener {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Session session = (Session) o;
-        return sessionId == session.sessionId && connectedClients == session.connectedClients && Objects.equals(callerBack, session.callerBack) && Objects.equals(timer, session.timer);
+        return sessionId == session.sessionId && Objects.equals(callerBack, session.callerBack) && Objects.equals(timer, session.timer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sessionId, callerBack, timer, connectedClients);
+        return Objects.hash(sessionId, callerBack, timer);
     }
 
     @Override
@@ -55,7 +54,6 @@ public class Session implements ActionListener {
                 "sessionId=" + sessionId +
                 ", callerBack=" + callerBack +
                 ", timer=" + timer +
-                ", connectedClients=" + connectedClients +
                 '}';
     }
 }
