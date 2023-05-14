@@ -107,6 +107,18 @@ public class DBUserManager implements Closeable {
         }
     }
 
+    public boolean checkExistence(String login) throws SQLException {
+        boolean res = false;
+        PreparedStatement statement = connection.prepareStatement(
+                "select exists(select 1 from \"User\" where login = ?)");
+        statement.setString(1, login);
+        ResultSet rs = statement.executeQuery();
+        if (rs.next()) {
+            res = rs.getBoolean(1);
+        }
+        return res;
+    }
+
     @Override
     public void close() throws IOException {
         try {

@@ -7,20 +7,27 @@ import databaseLogic.databaseUserLogic.DBUserManager;
 import databaseLogic.databaseUserLogic.PasswordEncryptionImplSHA512;
 import exceptions.authorizationExceptions.AuthorizeException;
 import exceptions.authorizationExceptions.UnauthorizedException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import requestLogic.CallerBack;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class AuthorizeManager {
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     public static AuthorizedUserData register(CallerBack requester, RegistrationData regData) throws AuthorizeException {
         AuthorizedUserData userData;
         try (DBUserManager manager = new DBUserManager(new PasswordEncryptionImplSHA512())) {
+            if (manager.checkExistence(regData.getLogin()))
+                throw new AuthorizeException("User with that login already exists.");
             userData = manager.addUserToDatabase(requester, regData);
             AuthorizedCallerBack callerBack = new AuthorizedCallerBack(userData, requester);
             SessionHandler.getInstance().registerSession(callerBack);
         } catch (SQLException | IOException e) {
-            throw new AuthorizeException(e);
+            logger.error(e);
+            throw new AuthorizeException("Сервер авторизации недоступен или завершил запрос с ошибкой. " +
+                    "Обратитесь к администратору сервера");
         }
         return userData;
     }
@@ -32,7 +39,9 @@ public class AuthorizeManager {
             AuthorizedCallerBack callerBack = new AuthorizedCallerBack(userData, requester);
             SessionHandler.getInstance().registerSession(callerBack);
         } catch (SQLException | IOException e) {
-            throw new AuthorizeException(e);
+            logger.error(e);
+            throw new AuthorizeException("Сервер авторизации недоступен или завершил запрос с ошибкой. " +
+                    "Обратитесь к администратору сервера");
         }
         return userData;
     }

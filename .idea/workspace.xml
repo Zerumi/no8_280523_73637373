@@ -8,7 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: authorization bug" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: removed unusual field">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,81 +61,6 @@
                 <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="distribution" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="distribution" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="distribution" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="shared" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="shared" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no7_220423_863847963" type="f1a62948:ProjectNode" />
-                <item name="shared" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -431,14 +363,7 @@
       <workItem from="1682894888391" duration="143974000" />
       <workItem from="1683538805840" duration="17057000" />
       <workItem from="1683737079840" duration="1850000" />
-      <workItem from="1683810991856" duration="11934000" />
-    </task>
-    <task id="LOCAL-00001" summary="add XML Reader">
-      <created>1675714633059</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675714633059</updated>
+      <workItem from="1683810991856" duration="14837000" />
     </task>
     <task id="LOCAL-00002" summary="loader, part 2">
       <created>1675731455397</created>
@@ -776,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683983405406</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fix: removed unusual field">
+      <created>1683983583136</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1683983583137</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -799,7 +731,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="rerun javadoc" />
     <MESSAGE value="logger fix" />
     <MESSAGE value="bug fix, part 1" />
     <MESSAGE value="bug fix, part 2.1" />
@@ -824,7 +755,8 @@
     <MESSAGE value="fix: teacher's edits" />
     <MESSAGE value="feat: add server packet dividing" />
     <MESSAGE value="fix: authorization bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: authorization bug" />
+    <MESSAGE value="fix: removed unusual field" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: removed unusual field" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
