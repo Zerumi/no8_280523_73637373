@@ -10,6 +10,7 @@ class AddCommand {
    name: String
    obj: Route
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
 }
@@ -19,6 +20,7 @@ class AddIfMaxCommand {
    name: String
    obj: Route
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
 }
@@ -28,8 +30,13 @@ class AddIfMinCommand {
    name: String
    obj: Route
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
+}
+class AnnotationProcessor {
+  + AnnotationProcessor(ServerRequest): 
+  + proceedAnnotations(): ServerRequest
 }
 class ArgumentCommandClientRequestWorker<T, Y> {
   + ArgumentCommandClientRequestWorker(): 
@@ -37,6 +44,35 @@ class ArgumentCommandClientRequestWorker<T, Y> {
 }
 interface ArgumentConsumer<T> << interface >> {
    obj: T
+}
+interface AuthorizableCommand << interface >> {
+   callerID: long
+}
+class AuthorizationRequestWorker {
+  + AuthorizationRequestWorker(): 
+  + workWithRequest(ServerRequest): void
+}
+class AuthorizeException {
+  + AuthorizeException(String): 
+  + AuthorizeException(Exception): 
+}
+class AuthorizeManager {
+  + AuthorizeManager(): 
+  + login(CallerBack): AuthorizedCallerBack
+  + register(CallerBack, RegistrationData): AuthorizedUserData
+  + authorize(CallerBack, AuthenticationData): AuthorizedUserData
+}
+class AuthorizeProcessor {
+  + AuthorizeProcessor(): 
+  + proceedRequest(ServerRequest): ServerRequest
+}
+class AuthorizedCallerBack {
+  + AuthorizedCallerBack(AuthorizedUserData, CallerBack): 
+  + toString(): String
+  + hashCode(): int
+  + equals(Object): boolean
+   userData: AuthorizedUserData
+   callerBack: CallerBack
 }
 interface BaseCommand << interface >> {
   + execute(String[]): void
@@ -63,34 +99,31 @@ class CallerBack {
    address: InetAddress
    port: int
 }
+class CannotProceedException {
+  + CannotProceedException(Exception): 
+}
 class ClearCommand {
   + ClearCommand(): 
   + execute(String[]): void
    name: String
-   response: CommandStatusResponse
+   callerID: long
    descr: String
-}
-class ClientHandler {
-  ~ availability: boolean
-  + actionPerformed(ActionEvent): void
-  + restartTimer(): void
-  + approveCallerBack(CallerBack): void
-  + allowNewCallerBack(): void
-   instance: ClientHandler
-   availability: boolean
+   response: CommandStatusResponse
 }
 interface CollectionHandler<T, E> << interface >> {
   + getMax(Comparator<E>): E
-  + clearCollection(): void
   + sort(): void
   + addElementToCollection(E): void
-  + validateElements(): void
   + getMin(Comparator<E>): E
    lastElement: E
    sorted: T
    firstOrNew: E
    collection: T
    initDate: Date
+}
+class CommandAuthorizePreProcessor {
+  + CommandAuthorizePreProcessor(): 
+  + proceed(BaseCommand, CallerBack, ServerConnection): void
 }
 class CommandClientRequestWorker {
   + CommandClientRequestWorker(): 
@@ -99,10 +132,6 @@ class CommandClientRequestWorker {
 class CommandConfigureRequestWorker {
   + CommandConfigureRequestWorker(): 
   + workWithRequest(ServerRequest): void
-}
-class CommandConfigureResponseSender {
-  + CommandConfigureResponseSender(): 
-  + sendResponse(CommandDescriptionsResponse, ServerConnection, CallerBack): void
 }
 class CommandExporter {
   + CommandExporter(): 
@@ -115,9 +144,12 @@ class CommandManager {
   + fromDescription(CommandDescription): BaseCommand
    commands: LinkedHashMap<String, BaseCommand>
 }
-class CommandResponseSender {
-  + CommandResponseSender(): 
-  + sendResponse(CommandStatusResponse, ServerConnection, CallerBack): void
+interface CommandPreProcessor << interface >> {
+  + proceed(BaseCommand, CallerBack, ServerConnection): void
+}
+class CommandPreProcessorManager {
+  + CommandPreProcessorManager(): 
+  + preProceed(BaseCommand, CallerBack, ServerConnection): void
 }
 class CountGreaterThanDistanceCommand {
   + CountGreaterThanDistanceCommand(): 
@@ -127,9 +159,36 @@ class CountGreaterThanDistanceCommand {
    descr: String
    response: CommandStatusResponse
 }
+class DBCollectionLoader<T> {
+  + DBCollectionLoader(T): 
+  + loadFromDB(): void
+  + close(): void
+}
+class DBCollectionManager {
+  + close(): void
+}
+class DBElementCreatorLogic {
+  + close(): void
+}
+class DBIntegrationUtility {
+  + DBIntegrationUtility(): 
+  + removeFromCollectionAndDB(long, long): boolean
+  + addRouteToDBAndCollection(Route, long): StatusResponse
+  + getAccessibleCollection(long, Supplier<T>): T
+  + updateElementInDBAndCollection(Route, long, long): StatusResponse
+  + clearCollectionInDBAndMemory(long): StatusResponse
+   instance: DBIntegrationUtility
+}
+class DBUserManager {
+  + DBUserManager(PasswordEncryption): 
+  + addUserToDatabase(CallerBack, RegistrationData): AuthorizedUserData
+  + checkExistence(String): boolean
+  + getUserFromDatabase(AuthenticationData): AuthorizedUserData
+  + close(): void
+}
 class DatagramServerConnection {
-  + sendData(byte[], InetAddress, int): void
   + listenAndGetData(): StatusRequest
+  + sendData(byte[], InetAddress, int): void
 }
 class DatagramServerConnectionFactory {
   + DatagramServerConnectionFactory(): 
@@ -138,8 +197,8 @@ class DatagramServerConnectionFactory {
 class DateEditor {
   + DateEditor(): 
   + supportsCustomEditor(): boolean
-  + paintValue(Graphics, Rectangle): void
   + addPropertyChangeListener(PropertyChangeListener): void
+  + paintValue(Graphics, Rectangle): void
   + removePropertyChangeListener(PropertyChangeListener): void
    asText: String
    customEditor: Component
@@ -147,6 +206,9 @@ class DateEditor {
    paintable: boolean
    value: Object
    tags: String[]
+}
+class ElementNotAddedException {
+  + ElementNotAddedException(): 
 }
 class ExecuteScriptCommand {
   + ExecuteScriptCommand(): 
@@ -161,8 +223,9 @@ class ExitCommand {
   + ExitCommand(): 
   + execute(String[]): void
    name: String
-   response: CommandStatusResponse
+   callerID: long
    descr: String
+   response: CommandStatusResponse
 }
 class HelpCommand {
   + HelpCommand(): 
@@ -178,14 +241,18 @@ class InfoCommand {
    response: CommandStatusResponse
    descr: String
 }
+class IntermediateResponseSender {
+  + IntermediateResponseSender(): 
+  + sendLargeResponse(ByteArrayOutputStream, CallerBack, ServerConnection): void
+}
 class InvalidRequestException {
-  + InvalidRequestException(String): 
+  + InvalidRequestException(): 
 }
 class Loader<T, E> {
   + Loader(Class<T>, Class<E>): 
   + loadFromXMLbyEnvKey(String): T
-  + setupConverter(Class<?>, Class<PropertyEditor>): void
   + loadFromFile(String, BaseReader): T
+  + setupConverter(Class<?>, Class<PropertyEditor>): void
 }
 class Main {
   + Main(): 
@@ -202,6 +269,20 @@ class NotAvailableException {
   + NotAvailableException(CallerBack): 
    deniedClient: CallerBack
 }
+interface PasswordEncryption << interface >> {
+  + generateSalt(): char[]
+  + encrypt(char[]): String
+   pepper: char[]
+}
+class PasswordEncryptionImplSHA512 {
+  + PasswordEncryptionImplSHA512(): 
+  + generateSalt(): char[]
+  + encrypt(char[]): String
+}
+class PreProceedingFailedException {
+  + PreProceedingFailedException(): 
+}
+interface PreProcessingCommandInterface << interface >>
 class PrintFieldDistanceAscendingCommand {
   + PrintFieldDistanceAscendingCommand(): 
   + execute(String[]): void
@@ -209,11 +290,22 @@ class PrintFieldDistanceAscendingCommand {
    response: CommandStatusResponse
    descr: String
 }
+class ProcessionInterruptedException {
+  + ProcessionInterruptedException(): 
+}
+class RegistrationFailedException {
+  + RegistrationFailedException(String): 
+}
+class RegistrationRequestWorker {
+  + RegistrationRequestWorker(): 
+  + workWithRequest(ServerRequest): void
+}
 class RemoveByIdCommand {
   + RemoveByIdCommand(): 
   + execute(String[]): void
    name: String
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
 }
@@ -223,8 +315,12 @@ class RemoveGreaterCommand {
    name: String
    obj: Route
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
+}
+interface RequestAnnotationProcessor << interface >> {
+  + proceedRequest(ServerRequest): ServerRequest
 }
 class RequestReader {
   + RequestReader(InputStream): 
@@ -236,6 +332,10 @@ interface RequestWorker << interface >> {
 class RequestWorkerManager {
   + RequestWorkerManager(): 
   + workWithRequest(ServerRequest): void
+}
+class ResourceStreamLogic {
+  + ResourceStreamLogic(String): 
+   resourceStream: InputStream
 }
 class ResponseSender {
   + ResponseSender(): 
@@ -253,18 +353,11 @@ class RouteDistanceComparator {
   + RouteDistanceComparator(): 
   + compare(Route, Route): int
 }
-class RouteIDHandler {
-  + RouteIDHandler(): 
-   instance: RouteIDHandler
-   nextID: Long
-}
 class RoutesHandler {
-  + getMax(Comparator<Route>): Route
-  + addElementToCollection(Route): void
-  + validateElements(): void
-  + clearCollection(): void
-  + getMin(Comparator<Route>): Route
   + sort(): void
+  + addElementToCollection(Route): void
+  + getMax(Comparator<Route>): Route
+  + getMin(Comparator<Route>): Route
    sorted: HashSet<Route>
    firstOrNew: Route
    instance: RoutesHandler
@@ -283,9 +376,13 @@ class Saver<T, E> {
   + Saver(Class<E>): 
   + saveCollection(T, String): void
 }
+class ServerCommandManager {
+  + ServerCommandManager(): 
+  + executeCommand(String[]): void
+}
 interface ServerConnection << interface >> {
-  + sendData(byte[], InetAddress, int): void
   + listenAndGetData(): StatusRequest
+  + sendData(byte[], InetAddress, int): void
 }
 interface ServerConnectionFactory << interface >> {
   + initializeServer(int): ServerConnection
@@ -296,8 +393,33 @@ class ServerRequest {
    userRequest: BaseRequest
    connection: ServerConnection
 }
+class Session {
+  + Session(AuthorizedCallerBack): 
+  + actionPerformed(ActionEvent): void
+  + hashCode(): int
+  + updateTimer(): void
+  + toString(): String
+  + equals(Object): boolean
+   sessionId: long
+   authorizedCallerBack: AuthorizedCallerBack
+}
+class SessionHandler {
+  + registerSession(AuthorizedCallerBack): void
+  + getSession(CallerBack): Session
+  + removeSession(long): void
+   allSessions: HashSet<Session>
+   instance: SessionHandler
+}
 class ShowCommand {
   + ShowCommand(): 
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class ShowSessions {
+  + ShowSessions(): 
   + execute(String[]): void
    name: String
    response: CommandStatusResponse
@@ -316,8 +438,20 @@ class StatusRequestBuilder {
    code: int
    callerBack: CallerBack
 }
+entity StatusResponse << record >> {
+  + StatusResponse(String, int): 
+  + code(): int
+  + toCommandResponse(): CommandStatusResponse
+  + response(): String
+}
+class UnauthorizedException {
+  + UnauthorizedException(String): 
+}
 class UnknownCommandException {
   + UnknownCommandException(String): 
+}
+class UnregisteredException {
+  + UnregisteredException(String): 
 }
 class UnsupportedRequestException {
   + UnsupportedRequestException(String): 
@@ -328,12 +462,21 @@ class UpdateCommand {
    name: String
    obj: Route
    args: String
+   callerID: long
    descr: String
    response: CommandStatusResponse
+}
+class Utilities {
+  + Utilities(): 
+  + isNotNumeric(String): boolean
+  + handleUserInputID(String): Long?
 }
 class Wrapper {
   + Wrapper(): 
   + isWrapperType(Class<?>): boolean
+}
+class WrongPasswordException {
+  + WrongPasswordException(String): 
 }
 class XMLReader {
   + XMLReader(): 
@@ -345,19 +488,36 @@ class XMLWriter {
 }
 
 AddCommand                          -[#008200,dashed]-^  ArgumentConsumer                   
+AddCommand                          -[#008200,dashed]-^  AuthorizableCommand                
 AddCommand                          -[#008200,dashed]-^  BaseCommand                        
 AddIfMaxCommand                     -[#008200,dashed]-^  ArgumentConsumer                   
+AddIfMaxCommand                     -[#008200,dashed]-^  AuthorizableCommand                
 AddIfMaxCommand                     -[#008200,dashed]-^  BaseCommand                        
 AddIfMaxCommand                     -[#595959,dashed]->  RouteDistanceComparator            : "«create»"
 AddIfMinCommand                     -[#008200,dashed]-^  ArgumentConsumer                   
+AddIfMinCommand                     -[#008200,dashed]-^  AuthorizableCommand                
 AddIfMinCommand                     -[#008200,dashed]-^  BaseCommand                        
 AddIfMinCommand                     -[#595959,dashed]->  RouteDistanceComparator            : "«create»"
+AnnotationProcessor                 -[#595959,dashed]->  AuthorizeProcessor                 : "«create»"
+AnnotationProcessor                "1" *-[#595959,plain]-> "loadedAnnotations\n*" RequestAnnotationProcessor         
+AnnotationProcessor                "1" *-[#595959,plain]-> "requestToProceed\n1" ServerRequest                      
 ArgumentCommandClientRequestWorker  -[#595959,dashed]->  CommandManager                     : "«create»"
 ArgumentCommandClientRequestWorker  -[#008200,dashed]-^  RequestWorker                      
+AuthorizableCommand                 -[#008200,plain]-^  PreProcessingCommandInterface      
+AuthorizationRequestWorker          -[#008200,dashed]-^  RequestWorker                      
+AuthorizeManager                    -[#595959,dashed]->  AuthorizeException                 : "«create»"
+AuthorizeManager                    -[#595959,dashed]->  AuthorizedCallerBack               : "«create»"
+AuthorizeManager                    -[#595959,dashed]->  DBUserManager                      : "«create»"
+AuthorizeManager                    -[#595959,dashed]->  PasswordEncryptionImplSHA512       : "«create»"
+AuthorizeProcessor                  -[#595959,dashed]->  CannotProceedException             : "«create»"
+AuthorizeProcessor                  -[#008200,dashed]-^  RequestAnnotationProcessor         
+AuthorizeProcessor                  -[#595959,dashed]->  ServerRequest                      : "«create»"
+AuthorizedCallerBack                -[#000082,plain]-^  CallerBack                         
+AuthorizedCallerBack               "1" *-[#595959,plain]-> "callerBack\n1" CallerBack                         
 BaseRequestWorker                   -[#008200,dashed]-^  RequestWorker                      
+ClearCommand                        -[#008200,dashed]-^  AuthorizableCommand                
 ClearCommand                        -[#008200,dashed]-^  BaseCommand                        
-ClientHandler                      "1" *-[#595959,plain]-> "callerBack\n1" CallerBack                         
-ClientHandler                       -[#595959,dashed]->  NotAvailableException              : "«create»"
+CommandAuthorizePreProcessor        -[#008200,dashed]-^  CommandPreProcessor                
 CommandClientRequestWorker          -[#595959,dashed]->  CommandManager                     : "«create»"
 CommandClientRequestWorker          -[#008200,dashed]-^  RequestWorker                      
 CommandConfigureRequestWorker       -[#008200,dashed]-^  RequestWorker                      
@@ -366,6 +526,7 @@ CommandManager                      -[#595959,dashed]->  AddIfMaxCommand        
 CommandManager                      -[#595959,dashed]->  AddIfMinCommand                    : "«create»"
 CommandManager                     "1" *-[#595959,plain]-> "commands\n*" BaseCommand                        
 CommandManager                      -[#595959,dashed]->  ClearCommand                       : "«create»"
+CommandManager                      -[#595959,dashed]->  CommandPreProcessorManager         : "«create»"
 CommandManager                      -[#595959,dashed]->  CountGreaterThanDistanceCommand    : "«create»"
 CommandManager                      -[#595959,dashed]->  ExecuteScriptCommand               : "«create»"
 CommandManager                      -[#595959,dashed]->  ExitCommand                        : "«create»"
@@ -375,57 +536,88 @@ CommandManager                      -[#595959,dashed]->  MinByCreationDateComman
 CommandManager                      -[#595959,dashed]->  PrintFieldDistanceAscendingCommand : "«create»"
 CommandManager                      -[#595959,dashed]->  RemoveByIdCommand                  : "«create»"
 CommandManager                      -[#595959,dashed]->  RemoveGreaterCommand               : "«create»"
-CommandManager                      -[#595959,dashed]->  SaveCommand                        : "«create»"
 CommandManager                      -[#595959,dashed]->  ShowCommand                        : "«create»"
 CommandManager                      -[#595959,dashed]->  UnknownCommandException            : "«create»"
 CommandManager                      -[#595959,dashed]->  UpdateCommand                      : "«create»"
+CommandPreProcessorManager          -[#595959,dashed]->  CommandAuthorizePreProcessor       : "«create»"
+CommandPreProcessorManager         "1" *-[#595959,plain]-> "preProcessorLinkedHashMap\n*" CommandPreProcessor                
 CountGreaterThanDistanceCommand     -[#008200,dashed]-^  BaseCommand                        
+DBCollectionManager                 -[#595959,dashed]->  ElementNotAddedException           : "«create»"
+DBIntegrationUtility                -[#595959,dashed]->  DBCollectionLoader                 : "«create»"
+DBIntegrationUtility                -[#595959,dashed]->  DBCollectionManager                : "«create»"
+DBIntegrationUtility                -[#595959,dashed]->  DBElementCreatorLogic              : "«create»"
+DBIntegrationUtility                -[#595959,dashed]->  StatusResponse                     : "«create»"
+DBUserManager                      "1" *-[#595959,plain]-> "encryptionAlg\n1" PasswordEncryption                 
+DBUserManager                       -[#595959,dashed]->  RegistrationFailedException        : "«create»"
+DBUserManager                       -[#595959,dashed]->  UnregisteredException              : "«create»"
+DBUserManager                       -[#595959,dashed]->  WrongPasswordException             : "«create»"
 DatagramServerConnection            -[#595959,dashed]->  CallerBack                         : "«create»"
 DatagramServerConnection            -[#008200,dashed]-^  ServerConnection                   
 DatagramServerConnectionFactory     -[#595959,dashed]->  DatagramServerConnection           : "«create»"
 DatagramServerConnectionFactory     -[#008200,dashed]-^  ServerConnectionFactory            
 ExecuteScriptCommand                -[#008200,dashed]-^  BaseCommand                        
+ExitCommand                         -[#008200,dashed]-^  AuthorizableCommand                
 ExitCommand                         -[#008200,dashed]-^  BaseCommand                        
-ExitCommand                         -[#595959,dashed]->  SaveCommand                        : "«create»"
 HelpCommand                         -[#008200,dashed]-^  BaseCommand                        
 HelpCommand                         -[#595959,dashed]->  CommandManager                     : "«create»"
 InfoCommand                         -[#008200,dashed]-^  BaseCommand                        
 Loader                              -[#595959,dashed]->  XMLReader                          : "«create»"
+Main                                -[#595959,dashed]->  DBCollectionLoader                 : "«create»"
 Main                                -[#595959,dashed]->  DatagramServerConnectionFactory    : "«create»"
-Main                                -[#595959,dashed]->  Loader                             : "«create»"
 Main                                -[#595959,dashed]->  RequestReader                      : "«create»"
 Main                                -[#595959,dashed]->  RequestWorkerManager               : "«create»"
-Main                                -[#595959,dashed]->  SaveCommand                        : "«create»"
+Main                                -[#595959,dashed]->  ServerCommandManager               : "«create»"
 Main                                -[#595959,dashed]->  ServerRequest                      : "«create»"
 MinByCreationDateCommand            -[#008200,dashed]-^  BaseCommand                        
 MinByCreationDateCommand            -[#595959,dashed]->  RouteCreationDateComparator        : "«create»"
 NotAvailableException              "1" *-[#595959,plain]-> "deniedClient\n1" CallerBack                         
+PasswordEncryption                  -[#595959,dashed]->  ResourceStreamLogic                : "«create»"
+PasswordEncryptionImplSHA512        -[#008200,dashed]-^  PasswordEncryption                 
 PrintFieldDistanceAscendingCommand  -[#008200,dashed]-^  BaseCommand                        
+RegistrationFailedException         -[#000082,plain]-^  AuthorizeException                 
+RegistrationRequestWorker           -[#008200,dashed]-^  RequestWorker                      
+RemoveByIdCommand                   -[#008200,dashed]-^  AuthorizableCommand                
 RemoveByIdCommand                   -[#008200,dashed]-^  BaseCommand                        
 RemoveGreaterCommand                -[#008200,dashed]-^  ArgumentConsumer                   
+RemoveGreaterCommand                -[#008200,dashed]-^  AuthorizableCommand                
 RemoveGreaterCommand                -[#008200,dashed]-^  BaseCommand                        
 RemoveGreaterCommand                -[#595959,dashed]->  RouteDistanceComparator            : "«create»"
+RequestWorkerManager                -[#595959,dashed]->  AnnotationProcessor                : "«create»"
 RequestWorkerManager                -[#595959,dashed]->  ArgumentCommandClientRequestWorker : "«create»"
+RequestWorkerManager                -[#595959,dashed]->  AuthorizationRequestWorker         : "«create»"
 RequestWorkerManager                -[#595959,dashed]->  BaseRequestWorker                  : "«create»"
 RequestWorkerManager                -[#595959,dashed]->  CommandClientRequestWorker         : "«create»"
 RequestWorkerManager                -[#595959,dashed]->  CommandConfigureRequestWorker      : "«create»"
+RequestWorkerManager                -[#595959,dashed]->  RegistrationRequestWorker          : "«create»"
 RequestWorkerManager               "1" *-[#595959,plain]-> "workers\n*" RequestWorker                      
 RequestWorkerManager                -[#595959,dashed]->  UnsupportedRequestException        : "«create»"
-RouteIDHandler                      -[#595959,dashed]->  RouteComparator                    : "«create»"
+ResponseSender                      -[#595959,dashed]->  IntermediateResponseSender         : "«create»"
 RoutesHandler                       -[#008200,dashed]-^  CollectionHandler                  
 RoutesHandler                       -[#595959,dashed]->  RouteComparator                    : "«create»"
 SaveCommand                         -[#008200,dashed]-^  BaseCommand                        
 SaveCommand                         -[#595959,dashed]->  Saver                              : "«create»"
 Saver                               -[#595959,dashed]->  XMLWriter                          : "«create»"
+ServerCommandManager               "1" *-[#595959,plain]-> "serverCommands\n*" BaseCommand                        
+ServerCommandManager                -[#595959,dashed]->  ShowSessions                       : "«create»"
+ServerCommandManager                -[#595959,dashed]->  UnknownCommandException            : "«create»"
 ServerRequest                      "1" *-[#595959,plain]-> "from\n1" CallerBack                         
 ServerRequest                      "1" *-[#595959,plain]-> "connection\n1" ServerConnection                   
+Session                            "1" *-[#595959,plain]-> "callerBack\n1" AuthorizedCallerBack               
+SessionHandler                     "1" *-[#595959,plain]-> "sessions\n*" Session                            
+SessionHandler                      -[#595959,dashed]->  Session                            : "«create»"
+SessionHandler                      -[#595959,dashed]->  UnauthorizedException              : "«create»"
 ShowCommand                         -[#008200,dashed]-^  BaseCommand                        
+ShowSessions                        -[#008200,dashed]-^  BaseCommand                        
 StatusRequest                      "1" *-[#595959,plain]-> "callerBack\n1" CallerBack                         
-StatusRequestBuilder               "1" *-[#595959,plain]-> "result\n1" StatusRequest                      
 StatusRequestBuilder                -[#595959,dashed]->  StatusRequest                      : "«create»"
+StatusRequestBuilder               "1" *-[#595959,plain]-> "result\n1" StatusRequest                      
+UnauthorizedException               -[#000082,plain]-^  AuthorizeException                 
+UnregisteredException               -[#000082,plain]-^  AuthorizeException                 
 UpdateCommand                       -[#008200,dashed]-^  ArgumentConsumer                   
+UpdateCommand                       -[#008200,dashed]-^  AuthorizableCommand                
 UpdateCommand                       -[#008200,dashed]-^  BaseCommand                        
 Wrapper                             +-[#820000,plain]-  Saver                              
+WrongPasswordException              -[#000082,plain]-^  AuthorizeException                 
 XMLReader                           -[#008200,dashed]-^  BaseReader                         
 XMLWriter                           -[#008200,dashed]-^  BaseWriter                         
 @enduml

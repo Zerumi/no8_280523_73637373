@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963/server/src/main</OriginalElement>
+  <nodes>
+    <node x="318.0" y="1961.0">fileLogic.BaseReader</node>
+    <node x="536.8578605200928" y="1058.0">exceptions.authorizationExceptions.UnauthorizedException</node>
+    <node x="2064.0" y="1961.0">commandManager.CommandExporter</node>
+    <node x="5653.295360520095" y="1319.0">requestLogic.requestWorkers.BaseRequestWorker</node>
+    <node x="2487.653221040187" y="731.0">databaseLogic.databaseUserLogic.ResourceStreamLogic</node>
+    <node x="1766.0" y="1961.0">utils.Utilities</node>
+    <node x="6842.295360520095" y="681.0">commandManager.commands.ExitCommand</node>
+    <node x="46.0" y="1538.0">databaseLogic.databaseElementLogic.DBCollectionManager</node>
+    <node x="-117.0" y="2270.0">models.handlers.RoutesHandler</node>
+    <node x="8863.482860520093" y="256.0">commandManager.commands.BaseCommand</node>
+    <node x="7946.670360520095" y="1319.0">requestLogic.requestWorkers.CommandClientRequestWorker</node>
+    <node x="9918.834958628839" y="99.0">fileLogic.XMLWriter</node>
+    <node x="3063.420360520094" y="707.0">requestLogic.requests.ServerRequest</node>
+    <node x="4115.170360520095" y="292.0">commandManager.commandPreProcessing.preProcessors.CommandAuthorizePreProcessor</node>
+    <node x="10009.334958628839" y="292.0">fileLogic.Saver</node>
+    <node x="3168.0" y="1961.0">exceptions.InvalidRequestException</node>
+    <node x="7727.295360520095" y="693.0">commandManager.commands.InfoCommand</node>
+    <node x="3913.1703605200946" y="745.0">exceptions.CannotProceedException</node>
+    <node x="6547.295360520095" y="681.0">commandManager.commands.ClearCommand</node>
+    <node x="6167.982860520093" y="306.0">commandManager.commands.AuthorizableCommand</node>
+    <node x="2505.653221040187" y="1307.0">databaseLogic.databaseUserLogic.PasswordEncryptionImplSHA512</node>
+    <node x="23.0" y="1961.0">models.handlers.CollectionHandler</node>
+    <node x="861.193262411347" y="731.0">exceptions.NotAvailableException</node>
+    <node x="316.0" y="2215.0">fileLogic.Loader</node>
+    <node x="3699.1078605200923" y="1044.0">requestLogic.requestAnnotationProcessors.processors.AuthorizeProcessor</node>
+    <node x="2836.0" y="1961.0">exceptions.PreProceedingFailedException</node>
+    <node x="2597.545360520094" y="1512.0">databaseLogic.databaseElementLogic.DBCollectionLoader</node>
+    <node x="2499.153221040187" y="1032.0">databaseLogic.databaseUserLogic.PasswordEncryption</node>
+    <node x="-211.0" y="2045.0">models.comparators.RouteComparator</node>
+    <node x="1506.6078605200923" y="242.0">requestLogic.CallerBack</node>
+    <node x="880.4828605200928" y="970.0">clientLogic.Session</node>
+    <node x="5951.295360520095" y="657.0">commandManager.commands.RemoveGreaterCommand</node>
+    <node x="1509.4828605200923" y="1058.0">exceptions.authorizationExceptions.UnregisteredException</node>
+    <node x="3171.7328605200923" y="1524.0">serverLogic.DatagramServerConnectionFactory</node>
+    <node x="6204.545360520095" y="1524.0">requestLogic.RequestReader</node>
+    <node x="-211.0" y="1538.0">databaseLogic.databaseElementLogic.DBElementCreatorLogic</node>
+    <node x="4682.170360520095" y="657.0">commandManager.commands.AddIfMinCommand</node>
+    <node x="690.3578605200928" y="1283.0">clientLogic.SessionHandler</node>
+    <node x="318.0" y="2074.0">fileLogic.XMLReader</node>
+    <node x="5361.295360520095" y="657.0">commandManager.commands.AddIfMaxCommand</node>
+    <node x="4226.670360520095" y="113.0">commandManager.commandPreProcessing.preProcessors.CommandPreProcessor</node>
+    <node x="4799.795360520095" y="292.0">models.comparators.RouteDistanceComparator</node>
+    <node x="5656.295360520095" y="657.0">commandManager.commands.UpdateCommand</node>
+    <node x="6747.818262411347" y="292.0">models.comparators.RouteCreationDateComparator</node>
+    <node x="7063.545360520095" y="1524.0">requestLogic.requestWorkers.RequestWorkerManager</node>
+    <node x="1216.4828605200923" y="1058.0">exceptions.authorizationExceptions.RegistrationFailedException</node>
+    <node x="2056.4828605200923" y="1008.0">requestLogic.StatusRequestBuilder</node>
+    <node x="2750.420360520094" y="733.0">serverLogic.DatagramServerConnection</node>
+    <node x="1773.4828605200923" y="1058.0">exceptions.authorizationExceptions.WrongPasswordException</node>
+    <node x="6246.295360520095" y="693.0">commandManager.commands.MinByCreationDateCommand</node>
+    <node x="9348.295360520095" y="693.0">commandManager.commands.SaveCommand</node>
+    <node x="6277.295360520095" y="1319.0">requestLogic.requestWorkers.AuthorizationRequestWorker</node>
+    <node x="3638.3578605200923" y="1319.0">requestLogic.requestAnnotationProcessors.AnnotationProcessor</node>
+    <node x="7432.295360520095" y="693.0">commandManager.commands.HelpCommand</node>
+    <node x="1147.193262411347" y="681.0">clientLogic.AuthorizedCallerBack</node>
+    <node x="756.0" y="1961.0">fileLogic.editors.DateEditor</node>
+    <node x="8612.295360520095" y="693.0">commandManager.commands.PrintFieldDistanceAscendingCommand</node>
+    <node x="9964.170360520095" y="693.0">commandManager.serverCommands.commands.ShowSessions</node>
+    <node x="10051.670360520095" y="1044.0">commandManager.serverCommands.ServerCommandManager</node>
+    <node x="8123.875" y="1004.0">commandManager.CommandManager</node>
+    <node x="8986.295360520095" y="681.0">commandManager.commands.CountGreaterThanDistanceCommand</node>
+    <node x="1064.0453605200942" y="1701.0">databaseLogic.databaseElementLogic.DBIntegrationUtility</node>
+    <node x="9643.295360520095" y="745.0">exceptions.UnknownCommandException</node>
+    <node x="8317.295360520095" y="667.0">commandManager.commands.ExecuteScriptCommand</node>
+    <node x="2252.778221040187" y="707.0">requestLogic.StatusRequest</node>
+    <node x="8259.670360520095" y="1333.0">exceptions.UnsupportedRequestException</node>
+    <node x="8022.295360520095" y="681.0">commandManager.commands.ShowCommand</node>
+    <node x="2214.545360520094" y="1500.0">responseLogic.StatusResponse</node>
+    <node x="2909.545360520094" y="294.0">serverLogic.ServerConnection</node>
+    <node x="1754.5453605200942" y="1500.0">clientLogic.AuthorizeManager</node>
+    <node x="1521.3578605200923" y="1283.0">databaseLogic.databaseUserLogic.DBUserManager</node>
+    <node x="9918.834958628839" y="-14.0">fileLogic.BaseWriter</node>
+    <node x="1248.5" y="2102.0">responseLogic.responseSenders.ResponseSender</node>
+    <node x="2491.0" y="1961.0">exceptions.ProcessionInterruptedException</node>
+    <node x="1242.0" y="1961.0">responseLogic.responseSenders.IntermediateResponseSender</node>
+    <node x="6485.5" y="1058.0">requestLogic.requestWorkers.RequestWorker</node>
+    <node x="4216.170360520095" y="731.0">commandManager.commandPreProcessing.CommandPreProcessorManager</node>
+    <node x="7137.295360520095" y="669.0">commandManager.commands.RemoveByIdCommand</node>
+    <node x="5066.295360520095" y="657.0">commandManager.commands.AddCommand</node>
+    <node x="6933.295360520095" y="1319.0">requestLogic.requestWorkers.ArgumentCommandClientRequestWorker</node>
+    <node x="10297.334958628839" y="731.0">fileLogic.Saver.Wrapper</node>
+    <node x="21.5" y="1333.0">exceptions.ElementNotAddedException</node>
+    <node x="3541.170360520094" y="745.0">requestLogic.requestAnnotationProcessors.processors.RequestAnnotationProcessor</node>
+    <node x="5965.295360520095" y="1319.0">requestLogic.requestWorkers.RegistrationRequestWorker</node>
+    <node x="3268.9828605200923" y="1333.0">serverLogic.ServerConnectionFactory</node>
+    <node x="6127.982860520093" y="130.5">commandManager.commandPreProcessing.PreProcessingCommandInterface</node>
+    <node x="594.193262411347" y="733.0">exceptions.authorizationExceptions.AuthorizeException</node>
+    <node x="5812.943262411347" y="306.0">commandManager.commands.ArgumentConsumer</node>
+    <node x="6089.795360520095" y="1763.0">Main</node>
+    <node x="6589.295360520095" y="1319.0">requestLogic.requestWorkers.CommandConfigureRequestWorker</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="commandManager.commands.HelpCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="7569.795360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.requests.ServerRequest" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="0.0" y="-69.5" />
+      <point x="3278.420360520094" y="615.0" />
+      <point x="1619.6078605200923" y="615.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.AnnotationProcessor" target="requestLogic.requestAnnotationProcessors.processors.RequestAnnotationProcessor" relationship="TO_MANY">
+      <point x="-71.75" y="-45.5" />
+      <point x="3710.1078605200923" y="1261.0" />
+      <point x="3463.528221040187" y="1261.0" />
+      <point x="3463.528221040187" y="948.0" />
+      <point x="3629.170360520094" y="948.0" />
+      <point x="-88.0" y="31.5" />
+    </edge>
+    <edge source="clientLogic.SessionHandler" target="clientLogic.Session" relationship="TO_MANY">
+      <point x="79.75" y="-81.5" />
+      <point x="929.6078605200928" y="1261.0" />
+      <point x="1117.4828605200928" y="1261.0" />
+      <point x="79.0" y="119.5" />
+    </edge>
+    <edge source="commandManager.commands.MinByCreationDateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="70.25" y="-83.5" />
+      <point x="6457.045360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizedCallerBack" target="requestLogic.CallerBack" relationship="GENERALIZATION">
+      <point x="-98.5" y="-95.5" />
+      <point x="1245.693262411347" y="625.0" />
+      <point x="1544.2745271867584" y="625.0" />
+      <point x="-75.33333333333394" y="95.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.AnnotationProcessor" target="requestLogic.requestAnnotationProcessors.processors.AuthorizeProcessor" relationship="CREATE">
+      <point x="71.75" y="-45.5" />
+      <point x="3853.6078605200923" y="1261.0" />
+      <point x="3875.1078605200923" y="1261.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="Main" target="databaseLogic.databaseElementLogic.DBCollectionLoader" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1670.0" />
+      <point x="2717.545360520094" y="1670.0" />
+      <point x="0.0" y="57.5" />
+    </edge>
+    <edge source="commandManager.commands.ExitCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="6979.795360520095" y="615.0" />
+      <point x="7488.818262411347" y="615.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="5567.545360520095" y="575.0" />
+      <point x="7488.818262411347" y="575.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="fileLogic.Saver" relationship="CREATE">
+      <point x="68.75" y="-83.5" />
+      <point x="9554.545360520095" y="615.0" />
+      <point x="10067.334958628839" y="615.0" />
+      <point x="-58.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.commands.ArgumentConsumer" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5793.795360520095" y="495.0" />
+      <point x="5932.943262411347" y="495.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.ExecuteScriptCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-109.5" />
+      <point x="8454.795360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="4888.420360520095" y="635.0" />
+      <point x="5080.670360520095" y="635.0" />
+      <point x="5080.670360520095" y="555.0" />
+      <point x="7488.818262411347" y="555.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commandPreProcessing.CommandPreProcessorManager" target="commandManager.commandPreProcessing.preProcessors.CommandAuthorizePreProcessor" relationship="CREATE">
+      <point x="-111.5" y="-45.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.serverCommands.ServerCommandManager" target="commandManager.serverCommands.commands.ShowSessions" relationship="CREATE">
+      <point x="-62.0" y="-45.5" />
+      <point x="10113.670360520095" y="948.0" />
+      <point x="10101.670360520095" y="948.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.ArgumentCommandClientRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="-105.75" y="-45.5" />
+      <point x="7039.045360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.InfoCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="7864.795360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.StatusRequestBuilder" target="requestLogic.StatusRequest" relationship="CREATE">
+      <point x="-61.75" y="-81.5" />
+      <point x="2118.2328605200923" y="938.0" />
+      <point x="2303.778221040187" y="938.0" />
+      <point x="-51.0" y="69.5" />
+    </edge>
+    <edge source="requestLogic.requests.ServerRequest" target="serverLogic.ServerConnection" relationship="TO_ONE">
+      <point x="0.0" y="-69.5" />
+      <point x="3278.420360520094" y="605.0" />
+      <point x="3129.295360520094" y="605.0" />
+      <point x="73.25" y="43.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="commandManager.commands.ArgumentConsumer" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="5567.545360520095" y="485.0" />
+      <point x="5932.943262411347" y="485.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.handlers.CollectionHandler" relationship="REALIZATION">
+      <point x="69.25" y="-141.5" />
+      <point x="90.75" y="2245.0" />
+      <point x="147.0" y="2245.0" />
+      <point x="0.0" y="129.5" />
+    </edge>
+    <edge source="commandManager.commands.ShowCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="8159.795360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.CountGreaterThanDistanceCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="9157.295360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.ArgumentCommandClientRequestWorker" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="105.75" y="-45.5" />
+      <point x="7250.545360520095" y="1251.0" />
+      <point x="8088.170360520095" y="1251.0" />
+      <point x="8088.170360520095" y="1231.0" />
+      <point x="8371.375" y="1231.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="commandManager.serverCommands.ServerCommandManager" target="commandManager.commands.BaseCommand" relationship="TO_MANY">
+      <point x="62.0" y="-45.5" />
+      <point x="10237.670360520095" y="948.0" />
+      <point x="10249.670360520095" y="948.0" />
+      <point x="10249.670360520095" y="625.0" />
+      <point x="10101.670360520095" y="625.0" />
+      <point x="10101.670360520095" y="605.0" />
+      <point x="9069.732860520093" y="605.0" />
+      <point x="68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.AuthorizableCommand" target="commandManager.commandPreProcessing.PreProcessingCommandInterface" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="commandManager.commands.ArgumentConsumer" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="6157.545360520095" y="455.0" />
+      <point x="5932.943262411347" y="455.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="exceptions.UnknownCommandException" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="938.0" />
+      <point x="9784.795360520095" y="938.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="databaseLogic.databaseElementLogic.DBIntegrationUtility" target="databaseLogic.databaseElementLogic.DBCollectionLoader" relationship="CREATE">
+      <point x="0.0" y="-107.5" />
+      <point x="1304.5453605200942" y="1680.0" />
+      <point x="2717.545360520094" y="1680.0" />
+      <point x="0.0" y="57.5" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.PasswordEncryptionImplSHA512" target="databaseLogic.databaseUserLogic.PasswordEncryption" relationship="REALIZATION">
+      <point x="0.0" y="-57.5" />
+      <point x="53.0" y="57.5" />
+    </edge>
+    <edge source="databaseLogic.databaseElementLogic.DBIntegrationUtility" target="responseLogic.StatusResponse" relationship="CREATE">
+      <point x="0.0" y="-107.5" />
+      <point x="1304.5453605200942" y="1670.0" />
+      <point x="2396.045360520094" y="1670.0" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnectionFactory" target="serverLogic.ServerConnectionFactory" relationship="REALIZATION">
+      <point x="81.25" y="-45.5" />
+      <point x="3415.4828605200923" y="1478.0" />
+      <point x="3409.9828605200923" y="1478.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.BaseCommand" relationship="TO_MANY">
+      <point x="123.75" y="-85.5" />
+      <point x="8495.125" y="948.0" />
+      <point x="9936.795360520095" y="948.0" />
+      <point x="9936.795360520095" y="625.0" />
+      <point x="10101.670360520095" y="625.0" />
+      <point x="10101.670360520095" y="605.0" />
+      <point x="9069.732860520093" y="605.0" />
+      <point x="68.75" y="81.5" />
+    </edge>
+    <edge source="Main" target="requestLogic.requests.ServerRequest" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1660.0" />
+      <point x="3001.7328605200923" y="1660.0" />
+      <point x="3001.7328605200923" y="948.0" />
+      <point x="3273.420360520094" y="948.0" />
+      <point x="3273.420360520094" y="918.0" />
+      <point x="3170.920360520094" y="918.0" />
+      <point x="-107.5" y="69.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.BaseRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="5799.295360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.AuthorizationRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="6423.295360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.ClearCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="6684.795360520095" y="495.0" />
+      <point x="6281.982860520093" y="495.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.CommandClientRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="8093.170360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="fileLogic.Loader" target="fileLogic.XMLReader" relationship="CREATE">
+      <point x="-5.6843418860808015E-14" y="-69.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="databaseLogic.databaseElementLogic.DBIntegrationUtility" target="databaseLogic.databaseElementLogic.DBCollectionManager" relationship="CREATE">
+      <point x="0.0" y="-107.5" />
+      <point x="1304.5453605200942" y="1670.0" />
+      <point x="156.0" y="1670.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizeManager" target="databaseLogic.databaseUserLogic.PasswordEncryptionImplSHA512" relationship="CREATE">
+      <point x="0.0" y="-69.5" />
+      <point x="1974.5453605200942" y="1478.0" />
+      <point x="2658.153221040187" y="1478.0" />
+      <point x="0.0" y="57.5" />
+    </edge>
+    <edge source="commandManager.commandPreProcessing.preProcessors.CommandAuthorizePreProcessor" target="commandManager.commandPreProcessing.preProcessors.CommandPreProcessor" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="4327.670360520095" y="216.0" />
+      <point x="4332.920360520095" y="216.0" />
+      <point x="-106.25" y="31.5" />
+    </edge>
+    <edge source="clientLogic.Session" target="clientLogic.AuthorizedCallerBack" relationship="TO_ONE">
+      <point x="0.0" y="-119.5" />
+      <point x="1038.4828605200928" y="938.0" />
+      <point x="1245.693262411347" y="938.0" />
+      <point x="-98.5" y="95.5" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5203.795360520095" y="565.0" />
+      <point x="7488.818262411347" y="565.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.CommandConfigureRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="6751.295360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="fileLogic.XMLWriter" target="fileLogic.BaseWriter" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="6157.545360520095" y="545.0" />
+      <point x="6281.982860520093" y="545.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.PrintFieldDistanceAscendingCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="8789.295360520095" y="928.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.RemoveByIdCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="7274.795360520095" y="928.0" />
+      <point x="0.0" y="107.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestAnnotationProcessors.AnnotationProcessor" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="3781.8578605200923" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="models.comparators.RouteDistanceComparator" relationship="CREATE">
+      <point x="-68.75" y="-119.5" />
+      <point x="5430.045360520095" y="625.0" />
+      <point x="4927.795360520095" y="625.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="clientLogic.SessionHandler" target="clientLogic.Session" relationship="CREATE">
+      <point x="-79.75" y="-81.5" />
+      <point x="770.1078605200928" y="1261.0" />
+      <point x="844.8578605200928" y="1261.0" />
+      <point x="844.8578605200928" y="1251.0" />
+      <point x="959.4828605200928" y="1251.0" />
+      <point x="-79.0" y="119.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizeManager" target="databaseLogic.databaseUserLogic.DBUserManager" relationship="CREATE">
+      <point x="0.0" y="-69.5" />
+      <point x="1974.5453605200942" y="1478.0" />
+      <point x="1766.8578605200923" y="1478.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="commandManager.commands.ArgumentConsumer" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="4888.420360520095" y="635.0" />
+      <point x="5080.670360520095" y="635.0" />
+      <point x="5080.670360520095" y="465.0" />
+      <point x="5932.943262411347" y="465.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="models.comparators.RouteDistanceComparator" relationship="CREATE">
+      <point x="-68.75" y="-119.5" />
+      <point x="6020.045360520095" y="625.0" />
+      <point x="4927.795360520095" y="625.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="exceptions.UnsupportedRequestException" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="8407.670360520095" y="1468.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.RemoveGreaterCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="6088.795360520095" y="928.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5203.795360520095" y="515.0" />
+      <point x="6281.982860520093" y="515.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="clientLogic.SessionHandler" target="exceptions.authorizationExceptions.UnauthorizedException" relationship="CREATE">
+      <point x="-79.75" y="-81.5" />
+      <point x="770.1078605200928" y="1261.0" />
+      <point x="844.8578605200928" y="1261.0" />
+      <point x="844.8578605200928" y="1251.0" />
+      <point x="659.8578605200928" y="1251.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="Main" target="commandManager.serverCommands.ServerCommandManager" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1660.0" />
+      <point x="10175.670360520095" y="1660.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="exceptions.authorizationExceptions.UnregisteredException" target="exceptions.authorizationExceptions.AuthorizeException" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="1631.4828605200923" y="948.0" />
+      <point x="1218.8349586288396" y="948.0" />
+      <point x="1218.8349586288396" y="928.0" />
+      <point x="779.443262411347" y="928.0" />
+      <point x="61.75" y="43.5" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.DBUserManager" target="exceptions.authorizationExceptions.UnregisteredException" relationship="CREATE">
+      <point x="-122.75" y="-81.5" />
+      <point x="1644.1078605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1251.0" />
+      <point x="1631.4828605200923" y="1251.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RegistrationRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="6111.295360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="5567.545360520095" y="525.0" />
+      <point x="6281.982860520093" y="525.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.ArgumentCommandClientRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="7144.795360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5793.795360520095" y="535.0" />
+      <point x="6281.982860520093" y="535.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.HelpCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="7569.795360520095" y="928.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="commandManager.commands.HelpCommand" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="0.0" y="83.5" />
+      <point x="7569.795360520095" y="928.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="8247.625" y="948.0" />
+      <point x="-123.75" y="-85.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ExitCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="fileLogic.XMLReader" target="fileLogic.BaseReader" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commandPreProcessing.CommandPreProcessorManager" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="4439.170360520095" y="928.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="exceptions.authorizationExceptions.WrongPasswordException" target="exceptions.authorizationExceptions.AuthorizeException" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="1904.9828605200923" y="948.0" />
+      <point x="1218.8349586288396" y="948.0" />
+      <point x="1218.8349586288396" y="928.0" />
+      <point x="779.443262411347" y="928.0" />
+      <point x="61.75" y="43.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.MinByCreationDateCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="6386.795360520095" y="928.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ExecuteScriptCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="8454.795360520095" y="928.0" />
+      <point x="0.0" y="109.5" />
+    </edge>
+    <edge source="Main" target="requestLogic.requestWorkers.RequestWorkerManager" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1660.0" />
+      <point x="7209.545360520095" y="1660.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.InfoCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="7864.795360520095" y="928.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="4888.420360520095" y="635.0" />
+      <point x="5080.670360520095" y="635.0" />
+      <point x="5080.670360520095" y="505.0" />
+      <point x="6281.982860520093" y="505.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.BaseRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="5799.295360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="-68.75" y="-83.5" />
+      <point x="9417.045360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.ClearCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="6684.795360520095" y="605.0" />
+      <point x="7488.818262411347" y="605.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.processors.AuthorizeProcessor" target="exceptions.CannotProceedException" relationship="CREATE">
+      <point x="-88.0" y="-45.5" />
+      <point x="3787.1078605200923" y="948.0" />
+      <point x="3687.8578605200923" y="948.0" />
+      <point x="3687.8578605200923" y="938.0" />
+      <point x="4054.6703605200946" y="938.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.RegistrationRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="6111.295360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddIfMinCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="4819.670360520095" y="928.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ShowCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="8159.795360520095" y="928.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="commandManager.commandPreProcessing.CommandPreProcessorManager" target="commandManager.commandPreProcessing.preProcessors.CommandPreProcessor" relationship="TO_MANY">
+      <point x="111.5" y="-45.5" />
+      <point x="4550.670360520095" y="216.0" />
+      <point x="4545.420360520095" y="216.0" />
+      <point x="106.25" y="31.5" />
+    </edge>
+    <edge source="exceptions.authorizationExceptions.RegistrationFailedException" target="exceptions.authorizationExceptions.AuthorizeException" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="1352.9828605200923" y="948.0" />
+      <point x="1218.8349586288396" y="948.0" />
+      <point x="1218.8349586288396" y="928.0" />
+      <point x="779.443262411347" y="928.0" />
+      <point x="61.75" y="43.5" />
+    </edge>
+    <edge source="commandManager.serverCommands.commands.ShowSessions" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="10101.670360520095" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="68.75" y="-119.5" />
+      <point x="6157.545360520095" y="595.0" />
+      <point x="7488.818262411347" y="595.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.DBUserManager" target="exceptions.authorizationExceptions.RegistrationFailedException" relationship="CREATE">
+      <point x="-122.75" y="-81.5" />
+      <point x="1644.1078605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1251.0" />
+      <point x="1352.9828605200923" y="1251.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="Main" target="serverLogic.DatagramServerConnectionFactory" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1660.0" />
+      <point x="3334.2328605200923" y="1660.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="commandManager.commands.ArgumentConsumer" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5203.795360520095" y="475.0" />
+      <point x="5932.943262411347" y="475.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="models.comparators.RouteDistanceComparator" relationship="CREATE">
+      <point x="-68.75" y="-119.5" />
+      <point x="4750.920360520095" y="625.0" />
+      <point x="4927.795360520095" y="625.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.UpdateCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="5793.795360520095" y="928.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="5203.795360520095" y="928.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizedCallerBack" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="98.5" y="-95.5" />
+      <point x="1442.693262411347" y="635.0" />
+      <point x="1619.6078605200923" y="635.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnection" target="requestLogic.CallerBack" relationship="CREATE">
+      <point x="-73.25" y="-43.5" />
+      <point x="2823.670360520094" y="625.0" />
+      <point x="1694.9411938534263" y="625.0" />
+      <point x="75.33333333333394" y="95.5" />
+    </edge>
+    <edge source="exceptions.authorizationExceptions.UnauthorizedException" target="exceptions.authorizationExceptions.AuthorizeException" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="659.8578605200928" y="948.0" />
+      <point x="1218.8349586288396" y="948.0" />
+      <point x="1218.8349586288396" y="928.0" />
+      <point x="779.443262411347" y="928.0" />
+      <point x="61.75" y="43.5" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.DBUserManager" target="exceptions.authorizationExceptions.WrongPasswordException" relationship="CREATE">
+      <point x="-122.75" y="-81.5" />
+      <point x="1644.1078605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1261.0" />
+      <point x="1628.9828605200923" y="1251.0" />
+      <point x="1904.9828605200923" y="1251.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.StatusRequestBuilder" target="requestLogic.StatusRequest" relationship="TO_ONE">
+      <point x="61.75" y="-81.5" />
+      <point x="2241.7328605200923" y="948.0" />
+      <point x="2405.778221040187" y="948.0" />
+      <point x="51.0" y="69.5" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.comparators.RouteComparator" relationship="CREATE">
+      <point x="-69.25" y="-141.5" />
+      <point x="-47.75" y="2245.0" />
+      <point x="-104.0" y="2245.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.AddIfMaxCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="5498.795360520095" y="928.0" />
+      <point x="0.0" y="119.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizeManager" target="exceptions.authorizationExceptions.AuthorizeException" relationship="CREATE">
+      <point x="0.0" y="-69.5" />
+      <point x="1974.5453605200942" y="1478.0" />
+      <point x="301.0" y="1478.0" />
+      <point x="301.0" y="938.0" />
+      <point x="655.943262411347" y="938.0" />
+      <point x="-61.75" y="43.5" />
+    </edge>
+    <edge source="fileLogic.Saver.Wrapper" target="fileLogic.Saver" relationship="INNER_CLASS">
+      <point x="-0.0" y="-45.5" />
+      <point x="10429.334958628839" y="337.5" />
+      <point x="116.0" y="-0.0" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.DBUserManager" target="databaseLogic.databaseUserLogic.PasswordEncryption" relationship="TO_ONE">
+      <point x="122.75" y="-81.5" />
+      <point x="1889.6078605200923" y="1261.0" />
+      <point x="2552.153221040187" y="1261.0" />
+      <point x="-53.0" y="57.5" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnectionFactory" target="serverLogic.DatagramServerConnection" relationship="CREATE">
+      <point x="-81.25" y="-45.5" />
+      <point x="3252.9828605200923" y="1478.0" />
+      <point x="3053.1078605200923" y="1478.0" />
+      <point x="3053.1078605200923" y="938.0" />
+      <point x="2896.920360520094" y="938.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.CommandClientRequestWorker" target="commandManager.CommandManager" relationship="CREATE">
+      <point x="73.25" y="-45.5" />
+      <point x="8166.420360520095" y="1251.0" />
+      <point x="8088.170360520095" y="1251.0" />
+      <point x="8088.170360520095" y="1231.0" />
+      <point x="8371.375" y="1231.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="Main" target="requestLogic.RequestReader" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="6171.795360520095" y="1660.0" />
+      <point x="6321.545360520095" y="1660.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.processors.AuthorizeProcessor" target="requestLogic.requests.ServerRequest" relationship="CREATE">
+      <point x="-88.0" y="-45.5" />
+      <point x="3787.1078605200923" y="948.0" />
+      <point x="3687.8578605200923" y="948.0" />
+      <point x="3687.8578605200923" y="928.0" />
+      <point x="3273.420360520094" y="928.0" />
+      <point x="3273.420360520094" y="918.0" />
+      <point x="3170.920360520094" y="918.0" />
+      <point x="-107.5" y="69.5" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnection" target="serverLogic.ServerConnection" relationship="REALIZATION">
+      <point x="73.25" y="-43.5" />
+      <point x="2970.170360520094" y="635.0" />
+      <point x="2982.795360520094" y="635.0" />
+      <point x="-73.25" y="43.5" />
+    </edge>
+    <edge source="requestLogic.StatusRequest" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="0.0" y="-69.5" />
+      <point x="2354.778221040187" y="635.0" />
+      <point x="1619.6078605200923" y="635.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveByIdCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-107.5" />
+      <point x="7274.795360520095" y="625.0" />
+      <point x="7488.818262411347" y="625.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.AnnotationProcessor" target="requestLogic.requests.ServerRequest" relationship="TO_ONE">
+      <point x="-71.75" y="-45.5" />
+      <point x="3710.1078605200923" y="1261.0" />
+      <point x="3463.528221040187" y="1261.0" />
+      <point x="3463.528221040187" y="1251.0" />
+      <point x="3405.028221040187" y="1251.0" />
+      <point x="3405.028221040187" y="948.0" />
+      <point x="3385.920360520094" y="948.0" />
+      <point x="107.5" y="69.5" />
+    </edge>
+    <edge source="clientLogic.AuthorizeManager" target="clientLogic.AuthorizedCallerBack" relationship="CREATE">
+      <point x="0.0" y="-69.5" />
+      <point x="1974.5453605200942" y="1478.0" />
+      <point x="2313.9828605200923" y="1478.0" />
+      <point x="2313.9828605200923" y="928.0" />
+      <point x="1442.693262411347" y="928.0" />
+      <point x="98.5" y="95.5" />
+    </edge>
+    <edge source="databaseLogic.databaseUserLogic.PasswordEncryption" target="databaseLogic.databaseUserLogic.ResourceStreamLogic" relationship="CREATE">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.serverCommands.ServerCommandManager" target="exceptions.UnknownCommandException" relationship="CREATE">
+      <point x="-62.0" y="-45.5" />
+      <point x="10113.670360520095" y="948.0" />
+      <point x="10101.670360520095" y="948.0" />
+      <point x="10101.670360520095" y="928.0" />
+      <point x="9784.795360520095" y="928.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.AuthorizationRequestWorker" relationship="CREATE">
+      <point x="-73.0" y="-45.5" />
+      <point x="7136.545360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1478.0" />
+      <point x="6587.295360520095" y="1468.0" />
+      <point x="6423.295360520095" y="1468.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.PrintFieldDistanceAscendingCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="-2.2737367544323206E-13" y="-83.5" />
+      <point x="8789.295360520093" y="635.0" />
+      <point x="7488.818262411347" y="635.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.RemoveByIdCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="0.0" y="-107.5" />
+      <point x="7274.795360520095" y="475.0" />
+      <point x="6281.982860520093" y="475.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="databaseLogic.databaseElementLogic.DBIntegrationUtility" target="databaseLogic.databaseElementLogic.DBElementCreatorLogic" relationship="CREATE">
+      <point x="0.0" y="-107.5" />
+      <point x="1304.5453605200942" y="1670.0" />
+      <point x="-92.5" y="1670.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.RequestWorker" relationship="TO_MANY">
+      <point x="73.0" y="-45.5" />
+      <point x="7282.545360520095" y="1478.0" />
+      <point x="8566.170360520095" y="1478.0" />
+      <point x="8566.170360520095" y="1241.0" />
+      <point x="6704.5" y="1241.0" />
+      <point x="73.0" y="31.5" />
+    </edge>
+    <edge source="databaseLogic.databaseElementLogic.DBCollectionManager" target="exceptions.ElementNotAddedException" relationship="CREATE">
+      <point x="0.0" y="-31.5" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestAnnotationProcessors.processors.AuthorizeProcessor" target="requestLogic.requestAnnotationProcessors.processors.RequestAnnotationProcessor" relationship="REALIZATION">
+      <point x="88.0" y="-45.5" />
+      <point x="3963.107860520093" y="928.0" />
+      <point x="3805.170360520094" y="928.0" />
+      <point x="88.0" y="31.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.CommandConfigureRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="0.0" y="-45.5" />
+      <point x="6751.295360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.ClearCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="6684.795360520095" y="928.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.CommandClientRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="-73.25" y="-45.5" />
+      <point x="8019.920360520095" y="1261.0" />
+      <point x="6558.5" y="1261.0" />
+      <point x="-73.0" y="31.5" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.CountGreaterThanDistanceCommand" relationship="CREATE">
+      <point x="-123.75" y="-85.5" />
+      <point x="8247.625" y="948.0" />
+      <point x="6979.795360520095" y="948.0" />
+      <point x="6979.795360520095" y="928.0" />
+      <point x="9157.295360520095" y="928.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="responseLogic.responseSenders.ResponseSender" target="responseLogic.responseSenders.IntermediateResponseSender" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="exceptions.NotAvailableException" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="0.0" y="-45.5" />
+      <point x="994.193262411347" y="635.0" />
+      <point x="1619.6078605200923" y="635.0" />
+      <point x="0.0" y="95.5" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="0.0" y="-119.5" />
+      <point x="5793.795360520095" y="585.0" />
+      <point x="7488.818262411347" y="585.0" />
+      <point x="7488.818262411347" y="545.0" />
+      <point x="8932.232860520093" y="545.0" />
+      <point x="-68.75" y="81.5" />
+    </edge>
+    <edge source="commandManager.commands.ExitCommand" target="commandManager.commands.AuthorizableCommand" relationship="REALIZATION">
+      <point x="0.0" y="-95.5" />
+      <point x="6979.795360520095" y="485.0" />
+      <point x="6281.982860520093" y="485.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="fileLogic.Saver" target="fileLogic.XMLWriter" relationship="CREATE">
+      <point x="0.0" y="-45.5" />
+      <point x="0.0" y="45.5" />
+    </edge>
+    <edge source="commandManager.commands.MinByCreationDateCommand" target="models.comparators.RouteCreationDateComparator" relationship="CREATE">
+      <point x="-70.25" y="-83.5" />
+      <point x="6316.545360520095" y="545.0" />
+      <point x="6892.818262411347" y="545.0" />
+      <point x="0.0" y="45.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.1361313868613139" showDependencies="true" x="5197.0" y="1279.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
