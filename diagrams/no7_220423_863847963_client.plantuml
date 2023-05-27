@@ -1,0 +1,275 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class ArgumentRequestSender<T> {
+  + ArgumentRequestSender(): 
+  + sendCommand(CommandDescription, String[], T, ServerConnection): CommandStatusResponse
+}
+class ArgumentRouteCommandReceiver {
+  + ArgumentRouteCommandReceiver(ModuleHandler<Route>): 
+  + receiveCommand(CommandDescription, String[]): boolean
+   arguemnt: Route
+}
+class AuthDataHolder {
+  + setClientData(String, char[]): void
+   instance: AuthDataHolder
+   clientData: AuthenticationData
+}
+class AuthorizationRequestSender {
+  + AuthorizationRequestSender(): 
+  + sendLoginRequest(AuthenticationData): AuthorizeResponse
+}
+class BuildObjectException {
+  + BuildObjectException(String): 
+}
+class CommandDescriptionHolder {
+  ~ commands: ArrayList<CommandDescription>
+  + initialize(ArrayList<CommandDescription>): void
+   instance: CommandDescriptionHolder
+   commands: ArrayList<CommandDescription>
+}
+class CommandDescriptionsRequestSender {
+  + CommandDescriptionsRequestSender(): 
+  + sendRequestAndGetCommands(): ArrayList<CommandDescription>
+}
+class CommandExecutor {
+  + CommandExecutor(ArrayList<CommandDescription>, InputStream, CommandMode): 
+  + startExecuting(): void
+}
+class CommandInterruptedException {
+  + CommandInterruptedException(Exception): 
+}
+class CommandLoaderUtility {
+  + CommandLoaderUtility(): 
+  + initializeCommands(): void
+}
+enum CommandMode << enumeration >> {
+  + CommandMode(): 
+  + values(): CommandMode[]
+  + valueOf(String): CommandMode
+}
+class CommandRequestSender {
+  + CommandRequestSender(): 
+  + sendCommand(CommandDescription, String[], ServerConnection): CommandStatusResponse
+}
+class CommandsNotLoadedException {
+  + CommandsNotLoadedException(): 
+}
+class CoordXValidator {
+  + CoordXValidator(): 
+  + validate(Double): boolean
+}
+class CoordYValidator {
+  + CoordYValidator(): 
+  + validate(Float): boolean
+}
+class CoordinatesCLIHandler {
+  + CoordinatesCLIHandler(): 
+  + buildObject(): Coordinates
+}
+class DistanceValidator {
+  + DistanceValidator(): 
+  + validate(Integer): boolean
+}
+class ExecuteScriptReceiver {
+  + ExecuteScriptReceiver(): 
+  + receiveCommand(CommandDescription, String[]): boolean
+}
+class ExitReceiver {
+  + ExitReceiver(): 
+  + receiveCommand(CommandDescription, String[]): boolean
+}
+class GotAnErrorResponseException {
+  + GotAnErrorResponseException(ErrorResponse): 
+   errorResponse: ErrorResponse
+}
+class IntermediateResponseHandler {
+  + IntermediateResponseHandler(IntermediateResponse): 
+  + proceedIntermediateResponse(): BaseResponse
+}
+class LocationCLIHandler {
+  + LocationCLIHandler(): 
+  + buildObject(): Location
+}
+class LocationNameValidator {
+  + LocationNameValidator(): 
+  + validate(String): boolean
+}
+class LocationXValidator {
+  + LocationXValidator(): 
+  + validate(Float): boolean
+}
+class LocationYZValidator {
+  + LocationYZValidator(): 
+  + validate(Long): boolean
+}
+class LoginRequestSender {
+  + LoginRequestSender(): 
+  + sendLoginRequest(BaseRequest): AuthorizeResponse
+}
+class Main {
+  + Main(): 
+  + main(String[]): void
+}
+interface ModuleHandler<T> << interface >> {
+  + buildObject(): T
+}
+class NameValidator {
+  + NameValidator(): 
+  + validate(String): boolean
+}
+class NonArgumentReceiver {
+  + NonArgumentReceiver(): 
+  + receiveCommand(CommandDescription, String[]): boolean
+}
+class ProceedException {
+  + ProceedException(String): 
+}
+class RegistrationRequestSender {
+  + RegistrationRequestSender(): 
+  + sendRegisterRequest(RegistrationData): AuthorizeResponse
+}
+class RequestSender {
+  + RequestSender(): 
+  + sendRequest(BaseRequest, ServerConnection): BaseResponse
+}
+class ResponseReader {
+  + ResponseReader(InputStream): 
+  + readObject(): BaseResponse
+}
+class RouteCLIHandler {
+  + RouteCLIHandler(): 
+  + buildObject(): Route
+}
+class RouteNonCLIHandler {
+  + RouteNonCLIHandler(Scanner): 
+  + buildObject(): Route
+}
+class RouteValidator {
+  + RouteValidator(): 
+  + validate(Route): boolean
+}
+interface ServerConnection << interface >> {
+  + closeConnection(): void
+  + listenServer(): ByteArrayInputStream
+  + sendData(byte[]): InputStream
+  + openConnection(): void
+}
+interface ServerConnectionFactory << interface >> {
+  + openConnection(InetAddress, int): ServerConnection
+}
+class ServerConnectionHandler {
+  + ServerConnectionHandler(): 
+   serverConnection: ServerConnection
+   currentConnection: ServerConnection
+}
+class StreamInterruptedException {
+  + StreamInterruptedException(String): 
+}
+class UdpConnectionBlockDecorator {
+  + UdpConnectionBlockDecorator(UdpServerConnection, boolean): 
+   lockState: boolean
+}
+class UdpServerConnection {
+  + listenServer(): ByteArrayInputStream
+  + openConnection(): void
+  + closeConnection(): void
+  + sendData(byte[]): ByteArrayInputStream
+}
+class UdpServerConnectionFactory {
+  + UdpServerConnectionFactory(): 
+  + openConnection(InetAddress, int): ServerConnection
+}
+class UnknownCommandException {
+  + UnknownCommandException(String): 
+}
+class UnsupportedResponseException {
+  + UnsupportedResponseException(String): 
+}
+class Utilities {
+  + Utilities(): 
+  + checkArgumentsOrThrow(int, int): void
+  + hasNextLineOrThrow(Scanner): boolean
+}
+interface Validator<T> << interface >> {
+  + validate(T): boolean
+}
+class WrongAmountOfArgumentsException {
+  + WrongAmountOfArgumentsException(String): 
+}
+
+ArgumentRequestSender             -[#595959,dashed]->  RequestSender                    : "«create»"
+ArgumentRouteCommandReceiver      -[#595959,dashed]->  ArgumentRequestSender            : "«create»"
+ArgumentRouteCommandReceiver     "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                    
+AuthorizationRequestSender        -[#595959,dashed]->  LoginRequestSender               : "«create»"
+CommandDescriptionsRequestSender  -[#595959,dashed]->  RequestSender                    : "«create»"
+CommandExecutor                   -[#595959,dashed]->  ArgumentRouteCommandReceiver     : "«create»"
+CommandExecutor                   -[#595959,dashed]->  CommandInterruptedException      : "«create»"
+CommandExecutor                  "1" *-[#595959,plain]-> "mode\n1" CommandMode                      
+CommandExecutor                   -[#595959,dashed]->  CommandsNotLoadedException       : "«create»"
+CommandExecutor                   -[#595959,dashed]->  ExecuteScriptReceiver            : "«create»"
+CommandExecutor                   -[#595959,dashed]->  ExitReceiver                     : "«create»"
+CommandExecutor                   -[#595959,dashed]->  NonArgumentReceiver              : "«create»"
+CommandExecutor                   -[#595959,dashed]->  RouteCLIHandler                  : "«create»"
+CommandExecutor                   -[#595959,dashed]->  RouteNonCLIHandler               : "«create»"
+CommandExecutor                   -[#595959,dashed]->  UnknownCommandException          : "«create»"
+CommandLoaderUtility              -[#595959,dashed]->  CommandDescriptionsRequestSender : "«create»"
+CommandRequestSender              -[#595959,dashed]->  RequestSender                    : "«create»"
+CoordXValidator                   -[#008200,dashed]-^  Validator                        
+CoordYValidator                   -[#008200,dashed]-^  Validator                        
+CoordinatesCLIHandler             -[#595959,dashed]->  BuildObjectException             : "«create»"
+CoordinatesCLIHandler             -[#595959,dashed]->  CoordXValidator                  : "«create»"
+CoordinatesCLIHandler             -[#595959,dashed]->  CoordYValidator                  : "«create»"
+CoordinatesCLIHandler             -[#008200,dashed]-^  ModuleHandler                    
+DistanceValidator                 -[#008200,dashed]-^  Validator                        
+ExecuteScriptReceiver             -[#595959,dashed]->  CommandExecutor                  : "«create»"
+IntermediateResponseHandler       -[#595959,dashed]->  ProceedException                 : "«create»"
+IntermediateResponseHandler       -[#595959,dashed]->  ResponseReader                   : "«create»"
+LocationCLIHandler                -[#595959,dashed]->  BuildObjectException             : "«create»"
+LocationCLIHandler                -[#595959,dashed]->  LocationNameValidator            : "«create»"
+LocationCLIHandler                -[#595959,dashed]->  LocationXValidator               : "«create»"
+LocationCLIHandler                -[#595959,dashed]->  LocationYZValidator              : "«create»"
+LocationCLIHandler                -[#008200,dashed]-^  ModuleHandler                    
+LocationNameValidator             -[#008200,dashed]-^  Validator                        
+LocationXValidator                -[#008200,dashed]-^  Validator                        
+LocationYZValidator               -[#008200,dashed]-^  Validator                        
+LoginRequestSender                -[#595959,dashed]->  RequestSender                    : "«create»"
+Main                              -[#595959,dashed]->  AuthorizationRequestSender       : "«create»"
+Main                              -[#595959,dashed]->  CommandExecutor                  : "«create»"
+Main                              -[#595959,dashed]->  RegistrationRequestSender        : "«create»"
+Main                              -[#595959,dashed]->  UdpConnectionBlockDecorator      : "«create»"
+Main                              -[#595959,dashed]->  UdpServerConnectionFactory       : "«create»"
+NameValidator                     -[#008200,dashed]-^  Validator                        
+NonArgumentReceiver               -[#595959,dashed]->  CommandRequestSender             : "«create»"
+RegistrationRequestSender         -[#595959,dashed]->  LoginRequestSender               : "«create»"
+RequestSender                     -[#595959,dashed]->  ResponseReader                   : "«create»"
+ResponseReader                    -[#595959,dashed]->  GotAnErrorResponseException      : "«create»"
+ResponseReader                    -[#595959,dashed]->  IntermediateResponseHandler      : "«create»"
+RouteCLIHandler                   -[#595959,dashed]->  BuildObjectException             : "«create»"
+RouteCLIHandler                   -[#595959,dashed]->  CoordinatesCLIHandler            : "«create»"
+RouteCLIHandler                   -[#595959,dashed]->  DistanceValidator                : "«create»"
+RouteCLIHandler                   -[#595959,dashed]->  LocationCLIHandler               : "«create»"
+RouteCLIHandler                   -[#008200,dashed]-^  ModuleHandler                    
+RouteCLIHandler                   -[#595959,dashed]->  NameValidator                    : "«create»"
+RouteNonCLIHandler                -[#595959,dashed]->  BuildObjectException             : "«create»"
+RouteNonCLIHandler                -[#008200,dashed]-^  ModuleHandler                    
+RouteNonCLIHandler                -[#595959,dashed]->  RouteValidator                   : "«create»"
+RouteValidator                    -[#595959,dashed]->  CoordXValidator                  : "«create»"
+RouteValidator                    -[#595959,dashed]->  CoordYValidator                  : "«create»"
+RouteValidator                    -[#595959,dashed]->  DistanceValidator                : "«create»"
+RouteValidator                    -[#595959,dashed]->  LocationNameValidator            : "«create»"
+RouteValidator                    -[#595959,dashed]->  LocationYZValidator              : "«create»"
+RouteValidator                    -[#595959,dashed]->  NameValidator                    : "«create»"
+RouteValidator                    -[#008200,dashed]-^  Validator                        
+ServerConnectionHandler          "1" *-[#595959,plain]-> "currentConnection\n1" ServerConnection                 
+UdpConnectionBlockDecorator       -[#000082,plain]-^  UdpServerConnection              
+UdpConnectionBlockDecorator      "1" *-[#595959,plain]-> "baseConnection\n1" UdpServerConnection              
+UdpServerConnection               -[#008200,dashed]-^  ServerConnection                 
+UdpServerConnectionFactory        -[#008200,dashed]-^  ServerConnectionFactory          
+UdpServerConnectionFactory        -[#595959,dashed]->  UdpServerConnection              : "«create»"
+Utilities                         -[#595959,dashed]->  StreamInterruptedException       : "«create»"
+Utilities                         -[#595959,dashed]->  WrongAmountOfArgumentsException  : "«create»"
+@enduml
