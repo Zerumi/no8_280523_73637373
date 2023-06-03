@@ -26,6 +26,10 @@ public class AuthWindow extends JFrame {
 
         JButton authButton = new JButton("Auth");
         southPanel.add(authButton);
-        authButton.addActionListener(new AuthButtonActionListener());
+        authButton.addActionListener(new AuthButtonActionListener(loginField, passField));
+
+        add(authPanel, BorderLayout.CENTER);
+        add(southPanel, BorderLayout.SOUTH);
+        pack();
     }
 }

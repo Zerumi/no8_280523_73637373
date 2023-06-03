@@ -8,28 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: remove old report">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/authentication/AuthLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/core/providers/ExceptionProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/core/providers/SingleElementProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthButtonActionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/ApplicationResponseProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerResponseProvider.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="critical: rewrite server -&gt; client logic to callback chain of observers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandLoaderUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandLoaderUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/externalRecievers/NonArgumentReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/AuthorizationRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/AuthorizationRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RegistrationRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RegistrationRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthButtonActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +162,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:server [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -320,10 +303,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
-        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
     </recent_temporary>
@@ -368,14 +351,7 @@
       <workItem from="1683538805840" duration="17057000" />
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
-      <workItem from="1685266672150" duration="16274000" />
-    </task>
-    <task id="LOCAL-00004" summary="Models get/set updated, javadoc">
-      <created>1675737676282</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675737676282</updated>
+      <workItem from="1685266672150" duration="18801000" />
     </task>
     <task id="LOCAL-00005" summary="loader env_value fixed + base reader abstract level added">
       <created>1675770856285</created>
@@ -713,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685266878395</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="critical: rewrite server -&gt; client logic to callback chain of observers">
+      <created>1685757941027</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1685757941027</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +719,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bug fix, part 2.1" />
     <MESSAGE value="fix: update javadoc &amp; argument consumers" />
     <MESSAGE value="chore: restored arguments validation" />
     <MESSAGE value="feat: simplification part 1" />
@@ -761,7 +743,8 @@
     <MESSAGE value="fix: removed unusual field" />
     <MESSAGE value="chore: rename project" />
     <MESSAGE value="chore: remove old report" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove old report" />
+    <MESSAGE value="critical: rewrite server -&gt; client logic to callback chain of observers" />
+    <option name="LAST_COMMIT_MESSAGE" value="critical: rewrite server -&gt; client logic to callback chain of observers" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
