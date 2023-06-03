@@ -2,7 +2,6 @@ package serverLogic;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Provides abstract server connection. Use factory methods to create the connection.
@@ -30,10 +29,9 @@ public interface ServerConnection {
      * Method for send data to a server
      *
      * @param bytesToSend bytes to send
-     * @return Response from a server
      * @throws IOException if I/O occurs
      */
-    InputStream sendData(byte[] bytesToSend) throws IOException;
+    void sendData(byte[] bytesToSend, ServerResponseProvider... providers) throws IOException;
 
     ByteArrayInputStream listenServer() throws IOException;
 }

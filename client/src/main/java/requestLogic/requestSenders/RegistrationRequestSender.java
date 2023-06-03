@@ -2,11 +2,29 @@ package requestLogic.requestSenders;
 
 import authorization.authCredentials.RegistrationData;
 import requests.RegistrationRequest;
+import responseLogic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;
 
-public class RegistrationRequestSender {
-    public AuthorizeResponse sendRegisterRequest(RegistrationData data) {
+import java.util.Arrays;
+
+public class RegistrationRequestSender implements ApplicationResponseProvider<AuthorizeResponse> {
+
+    ApplicationResponseProvider<AuthorizeResponse>[] providers;
+
+    @SafeVarargs
+    public final void sendRegisterRequest(RegistrationData data, ApplicationResponseProvider<AuthorizeResponse>... providers) {
+        this.providers = providers;
         RegistrationRequest request = new RegistrationRequest(data);
-        return new LoginRequestSender().sendLoginRequest(request);
+        new LoginRequestSender().sendLoginRequest(request, this);
+    }
+
+    @Override
+    public void acceptException(Exception e) {
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
+    }
+
+    @Override
+    public void acceptResponse(AuthorizeResponse response) {
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
     }
 }

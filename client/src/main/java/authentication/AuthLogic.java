@@ -1,19 +1,21 @@
-package requestLogic.requestSenders;
+package authentication;
 
 import authorization.authCredentials.AuthenticationData;
-import requests.AuthorizationRequest;
+import requestLogic.requestSenders.AuthorizationRequestSender;
 import responseLogic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;
 
 import java.util.Arrays;
 
-public class AuthorizationRequestSender implements ApplicationResponseProvider<AuthorizeResponse> {
+public class AuthLogic implements ApplicationResponseProvider<AuthorizeResponse> {
 
     ApplicationResponseProvider<AuthorizeResponse>[] providers;
 
-    public void sendLoginRequest(AuthenticationData data) {
-        AuthorizationRequest request = new AuthorizationRequest(data);
-        new LoginRequestSender().sendLoginRequest(request, this);
+    @SafeVarargs
+    public final void auth(String username, char[] password, ApplicationResponseProvider<AuthorizeResponse>... providers) {
+        this.providers = providers;
+        AuthenticationData data = new AuthenticationData(username, password);
+        new AuthorizationRequestSender().sendLoginRequest(data);
     }
 
     @Override

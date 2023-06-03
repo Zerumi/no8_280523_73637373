@@ -1,41 +1,48 @@
 package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
+import core.providers.SingleElementProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.CommandDescriptionsRequest;
+import responseLogic.ApplicationResponseProvider;
+import responses.BaseResponse;
 import responses.CommandDescriptionsResponse;
 import serverLogic.ServerConnectionHandler;
 
 import java.io.IOException;
-import java.net.PortUnreachableException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class CommandDescriptionsRequestSender {
+public class CommandDescriptionsRequestSender implements ApplicationResponseProvider<BaseResponse> {
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public ArrayList<CommandDescription> sendRequestAndGetCommands() {
-        ArrayList<CommandDescription> result = null;
+    private SingleElementProvider<ArrayList<CommandDescription>>[] providers;
 
+    @SafeVarargs
+    public final void sendRequestForGetCommands(SingleElementProvider<ArrayList<CommandDescription>>... providers) {
+        this.providers = providers;
         CommandDescriptionsRequest request = new CommandDescriptionsRequest();
-
         try {
-            CommandDescriptionsResponse response = (CommandDescriptionsResponse) new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection());
-            result = response.getCommands();
-        } catch (PortUnreachableException e) {
-            logger.fatal("Server is unavailable. Please, wait until server will came back.");
-            logger.fatal("We can't get available commands because the server is unavailable.");
-        } catch (GotAnErrorResponseException e) {
-            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
-        } catch (ProceedException e) {
-            logger.error("We've lost some packets during getting response: " + e.getMessage());
+            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(), this);
         } catch (IOException e) {
-            logger.error("Something went wrong during I/O operations.");
+            logger.error("Something went wrong during I/O operations.", e);
         }
+    }
 
-        return result;
+    @Override
+    public void acceptResponse(BaseResponse response) {
+        ArrayList<CommandDescription> result;
+        CommandDescriptionsResponse acceptedResponse = (CommandDescriptionsResponse) response;
+        result = acceptedResponse.getCommands();
+
+        ArrayList<CommandDescription> finalResult = result;
+        Arrays.stream(providers).forEach(x -> x.acceptElement(finalResult));
+    }
+
+    @Override
+    public void acceptException(Exception e) {
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
     }
 }

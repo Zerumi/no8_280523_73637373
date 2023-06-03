@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.net.PortUnreachableException;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
@@ -62,8 +61,7 @@ public class UdpServerConnection implements ServerConnection {
     boolean lastRequestSuccess = true;
 
     @Override
-    public ByteArrayInputStream sendData(byte[] bytesToSend) throws IOException {
-        ByteArrayInputStream bos = null;
+    public void sendData(byte[] bytesToSend, ServerResponseProvider... providers) throws IOException {
         if (channel.isConnected() && channel.isOpen()) {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
@@ -73,7 +71,34 @@ public class UdpServerConnection implements ServerConnection {
                 bosFuture = service.submit(callable);
             }
 
-            try {
+            Thread thread = new Thread(() -> {
+                ByteArrayInputStream bos = null;
+                try {
+                    bos = bosFuture.get(5, TimeUnit.SECONDS);
+                } catch (InterruptedException | ExecutionException e) {
+                    logger.error("Exception in server logic");
+                    Arrays.stream(providers).forEach(x -> x.acceptException(e));
+                } catch (TimeoutException e) {
+                    logger.error("Timeout in server logic");
+                    logger.info("We will listen response...");
+                    Arrays.stream(providers).forEach(x -> x.acceptException(e));
+                    try {
+                        bos = bosFuture.get();
+                    } catch (InterruptedException | ExecutionException ex) {
+                        logger.error("Exception in server logic after timeout");
+                        Arrays.stream(providers).forEach(x -> x.acceptException(ex));
+                    }
+                } finally {
+                    if (bos != null) {
+                        ByteArrayInputStream finalBos = bos;
+                        Arrays.stream(providers).forEach(x -> x.acceptResponse(finalBos));
+                    }
+                }
+            });
+
+            thread.start();
+
+            /* try {
                 bos = bosFuture.get(5, TimeUnit.SECONDS);
                 lastRequestSuccess = true;
             } catch (InterruptedException e) {
@@ -86,9 +111,8 @@ public class UdpServerConnection implements ServerConnection {
                 lastRequestSuccess = false;
                 logger.error("Time limit exceed for getting response");
                 throw new PortUnreachableException("Server may be unavailable");
-            }
+            } */
         } else this.openConnection();
-        return bos;
     }
 
     public ByteArrayInputStream listenServer() throws IOException {

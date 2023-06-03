@@ -1,30 +1,41 @@
 package requestLogic.requestSenders;
 
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.BaseRequest;
+import responseLogic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;
+import responses.BaseResponse;
 import serverLogic.ServerConnectionHandler;
 
 import java.io.IOException;
+import java.util.Arrays;
 
-public class LoginRequestSender {
+public class LoginRequestSender implements ApplicationResponseProvider<BaseResponse> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab7");
 
+    private ApplicationResponseProvider<AuthorizeResponse>[] providers;
+
     // костылииииии.............
-    public AuthorizeResponse sendLoginRequest(BaseRequest request) {
-        AuthorizeResponse response = null;
+    // upd. since 4.0: где?
+    @SafeVarargs
+    public final void sendLoginRequest(BaseRequest request, ApplicationResponseProvider<AuthorizeResponse>... providers) {
+        this.providers = providers;
         try {
-            response = (AuthorizeResponse) new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection());
+            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(), this);
         } catch (IOException e) {
             logger.error("Something went wrong during I/O ", e);
-        } catch (GotAnErrorResponseException e) {
-            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
-        } catch (ProceedException e) {
-            logger.error("We've lost some packets during getting response: " + e.getMessage());
         }
-        return response;
+    }
+
+    @Override
+    public void acceptException(Exception e) {
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
+    }
+
+    @Override
+    public void acceptResponse(BaseResponse response) {
+        var acceptedResponse = (AuthorizeResponse) response;
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
     }
 }

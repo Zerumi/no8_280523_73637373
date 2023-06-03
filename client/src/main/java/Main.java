@@ -1,5 +1,3 @@
-import authorization.authCredentials.AuthenticationData;
-import authorization.authCredentials.RegistrationData;
 import commandManager.CommandDescriptionHolder;
 import commandManager.CommandExecutor;
 import commandManager.CommandLoaderUtility;
@@ -7,18 +5,12 @@ import commandManager.CommandMode;
 import exceptions.CommandsNotLoadedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.requestSenders.AuthorizationRequestSender;
-import requestLogic.requestSenders.RegistrationRequestSender;
-import responses.AuthorizeResponse;
 import serverLogic.*;
 
 import javax.swing.*;
-import java.io.Console;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Objects;
-import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -39,6 +31,9 @@ public class Main {
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
+
+        // most of the logic are deprecated now (staying here because I need code-snippets from here).
+
         // server connecting
         try {
             //ServerConnection connection = new UdpServerConnectionFactory().openConnection(InetAddress.getByName(HOST_ADDRESS), PORT);
@@ -49,7 +44,7 @@ public class Main {
             connection.openConnection();
 
             // authorisation
-            AuthorizeResponse response;
+            /* AuthorizeResponse response;
             do {
                 Console console = System.console();
                 String username;
@@ -76,6 +71,7 @@ public class Main {
             System.out.println("Authorization successful!");
             System.out.println("Authorized as: " + response.getAuthorizedAs().name() + " (login: " + response.getAuthorizedAs().login() + ")");
             System.out.println("Last login: " + response.getAuthorizedAs().lastLogin());
+            */
 
             // request commands
             boolean commandsNotLoaded = true;

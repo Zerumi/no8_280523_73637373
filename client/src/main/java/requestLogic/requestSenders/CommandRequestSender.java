@@ -1,35 +1,42 @@
 package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.CommandClientRequest;
+import responseLogic.ApplicationResponseProvider;
+import responses.BaseResponse;
 import responses.CommandStatusResponse;
 import serverLogic.ServerConnection;
 
 import java.io.IOException;
-import java.net.PortUnreachableException;
+import java.util.Arrays;
 
-public class CommandRequestSender {
+public class CommandRequestSender implements ApplicationResponseProvider<BaseResponse> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public CommandStatusResponse sendCommand(CommandDescription command, String[] args, ServerConnection connection) {
-        CommandStatusResponse response = null;
+    private ApplicationResponseProvider<CommandStatusResponse>[] providers;
+
+    @SafeVarargs
+    public final void sendCommand(CommandDescription command, String[] args, ServerConnection connection, ApplicationResponseProvider<CommandStatusResponse>... providers) {
+        this.providers = providers;
         try {
             var rq = new CommandClientRequest(command, args);
             logger.info("Sending command request...");
-            response = (CommandStatusResponse) new RequestSender().sendRequest(rq, connection);
-        } catch (PortUnreachableException e) {
-            logger.warn("Server is unavailable. Please, wait until server will come back.");
-        } catch (ProceedException e) {
-            logger.error("We've lost some packets during getting response: " + e.getMessage());
-        } catch (GotAnErrorResponseException e) {
-            logger.error("Received error from a server! " + e.getErrorResponse().getMsg());
+            new RequestSender().sendRequest(rq, connection, this);
         } catch (IOException e) {
             logger.error("Something went wrong during I/O operations", e);
         }
-        return response;
+    }
+
+    @Override
+    public void acceptException(Exception e) {
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
+    }
+
+    @Override
+    public void acceptResponse(BaseResponse response) {
+        var acceptedResponse = (CommandStatusResponse) response;
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
     }
 }
