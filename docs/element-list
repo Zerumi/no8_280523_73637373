@@ -24,7 +24,7 @@ exceptions.authorizationExceptions
 fileLogic
 fileLogic.editors
 gui.controllers
-gui.controllers.callbacks
+gui.controllers.auth.callbacks
 gui.frames
 main
 models

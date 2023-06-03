@@ -1,11 +1,13 @@
 package gui.frames;
 
-import gui.controllers.AuthActionListener;
-import gui.controllers.RegisterWindowActionListener;
-import gui.controllers.callbacks.AuthActionListenerCallback;
+import gui.controllers.auth.AuthActionListener;
+import gui.controllers.auth.AuthTextFieldsEditListener;
+import gui.controllers.auth.RegisterWindowActionListener;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class AuthWindow extends JFrame implements AuthActionListenerCallback {
 
@@ -16,10 +18,18 @@ public class AuthWindow extends JFrame implements AuthActionListenerCallback {
         var loginField = new JTextField();
         var passField = new JPasswordField();
 
-        loginField.setColumns(15);
-        passField.setColumns(15);
+        AuthTextFieldsEditListener textChangeListener = new AuthTextFieldsEditListener(loginField, passField, false);
+        AuthActionListener authActionListener = new AuthActionListener(loginField, passField, this);
+        ActionListener resetForeground = event -> textChangeListener.setEnabled(true);
 
-        passField.addActionListener(new AuthActionListener(loginField, passField, this));
+        loginField.getDocument().addDocumentListener(textChangeListener);
+        passField.getDocument().addDocumentListener(textChangeListener);
+
+        loginField.setColumns(12);
+        passField.setColumns(12);
+
+        passField.addActionListener(authActionListener);
+        passField.addActionListener(resetForeground);
 
         var loginLabel = new JLabel("Login: ", SwingConstants.RIGHT);
         var passLabel = new JLabel("Password: ", SwingConstants.RIGHT);
@@ -37,7 +47,8 @@ public class AuthWindow extends JFrame implements AuthActionListenerCallback {
 
         JButton authButton = new JButton("Login");
         southPanel.add(authButton);
-        authButton.addActionListener(new AuthActionListener(loginField, passField, this));
+        authButton.addActionListener(authActionListener);
+        authButton.addActionListener(resetForeground);
 
         this.add(authPanel, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.SOUTH);

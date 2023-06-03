@@ -266,7 +266,7 @@ memberSearchIndex = [{
     "p": "gui.controllers",
     "c": "AuthActionListener",
     "l": "AuthActionListener(JTextField, JPasswordField, AuthActionListenerCallback)",
-    "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.callbacks.AuthActionListenerCallback)"
+    "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.auth.callbacks.AuthActionListenerCallback)"
 }, {
     "p": "authorization.authCredentials",
     "c": "AuthenticationData",
@@ -1499,7 +1499,7 @@ memberSearchIndex = [{
     "p": "gui.controllers",
     "c": "RegisterActionListener",
     "l": "RegisterActionListener(JTextField, JTextField, JPasswordField, AuthActionListenerCallback)",
-    "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.callbacks.AuthActionListenerCallback)"
+    "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.auth.callbacks.AuthActionListenerCallback)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "registerDate()"}, {
     "p": "commandLogic.commandReceiverLogic",
     "c": "ReceiverManager",
@@ -1519,7 +1519,7 @@ memberSearchIndex = [{
     "p": "gui.controllers",
     "c": "RegisterWindowActionListener",
     "l": "RegisterWindowActionListener(AuthActionListenerCallback)",
-    "u": "%3Cinit%3E(gui.controllers.callbacks.AuthActionListenerCallback)"
+    "u": "%3Cinit%3E(gui.controllers.auth.callbacks.AuthActionListenerCallback)"
 }, {
     "p": "authorization.authCredentials",
     "c": "RegistrationData",
@@ -1895,7 +1895,7 @@ memberSearchIndex = [{
     "c": "StreamInterruptedException",
     "l": "StreamInterruptedException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
-}, {"p": "gui.controllers.callbacks", "c": "AuthActionListenerCallback", "l": "succeedAction()"}, {
+}, {"p": "gui.controllers.auth.callbacks", "c": "AuthActionListenerCallback", "l": "succeedAction()"}, {
     "p": "gui.frames",
     "c": "AuthWindow",
     "l": "succeedAction()"

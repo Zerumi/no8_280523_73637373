@@ -1,7 +1,7 @@
-package gui.controllers;
+package gui.controllers.auth;
 
 import authentication.AuthLogic;
-import gui.controllers.callbacks.AuthActionListenerCallback;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import gui.frames.MainWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +19,8 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
     private final JPasswordField passwordField;
     private final AuthActionListenerCallback callback;
 
-    public AuthActionListener(JTextField usernameField, JPasswordField passwordField, AuthActionListenerCallback callback) {
+    public AuthActionListener(JTextField usernameField, JPasswordField passwordField,
+                              AuthActionListenerCallback callback) {
         this.usernameField = usernameField;
         this.passwordField = passwordField;
         this.callback = callback;

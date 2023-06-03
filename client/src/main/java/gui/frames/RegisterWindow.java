@@ -1,11 +1,12 @@
 package gui.frames;
 
-import gui.controllers.AuthActionListener;
-import gui.controllers.RegisterActionListener;
-import gui.controllers.callbacks.AuthActionListenerCallback;
+import gui.controllers.auth.RegisterActionListener;
+import gui.controllers.auth.RegisterTextFieldsEditListener;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class RegisterWindow extends JFrame implements AuthActionListenerCallback {
 
@@ -17,11 +18,22 @@ public class RegisterWindow extends JFrame implements AuthActionListenerCallback
         var loginField = new JTextField();
         var passField = new JPasswordField();
 
-        userNameField.setColumns(15);
-        loginField.setColumns(15);
-        passField.setColumns(15);
+        userNameField.setColumns(12);
+        loginField.setColumns(12);
+        passField.setColumns(12);
 
-        passField.addActionListener(new AuthActionListener(loginField, passField, this));
+        RegisterTextFieldsEditListener textChangeListener = new RegisterTextFieldsEditListener
+                (userNameField, loginField, passField, false);
+        RegisterActionListener authActionListener = new RegisterActionListener
+                (userNameField, loginField, passField, this);
+        ActionListener resetForeground = event -> textChangeListener.setEnabled(true);
+
+        userNameField.getDocument().addDocumentListener(textChangeListener);
+        loginField.getDocument().addDocumentListener(textChangeListener);
+        passField.getDocument().addDocumentListener(textChangeListener);
+
+        passField.addActionListener(authActionListener);
+        passField.addActionListener(resetForeground);
 
         var userNameLabel = new JLabel("Username: ", SwingConstants.RIGHT);
         var loginLabel = new JLabel("Login: ", SwingConstants.RIGHT);
@@ -38,7 +50,8 @@ public class RegisterWindow extends JFrame implements AuthActionListenerCallback
 
         JButton registerButton = new JButton("Register");
         southPanel.add(registerButton);
-        registerButton.addActionListener(new RegisterActionListener(userNameField, loginField, passField, this));
+        registerButton.addActionListener(authActionListener);
+        registerButton.addActionListener(resetForeground);
 
         this.add(authPanel, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.SOUTH);

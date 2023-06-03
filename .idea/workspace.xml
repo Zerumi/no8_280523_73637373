@@ -9,50 +9,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
-      <change afterPath="$PROJECT_DIR$/docs/authentication/AuthLogic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/authentication/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/authentication/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ArgumentRouteCommandReceiver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExecuteScriptReceiver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExitReceiver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/NonArgumentReceiver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/ServerCommandManager.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/ShowSessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/core/providers/SingleElementProvider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/core/providers/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/core/providers/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exceptions/ProceedException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responseLogic/IntermediateResponseHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/IntermediateResponseSender.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responses/ByteArrayPacketResponse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responses/IntermediateResponse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/responses/SaveStatusResponse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/serverLogic/ServerResponseProvider.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils/Utilities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthTextFieldsEditListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterTextFieldsEditListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/RegisterActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/RegisterWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterWindowActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/callbacks/AuthActionListenerCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/callbacks/AuthActionListenerCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,14 +379,7 @@
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="16274000" />
-      <workItem from="1685799662860" duration="7248000" />
-    </task>
-    <task id="LOCAL-00006" summary="docs">
-      <created>1675771666792</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675771666792</updated>
+      <workItem from="1685799662860" duration="10478000" />
     </task>
     <task id="LOCAL-00007" summary="commands, part 1; handlers + validators">
       <created>1675810034037</created>
@@ -737,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685808193199</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="chore: rerun javadoc">
+      <created>1685826986962</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1685826986962</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -889,12 +876,12 @@
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthActionListener.java</url>
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java</url>
           <line>24</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthActionListener.java</url>
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java</url>
           <line>31</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>

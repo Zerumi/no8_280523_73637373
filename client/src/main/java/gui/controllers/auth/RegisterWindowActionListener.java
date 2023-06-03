@@ -1,6 +1,6 @@
-package gui.controllers;
+package gui.controllers.auth;
 
-import gui.controllers.callbacks.AuthActionListenerCallback;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import gui.frames.RegisterWindow;
 
 import javax.swing.*;

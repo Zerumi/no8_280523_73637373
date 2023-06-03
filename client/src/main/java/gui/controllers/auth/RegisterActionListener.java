@@ -1,7 +1,7 @@
-package gui.controllers;
+package gui.controllers.auth;
 
 import authorization.authCredentials.RegistrationData;
-import gui.controllers.callbacks.AuthActionListenerCallback;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import requestLogic.requestSenders.RegistrationRequestSender;
 import responseLogic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;

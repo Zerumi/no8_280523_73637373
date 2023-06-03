@@ -1,4 +1,4 @@
-package gui.controllers.callbacks;
+package gui.controllers.auth.callbacks;
 
 public interface AuthActionListenerCallback {
     void succeedAction();
