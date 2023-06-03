@@ -15,7 +15,7 @@ public class AuthLogic implements ApplicationResponseProvider<AuthorizeResponse>
     public final void auth(String username, char[] password, ApplicationResponseProvider<AuthorizeResponse>... providers) {
         this.providers = providers;
         AuthenticationData data = new AuthenticationData(username, password);
-        new AuthorizationRequestSender().sendLoginRequest(data);
+        new AuthorizationRequestSender().sendLoginRequest(data, this);
     }
 
     @Override

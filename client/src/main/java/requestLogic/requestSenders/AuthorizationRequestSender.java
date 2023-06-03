@@ -11,7 +11,9 @@ public class AuthorizationRequestSender implements ApplicationResponseProvider<A
 
     ApplicationResponseProvider<AuthorizeResponse>[] providers;
 
-    public void sendLoginRequest(AuthenticationData data) {
+    @SafeVarargs
+    public final void sendLoginRequest(AuthenticationData data, ApplicationResponseProvider<AuthorizeResponse>... providers) {
+        this.providers = providers;
         AuthorizationRequest request = new AuthorizationRequest(data);
         new LoginRequestSender().sendLoginRequest(request, this);
     }

@@ -1,4 +1,4 @@
-package commandManager.externalRecievers;
+package commandManager.external.recievers;
 
 import commandLogic.CommandDescription;
 import commandLogic.commandReceiverLogic.receivers.ExternalArgumentReceiver;
