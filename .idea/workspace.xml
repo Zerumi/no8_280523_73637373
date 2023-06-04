@@ -8,38 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthTextFieldsEditListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterTextFieldsEditListener.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: reset foreground in auth/regwindows">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ShowCollectionRequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/ShowCollectionRequestWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/requests/ShowCollectionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/responses/ShowCollectionResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/RegisterActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/RegisterWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterWindowActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/callbacks/AuthActionListenerCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/callbacks/AuthActionListenerCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,9 +312,9 @@
       <list>
         <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
-        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
-        <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
+        <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
+        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
       </list>
     </recent_temporary>
   </component>
@@ -379,14 +359,8 @@
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="16274000" />
-      <workItem from="1685799662860" duration="10478000" />
-    </task>
-    <task id="LOCAL-00007" summary="commands, part 1; handlers + validators">
-      <created>1675810034037</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1675810034037</updated>
+      <workItem from="1685799662860" duration="11345000" />
+      <workItem from="1685831119239" duration="7412000" />
     </task>
     <task id="LOCAL-00008" summary="docs for last commit">
       <created>1675810103452</created>
@@ -724,7 +698,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685826986962</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="feat: reset foreground in auth/regwindows">
+      <created>1685830320253</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1685830320253</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,7 +728,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: update javadoc &amp; argument consumers" />
     <MESSAGE value="chore: restored arguments validation" />
     <MESSAGE value="feat: simplification part 1" />
     <MESSAGE value="feat: simplification part 2" />
@@ -772,7 +752,8 @@
     <MESSAGE value="chore: remove old report" />
     <MESSAGE value="feat: add registration" />
     <MESSAGE value="chore: rerun javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
+    <MESSAGE value="feat: reset foreground in auth/regwindows" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: reset foreground in auth/regwindows" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -874,11 +855,6 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/commandManager/serverCommands/commands/ShowSessions.java</url>
           <line>24</line>
           <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java</url>

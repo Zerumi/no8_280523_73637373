@@ -50,38 +50,6 @@ public class Main {
 
         // server connecting
         /* try {
-            //
-
-            // authorisation
-            AuthorizeResponse response;
-            do {
-                Console console = System.console();
-                String username;
-                String answer = "Our programming skills are beautiful. Tu tu tututu tututu already gone already gone...";
-                if (args.length == 0 || !args[0].equals("-login")) {
-                    Scanner scanner = new Scanner(System.in);
-                    System.out.print("Do you want to register new account? Enter 'y': ");
-                    answer = scanner.nextLine();
-                    System.out.println("Hint! If you want to skip this question in future, use this command before run application: ");
-                    System.out.println("java -jar client.jar -login [username]");
-                }
-                if (args.length == 2 && args[0].equals("-login")) username = args[1];
-                else username = console.readLine(Objects.equals(answer, "y") ? "Pick a login: " : "Username: ");
-                char[] password = console.readPassword(Objects.equals(answer, "y") ? "Pick a password: " : "Password: ");
-                if (answer.equals("y")) {
-                    String name = console.readLine("What's your name? ");
-                    RegistrationData data = new RegistrationData(name, username, password);
-                    response = new RegistrationRequestSender().sendRegisterRequest(data);
-                } else {
-                    AuthenticationData data = new AuthenticationData(username, password);
-                    response = new AuthorizationRequestSender().sendLoginRequest(data);
-                }
-            } while (response == null);
-            System.out.println("Authorization successful!");
-            System.out.println("Authorized as: " + response.getAuthorizedAs().name() + " (login: " + response.getAuthorizedAs().login() + ")");
-            System.out.println("Last login: " + response.getAuthorizedAs().lastLogin());
-
-
             // request commands
             boolean commandsNotLoaded = true;
             int waitingCount = 4000;

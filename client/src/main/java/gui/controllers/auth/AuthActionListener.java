@@ -52,7 +52,7 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
         passwordField.setForeground(Color.GREEN);
 
         EventQueue.invokeLater(() -> {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(response.getAuthorizedAs());
             mainWindow.setTitle("Route collection manager by Zerumi");
             mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             mainWindow.setVisible(true);

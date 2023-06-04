@@ -41,6 +41,8 @@ public class IntermediateResponseHandler {
             if (bpr.getDeliveryNumber() != i)
                 throw new ProceedException("We have lost some packets...");
             buffer.put(((ByteArrayPacketResponse) response).getPacket());
+
+            // todo: packet queue & tcp))))
         }
 
         return new ResponseReader(new ByteArrayInputStream(buffer.array())).readObject();
