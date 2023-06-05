@@ -1,5 +1,7 @@
 package serverLogic;
 
+import serverLogic.abstractLogic.ServerConnection;
+
 public class ServerConnectionHandler {
 
     private static ServerConnection currentConnection;

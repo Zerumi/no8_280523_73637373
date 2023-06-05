@@ -1,40 +1,52 @@
 package gui.models;
 
+import exceptions.UpdateModelException;
+import gui.models.listeners.RouteTableModelChangeListener;
+import gui.models.listeners.RouteTableModelUpdateFullCollectionListener;
+import listenLogic.ServerListener;
 import models.Route;
+import models.RouteFields;
+import models.collection.actions.AddCollectionAction;
+import models.collection.actions.RemoveCollectionAction;
+import models.collection.actions.UpdateCollectionAction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.requestSenders.RequestSender;
 import requestLogic.requestSenders.ShowCollectionRequestSender;
-import responseLogic.ApplicationResponseProvider;
+import requests.ListenCollectionActionsRequest;
+import responses.CollectionUpdatedResponse;
 import responses.ShowCollectionResponse;
+import serverLogic.ServerConnectionHandler;
 
 import javax.swing.table.AbstractTableModel;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
-public class RouteTableModel extends AbstractTableModel implements ApplicationResponseProvider<ShowCollectionResponse> {
+public class RouteTableModel extends AbstractTableModel {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
 
     private final ArrayList<ArrayList<Object>> model = new ArrayList<>();
 
-    private final String[] columnNames = {
-            "id",
-            "name",
-            "coordinates.x",
-            "coordinates.y",
-            "creation_date",
-            "from.x",
-            "from.y",
-            "from.z",
-            "from.name",
-            "to.x",
-            "to.y",
-            "to.z",
-            "to.name",
-            "distance"
-    };
+    private final String[] columnNames = Arrays.stream(RouteFields.values())
+            .map(RouteFields::getName)
+            .toList()
+            .toArray(new String[0]);
 
     public RouteTableModel() {
-        new ShowCollectionRequestSender().sendCollectionRequest(this);
+        new ShowCollectionRequestSender().sendCollectionRequest(
+                new RouteTableModelUpdateFullCollectionListener(this));
+        try {
+            new RequestSender().sendRequest(
+                    new ListenCollectionActionsRequest(),
+                    ServerConnectionHandler.getCurrentConnection());
+        } catch (IOException e) {
+            acceptException(e);
+        }
+        new ServerListener<>(CollectionUpdatedResponse.class).addListeners(
+                new RouteTableModelChangeListener(this)
+        ).startListen();
     }
 
 
@@ -83,49 +95,101 @@ public class RouteTableModel extends AbstractTableModel implements ApplicationRe
         return model.get(rowIndex).get(columnIndex);
     }
 
-    @Override
-    public void acceptResponse(ShowCollectionResponse response) {
+    public void acceptFullCollectionResponse(ShowCollectionResponse response) {
         HashSet<Route> collection = response.getCollection();
 
         for (var element : collection) {
-            ArrayList<Object> line = new ArrayList<>(getColumnCount());
-            line.add(element.getId());
-            line.add(element.getName());
-            line.add(element.getCoordinates().getX());
-            line.add(element.getCoordinates().getY());
-            line.add(element.getCreationDate());
-            // nullable zone
-            if (element.getFrom() != null) {
-                line.add(element.getFrom().getX());
-                line.add(element.getFrom().getY());
-                line.add(element.getFrom().getZ());
-                line.add(element.getFrom().getName());
-            } else {
-                line.add(null);
-                line.add(null);
-                line.add(null);
-                line.add(null);
-            }
-            if (element.getTo() != null) {
-                line.add(element.getTo().getX());
-                line.add(element.getTo().getY());
-                line.add(element.getTo().getZ());
-                line.add(element.getTo().getName());
-                line.add(element.getDistance());
-            } else {
-                line.add(null);
-                line.add(null);
-                line.add(null);
-                line.add(null);
-            }
-            model.add(line);
+            addNewLine(element);
         }
 
         fireTableRowsUpdated(0, getRowCount());
     }
 
-    @Override
+    public void acceptCollectionUpdate(CollectionUpdatedResponse response) {
+        switch (response.getAction().getAction()) {
+            case ADD -> {
+                int lastRowCount = getRowCount();
+
+                AddCollectionAction action = ((AddCollectionAction) response.getAction());
+                for (var element : action.getNewElements()) {
+                    addNewLine(element);
+                }
+
+                fireTableRowsUpdated(0, getRowCount());
+            }
+            case UPDATE -> {
+                try {
+                    UpdateCollectionAction action = ((UpdateCollectionAction) response.getAction());
+                    updateCellInModel(action.getElementId(), action.getUpdatedFiled(), action.getUpdatedValue());
+                } catch (UpdateModelException e) {
+                    acceptException(e);
+                }
+            }
+            case REMOVE -> {
+                RemoveCollectionAction action = ((RemoveCollectionAction) response.getAction());
+                for (long id : action.getRemoved_ids()) {
+                    removeLineByRouteId(id);
+                }
+
+                fireTableRowsUpdated(0, getRowCount());
+            }
+            default -> logger.warn("Something strange here...");
+        }
+    }
+
+    private void removeLineByRouteId(long id) {
+        model.removeIf(x -> x.get(0).equals(id));
+    }
+
+    private void updateCellInModel(long elementId, RouteFields updatedFiled, Object updatedValue) throws UpdateModelException {
+        int row = model.indexOf(
+                model.stream()
+                        .filter(x -> x.get(0).equals(elementId))
+                        .findFirst()
+                        .orElseThrow(() ->
+                                new UpdateModelException("Can't find object in model")));
+
+        int col = updatedFiled.getIndex();
+        model.get(row).set(updatedFiled.getIndex(), updatedValue);
+
+        fireTableCellUpdated(row, col);
+    }
+
     public void acceptException(Exception e) {
-        logger.error(e);
+        logger.error("exception", e);
+    }
+
+    private void addNewLine(Route element) {
+        ArrayList<Object> line = new ArrayList<>(getColumnCount());
+        line.add(element.getId());
+        line.add(element.getName());
+        line.add(element.getCoordinates().getX());
+        line.add(element.getCoordinates().getY());
+        line.add(element.getCreationDate());
+        // nullable zone
+        if (element.getFrom() != null) {
+            line.add(element.getFrom().getX());
+            line.add(element.getFrom().getY());
+            line.add(element.getFrom().getZ());
+            line.add(element.getFrom().getName());
+        } else {
+            line.add(null);
+            line.add(null);
+            line.add(null);
+            line.add(null);
+        }
+        if (element.getTo() != null) {
+            line.add(element.getTo().getX());
+            line.add(element.getTo().getY());
+            line.add(element.getTo().getZ());
+            line.add(element.getTo().getName());
+        } else {
+            line.add(null);
+            line.add(null);
+            line.add(null);
+            line.add(null);
+        }
+        line.add(element.getDistance());
+        model.add(line);
     }
 }

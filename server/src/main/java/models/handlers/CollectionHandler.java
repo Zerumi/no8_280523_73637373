@@ -85,4 +85,12 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
      * @return Max element or null if collection is empty
      */
     E getMax(Comparator<E> comparator);
+
+    /**
+     * Registers new listener for some collection operations.
+     *
+     * @param listener Listener
+     * @since 4.0
+     */
+    void addCollectionListener(CollectionUpdateListener<E> listener);
 }

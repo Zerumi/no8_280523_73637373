@@ -1,4 +1,4 @@
-package serverLogic;
+package serverLogic.udp;
 
 import java.io.IOException;
 

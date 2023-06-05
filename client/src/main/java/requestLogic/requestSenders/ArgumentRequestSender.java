@@ -7,7 +7,7 @@ import requests.ArgumentCommandClientRequest;
 import responseLogic.ApplicationResponseProvider;
 import responses.BaseResponse;
 import responses.CommandStatusResponse;
-import serverLogic.ServerConnection;
+import serverLogic.abstractLogic.ServerConnection;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -38,7 +38,9 @@ public class ArgumentRequestSender<T extends Serializable> implements Applicatio
 
     @Override
     public void acceptResponse(BaseResponse response) {
-        var acceptedResponse = (CommandStatusResponse) response;
-        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        if (response.getClass().equals(CommandStatusResponse.class)) {
+            var acceptedResponse = (CommandStatusResponse) response;
+            Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        }
     }
 }

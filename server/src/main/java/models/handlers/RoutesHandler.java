@@ -1,6 +1,8 @@
 package models.handlers;
 
 import models.Route;
+import models.collections.ObservableHashSet;
+import models.collections.ObservableListener;
 import models.comparators.RouteComparator;
 
 import java.time.Instant;
@@ -16,20 +18,24 @@ import java.util.stream.Collectors;
  * @author Zerumi
  * @since 1.0
  */
-public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
+public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route>, ObservableListener<Route> {
 
     private static RoutesHandler singletoneMoment;
     private final Date initDate;
     private HashSet<Route> routes;
     private final Lock readLock;
     private final Lock writeLock;
+    private final ArrayList<CollectionUpdateListener<Route>> listeners;
 
     private RoutesHandler() {
-        routes = new HashSet<>();
+        ObservableHashSet<Route> observableHashSet = new ObservableHashSet<>();
+        observableHashSet.registerListener(this);
+        this.routes = observableHashSet;
         initDate = Date.from(Instant.now());
         ReadWriteLock rwl = new ReentrantReadWriteLock();
         readLock = rwl.readLock();
         writeLock = rwl.writeLock();
+        listeners = new ArrayList<>();
     }
 
     /**
@@ -64,7 +70,9 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     @Override
     public void setCollection(HashSet<Route> routes) {
         writeLock.lock();
-        this.routes = routes;
+        ObservableHashSet<Route> observableHashSet = new ObservableHashSet<>(routes);
+        observableHashSet.registerListener(this);
+        this.routes = observableHashSet;
         sort();
         writeLock.unlock();
     }
@@ -78,25 +86,6 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
     public void addElementToCollection(Route e) {
         writeLock.lock();
         routes.add(e);
-        sort();
-        writeLock.unlock();
-    }
-
-    /**
-     * Sorts elements by ID Field in Route.
-     */
-    @Override
-    public void sort() {
-        writeLock.lock();
-        HashSet<Route> sorted = new HashSet<>();
-
-        for (Iterator<Route> it = routes.stream().sorted(new RouteComparator()).iterator(); it.hasNext(); ) {
-            Route sortedItem = it.next();
-
-            sorted.add(sortedItem);
-        }
-
-        this.routes = sorted;
         writeLock.unlock();
     }
 
@@ -172,5 +161,30 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
         var result = getCollection().stream().max(comparator).orElse(null);
         readLock.unlock();
         return result;
+    }
+
+    @Override
+    public void addCollectionListener(CollectionUpdateListener<Route> listener) {
+        this.listeners.add(listener);
+    }
+
+    @Override
+    public void listenAdd(Collection<? extends Route> addedElements) {
+        this.listeners.forEach(x -> x.listenAdd(addedElements));
+    }
+
+    @Override
+    public void listenRemove(Collection<?> removedObjects) {
+        ArrayList<Long> totalIds = new ArrayList<>();
+        for (var removedObj : removedObjects) {
+            if (removedObj.getClass().equals(Route.class)) {
+                totalIds.add(((Route) removedObj).getId());
+            }
+        }
+        this.listeners.forEach(x -> x.listenRemove(totalIds.toArray(new Long[0])));
+    }
+
+    public ArrayList<CollectionUpdateListener<Route>> getListeners() {
+        return listeners;
     }
 }

@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class MainWindow extends JFrame {
     public MainWindow(AuthorizedUserData profile) {
-        JLabel label = new JLabel("Lorem ipsum doro sit amet");
+        JLabel label = new JLabel("Lorem ipsum dolor sit amet");
 
         JPanel northPanel = new JPanel();
         northPanel.add(label);

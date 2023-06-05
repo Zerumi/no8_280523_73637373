@@ -7,7 +7,7 @@ import requests.CommandClientRequest;
 import responseLogic.ApplicationResponseProvider;
 import responses.BaseResponse;
 import responses.CommandStatusResponse;
-import serverLogic.ServerConnection;
+import serverLogic.abstractLogic.ServerConnection;
 
 import java.io.IOException;
 import java.util.Arrays;

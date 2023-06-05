@@ -1,6 +1,5 @@
-package serverLogic;
+package serverLogic.abstractLogic;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 /**
@@ -31,7 +30,11 @@ public interface ServerConnection {
      * @param bytesToSend bytes to send
      * @throws IOException if I/O occurs
      */
-    void sendData(byte[] bytesToSend, ServerResponseProvider... providers) throws IOException;
+    void sendData(byte[] bytesToSend) throws IOException;
 
-    ByteArrayInputStream listenServer() throws IOException;
+    void addResponseListeners(ServerResponseProvider... providers);
+
+    void removeResponseListeners(ServerResponseProvider... providers);
+
+    byte[] listenServer() throws IOException;
 }

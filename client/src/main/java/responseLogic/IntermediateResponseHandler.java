@@ -27,9 +27,9 @@ public class IntermediateResponseHandler {
         ByteBuffer buffer = ByteBuffer.allocate(totalDeliveryCount * 5000);
 
         for (int i = 0; i < totalDeliveryCount; i++) {
-            BaseResponse response = new ResponseReader(
-                    ServerConnectionHandler.getCurrentConnection().listenServer()
-            ).readObject();
+            BaseResponse response = new ResponseReader().readObject(
+                    new ByteArrayInputStream(ServerConnectionHandler.getCurrentConnection().listenServer())
+            );
             if (!response.getClass().equals(ByteArrayPacketResponse.class))
                 throw new ProceedException("Got unexpected object");
             ByteArrayPacketResponse bpr = (ByteArrayPacketResponse) response;
@@ -39,12 +39,11 @@ public class IntermediateResponseHandler {
                 // packet was lost... to a far away land
             }
             if (bpr.getDeliveryNumber() != i)
-                throw new ProceedException("We have lost some packets...");
+                throw new ProceedException("We have lost some packets... expected: " + i + " / got: "
+                        + bpr.getDeliveryNumber());
             buffer.put(((ByteArrayPacketResponse) response).getPacket());
-
-            // todo: packet queue & tcp))))
         }
 
-        return new ResponseReader(new ByteArrayInputStream(buffer.array())).readObject();
+        return new ResponseReader().readObject(new ByteArrayInputStream(buffer.array()));
     }
 }

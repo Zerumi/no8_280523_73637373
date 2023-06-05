@@ -1,4 +1,4 @@
-package serverLogic;
+package serverLogic.abstractLogic;
 
 import java.io.IOException;
 import java.net.InetAddress;

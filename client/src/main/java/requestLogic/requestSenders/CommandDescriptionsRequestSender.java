@@ -33,14 +33,15 @@ public class CommandDescriptionsRequestSender implements ApplicationResponseProv
 
     @Override
     public void acceptResponse(BaseResponse response) {
-        ArrayList<CommandDescription> result;
-        CommandDescriptionsResponse acceptedResponse = (CommandDescriptionsResponse) response;
-        result = acceptedResponse.getCommands();
+        if (response.getClass().equals(CommandDescriptionsResponse.class)) {
+            ArrayList<CommandDescription> result;
+            CommandDescriptionsResponse acceptedResponse = (CommandDescriptionsResponse) response;
+            result = acceptedResponse.getCommands();
 
-        ArrayList<CommandDescription> finalResult = result;
-        Arrays.stream(providers).forEach(x -> x.acceptElement(finalResult));
+            ArrayList<CommandDescription> finalResult = result;
+            Arrays.stream(providers).forEach(x -> x.acceptElement(finalResult));
+        }
     }
-
     @Override
     public void acceptException(Exception e) {
         Arrays.stream(providers).forEach(x -> x.acceptException(e));

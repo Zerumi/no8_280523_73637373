@@ -1,8 +1,6 @@
-package serverLogic;
+package serverLogic.abstractLogic;
 
 import core.providers.ExceptionProvider;
-
-import java.io.InputStream;
 
 /**
  * Base observer interface for accepting responses
@@ -11,5 +9,5 @@ import java.io.InputStream;
  * @since 4.0
  */
 public interface ServerResponseProvider extends ExceptionProvider {
-    void acceptResponse(InputStream response);
+    void acceptResponse(byte[] response);
 }

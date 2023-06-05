@@ -1,4 +1,7 @@
-package serverLogic;
+package serverLogic.udp;
+
+import serverLogic.abstractLogic.ServerConnection;
+import serverLogic.abstractLogic.ServerConnectionFactory;
 
 import java.io.IOException;
 import java.net.InetAddress;

@@ -22,13 +22,24 @@ public class RequestWorkerManager {
     private final LinkedHashMap<Class<?>, RequestWorker> workers = new LinkedHashMap<>();
 
     public RequestWorkerManager() {
-        workers.put(BaseRequest.class, new BaseRequestWorker());
-        workers.put(CommandClientRequest.class, new CommandClientRequestWorker());
-        workers.put(ArgumentCommandClientRequest.class, new ArgumentCommandClientRequestWorker<>());
-        workers.put(CommandDescriptionsRequest.class, new CommandConfigureRequestWorker());
-        workers.put(AuthorizationRequest.class, new AuthorizationRequestWorker());
-        workers.put(RegistrationRequest.class, new RegistrationRequestWorker());
-        workers.put(ShowCollectionRequest.class, new ShowCollectionRequestWorker());
+        workers.put(BaseRequest.class,
+                new BaseRequestWorker());
+        workers.put(CommandClientRequest.class,
+                new CommandClientRequestWorker());
+        workers.put(ArgumentCommandClientRequest.class,
+                new ArgumentCommandClientRequestWorker<>());
+        workers.put(CommandDescriptionsRequest.class,
+                new CommandConfigureRequestWorker());
+        workers.put(AuthorizationRequest.class,
+                new AuthorizationRequestWorker());
+        workers.put(RegistrationRequest.class,
+                new RegistrationRequestWorker());
+        workers.put(ShowCollectionRequest.class,
+                new ShowCollectionRequestWorker());
+        workers.put(ListenCollectionActionsRequest.class,
+                new ListenCollectionChangeHubWorker());
+        workers.put(UnsubscribeListenCollectionActionsRequest.class,
+                new UnsubscribeFromListenCollectionActionsWorker());
     }
 
     public void workWithRequest(ServerRequest request) {
@@ -36,15 +47,19 @@ public class RequestWorkerManager {
             var finalRequest = request;
             try {
                 finalRequest = new AnnotationProcessor(finalRequest).proceedAnnotations();
-                RequestWorker requestWorker = Optional.ofNullable(workers.get(finalRequest.getUserRequest().getClass())).orElseThrow(()
-                        -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
+                RequestWorker requestWorker = Optional.ofNullable(
+                                workers.get(finalRequest.getUserRequest().getClass()))
+                        .orElseThrow(()
+                                -> new UnsupportedRequestException("Указанный запрос не может быть обработан"));
                 requestWorker.workWithRequest(finalRequest);
             } catch (UnsupportedRequestException e) {
-                ErrorResponse response = new ErrorResponse("Server understood Request class, but didn't know how to handle it.");
+                ErrorResponse response = new ErrorResponse
+                        ("Server understood Request class, but didn't know how to handle it.");
                 ResponseSender.sendResponse(response, finalRequest.getConnection(), finalRequest.getFrom());
                 logger.error("Got an invalid request.", e);
             } catch (CannotProceedException e) {
-                ErrorResponse response = new ErrorResponse("Request can't be proceed / passed some checks: " + e.getMessage());
+                ErrorResponse response = new ErrorResponse
+                        ("Request can't be proceed / passed some checks: " + e.getMessage());
                 ResponseSender.sendResponse(response, finalRequest.getConnection(), finalRequest.getFrom());
                 logger.error("Request can't be proceed / passed some checks.", e);
             }

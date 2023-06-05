@@ -34,7 +34,9 @@ public class ShowCollectionRequestSender implements ApplicationResponseProvider<
 
     @Override
     public void acceptResponse(BaseResponse response) {
-        ShowCollectionResponse acceptedResponse = (ShowCollectionResponse) response;
-        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        if (response.getClass().equals(ShowCollectionResponse.class)) {
+            ShowCollectionResponse acceptedResponse = (ShowCollectionResponse) response;
+            Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        }
     }
 }

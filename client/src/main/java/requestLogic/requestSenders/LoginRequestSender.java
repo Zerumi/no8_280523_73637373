@@ -35,7 +35,9 @@ public class LoginRequestSender implements ApplicationResponseProvider<BaseRespo
 
     @Override
     public void acceptResponse(BaseResponse response) {
-        var acceptedResponse = (AuthorizeResponse) response;
-        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        if (response.getClass().equals(AuthorizeResponse.class)) {
+            var acceptedResponse = (AuthorizeResponse) response;
+            Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+        }
     }
 }

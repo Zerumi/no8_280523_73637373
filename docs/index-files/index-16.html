@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
                                                      title="class in responses">SaveStatusResponse</a></dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../requestLogic/requestSenders/CommandRequestSender.html#sendCommand(commandLogic.CommandDescription,java.lang.String%5B%5D,serverLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
+                <a href="../requestLogic/requestSenders/CommandRequestSender.html#sendCommand(commandLogic.CommandDescription,java.lang.String%5B%5D,serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
                    class="member-name-link">sendCommand(CommandDescription, String[], ServerConnection,
                     ApplicationResponseProvider&lt;CommandStatusResponse&gt;...)</a> - Method in class
                 requestLogic.requestSenders.<a href="../requestLogic/requestSenders/CommandRequestSender.html"
@@ -126,7 +126,7 @@ loadScripts(document, 'script');</script>
             </dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../requestLogic/requestSenders/ArgumentRequestSender.html#sendCommand(commandLogic.CommandDescription,java.lang.String%5B%5D,T,serverLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
+                <a href="../requestLogic/requestSenders/ArgumentRequestSender.html#sendCommand(commandLogic.CommandDescription,java.lang.String%5B%5D,T,serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
                    class="member-name-link">sendCommand(CommandDescription, String[], T, ServerConnection,
                     ApplicationResponseProvider&lt;CommandStatusResponse&gt;...)</a> - Method in class
                 requestLogic.requestSenders.<a href="../requestLogic/requestSenders/ArgumentRequestSender.html"
@@ -139,7 +139,7 @@ loadScripts(document, 'script');</script>
             </dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../serverLogic/ServerConnection.html#sendData(byte%5B%5D,serverLogic.ServerResponseProvider...)"
+                <a href="../serverLogic/ServerConnection.html#sendData(byte%5B%5D,serverLogic.abstractLogic.ServerResponseProvider...)"
                    class="member-name-link">sendData(byte[], ServerResponseProvider...)</a> - Method in interface
                 serverLogic.<a href="../serverLogic/ServerConnection.html" title="interface in serverLogic">ServerConnection</a>
             </dt>
@@ -147,13 +147,13 @@ loadScripts(document, 'script');</script>
                 <div class="block">Method for send data to a server</div>
             </dd>
             <dt>
-                <a href="../serverLogic/UdpServerConnection.html#sendData(byte%5B%5D,serverLogic.ServerResponseProvider...)"
+                <a href="../serverLogic/UdpServerConnection.html#sendData(byte%5B%5D,serverLogic.abstractLogic.ServerResponseProvider...)"
                    class="member-name-link">sendData(byte[], ServerResponseProvider...)</a> - Method in class
                 serverLogic.<a href="../serverLogic/UdpServerConnection.html" title="class in serverLogic">UdpServerConnection</a>
             </dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../responseLogic/responseSenders/IntermediateResponseSender.html#sendLargeResponse(java.io.ByteArrayOutputStream,requestLogic.CallerBack,serverLogic.ServerConnection)"
+                <a href="../responseLogic/responseSenders/IntermediateResponseSender.html#sendLargeResponse(java.io.ByteArrayOutputStream,requestLogic.CallerBack,serverLogic.abstractLogic.ServerConnection)"
                    class="member-name-link">sendLargeResponse(ByteArrayOutputStream, CallerBack, ServerConnection)</a> -
                 Method in class responseLogic.responseSenders.<a
                     href="../responseLogic/responseSenders/IntermediateResponseSender.html"
@@ -181,7 +181,7 @@ loadScripts(document, 'script');</script>
                     title="class in requestLogic.requestSenders">RegistrationRequestSender</a></dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../requestLogic/requestSenders/RequestSender.html#sendRequest(requests.BaseRequest,serverLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
+                <a href="../requestLogic/requestSenders/RequestSender.html#sendRequest(requests.BaseRequest,serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
                    class="member-name-link">sendRequest(BaseRequest, ServerConnection, ApplicationResponseProvider&lt;BaseResponse&gt;...)</a>
                 - Method in class requestLogic.requestSenders.<a
                     href="../requestLogic/requestSenders/RequestSender.html"
@@ -195,14 +195,14 @@ loadScripts(document, 'script');</script>
                     title="class in requestLogic.requestSenders">CommandDescriptionsRequestSender</a></dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../responseLogic/responseSenders/ResponseSender.html#sendResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
+                <a href="../responseLogic/responseSenders/ResponseSender.html#sendResponse(responses.BaseResponse,serverLogic.abstractLogic.ServerConnection,requestLogic.CallerBack)"
                    class="member-name-link">sendResponse(BaseResponse, ServerConnection, CallerBack)</a> - Static method
                 in class responseLogic.responseSenders.<a href="../responseLogic/responseSenders/ResponseSender.html"
                                                           title="class in responseLogic.responseSenders">ResponseSender</a>
             </dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../responseLogic/responseSenders/ResponseSender.html#sendSyncResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
+                <a href="../responseLogic/responseSenders/ResponseSender.html#sendSyncResponse(responses.BaseResponse,serverLogic.abstractLogic.ServerConnection,requestLogic.CallerBack)"
                    class="member-name-link">sendSyncResponse(BaseResponse, ServerConnection, CallerBack)</a> - Static
                 method in class responseLogic.responseSenders.<a
                     href="../responseLogic/responseSenders/ResponseSender.html"
@@ -249,7 +249,7 @@ loadScripts(document, 'script');</script>
                     href="../requestLogic/requests/package-summary.html">requestLogic.requests</a></dt>
             <dd>&nbsp;</dd>
             <dt>
-                <a href="../requestLogic/requests/ServerRequest.html#%3Cinit%3E(requests.BaseRequest,requestLogic.CallerBack,serverLogic.ServerConnection)"
+                <a href="../requestLogic/requests/ServerRequest.html#%3Cinit%3E(requests.BaseRequest,requestLogic.CallerBack,serverLogic.abstractLogic.ServerConnection)"
                    class="member-name-link">ServerRequest(BaseRequest, CallerBack, ServerConnection)</a> - Constructor
                 for class requestLogic.requests.<a href="../requestLogic/requests/ServerRequest.html"
                                                    title="class in requestLogic.requests">ServerRequest</a></dt>
@@ -433,7 +433,8 @@ loadScripts(document, 'script');</script>
                     href="../requestLogic/StatusRequestBuilder.html"
                     title="class in requestLogic">StatusRequestBuilder</a></dt>
             <dd>&nbsp;</dd>
-            <dt><a href="../serverLogic/ServerConnectionHandler.html#setServerConnection(serverLogic.ServerConnection)"
+            <dt>
+                <a href="../serverLogic/ServerConnectionHandler.html#setServerConnection(serverLogic.abstractLogic.ServerConnection)"
                    class="member-name-link">setServerConnection(ServerConnection)</a> - Static method in class
                 serverLogic.<a href="../serverLogic/ServerConnectionHandler.html" title="class in serverLogic">ServerConnectionHandler</a>
             </dt>

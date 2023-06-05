@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
             <div class="inheritance" title="Inheritance Tree"><a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
                     title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-                <div class="inheritance">serverLogic.UdpServerConnection</div>
+                <div class="inheritance">serverLogic.udp.UdpServerConnection</div>
             </div>
             <section class="class-description" id="class-description">
                 <dl class="notes">
@@ -217,8 +217,9 @@ implements <a href="ServerConnection.html" title="interface in serverLogic">Serv
                                         <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code>void</code></div>
                                         <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-                                            <code><a href="#sendData(byte%5B%5D,serverLogic.ServerResponseProvider...)"
-                                                     class="member-name-link">sendData</a>
+                                            <code><a
+                                                    class="member-name-link"
+                                                    href="#sendData(byte%5B%5D,serverLogic.abstractLogic.ServerResponseProvider...)">sendData</a>
                                                 <wbr>
                                                 (byte[]&nbsp;bytesToSend,
                                                 <a href="ServerResponseProvider.html" title="interface in serverLogic">ServerResponseProvider</a>...&nbsp;providers)</code>
@@ -279,7 +280,7 @@ implements <a href="ServerConnection.html" title="interface in serverLogic">Serv
                                             <dd>
                                                 <ul class="see-list">
                                                     <li>
-                                                        <a href="../constant-values.html#serverLogic.UdpServerConnection.BUFFER_SIZE">Constant
+                                                        <a href="../constant-values.html#serverLogic.udp.UdpServerConnection.BUFFER_SIZE">Constant
                                                             Field Values</a></li>
                                                 </ul>
                                             </dd>
@@ -390,7 +391,8 @@ implements <a href="ServerConnection.html" title="interface in serverLogic">Serv
                                     </section>
                                 </li>
                                 <li>
-                                    <section class="detail" id="sendData(byte[],serverLogic.ServerResponseProvider...)">
+                                    <section class="detail"
+                                             id="sendData(byte[],serverLogic.abstractLogic.ServerResponseProvider...)">
                                         <h3>sendData</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
                                                 class="return-type">void</span>&nbsp;<span
@@ -404,13 +406,13 @@ implements <a href="ServerConnection.html" title="interface in serverLogic">Serv
                                                     title="class or interface in java.io" class="external-link">IOException</a></span>
                                         </div>
                                         <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a
-                                                href="ServerConnection.html#sendData(byte%5B%5D,serverLogic.ServerResponseProvider...)">ServerConnection</a></code></span>
+                                                href="ServerConnection.html#sendData(byte%5B%5D,serverLogic.abstractLogic.ServerResponseProvider...)">ServerConnection</a></code></span>
                                         </div>
                                         <div class="block">Method for send data to a server</div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
-                                                    href="ServerConnection.html#sendData(byte%5B%5D,serverLogic.ServerResponseProvider...)">sendData</a></code>&nbsp;in
+                                                    href="ServerConnection.html#sendData(byte%5B%5D,serverLogic.abstractLogic.ServerResponseProvider...)">sendData</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="ServerConnection.html"
                                                                         title="interface in serverLogic">ServerConnection</a></code>
                                             </dd>
