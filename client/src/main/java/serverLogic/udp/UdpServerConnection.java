@@ -33,7 +33,7 @@ public class UdpServerConnection implements ServerConnection, LargeResponseHandl
     }
 
 
-    // todo: Наблюдение
+    //  Fixed // Наблюдение
     //  В начале программы отправляется запрос на авторизацию (+ Provider / - Provider)
     //  Потом отправятся запрос на подписку на события (+ Provider[0])
     //  Потом на получение коллекции (+ Provider) / ! \ Intermediate response ownership
@@ -115,7 +115,7 @@ public class UdpServerConnection implements ServerConnection, LargeResponseHandl
         return this;
     }
 
-    // todo: уязвимость. публично слушать сервер небезопасно,
+    // Fixed // Уязвимость. Публично слушать сервер небезопасно,
     //  так как много слушателей пытаются обработать IntermediateRequest,
     //  и как следствие, ждут ответов, которые им уже никто не даст
     //  Требуется переработать систему "промежуточных" запросов

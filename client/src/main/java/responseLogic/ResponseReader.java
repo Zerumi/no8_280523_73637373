@@ -15,7 +15,6 @@ public class ResponseReader {
             throws IOException, ClassNotFoundException, GotAnErrorResponseException, ProceedException {
         ObjectInputStream ois = new ObjectInputStream(in);
         BaseResponse result = (BaseResponse) ois.readObject();
-        // todo: pattern command....
         if (result instanceof IntermediateResponse response) {
             result = new IntermediateResponseHandler(response)
                     .proceedIntermediateResponse();
