@@ -8,77 +8,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add auth window">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/UpdateModelException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelChangeListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelUpdateFullCollectionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/listenLogic/ServerListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/listenProviders/CollectionActionsListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/models/handlers/CollectionUpdateListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/ListenCollectionChangeHubWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/UnsubscribeFromListenCollectionActionsWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/RouteFields.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collection/actions/AbstractCollectionAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collection/actions/AddCollectionAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collection/actions/CollectionActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collection/actions/RemoveCollectionAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collection/actions/UpdateCollectionAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collections/ObservableHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/models/collections/ObservableListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/ListenCollectionActionsRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/requests/UnsubscribeListenCollectionActionsRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/responses/CollectionUpdatedResponse.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: multi-window sync part 1 (fix required!)">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/LargePacketProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/LargeResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ListenLoopListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/LoginRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ShowCollectionRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/requestLogic/requestSenders/ShowCollectionRequestSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/IntermediateResponseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/responseLogic/ResponseReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ServerConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerConnectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/ServerResponseProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ServerResponseProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpConnectionBlockDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpConnectionBlockDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/UdpServerConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/CommandPreProcessorManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/CommandPreProcessorManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ArgumentRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ArgumentRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/ServerRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/ServerRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandConfigureResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandConfigureResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/IntermediateResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/IntermediateResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/ResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/ResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/SuppressIOResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/SuppressIOResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/ServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/ServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/UdpConnectionBlockDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/UdpConnectionBlockDecorator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/UdpServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/UdpServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/UdpServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/UdpServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/models/handlers/RoutesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/abstractLogic/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,9 +65,9 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -190,11 +128,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="serverLogic.abstractLogic" />
       <recent name="exceptions" />
       <recent name="commandManager.commandPreProcessing" />
       <recent name="commandManager.commands" />
       <recent name="responses" />
-      <recent name="requestLogic" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/responseLogic" />
@@ -418,13 +356,6 @@
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
-    </task>
-    <task id="LOCAL-00005" summary="loader env_value fixed + base reader abstract level added">
-      <created>1675770856285</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675770856285</updated>
     </task>
     <task id="LOCAL-00006" summary="docs">
       <created>1675771666792</created>
@@ -762,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685757941027</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="feat: multi-window sync part 1 (fix required!)">
+      <created>1685940265034</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1685940265035</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -785,7 +723,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: update javadoc &amp; argument consumers" />
     <MESSAGE value="chore: restored arguments validation" />
     <MESSAGE value="feat: simplification part 1" />
     <MESSAGE value="feat: simplification part 2" />
@@ -810,7 +747,8 @@
     <MESSAGE value="chore: rename project" />
     <MESSAGE value="chore: remove old report" />
     <MESSAGE value="critical: rewrite server -&gt; client logic to callback chain of observers" />
-    <option name="LAST_COMMIT_MESSAGE" value="critical: rewrite server -&gt; client logic to callback chain of observers" />
+    <MESSAGE value="feat: multi-window sync part 1 (fix required!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: multi-window sync part 1 (fix required!)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -825,23 +763,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shared/src/models/collections/ObservableHashSet.java</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shared/src/models/collections/ObservableHashSet.java</url>
-          <line>36</line>
+          <line>35</line>
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java</url>
-          <line>69</line>
+          <line>68</line>
           <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java</url>

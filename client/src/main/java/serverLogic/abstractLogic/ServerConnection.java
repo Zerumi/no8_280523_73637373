@@ -36,5 +36,9 @@ public interface ServerConnection {
 
     void removeResponseListeners(ServerResponseProvider... providers);
 
-    byte[] listenServer() throws IOException;
+    LargeResponseHandler getLargeResponseHandler();
+
+    void addLoopListener(ListenLoopListener listener);
+
+    void removeLoopListener(ListenLoopListener listener);
 }

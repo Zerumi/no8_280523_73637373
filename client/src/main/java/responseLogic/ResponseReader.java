@@ -11,7 +11,8 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 
 public class ResponseReader {
-    public BaseResponse readObject(InputStream in) throws IOException, ClassNotFoundException, GotAnErrorResponseException, ProceedException {
+    public BaseResponse readObject(InputStream in)
+            throws IOException, ClassNotFoundException, GotAnErrorResponseException, ProceedException {
         ObjectInputStream ois = new ObjectInputStream(in);
         BaseResponse result = (BaseResponse) ois.readObject();
         // todo: pattern command....

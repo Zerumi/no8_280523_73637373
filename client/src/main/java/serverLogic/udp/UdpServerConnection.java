@@ -3,8 +3,7 @@ package serverLogic.udp;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import serverLogic.abstractLogic.ServerConnection;
-import serverLogic.abstractLogic.ServerResponseProvider;
+import serverLogic.abstractLogic.*;
 
 import java.io.IOException;
 import java.net.SocketAddress;
@@ -13,17 +12,19 @@ import java.nio.channels.DatagramChannel;
 import java.util.Arrays;
 import java.util.concurrent.*;
 
-public class UdpServerConnection implements ServerConnection {
+public class UdpServerConnection implements ServerConnection, LargeResponseHandler {
     public static final int BUFFER_SIZE = 4096;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     private final ExecutorService service;
     private final CopyOnWriteArrayList<ServerResponseProvider> providers;
+    private final CopyOnWriteArrayList<ListenLoopListener> loopListeners;
     protected final DatagramChannel channel;
     protected SocketAddress address;
 
     {
         service = Executors.newCachedThreadPool();
         providers = new CopyOnWriteArrayList<>();
+        loopListeners = new CopyOnWriteArrayList<>();
     }
 
     protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {
@@ -65,9 +66,8 @@ public class UdpServerConnection implements ServerConnection {
                     } finally {
                         if (bos != null) {
                             byte[] finalBos = bos;
-                            providers.forEach(x -> {
-                                x.acceptResponse(finalBos);
-                            });
+                            providers.forEach(x -> x.acceptResponse(finalBos));
+                            loopListeners.forEach(ListenLoopListener::loopEndAction);
                         }
                     }
                 }
@@ -110,6 +110,11 @@ public class UdpServerConnection implements ServerConnection {
         this.providers.removeAll(Arrays.stream(providers).toList());
     }
 
+    @Override
+    public LargeResponseHandler getLargeResponseHandler() {
+        return this;
+    }
+
     // todo: уязвимость. публично слушать сервер небезопасно,
     //  так как много слушателей пытаются обработать IntermediateRequest,
     //  и как следствие, ждут ответов, которые им уже никто не даст
@@ -117,7 +122,7 @@ public class UdpServerConnection implements ServerConnection {
     //  Например, смотреть и ловить такие запросы прямо здесь
     //  Не считаю это лучшим решением, поэтому есть еще вариант
     //  Ограничить слушателей
-    public byte[] listenServer() throws IOException {
+    private byte[] listenServer() throws IOException {
         byte[] res = null;
         if (channel.isConnected() && channel.isOpen()) {
             ByteBuffer buf = ByteBuffer.allocate(BUFFER_SIZE);
@@ -127,5 +132,29 @@ public class UdpServerConnection implements ServerConnection {
             res = buf.array();
         } else this.openConnection();
         return res;
+    }
+
+    @Override
+    public void readLargeObject(int packetsCount, LargePacketProvider... packetProviders) {
+        for (int i = 0; i < packetsCount; i++) {
+            Arrays.stream(packetProviders.clone()).forEach(x -> {
+                try {
+                    x.acceptResponse(listenServer());
+                } catch (IOException e) {
+                    x.acceptException(e);
+                }
+            });
+        }
+        Arrays.stream(packetProviders.clone()).forEach(LargePacketProvider::acceptReadingOver);
+    }
+
+    @Override
+    public void addLoopListener(ListenLoopListener listener) {
+        this.loopListeners.add(listener);
+    }
+
+    @Override
+    public void removeLoopListener(ListenLoopListener listener) {
+        this.loopListeners.remove(listener);
     }
 }
