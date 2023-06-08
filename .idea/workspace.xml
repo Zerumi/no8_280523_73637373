@@ -8,8 +8,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: updating single fields">
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/gui/GUIRouteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/stream/RouteNonCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/CoordinatesCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/LocationCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/RouteCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/RouteNonCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/RouteNonCLIHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/CoordinatesCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/CoordinatesCLIHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/LocationCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/LocationCLIHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/RouteCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/RouteCLIHandler.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,20 +363,6 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
     </task>
-    <task id="LOCAL-00008" summary="docs for last commit">
-      <created>1675810103452</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1675810103452</updated>
-    </task>
-    <task id="LOCAL-00009" summary="commands, part 2">
-      <created>1675847533723</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1675847533723</updated>
-    </task>
     <task id="LOCAL-00010" summary="bug fix, part 2.1">
       <created>1675949377935</created>
       <option name="number" value="00010" />
@@ -693,7 +692,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686243001698</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fix: some fixes">
+      <created>1686243210860</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1686243210860</updated>
+    </task>
+    <task id="LOCAL-00058" summary="chore: rerun javadoc">
+      <created>1686243292319</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1686243292319</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +729,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: simplification part 2" />
     <MESSAGE value="bug fixes (approved version)" />
     <MESSAGE value="feat: remove single client restriction, add database load logic, changed project folder structure" />
     <MESSAGE value="feat: authorization part 1" />
@@ -728,7 +740,6 @@
     <MESSAGE value="critical: reformed commands + authorization" />
     <MESSAGE value="chore: inspection" />
     <MESSAGE value="feat: add multithreading" />
-    <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="fix: remove static, redundant locks and updated command descriptions" />
     <MESSAGE value="feat: add logout" />
     <MESSAGE value="fix: teacher's edits" />
@@ -741,7 +752,9 @@
     <MESSAGE value="feat: multi-window sync part 1 (fix required!)" />
     <MESSAGE value="fix: reworked intermediate response handling" />
     <MESSAGE value="feat: updating single fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: updating single fields" />
+    <MESSAGE value="fix: some fixes" />
+    <MESSAGE value="chore: rerun javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

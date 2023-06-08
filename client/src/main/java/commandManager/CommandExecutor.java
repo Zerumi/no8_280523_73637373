@@ -12,8 +12,8 @@ import commandManager.external.recievers.NonArgumentReceiver;
 import exceptions.*;
 import models.Route;
 import models.handlers.ModuleHandler;
-import models.handlers.nonUserMode.RouteNonCLIHandler;
-import models.handlers.userMode.RouteCLIHandler;
+import models.handlers.mode.cli.RouteCLIHandler;
+import models.handlers.mode.stream.RouteNonCLIHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

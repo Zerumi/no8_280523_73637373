@@ -1,4 +1,4 @@
-package models.handlers.nonUserMode;
+package models.handlers.mode.stream;
 
 import exceptions.BuildObjectException;
 import models.Coordinates;

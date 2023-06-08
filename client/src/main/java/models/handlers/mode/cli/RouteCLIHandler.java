@@ -1,4 +1,4 @@
-package models.handlers.userMode;
+package models.handlers.mode.cli;
 
 import exceptions.BuildObjectException;
 import exceptions.StreamInterruptedException;
