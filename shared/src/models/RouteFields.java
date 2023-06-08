@@ -26,6 +26,10 @@ public enum RouteFields implements Serializable {
         this.name = name;
     }
 
+    public static RouteFields byId(int columnIndex) {
+        return RouteFields.values()[columnIndex];
+    }
+
     public int getIndex() {
         return index;
     }

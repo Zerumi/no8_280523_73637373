@@ -1,11 +1,18 @@
 package databaseLogic.databaseElementLogic;
 
+import exceptions.NotEditableException;
+import javassist.NotFoundException;
 import models.Route;
+import models.RouteFields;
+import models.collection.actions.UpdateCollectionAction;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.requestWorkers.ListenCollectionChangeHubWorker;
 import responseLogic.StatusResponse;
+import responses.CollectionUpdatedResponse;
+import utils.RouteFieldToRoute;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -147,5 +154,40 @@ public class DBIntegrationUtility {
             writeLock.unlock();
         }
         return response;
+    }
+
+    public StatusResponse updateSingleField(long creatorID, Long objId, RouteFields field, Object valueToSet) {
+        writeLock.lock();
+        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
+        try (DBCollectionManager manager = new DBCollectionManager();
+             DBElementCreatorLogic logic = new DBElementCreatorLogic()) {
+            logger.info("checking creatorID " + creatorID + " element id " + objId);
+            if (logic.checkNonAccessory(creatorID, objId)) {
+                logger.warn("user has no access :(");
+                return new StatusResponse("User has no access to the element", 403);
+            }
+            manager.updateSingleObject(objId, field.getIndex(), valueToSet);
+            RouteFieldToRoute.setField(
+                    collectionHandler.getCollection().stream().filter(x -> x.getId().equals(objId))
+                            .findAny().orElseThrow(() -> new NotFoundException("Object not found in cache!")),
+                    field, valueToSet);
+        } catch (SQLException | IOException | NotFoundException e) {
+            logger.error("Something went wrong during updating elements! ", e);
+            return new StatusResponse
+                    ("Something went wrong during removing elements. " +
+                            "Ask server administrator for further information.", 403);
+        } catch (NotEditableException e) {
+            logger.error("not editable field");
+            return new StatusResponse(
+                    "Field is auto-generated", 400
+            );
+        } finally {
+            writeLock.unlock();
+            logger.info("finally block");
+        }
+        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                objId, field, valueToSet
+        )));
+        return new StatusResponse("Executed", 200);
     }
 }

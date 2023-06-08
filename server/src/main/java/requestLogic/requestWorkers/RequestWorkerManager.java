@@ -40,6 +40,8 @@ public class RequestWorkerManager {
                 new ListenCollectionChangeHubWorker());
         workers.put(UnsubscribeListenCollectionActionsRequest.class,
                 new UnsubscribeFromListenCollectionActionsWorker());
+        workers.put(UpdateSingleFieldRequest.class,
+                new UpdateSingleFieldRequestWorker());
     }
 
     public void workWithRequest(ServerRequest request) {

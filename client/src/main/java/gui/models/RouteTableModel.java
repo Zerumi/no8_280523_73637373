@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import requestLogic.requestSenders.RequestSender;
 import requestLogic.requestSenders.ShowCollectionRequestSender;
 import requests.ListenCollectionActionsRequest;
+import requests.UpdateSingleFieldRequest;
 import responses.CollectionUpdatedResponse;
 import responses.ShowCollectionResponse;
 import serverLogic.ServerConnectionHandler;
@@ -191,5 +192,24 @@ public class RouteTableModel extends AbstractTableModel {
         }
         line.add(element.getDistance());
         model.add(line);
+    }
+
+    @Override
+    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        UpdateSingleFieldRequest request = new UpdateSingleFieldRequest(
+                (Long) (model.get(rowIndex).get(RouteFields.ID.getIndex())),
+                RouteFields.byId(columnIndex),
+                aValue
+        );
+        try {
+            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection());
+        } catch (IOException e) {
+            logger.error("ex ", e);
+        }
+    }
+
+    @Override
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return columnIndex > 0 && columnIndex != 4;
     }
 }

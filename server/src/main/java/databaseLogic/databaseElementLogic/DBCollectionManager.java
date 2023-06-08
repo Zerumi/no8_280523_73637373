@@ -201,6 +201,22 @@ public class DBCollectionManager implements Closeable {
         } else return false;
     }
 
+    public void updateSingleObject(Long objId, int dbIndex, Object valueToSet) throws SQLException {
+        Statement updateStat = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        logger.info("updating objID " + objId);
+        logger.info("updating columnID " + dbIndex);
+        logger.info("updating obj " + valueToSet);
+        ResultSet rs = updateStat.executeQuery("SELECT route.route_id, route.name, c.x, c.y, creation_date, l.x, l.y, l.z, l.name, l2.x, l2.y, l2.z, l2.name, distance, coordinates_id, coord_id, location_from_id, location_to_id, l.location_id, l2.location_id FROM route\n" +
+                "RIGHT JOIN coordinates c on c.coord_id = route.coordinates_id\n" +
+                "RIGHT JOIN location l on l.location_id = route.location_from_id\n" +
+                "RIGHT JOIN location l2 on l2.location_id = route.location_to_id\n" +
+                "WHERE route.route_id = " + objId);
+        if (rs.next()) {
+            rs.updateObject(++dbIndex, valueToSet);
+            rs.updateRow();
+        }
+    }
+
     @Override
     public void close() throws IOException {
         try {
