@@ -103,20 +103,18 @@ public class RouteTableModel extends AbstractTableModel {
             addNewLine(element);
         }
 
-        fireTableRowsUpdated(0, getRowCount());
+        fireTableRowsUpdated(0, Integer.MAX_VALUE);
     }
 
     public void acceptCollectionUpdate(CollectionUpdatedResponse response) {
         switch (response.getAction().getAction()) {
             case ADD -> {
-                int lastRowCount = getRowCount();
-
                 AddCollectionAction action = ((AddCollectionAction) response.getAction());
                 for (var element : action.getNewElements()) {
                     addNewLine(element);
                 }
 
-                fireTableRowsUpdated(0, getRowCount());
+                fireTableRowsUpdated(0, Integer.MAX_VALUE);
             }
             case UPDATE -> {
                 try {
@@ -132,7 +130,7 @@ public class RouteTableModel extends AbstractTableModel {
                     removeLineByRouteId(id);
                 }
 
-                fireTableRowsUpdated(0, getRowCount());
+                fireTableRowsUpdated(0, Integer.MAX_VALUE);
             }
             default -> logger.warn("Something strange here...");
         }

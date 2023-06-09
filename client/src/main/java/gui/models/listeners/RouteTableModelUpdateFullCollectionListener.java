@@ -4,6 +4,8 @@ import gui.models.RouteTableModel;
 import responseLogic.ApplicationResponseProvider;
 import responses.ShowCollectionResponse;
 
+import java.awt.*;
+
 public class RouteTableModelUpdateFullCollectionListener
         implements ApplicationResponseProvider<ShowCollectionResponse> {
 
@@ -20,6 +22,6 @@ public class RouteTableModelUpdateFullCollectionListener
 
     @Override
     public void acceptResponse(ShowCollectionResponse response) {
-        parent.acceptFullCollectionResponse(response);
+        EventQueue.invokeLater(() -> parent.acceptFullCollectionResponse(response));
     }
 }

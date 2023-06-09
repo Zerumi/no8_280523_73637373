@@ -8,21 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/gui/GUIRouteHandler.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: sorting part 1">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/utils/RouteFieldComparators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/commandManager/CommandExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/stream/RouteNonCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/CoordinatesCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/models/handlers/mode/cli/RouteCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CoordinatesHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/LocationHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/RouteNonCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/nonUserMode/RouteNonCLIHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/CoordinatesCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/CoordinatesCLIHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/LocationCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/LocationCLIHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/userMode/RouteCLIHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/userMode/RouteCLIHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelChangeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelUpdateFullCollectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/models/listeners/RouteTableModelUpdateFullCollectionListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,11 +126,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="utils" />
       <recent name="exceptions" />
       <recent name="serverLogic.abstractLogic" />
       <recent name="commandManager.commandPreProcessing" />
       <recent name="commandManager.commands" />
-      <recent name="responses" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/responseLogic" />
@@ -362,13 +354,7 @@
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
-    </task>
-    <task id="LOCAL-00010" summary="bug fix, part 2.1">
-      <created>1675949377935</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1675949377935</updated>
+      <workItem from="1686269093681" duration="217000" />
     </task>
     <task id="LOCAL-00011" summary="critical solid violate fixed, building objects by nonCLI added">
       <created>1676158560098</created>
@@ -706,7 +692,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686243292319</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="feat: sorting part 1">
+      <created>1686245877310</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1686245877310</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +722,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bug fixes (approved version)" />
     <MESSAGE value="feat: remove single client restriction, add database load logic, changed project folder structure" />
     <MESSAGE value="feat: authorization part 1" />
     <MESSAGE value="feat: authorization part 2" />
@@ -754,7 +746,8 @@
     <MESSAGE value="feat: updating single fields" />
     <MESSAGE value="fix: some fixes" />
     <MESSAGE value="chore: rerun javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
+    <MESSAGE value="feat: sorting part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: sorting part 1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -762,11 +755,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/models/RouteTableModel.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/shared/src/models/collections/ObservableHashSet.java</url>
           <line>43</line>
@@ -778,14 +766,14 @@
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/serverLogic/udp/UdpServerConnection.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java</url>
           <line>16</line>
           <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JTable.java</url>
+          <line>4179</line>
+          <option name="timeStamp" value="143" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

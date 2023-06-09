@@ -5,6 +5,8 @@ import responseLogic.ApplicationResponseProvider;
 import responses.BaseResponse;
 import responses.CollectionUpdatedResponse;
 
+import java.awt.*;
+
 public class RouteTableModelChangeListener implements ApplicationResponseProvider<BaseResponse> {
 
     private final RouteTableModel parent;
@@ -21,7 +23,7 @@ public class RouteTableModelChangeListener implements ApplicationResponseProvide
     @Override
     public void acceptResponse(BaseResponse response) {
         if (response instanceof CollectionUpdatedResponse) {
-            parent.acceptCollectionUpdate(((CollectionUpdatedResponse) response));
+            EventQueue.invokeLater(() -> parent.acceptCollectionUpdate(((CollectionUpdatedResponse) response)));
         }
     }
 }
