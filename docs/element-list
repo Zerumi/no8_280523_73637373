@@ -25,6 +25,7 @@ fileLogic
 fileLogic.editors
 gui.controllers.auth
 gui.controllers.auth.callbacks
+gui.controllers.register
 gui.frames
 gui.models
 gui.models.listeners
@@ -36,8 +37,9 @@ models.collection.actions
 models.collections
 models.comparators
 models.handlers
-models.handlers.nonUserMode
-models.handlers.userMode
+models.handlers.mode.cli
+models.handlers.mode.gui
+models.handlers.mode.stream
 models.validators
 requestLogic
 requestLogic.authentication
