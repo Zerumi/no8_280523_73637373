@@ -1,6 +1,8 @@
-package gui.controllers.auth;
+package gui.controllers.register;
 
 import authorization.authCredentials.RegistrationData;
+import core.providers.ExceptionProvider;
+import gui.controllers.auth.AuthActionListener;
 import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import requestLogic.requestSenders.RegistrationRequestSender;
 import responseLogic.ApplicationResponseProvider;
@@ -14,8 +16,8 @@ import java.awt.event.ActionListener;
 public class RegisterActionListener extends AuthActionListener implements ActionListener, ApplicationResponseProvider<AuthorizeResponse> {
     private final JTextField userNameField;
 
-    public RegisterActionListener(JTextField userNameField, JTextField loginField, JPasswordField passwordField, AuthActionListenerCallback callback) {
-        super(loginField, passwordField, callback);
+    public RegisterActionListener(JTextField userNameField, JTextField loginField, JPasswordField passwordField, AuthActionListenerCallback callback, ExceptionProvider provider) {
+        super(loginField, passwordField, callback, provider);
         this.userNameField = userNameField;
     }
 

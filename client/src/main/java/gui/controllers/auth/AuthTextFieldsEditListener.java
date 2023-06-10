@@ -1,5 +1,7 @@
 package gui.controllers.auth;
 
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
+
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -10,11 +12,17 @@ public class AuthTextFieldsEditListener implements DocumentListener {
     private final JTextField loginField;
     private final JPasswordField passwordField;
     private boolean isEnabled;
+    private final AuthActionListenerCallback callback;
 
-    public AuthTextFieldsEditListener(JTextField loginField, JPasswordField passwordField, boolean isEnabled) {
+    public AuthTextFieldsEditListener
+            (JTextField loginField,
+             JPasswordField passwordField,
+             AuthActionListenerCallback callback,
+             boolean isEnabled) {
         this.loginField = loginField;
         this.passwordField = passwordField;
         this.isEnabled = isEnabled;
+        this.callback = callback;
     }
 
     /**
@@ -54,6 +62,7 @@ public class AuthTextFieldsEditListener implements DocumentListener {
         if (isEnabled) {
             loginField.setForeground(Color.BLACK);
             passwordField.setForeground(Color.BLACK);
+            callback.resetNotifications();
             isEnabled = false;
         }
     }

@@ -1,4 +1,7 @@
-package gui.controllers.auth;
+package gui.controllers.register;
+
+import gui.controllers.auth.AuthTextFieldsEditListener;
+import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,8 +11,8 @@ public class RegisterTextFieldsEditListener extends AuthTextFieldsEditListener {
     private final JTextField usernameField;
 
     public RegisterTextFieldsEditListener(JTextField usernameField, JTextField loginField,
-                                          JPasswordField passwordField, boolean isEnabled) {
-        super(loginField, passwordField, isEnabled);
+                                          JPasswordField passwordField, AuthActionListenerCallback callback, boolean isEnabled) {
+        super(loginField, passwordField, callback, isEnabled);
 
         this.usernameField = usernameField;
     }

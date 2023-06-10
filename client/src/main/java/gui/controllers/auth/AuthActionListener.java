@@ -1,6 +1,8 @@
 package gui.controllers.auth;
 
 import authentication.AuthLogic;
+import core.providers.ExceptionProvider;
+import exceptions.DenyOperationException;
 import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import gui.frames.MainWindow;
 import org.apache.logging.log4j.LogManager;
@@ -18,12 +20,15 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
     private final JTextField usernameField;
     private final JPasswordField passwordField;
     private final AuthActionListenerCallback callback;
+    private final ExceptionProvider provider;
+    private final AuthLogic authLogic = new AuthLogic();
 
     public AuthActionListener(JTextField usernameField, JPasswordField passwordField,
-                              AuthActionListenerCallback callback) {
+                              AuthActionListenerCallback callback, ExceptionProvider provider) {
         this.usernameField = usernameField;
         this.passwordField = passwordField;
         this.callback = callback;
+        this.provider = provider;
     }
 
     protected JTextField getLoginField() {
@@ -36,7 +41,8 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        new AuthLogic().auth(usernameField.getText(), passwordField.getPassword(), this);
+        callback.resetNotifications();
+        authLogic.auth(usernameField.getText(), passwordField.getPassword(), this);
     }
 
     @Override
@@ -44,6 +50,7 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
         usernameField.setForeground(Color.RED);
         passwordField.setForeground(Color.RED);
         logger.error(e);
+        provider.acceptException(e);
     }
 
     @Override
@@ -52,10 +59,15 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
         passwordField.setForeground(Color.GREEN);
 
         EventQueue.invokeLater(() -> {
-            MainWindow mainWindow = new MainWindow(response.getAuthorizedAs());
-            mainWindow.setTitle("Route collection manager by Zerumi");
-            mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            mainWindow.setVisible(true);
+            MainWindow mainWindow;
+            try {
+                mainWindow = new MainWindow(response.getAuthorizedAs());
+                mainWindow.setTitle("Route collection manager by Zerumi");
+                mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                mainWindow.setVisible(true);
+            } catch (DenyOperationException e) {
+                logger.warn("Denied new MainWindow");
+            }
         });
 
         callback.succeedAction();

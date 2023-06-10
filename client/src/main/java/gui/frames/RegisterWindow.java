@@ -1,18 +1,18 @@
 package gui.frames;
 
-import gui.controllers.auth.RegisterActionListener;
-import gui.controllers.auth.RegisterTextFieldsEditListener;
-import gui.controllers.auth.callbacks.AuthActionListenerCallback;
+import gui.controllers.register.RegisterActionListener;
+import gui.controllers.register.RegisterTextFieldsEditListener;
+import utils.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class RegisterWindow extends JFrame implements AuthActionListenerCallback {
+public class RegisterWindow extends AuthWindow {
 
     public RegisterWindow() {
         var authPanel = new JPanel();
-        authPanel.setLayout(new GridLayout(3, 2));
+        authPanel.setLayout(new SpringLayout());
 
         var userNameField = new JTextField();
         var loginField = new JTextField();
@@ -23,9 +23,9 @@ public class RegisterWindow extends JFrame implements AuthActionListenerCallback
         passField.setColumns(12);
 
         RegisterTextFieldsEditListener textChangeListener = new RegisterTextFieldsEditListener
-                (userNameField, loginField, passField, false);
+                (userNameField, loginField, passField, this, false);
         RegisterActionListener authActionListener = new RegisterActionListener
-                (userNameField, loginField, passField, this);
+                (userNameField, loginField, passField, this, this);
         ActionListener resetForeground = event -> textChangeListener.setEnabled(true);
 
         userNameField.getDocument().addDocumentListener(textChangeListener);
@@ -53,6 +53,10 @@ public class RegisterWindow extends JFrame implements AuthActionListenerCallback
         registerButton.addActionListener(authActionListener);
         registerButton.addActionListener(resetForeground);
 
+        SpringUtilities.makeCompactGrid(authPanel,
+                2, 2,
+                5, 5,
+                0, 0);
         this.add(authPanel, BorderLayout.CENTER);
         this.add(southPanel, BorderLayout.SOUTH);
         this.pack();

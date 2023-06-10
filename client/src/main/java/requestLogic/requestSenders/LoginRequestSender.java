@@ -1,5 +1,6 @@
 package requestLogic.requestSenders;
 
+import core.providers.ProviderRuleSet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.BaseRequest;
@@ -22,7 +23,10 @@ public class LoginRequestSender implements ApplicationResponseProvider<BaseRespo
     public final void sendLoginRequest(BaseRequest request, ApplicationResponseProvider<AuthorizeResponse>... providers) {
         this.providers = providers;
         try {
-            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(), this);
+            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(),
+                    new ProviderRuleSet[]{ProviderRuleSet.UNSUBSCRIBE_ON_ERROR_RESPONSE,
+                            ProviderRuleSet.UNSUBSCRIBE_ON_EXCEPTION},
+                    this);
         } catch (IOException e) {
             logger.error("Something went wrong during I/O ", e);
         }
