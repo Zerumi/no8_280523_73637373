@@ -3,7 +3,7 @@ package request.logic.requests;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import request.logic.CallerBack;
 import requests.BaseRequest;
-import serverLogic.ServerConnection;
+import server.logic.abstrct.ServerConnection;
 
 public class ServerRequest {
     private final BaseRequest request;

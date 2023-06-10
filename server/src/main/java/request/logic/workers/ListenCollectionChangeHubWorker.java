@@ -4,7 +4,7 @@ import listen.providers.CollectionActionsListener;
 import models.handlers.RoutesHandler;
 import request.logic.CallerBack;
 import request.logic.requests.ServerRequest;
-import responseLogic.responseSenders.ResponseSender;
+import response.logic.senders.ResponseSender;
 import responses.CollectionUpdatedResponse;
 
 import java.util.ArrayList;

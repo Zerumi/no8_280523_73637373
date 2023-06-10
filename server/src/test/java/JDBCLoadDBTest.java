@@ -1,4 +1,4 @@
-import databaseLogic.databaseElementLogic.DBCollectionLoader;
+import database.logic.element.DBCollectionLoader;
 import models.Route;
 import org.junit.jupiter.api.Test;
 

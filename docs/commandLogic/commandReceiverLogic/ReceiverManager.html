@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="dc.created" content="2023-06-10">
-    <meta name="description" content="declaration: package: commandLogic.commandReceiverLogic, class: ReceiverManager">
+    <meta name="description"
+          content="declaration: package: commandLogic.logic.commandReceiverLogic, class: ReceiverManager">
     <meta name="generator" content="javadoc/ClassWriterImpl">
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../script-dir/jquery-ui.min.css" title="Style">
@@ -71,13 +72,13 @@ loadScripts(document, 'script');</script>
             <!-- ======== START OF CLASS DATA ======== -->
             <div class="header">
                 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a
-                        href="package-summary.html">commandLogic.commandReceiverLogic</a></div>
+                        href="package-summary.html">commandLogic.logic.commandReceiverLogic</a></div>
                 <h1 title="Class ReceiverManager" class="title">Class ReceiverManager</h1>
             </div>
             <div class="inheritance" title="Inheritance Tree"><a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
                     title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-                <div class="inheritance">commandLogic.commandReceiverLogic.ReceiverManager</div>
+                <div class="inheritance">commandReceiverLogic.command.logic.ReceiverManager</div>
             </div>
             <section class="class-description" id="class-description">
                 <hr>
@@ -140,15 +141,15 @@ loadScripts(document, 'script');</script>
                                                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html"
                                                     title="class or interface in java.util" class="external-link">ArrayList</a>&lt;?
                                                 extends <a href="receivers/ExternalBaseReceiver.html"
-                                                           title="interface in commandLogic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&gt;</code>
+                                                           title="interface in commandLogic.logic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&gt;</code>
                                         </div>
                                         <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code><a
-                                                    href="#getReceivers(commandLogic.commandReceiverLogic.enums.ReceiverType)"
+                                                    href="#getReceivers(enums.commandReceiverLogic.command.logic.ReceiverType)"
                                                     class="member-name-link">getReceivers</a>
                                                 <wbr>
                                                 (<a href="enums/ReceiverType.html"
-                                                    title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type)</code>
+                                                    title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type)</code>
                                         </div>
                                         <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -157,13 +158,13 @@ loadScripts(document, 'script');</script>
                                             <code>void</code></div>
                                         <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code><a
-                                                    href="#registerHandler(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.handlers.ReceiverHandler)"
+                                                    href="#registerHandler(enums.commandReceiverLogic.command.logic.ReceiverType,handlers.commandReceiverLogic.command.logic.ReceiverHandler)"
                                                     class="member-name-link">registerHandler</a>
                                                 <wbr>
                                                 (<a href="enums/ReceiverType.html"
-                                                    title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
+                                                    title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
                                                 <a href="handlers/ReceiverHandler.html"
-                                                   title="class in commandLogic.commandReceiverLogic.handlers">ReceiverHandler</a>&nbsp;handler)</code>
+                                                   title="class in commandLogic.logic.commandReceiverLogic.handlers">ReceiverHandler</a>&nbsp;handler)</code>
                                         </div>
                                         <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -172,13 +173,13 @@ loadScripts(document, 'script');</script>
                                             <code>void</code></div>
                                         <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code><a
-                                                    href="#registerReceiver(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+                                                    href="#registerReceiver(enums.commandReceiverLogic.command.logic.ReceiverType,receivers.commandReceiverLogic.command.logic.ExternalBaseReceiver)"
                                                     class="member-name-link">registerReceiver</a>
                                                 <wbr>
                                                 (<a href="enums/ReceiverType.html"
-                                                    title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
+                                                    title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
                                                 <a href="receivers/ExternalBaseReceiver.html"
-                                                   title="interface in commandLogic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&nbsp;receiver)</code>
+                                                   title="interface in commandLogic.logic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&nbsp;receiver)</code>
                                         </div>
                                         <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -243,33 +244,33 @@ loadScripts(document, 'script');</script>
                             <ul class="member-list">
                                 <li>
                                     <section class="detail"
-                                             id="registerHandler(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.handlers.ReceiverHandler)">
+                                             id="registerHandler(enums.commandReceiverLogic.command.logic.ReceiverType,handlers.commandReceiverLogic.command.logic.ReceiverHandler)">
                                         <h3>registerHandler</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
                                                 class="return-type">void</span>&nbsp;<span class="element-name">registerHandler</span>
                                             <wbr>
                                             <span class="parameters">(<a href="enums/ReceiverType.html"
-                                                                         title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
- <a href="handlers/ReceiverHandler.html" title="class in commandLogic.commandReceiverLogic.handlers">ReceiverHandler</a>&nbsp;handler)</span>
+                                                                         title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
+ <a href="handlers/ReceiverHandler.html" title="class in commandLogic.logic.commandReceiverLogic.handlers">ReceiverHandler</a>&nbsp;handler)</span>
                                         </div>
                                     </section>
                                 </li>
                                 <li>
                                     <section class="detail"
-                                             id="registerReceiver(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)">
+                                             id="registerReceiver(enums.commandReceiverLogic.command.logic.ReceiverType,receivers.commandReceiverLogic.command.logic.ExternalBaseReceiver)">
                                         <h3>registerReceiver</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
                                                 class="return-type">void</span>&nbsp;<span class="element-name">registerReceiver</span>
                                             <wbr>
                                             <span class="parameters">(<a href="enums/ReceiverType.html"
-                                                                         title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
- <a href="receivers/ExternalBaseReceiver.html" title="interface in commandLogic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&nbsp;receiver)</span>
+                                                                         title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type,
+ <a href="receivers/ExternalBaseReceiver.html" title="interface in commandLogic.logic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&nbsp;receiver)</span>
                                         </div>
                                     </section>
                                 </li>
                                 <li>
                                     <section class="detail"
-                                             id="getReceivers(commandLogic.commandReceiverLogic.enums.ReceiverType)">
+                                             id="getReceivers(enums.commandReceiverLogic.command.logic.ReceiverType)">
                                         <h3>getReceivers</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
                                                 class="return-type"><a
@@ -277,11 +278,11 @@ loadScripts(document, 'script');</script>
                                                 title="class or interface in java.util"
                                                 class="external-link">ArrayList</a>&lt;? extends <a
                                                 href="receivers/ExternalBaseReceiver.html"
-                                                title="interface in commandLogic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&gt;</span>&nbsp;<span
+                                                title="interface in commandLogic.logic.commandReceiverLogic.receivers">ExternalBaseReceiver</a>&gt;</span>&nbsp;<span
                                                 class="element-name">getReceivers</span>
                                             <wbr>
                                             <span class="parameters">(<a href="enums/ReceiverType.html"
-                                                                         title="enum class in commandLogic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type)</span>
+                                                                         title="enum class in commandLogic.logic.commandReceiverLogic.enums">ReceiverType</a>&nbsp;type)</span>
                                         </div>
                                     </section>
                                 </li>

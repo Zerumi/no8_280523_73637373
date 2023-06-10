@@ -7,7 +7,7 @@ import gui.controllers.auth.callbacks.AuthActionListenerCallback;
 import gui.frames.MainWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.ApplicationResponseProvider;
+import response.logic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;
 
 import javax.swing.*;

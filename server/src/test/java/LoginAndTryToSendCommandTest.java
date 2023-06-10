@@ -1,13 +1,13 @@
-import authorization.authCredentials.AuthenticationData;
-import clientLogic.AuthorizeManager;
-import commandLogic.CommandDescription;
-import commandLogic.commandReceiverLogic.callers.ExternalBaseReceiverCaller;
-import exceptions.authorizationExceptions.AuthorizeException;
+import authorization.credentials.AuthenticationData;
+import client.logic.AuthorizeManager;
+import command.logic.CommandDescription;
+import command.logic.reciever.callers.ExternalBaseReceiverCaller;
+import exceptions.authorization.AuthorizeException;
 import request.logic.CallerBack;
 import request.logic.workers.RequestWorkerManager;
 import request.logic.requests.ServerRequest;
 import requests.CommandClientRequest;
-import serverLogic.DatagramServerConnectionFactory;
+import server.logic.datagram.DatagramServerConnectionFactory;
 
 import java.net.InetSocketAddress;
 

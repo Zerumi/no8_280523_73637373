@@ -1,7 +1,7 @@
 package request.logic.workers;
 
-import clientLogic.AuthorizedCallerBack;
-import databaseLogic.databaseElementLogic.DBIntegrationUtility;
+import client.logic.AuthorizedCallerBack;
+import database.logic.element.DBIntegrationUtility;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;

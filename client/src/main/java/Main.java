@@ -1,11 +1,11 @@
 import gui.frames.AuthWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import serverLogic.ServerConnectionHandler;
-import serverLogic.abstractLogic.ServerConnection;
-import serverLogic.udp.UdpConnectionBlockDecorator;
-import serverLogic.udp.UdpServerConnection;
-import serverLogic.udp.UdpServerConnectionFactory;
+import server.logic.ServerConnectionHandler;
+import server.logic.abstrct.ServerConnection;
+import server.logic.udp.UdpConnectionBlockDecorator;
+import server.logic.udp.UdpServerConnection;
+import server.logic.udp.UdpServerConnectionFactory;
 
 import javax.swing.*;
 import java.awt.*;

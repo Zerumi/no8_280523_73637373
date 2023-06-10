@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="dc.created" content="2023-06-10">
-    <meta name="description" content="declaration: package: serverLogic.udp, class: UdpServerConnection">
+    <meta name="description" content="declaration: package: serverLogic.logic.udp, class: UdpServerConnection">
     <meta name="generator" content="javadoc/ClassWriterImpl">
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
     <link rel="stylesheet" type="text/css" href="../../script-dir/jquery-ui.min.css" title="Style">
@@ -71,25 +71,25 @@ loadScripts(document, 'script');</script>
             <!-- ======== START OF CLASS DATA ======== -->
             <div class="header">
                 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a
-                        href="package-summary.html">serverLogic.udp</a></div>
+                        href="package-summary.html">serverLogic.logic.udp</a></div>
                 <h1 title="Class UdpServerConnection" class="title">Class UdpServerConnection</h1>
             </div>
             <div class="inheritance" title="Inheritance Tree"><a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
                     title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-                <div class="inheritance">serverLogic.udp.UdpServerConnection</div>
+                <div class="inheritance">udp.server.logic.UdpServerConnection</div>
             </div>
             <section class="class-description" id="class-description">
                 <dl class="notes">
                     <dt>All Implemented Interfaces:</dt>
                     <dd><code><a href="../abstractLogic/LargeResponseHandler.html"
-                                 title="interface in serverLogic.abstractLogic">LargeResponseHandler</a></code>,
+                                 title="interface in serverLogic.logic.abstrct">LargeResponseHandler</a></code>,
                         <code><a href="../abstractLogic/ServerConnection.html"
-                                 title="interface in serverLogic.abstractLogic">ServerConnection</a></code></dd>
+                                 title="interface in serverLogic.logic.abstrct">ServerConnection</a></code></dd>
                 </dl>
                 <dl class="notes">
                     <dt>Direct Known Subclasses:</dt>
-                    <dd><code><a href="UdpConnectionBlockDecorator.html" title="class in serverLogic.udp">UdpConnectionBlockDecorator</a></code>
+                    <dd><code><a href="UdpConnectionBlockDecorator.html" title="class in serverLogic.logic.udp">UdpConnectionBlockDecorator</a></code>
                     </dd>
                 </dl>
                 <hr>
@@ -98,9 +98,9 @@ loadScripts(document, 'script');</script>
                     <span class="extends-implements">extends <a
                             href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
                             title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../abstractLogic/ServerConnection.html" title="interface in serverLogic.abstractLogic">ServerConnection</a>, <a
+implements <a href="../abstractLogic/ServerConnection.html" title="interface in serverLogic.logic.abstrct">ServerConnection</a>, <a
                                 href="../abstractLogic/LargeResponseHandler.html"
-                                title="interface in serverLogic.abstractLogic">LargeResponseHandler</a></span></div>
+                                title="interface in serverLogic.logic.abstrct">LargeResponseHandler</a></span></div>
             </section>
             <section class="summary">
                 <ul class="summary-list">
@@ -199,7 +199,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                     class="member-name-link">addLoopListener</a>
                                                 <wbr>
                                                 (<a href="../abstractLogic/ListenLoopListener.html"
-                                                    title="interface in serverLogic.abstractLogic">ListenLoopListener</a>&nbsp;listener)</code>
+                                                    title="interface in serverLogic.logic.abstrct">ListenLoopListener</a>&nbsp;listener)</code>
                                         </div>
                                         <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -212,7 +212,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                     class="member-name-link">addResponseListeners</a>
                                                 <wbr>
                                                 (<a href="../abstractLogic/ServerResponseProvider.html"
-                                                    title="interface in serverLogic.abstractLogic">ServerResponseProvider</a>...&nbsp;providers)</code>
+                                                    title="interface in serverLogic.logic.abstrct">ServerResponseProvider</a>...&nbsp;providers)</code>
                                         </div>
                                         <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -227,7 +227,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                         </div>
                                         <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code><a href="../abstractLogic/LargeResponseHandler.html"
-                                                     title="interface in serverLogic.abstractLogic">LargeResponseHandler</a></code>
+                                                     title="interface in serverLogic.logic.abstrct">LargeResponseHandler</a></code>
                                         </div>
                                         <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             <code><a href="#getLargeResponseHandler()" class="member-name-link">getLargeResponseHandler</a>()</code>
@@ -252,7 +252,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                 <wbr>
                                                 (int&nbsp;packetsCount,
                                                 <a href="../abstractLogic/LargePacketProvider.html"
-                                                   title="interface in serverLogic.abstractLogic">LargePacketProvider</a>...&nbsp;packetProviders)</code>
+                                                   title="interface in serverLogic.logic.abstrct">LargePacketProvider</a>...&nbsp;packetProviders)</code>
                                         </div>
                                         <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -265,7 +265,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                     class="member-name-link">removeLoopListener</a>
                                                 <wbr>
                                                 (<a href="../abstractLogic/ListenLoopListener.html"
-                                                    title="interface in serverLogic.abstractLogic">ListenLoopListener</a>&nbsp;listener)</code>
+                                                    title="interface in serverLogic.logic.abstrct">ListenLoopListener</a>&nbsp;listener)</code>
                                         </div>
                                         <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -278,7 +278,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                     class="member-name-link">removeResponseListeners</a>
                                                 <wbr>
                                                 (<a href="../abstractLogic/ServerResponseProvider.html"
-                                                    title="interface in serverLogic.abstractLogic">ServerResponseProvider</a>...&nbsp;providers)</code>
+                                                    title="interface in serverLogic.logic.abstrct">ServerResponseProvider</a>...&nbsp;providers)</code>
                                         </div>
                                         <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
                                             &nbsp;
@@ -345,7 +345,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <dd>
                                                 <ul class="see-list">
                                                     <li>
-                                                        <a href="../../constant-values.html#serverLogic.udp.UdpServerConnection.BUFFER_SIZE">Constant
+                                                        <a href="../../constant-values.html#udp.server.logic.UdpServerConnection.BUFFER_SIZE">Constant
                                                             Field Values</a></li>
                                                 </ul>
                                             </dd>
@@ -417,7 +417,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <dt>Specified by:</dt>
                                             <dd><code><a href="../abstractLogic/ServerConnection.html#openConnection()">openConnection</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                             <dt>Throws:</dt>
                                             <dd><code><a
@@ -443,7 +443,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#closeConnection()">closeConnection</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                             <dt>Throws:</dt>
                                             <dd><code><a
@@ -475,7 +475,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#sendData(byte%5B%5D)">sendData</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                             <dt>Parameters:</dt>
                                             <dd><code>bytesToSend</code> - bytes to send</dd>
@@ -497,14 +497,14 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <wbr>
                                             <span class="parameters">(<a
                                                     href="../abstractLogic/ServerResponseProvider.html"
-                                                    title="interface in serverLogic.abstractLogic">ServerResponseProvider</a>...&nbsp;providers)</span>
+                                                    title="interface in serverLogic.logic.abstrct">ServerResponseProvider</a>...&nbsp;providers)</span>
                                         </div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#addResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)">addResponseListeners</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                         </dl>
                                     </section>
@@ -518,14 +518,14 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <wbr>
                                             <span class="parameters">(<a
                                                     href="../abstractLogic/ServerResponseProvider.html"
-                                                    title="interface in serverLogic.abstractLogic">ServerResponseProvider</a>...&nbsp;providers)</span>
+                                                    title="interface in serverLogic.logic.abstrct">ServerResponseProvider</a>...&nbsp;providers)</span>
                                         </div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#removeResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)">removeResponseListeners</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                         </dl>
                                     </section>
@@ -535,7 +535,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                         <h3>getLargeResponseHandler</h3>
                                         <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span
                                                 class="return-type"><a href="../abstractLogic/LargeResponseHandler.html"
-                                                                       title="interface in serverLogic.abstractLogic">LargeResponseHandler</a></span>&nbsp;<span
+                                                                       title="interface in serverLogic.logic.abstrct">LargeResponseHandler</a></span>&nbsp;<span
                                                 class="element-name">getLargeResponseHandler</span>()
                                         </div>
                                         <dl class="notes">
@@ -543,7 +543,7 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#getLargeResponseHandler()">getLargeResponseHandler</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                         </dl>
                                     </section>
@@ -557,14 +557,14 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                             <wbr>
                                             <span class="parameters">(int&nbsp;packetsCount,
  <a href="../abstractLogic/LargePacketProvider.html"
-    title="interface in serverLogic.abstractLogic">LargePacketProvider</a>...&nbsp;packetProviders)</span></div>
+    title="interface in serverLogic.logic.abstrct">LargePacketProvider</a>...&nbsp;packetProviders)</span></div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
                                                     href="../abstractLogic/LargeResponseHandler.html#readLargeObject(int,serverLogic.abstractLogic.LargePacketProvider...)">readLargeObject</a></code>&nbsp;in
                                                 interface&nbsp;<code><a
                                                         href="../abstractLogic/LargeResponseHandler.html"
-                                                        title="interface in serverLogic.abstractLogic">LargeResponseHandler</a></code>
+                                                        title="interface in serverLogic.logic.abstrct">LargeResponseHandler</a></code>
                                             </dd>
                                         </dl>
                                     </section>
@@ -577,14 +577,14 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                 class="return-type">void</span>&nbsp;<span class="element-name">addLoopListener</span>
                                             <wbr>
                                             <span class="parameters">(<a href="../abstractLogic/ListenLoopListener.html"
-                                                                         title="interface in serverLogic.abstractLogic">ListenLoopListener</a>&nbsp;listener)</span>
+                                                                         title="interface in serverLogic.logic.abstrct">ListenLoopListener</a>&nbsp;listener)</span>
                                         </div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#addLoopListener(serverLogic.abstractLogic.ListenLoopListener)">addLoopListener</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                         </dl>
                                     </section>
@@ -597,14 +597,14 @@ implements <a href="../abstractLogic/ServerConnection.html" title="interface in 
                                                 class="return-type">void</span>&nbsp;<span class="element-name">removeLoopListener</span>
                                             <wbr>
                                             <span class="parameters">(<a href="../abstractLogic/ListenLoopListener.html"
-                                                                         title="interface in serverLogic.abstractLogic">ListenLoopListener</a>&nbsp;listener)</span>
+                                                                         title="interface in serverLogic.logic.abstrct">ListenLoopListener</a>&nbsp;listener)</span>
                                         </div>
                                         <dl class="notes">
                                             <dt>Specified by:</dt>
                                             <dd><code><a
                                                     href="../abstractLogic/ServerConnection.html#removeLoopListener(serverLogic.abstractLogic.ListenLoopListener)">removeLoopListener</a></code>&nbsp;in
                                                 interface&nbsp;<code><a href="../abstractLogic/ServerConnection.html"
-                                                                        title="interface in serverLogic.abstractLogic">ServerConnection</a></code>
+                                                                        title="interface in serverLogic.logic.abstrct">ServerConnection</a></code>
                                             </dd>
                                         </dl>
                                     </section>

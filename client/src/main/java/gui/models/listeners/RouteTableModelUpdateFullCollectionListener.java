@@ -1,7 +1,7 @@
 package gui.models.listeners;
 
 import gui.models.RouteTableModel;
-import responseLogic.ApplicationResponseProvider;
+import response.logic.ApplicationResponseProvider;
 import responses.ShowCollectionResponse;
 
 import java.awt.*;

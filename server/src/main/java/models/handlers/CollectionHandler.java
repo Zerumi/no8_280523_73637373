@@ -59,7 +59,7 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
      * Provides method for get collection initDate.
      *
      * @return Date instance -- Collection created time.
-     * @see commandManager.commands.InfoCommand
+     * @see command.manager.commands.InfoCommand
      */
     Date getInitDate();
 

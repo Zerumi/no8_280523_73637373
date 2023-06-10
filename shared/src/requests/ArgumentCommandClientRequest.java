@@ -1,7 +1,7 @@
 package requests;
 
-import commandLogic.CommandDescription;
-import requests.requestAnnotations.Authorize;
+import command.logic.CommandDescription;
+import requests.annotations.Authorize;
 
 @Authorize
 public class ArgumentCommandClientRequest<T> extends CommandClientRequest {

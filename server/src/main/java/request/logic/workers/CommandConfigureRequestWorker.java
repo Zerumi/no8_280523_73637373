@@ -1,9 +1,9 @@
 package request.logic.workers;
 
-import commandLogic.CommandDescription;
-import commandManager.CommandExporter;
+import command.logic.CommandDescription;
+import command.manager.CommandExporter;
 import request.logic.requests.ServerRequest;
-import responseLogic.responseSenders.ResponseSender;
+import response.logic.senders.ResponseSender;
 import responses.CommandDescriptionsResponse;
 
 import java.util.ArrayList;

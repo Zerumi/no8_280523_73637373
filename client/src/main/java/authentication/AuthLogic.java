@@ -1,8 +1,8 @@
 package authentication;
 
-import authorization.authCredentials.AuthenticationData;
-import requestLogic.requestSenders.AuthorizationRequestSender;
-import responseLogic.ApplicationResponseProvider;
+import authorization.credentials.AuthenticationData;
+import request.logic.senders.AuthorizationRequestSender;
+import response.logic.ApplicationResponseProvider;
 import responses.AuthorizeResponse;
 
 import java.util.Arrays;

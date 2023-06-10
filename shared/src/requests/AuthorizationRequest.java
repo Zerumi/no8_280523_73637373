@@ -1,6 +1,6 @@
 package requests;
 
-import authorization.authCredentials.AuthenticationData;
+import authorization.credentials.AuthenticationData;
 
 public class AuthorizationRequest extends BaseRequest {
     private final AuthenticationData authenticationData;

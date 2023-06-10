@@ -1,6 +1,6 @@
 package requests;
 
-import authorization.authCredentials.RegistrationData;
+import authorization.credentials.RegistrationData;
 
 public class RegistrationRequest extends BaseRequest {
     private final RegistrationData data;

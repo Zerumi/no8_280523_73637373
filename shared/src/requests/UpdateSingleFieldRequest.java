@@ -1,7 +1,7 @@
 package requests;
 
 import models.RouteFields;
-import requests.requestAnnotations.Authorize;
+import requests.annotations.Authorize;
 
 @Authorize
 public class UpdateSingleFieldRequest extends BaseRequest {

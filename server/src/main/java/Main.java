@@ -1,5 +1,5 @@
-import commandManager.serverCommands.ServerCommandManager;
-import databaseLogic.databaseElementLogic.DBCollectionLoader;
+import command.manager.server.ServerCommandManager;
+import database.logic.element.DBCollectionLoader;
 import exceptions.UnknownCommandException;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -11,8 +11,8 @@ import request.logic.StatusRequest;
 import request.logic.workers.RequestWorkerManager;
 import request.logic.requests.ServerRequest;
 import requests.BaseRequest;
-import serverLogic.DatagramServerConnectionFactory;
-import serverLogic.ServerConnection;
+import server.logic.datagram.DatagramServerConnectionFactory;
+import server.logic.abstrct.ServerConnection;
 
 import java.io.IOException;
 import java.sql.SQLException;

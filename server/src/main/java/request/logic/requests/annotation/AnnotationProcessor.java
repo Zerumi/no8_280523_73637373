@@ -4,7 +4,7 @@ import exceptions.CannotProceedException;
 import request.logic.requests.annotation.processors.AuthorizeProcessor;
 import request.logic.requests.annotation.processors.RequestAnnotationProcessor;
 import request.logic.requests.ServerRequest;
-import requests.requestAnnotations.Authorize;
+import requests.annotations.Authorize;
 
 import java.lang.annotation.Annotation;
 import java.util.LinkedHashMap;

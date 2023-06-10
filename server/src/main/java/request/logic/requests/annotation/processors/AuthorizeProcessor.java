@@ -1,9 +1,9 @@
 package request.logic.requests.annotation.processors;
 
-import clientLogic.AuthorizeManager;
-import clientLogic.AuthorizedCallerBack;
+import client.logic.AuthorizeManager;
+import client.logic.AuthorizedCallerBack;
 import exceptions.CannotProceedException;
-import exceptions.authorizationExceptions.UnauthorizedException;
+import exceptions.authorization.UnauthorizedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.requests.ServerRequest;

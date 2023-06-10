@@ -1,7 +1,7 @@
 package request.logic.workers;
 
-import commandManager.CommandManager;
-import commandManager.commands.ArgumentConsumer;
+import command.manager.CommandManager;
+import command.manager.commands.ArgumentConsumer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.requests.ServerRequest;

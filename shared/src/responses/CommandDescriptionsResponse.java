@@ -1,6 +1,6 @@
 package responses;
 
-import commandLogic.CommandDescription;
+import command.logic.CommandDescription;
 
 import java.util.ArrayList;
 

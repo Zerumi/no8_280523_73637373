@@ -1,6 +1,6 @@
 package requests;
 
-import requests.requestAnnotations.Authorize;
+import requests.annotations.Authorize;
 
 @Authorize
 public class ListenCollectionActionsRequest extends BaseRequest {

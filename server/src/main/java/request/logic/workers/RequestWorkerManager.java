@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import request.logic.requests.annotation.AnnotationProcessor;
 import request.logic.requests.ServerRequest;
 import requests.*;
-import responseLogic.responseSenders.ResponseSender;
+import response.logic.senders.ResponseSender;
 import responses.ErrorResponse;
 
 import java.util.LinkedHashMap;

@@ -1,11 +1,11 @@
 package request.logic.workers;
 
 import authorization.AuthorizedUserData;
-import clientLogic.AuthorizeManager;
-import exceptions.authorizationExceptions.AuthorizeException;
+import client.logic.AuthorizeManager;
+import exceptions.authorization.AuthorizeException;
 import request.logic.requests.ServerRequest;
 import requests.RegistrationRequest;
-import responseLogic.responseSenders.ResponseSender;
+import response.logic.senders.ResponseSender;
 import responses.AuthorizeResponse;
 import responses.BaseResponse;
 import responses.ErrorResponse;

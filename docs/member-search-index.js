@@ -9,7 +9,7 @@ memberSearchIndex = [{
     "l": "acceptCollectionUpdate(CollectionUpdatedResponse)",
     "u": "acceptCollectionUpdate(responses.CollectionUpdatedResponse)"
 }, {
-    "p": "commandManager",
+    "p": "command.logic",
     "c": "CommandLoaderUtility",
     "l": "acceptElement(ArrayList<CommandDescription>)",
     "u": "acceptElement(java.util.ArrayList)"
@@ -19,17 +19,17 @@ memberSearchIndex = [{
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "commandManager",
+    "p": "command.logic",
     "c": "CommandLoaderUtility",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ArgumentRouteCommandReceiver",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "NonArgumentReceiver",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
@@ -69,52 +69,52 @@ memberSearchIndex = [{
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "listenLogic",
+    "p": "listen.logic",
     "c": "ServerListener",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ArgumentRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "AuthorizationRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandDescriptionsRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "LoginRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RegistrationRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ShowCollectionRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "IntermediateResponseHandler",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
@@ -124,10 +124,10 @@ memberSearchIndex = [{
     "l": "acceptFullCollectionResponse(ShowCollectionResponse)",
     "u": "acceptFullCollectionResponse(responses.ShowCollectionResponse)"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "IntermediateResponseHandler",
     "l": "acceptReadingOver()"
-}, {"p": "serverLogic.abstractLogic", "c": "LargePacketProvider", "l": "acceptReadingOver()"}, {
+}, {"p": "server.logic.abstrct", "c": "LargePacketProvider", "l": "acceptReadingOver()"}, {
     "p": "authentication",
     "c": "AuthLogic",
     "l": "acceptResponse(AuthorizeResponse)",
@@ -143,12 +143,12 @@ memberSearchIndex = [{
     "l": "acceptResponse(AuthorizeResponse)",
     "u": "acceptResponse(responses.AuthorizeResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "AuthorizationRequestSender",
     "l": "acceptResponse(AuthorizeResponse)",
     "u": "acceptResponse(responses.AuthorizeResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RegistrationRequestSender",
     "l": "acceptResponse(AuthorizeResponse)",
     "u": "acceptResponse(responses.AuthorizeResponse)"
@@ -158,49 +158,49 @@ memberSearchIndex = [{
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ArgumentRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandDescriptionsRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "LoginRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ShowCollectionRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(responses.BaseResponse)"
-}, {"p": "listenLogic", "c": "ServerListener", "l": "acceptResponse(byte[])"}, {
-    "p": "requestLogic.requestSenders",
+}, {"p": "listen.logic", "c": "ServerListener", "l": "acceptResponse(byte[])"}, {
+    "p": "request.logic.senders",
     "c": "RequestSender",
     "l": "acceptResponse(byte[])"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "IntermediateResponseHandler",
     "l": "acceptResponse(byte[])"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerResponseProvider",
     "l": "acceptResponse(byte[])"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ArgumentRouteCommandReceiver",
     "l": "acceptResponse(CommandStatusResponse)",
     "u": "acceptResponse(responses.CommandStatusResponse)"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "NonArgumentReceiver",
     "l": "acceptResponse(CommandStatusResponse)",
     "u": "acceptResponse(responses.CommandStatusResponse)"
@@ -209,8 +209,8 @@ memberSearchIndex = [{
     "c": "RouteTableModelUpdateFullCollectionListener",
     "l": "acceptResponse(ShowCollectionResponse)",
     "u": "acceptResponse(responses.ShowCollectionResponse)"
-}, {"p": "responseLogic", "c": "ApplicationResponseProvider", "l": "acceptResponse(T)"}, {
-    "p": "clientLogic",
+}, {"p": "response.logic", "c": "ApplicationResponseProvider", "l": "acceptResponse(T)"}, {
+    "p": "client.logic",
     "c": "Session",
     "l": "actionPerformed(ActionEvent)",
     "u": "actionPerformed(java.awt.event.ActionEvent)"
@@ -254,12 +254,12 @@ memberSearchIndex = [{
     "l": "addCollectionListener(CollectionUpdateListener<Route>)",
     "u": "addCollectionListener(models.handlers.CollectionUpdateListener)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "AddCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBElementCreatorLogic",
     "l": "addCreatorToDB(long, long)",
     "u": "addCreatorToDB(long,long)"
@@ -269,75 +269,75 @@ memberSearchIndex = [{
     "l": "addElementToCollection(Route)",
     "u": "addElementToCollection(models.Route)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "addElementToDataBase(Route)",
     "u": "addElementToDataBase(models.Route)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "AddIfMaxCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "AddIfMinCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "listenLogic",
+    "p": "listen.logic",
     "c": "ServerListener",
     "l": "addListeners(ApplicationResponseProvider<BaseResponse>...)",
-    "u": "addListeners(responseLogic.ApplicationResponseProvider...)"
+    "u": "addListeners(response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "addLoopListener(ListenLoopListener)",
-    "u": "addLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
+    "u": "addLoopListener(server.logic.abstrct.ListenLoopListener)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "addLoopListener(ListenLoopListener)",
-    "u": "addLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
+    "u": "addLoopListener(server.logic.abstrct.ListenLoopListener)"
 }, {
     "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "addPropertyChangeListener(PropertyChangeListener)",
     "u": "addPropertyChangeListener(java.beans.PropertyChangeListener)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "ArgumentReceiverHandler",
     "l": "addReceiver(ExternalBaseReceiver)",
-    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+    "u": "addReceiver(command.logic.reciever.receivers.ExternalBaseReceiver)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "NonArgReceiversHandler",
     "l": "addReceiver(ExternalBaseReceiver)",
-    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+    "u": "addReceiver(command.logic.reciever.receivers.ExternalBaseReceiver)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "ReceiverHandler",
     "l": "addReceiver(ExternalBaseReceiver)",
-    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+    "u": "addReceiver(command.logic.reciever.receivers.ExternalBaseReceiver)"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "addResponseListeners(ServerResponseProvider...)",
-    "u": "addResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)"
+    "u": "addResponseListeners(server.logic.abstrct.ServerResponseProvider...)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "addResponseListeners(ServerResponseProvider...)",
-    "u": "addResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)"
-}, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "address"}, {
-    "p": "databaseLogic.databaseElementLogic",
+    "u": "addResponseListeners(server.logic.abstrct.ServerResponseProvider...)"
+}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "address"}, {
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "addRouteToDBAndCollection(Route, long)",
     "u": "addRouteToDBAndCollection(models.Route,long)"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "DBUserManager",
     "l": "addUserToDatabase(CallerBack, RegistrationData)",
-    "u": "addUserToDatabase(request.logic.CallerBack,authorization.authCredentials.RegistrationData)"
+    "u": "addUserToDatabase(request.logic.CallerBack,authorization.credentials.RegistrationData)"
 }, {"p": "authorization", "c": "UserRoles", "l": "Admin"}, {
     "p": "request.logic.requests.annotation",
     "c": "AnnotationProcessor",
@@ -352,28 +352,28 @@ memberSearchIndex = [{
     "p": "requests",
     "c": "ArgumentCommandClientRequest",
     "l": "ArgumentCommandClientRequest(CommandDescription, String[], T)",
-    "u": "%3Cinit%3E(commandLogic.CommandDescription,java.lang.String[],T)"
+    "u": "%3Cinit%3E(command.logic.CommandDescription,java.lang.String[],T)"
 }, {
     "p": "request.logic.workers",
     "c": "ArgumentCommandClientRequestWorker",
     "l": "ArgumentCommandClientRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "ArgumentReceiverHandler",
     "l": "ArgumentReceiverHandler(Class<T>)",
     "u": "%3Cinit%3E(java.lang.Class)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ArgumentRequestSender",
     "l": "ArgumentRequestSender()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.enums",
+    "p": "command.logic.reciever.enums",
     "c": "ReceiverType",
     "l": "ArgumentRoute"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ArgumentRouteCommandReceiver",
     "l": "ArgumentRouteCommandReceiver(ModuleHandler<Route>)",
     "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
@@ -381,14 +381,14 @@ memberSearchIndex = [{
     "p": "authentication",
     "c": "AuthLogic",
     "l": "auth(String, char[], ApplicationResponseProvider<AuthorizeResponse>...)",
-    "u": "auth(java.lang.String,char[],responseLogic.ApplicationResponseProvider...)"
+    "u": "auth(java.lang.String,char[],response.logic.ApplicationResponseProvider...)"
 }, {
     "p": "gui.controllers.auth",
     "c": "AuthActionListener",
     "l": "AuthActionListener(JTextField, JPasswordField, AuthActionListenerCallback, ExceptionProvider)",
     "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.auth.callbacks.AuthActionListenerCallback,core.providers.ExceptionProvider)"
 }, {
-    "p": "authorization.authCredentials",
+    "p": "authorization.credentials",
     "c": "AuthenticationData",
     "l": "AuthenticationData(String, char[])",
     "u": "%3Cinit%3E(java.lang.String,char[])"
@@ -396,9 +396,9 @@ memberSearchIndex = [{
     "p": "requests",
     "c": "AuthorizationRequest",
     "l": "AuthorizationRequest(AuthenticationData)",
-    "u": "%3Cinit%3E(authorization.authCredentials.AuthenticationData)"
+    "u": "%3Cinit%3E(authorization.credentials.AuthenticationData)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "AuthorizationRequestSender",
     "l": "AuthorizationRequestSender()",
     "u": "%3Cinit%3E()"
@@ -408,12 +408,12 @@ memberSearchIndex = [{
     "l": "AuthorizationRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizeManager",
     "l": "authorize(CallerBack, AuthenticationData)",
-    "u": "authorize(request.logic.CallerBack,authorization.authCredentials.AuthenticationData)"
+    "u": "authorize(request.logic.CallerBack,authorization.credentials.AuthenticationData)"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizedCallerBack",
     "l": "AuthorizedCallerBack(AuthorizedUserData, CallerBack)",
     "u": "%3Cinit%3E(authorization.AuthorizedUserData,request.logic.CallerBack)"
@@ -423,17 +423,17 @@ memberSearchIndex = [{
     "l": "AuthorizedUserData(long, String, String, LocalDateTime, String, LocalDateTime)",
     "u": "%3Cinit%3E(long,java.lang.String,java.lang.String,java.time.LocalDateTime,java.lang.String,java.time.LocalDateTime)"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "AuthorizeException",
     "l": "AuthorizeException(Exception)",
     "u": "%3Cinit%3E(java.lang.Exception)"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "AuthorizeException",
     "l": "AuthorizeException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizeManager",
     "l": "AuthorizeManager()",
     "u": "%3Cinit%3E()"
@@ -463,10 +463,10 @@ memberSearchIndex = [{
     "l": "BaseRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {"p": "responses", "c": "BaseResponse", "l": "BaseResponse()", "u": "%3Cinit%3E()"}, {
-    "p": "serverLogic",
+    "p": "server.logic.datagram",
     "c": "DatagramServerConnection",
     "l": "BUFFER_SIZE"
-}, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "BUFFER_SIZE"}, {
+}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "BUFFER_SIZE"}, {
     "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "build()"
@@ -498,20 +498,20 @@ memberSearchIndex = [{
     "l": "CallerBack(InetAddress, int)",
     "u": "%3Cinit%3E(java.net.InetAddress,int)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalArgumentReceiverCaller",
     "l": "callReceivers(ReceiverManager, CommandDescription, String[])",
-    "u": "callReceivers(commandLogic.commandReceiverLogic.ReceiverManager,commandLogic.CommandDescription,java.lang.String[])"
+    "u": "callReceivers(command.logic.reciever.ReceiverManager,command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalBaseReceiverCaller",
     "l": "callReceivers(ReceiverManager, CommandDescription, String[])",
-    "u": "callReceivers(commandLogic.commandReceiverLogic.ReceiverManager,commandLogic.CommandDescription,java.lang.String[])"
+    "u": "callReceivers(command.logic.reciever.ReceiverManager,command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalCaller",
     "l": "callReceivers(ReceiverManager, CommandDescription, String[])",
-    "u": "callReceivers(commandLogic.commandReceiverLogic.ReceiverManager,commandLogic.CommandDescription,java.lang.String[])"
+    "u": "callReceivers(command.logic.reciever.ReceiverManager,command.logic.CommandDescription,java.lang.String[])"
 }, {
     "p": "exceptions",
     "c": "CannotProceedException",
@@ -522,48 +522,44 @@ memberSearchIndex = [{
     "c": "AuthTextFieldsEditListener",
     "l": "changedUpdate(DocumentEvent)",
     "u": "changedUpdate(javax.swing.event.DocumentEvent)"
-}, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "channel"}, {
+}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "channel"}, {
     "p": "models.handlers",
     "c": "Utilities",
     "l": "checkArgumentsOrThrow(int, int)",
     "u": "checkArgumentsOrThrow(int,int)"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "DBUserManager",
     "l": "checkExistence(String)",
     "u": "checkExistence(java.lang.String)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBElementCreatorLogic",
     "l": "checkNonAccessory(long, long)",
     "u": "checkNonAccessory(long,long)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "clearCollectionInDBAndMemory(long)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ClearCommand",
     "l": "ClearCommand()",
     "u": "%3Cinit%3E()"
-}, {"p": "commandManager", "c": "CommandMode", "l": "CLI_UserMode"}, {
-    "p": "databaseLogic.databaseElementLogic",
+}, {"p": "command.logic", "c": "CommandMode", "l": "CLI_UserMode"}, {
+    "p": "database.logic.element",
     "c": "DBCollectionLoader",
     "l": "close()"
-}, {
-    "p": "databaseLogic.databaseElementLogic",
-    "c": "DBCollectionManager",
-    "l": "close()"
-}, {
-    "p": "databaseLogic.databaseElementLogic",
+}, {"p": "database.logic.element", "c": "DBCollectionManager", "l": "close()"}, {
+    "p": "database.logic.element",
     "c": "DBElementCreatorLogic",
     "l": "close()"
-}, {"p": "databaseLogic.databaseUserLogic", "c": "DBUserManager", "l": "close()"}, {
-    "p": "serverLogic.abstractLogic",
+}, {"p": "database.logic.user", "c": "DBUserManager", "l": "close()"}, {
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "closeConnection()"
-}, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "closeConnection()"}, {
-    "p": "responseLogic",
+}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "closeConnection()"}, {
+    "p": "response.logic",
     "c": "StatusResponse",
     "l": "code()"
 }, {
@@ -577,7 +573,7 @@ memberSearchIndex = [{
     "l": "CollectionUpdatedResponse(AbstractCollectionAction)",
     "u": "%3Cinit%3E(models.collection.actions.AbstractCollectionAction)"
 }, {
-    "p": "commandManager.commandPreProcessing.preProcessors",
+    "p": "command.manager.preprocessing.processors",
     "c": "CommandAuthorizePreProcessor",
     "l": "CommandAuthorizePreProcessor()",
     "u": "%3Cinit%3E()"
@@ -585,7 +581,7 @@ memberSearchIndex = [{
     "p": "requests",
     "c": "CommandClientRequest",
     "l": "CommandClientRequest(CommandDescription, String[])",
-    "u": "%3Cinit%3E(commandLogic.CommandDescription,java.lang.String[])"
+    "u": "%3Cinit%3E(command.logic.CommandDescription,java.lang.String[])"
 }, {
     "p": "request.logic.workers",
     "c": "CommandClientRequestWorker",
@@ -597,17 +593,17 @@ memberSearchIndex = [{
     "l": "CommandConfigureRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic",
+    "p": "command.logic",
     "c": "CommandDescription",
     "l": "CommandDescription(String, ExternalCaller)",
-    "u": "%3Cinit%3E(java.lang.String,commandLogic.commandReceiverLogic.callers.ExternalCaller)"
+    "u": "%3Cinit%3E(java.lang.String,command.logic.reciever.callers.ExternalCaller)"
 }, {
     "p": "requests",
     "c": "CommandDescriptionsRequest",
     "l": "CommandDescriptionsRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandDescriptionsRequestSender",
     "l": "CommandDescriptionsRequestSender()",
     "u": "%3Cinit%3E()"
@@ -617,32 +613,32 @@ memberSearchIndex = [{
     "l": "CommandDescriptionsResponse(ArrayList<CommandDescription>)",
     "u": "%3Cinit%3E(java.util.ArrayList)"
 }, {
-    "p": "commandManager",
+    "p": "command.logic",
     "c": "CommandExecutor",
     "l": "CommandExecutor(ArrayList<CommandDescription>, InputStream, CommandMode)",
-    "u": "%3Cinit%3E(java.util.ArrayList,java.io.InputStream,commandManager.CommandMode)"
-}, {"p": "commandManager", "c": "CommandExporter", "l": "CommandExporter()", "u": "%3Cinit%3E()"}, {
+    "u": "%3Cinit%3E(java.util.ArrayList,java.io.InputStream,command.logic.CommandMode)"
+}, {"p": "command.manager", "c": "CommandExporter", "l": "CommandExporter()", "u": "%3Cinit%3E()"}, {
     "p": "exceptions",
     "c": "CommandInterruptedException",
     "l": "CommandInterruptedException(Exception)",
     "u": "%3Cinit%3E(java.lang.Exception)"
 }, {
-    "p": "commandManager",
+    "p": "command.logic",
     "c": "CommandLoaderUtility",
     "l": "CommandLoaderUtility()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager",
+    "p": "command.manager",
     "c": "CommandManager",
     "l": "CommandManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commandPreProcessing",
+    "p": "command.manager.preprocessing",
     "c": "CommandPreProcessorManager",
     "l": "CommandPreProcessorManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandRequestSender",
     "l": "CommandRequestSender()",
     "u": "%3Cinit%3E()"
@@ -696,17 +692,17 @@ memberSearchIndex = [{
     "l": "CoordYValidator()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "CountGreaterThanDistanceCommand()",
     "u": "%3Cinit%3E()"
 }, {"p": "models", "c": "RouteFields", "l": "CREATION_DATE"}, {
-    "p": "serverLogic",
+    "p": "server.logic.datagram",
     "c": "DatagramServerConnection",
     "l": "DatagramServerConnection(int)",
     "u": "%3Cinit%3E(int)"
 }, {
-    "p": "serverLogic",
+    "p": "server.logic.datagram",
     "c": "DatagramServerConnectionFactory",
     "l": "DatagramServerConnectionFactory()",
     "u": "%3Cinit%3E()"
@@ -716,30 +712,30 @@ memberSearchIndex = [{
     "l": "DateEditor()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionLoader",
     "l": "DBCollectionLoader(T)",
     "u": "%3Cinit%3E(T)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "DBCollectionManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBElementCreatorLogic",
     "l": "DBElementCreatorLogic()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "DBIntegrationUtility()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "DBUserManager",
     "l": "DBUserManager(PasswordEncryption)",
-    "u": "%3Cinit%3E(databaseLogic.databaseUserLogic.PasswordEncryption)"
+    "u": "%3Cinit%3E(database.logic.user.PasswordEncryption)"
 }, {
     "p": "exceptions",
     "c": "DenyOperationException",
@@ -755,12 +751,8 @@ memberSearchIndex = [{
     "c": "ElementNotAddedException",
     "l": "ElementNotAddedException()",
     "u": "%3Cinit%3E()"
-}, {
-    "p": "databaseLogic.databaseUserLogic",
-    "c": "PasswordEncryption",
-    "l": "encrypt(char[])"
-}, {
-    "p": "databaseLogic.databaseUserLogic",
+}, {"p": "database.logic.user", "c": "PasswordEncryption", "l": "encrypt(char[])"}, {
+    "p": "database.logic.user",
     "c": "PasswordEncryptionImplSHA512",
     "l": "encrypt(char[])"
 }, {
@@ -769,11 +761,11 @@ memberSearchIndex = [{
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizedCallerBack",
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
-}, {"p": "clientLogic", "c": "Session", "l": "equals(Object)", "u": "equals(java.lang.Object)"}, {
+}, {"p": "client.logic", "c": "Session", "l": "equals(Object)", "u": "equals(java.lang.Object)"}, {
     "p": "models",
     "c": "Coordinates",
     "l": "equals(Object)",
@@ -789,7 +781,7 @@ memberSearchIndex = [{
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "StatusResponse",
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
@@ -799,137 +791,137 @@ memberSearchIndex = [{
     "l": "ErrorResponse(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "BaseCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ClearCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ExecuteScriptCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "HelpCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveByIdCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "SaveCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager.serverCommands.commands",
+    "p": "command.manager.server.commands",
     "c": "ShowSessions",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
-    "p": "commandManager",
+    "p": "command.manager",
     "c": "CommandManager",
     "l": "executeCommand(CommandClientRequest, CallerBack, ServerConnection)",
-    "u": "executeCommand(requests.CommandClientRequest,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "executeCommand(requests.CommandClientRequest,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
-    "p": "commandManager.serverCommands",
+    "p": "command.manager.server",
     "c": "ServerCommandManager",
     "l": "executeCommand(String[])",
     "u": "executeCommand(java.lang.String[])"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ExecuteScriptCommand",
     "l": "ExecuteScriptCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ExecuteScriptReceiver",
     "l": "ExecuteScriptReceiver()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "ExitCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ExitReceiver",
     "l": "ExitReceiver()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalArgumentReceiverCaller",
     "l": "ExternalArgumentReceiverCaller()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalBaseReceiverCaller",
     "l": "ExternalBaseReceiverCaller()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.callers",
+    "p": "command.logic.reciever.callers",
     "c": "ExternalCaller",
     "l": "ExternalCaller()",
     "u": "%3Cinit%3E()"
@@ -942,20 +934,16 @@ memberSearchIndex = [{
     "c": "RouteFields",
     "l": "FROM_Z"
 }, {
-    "p": "commandManager",
+    "p": "command.manager",
     "c": "CommandManager",
     "l": "fromDescription(CommandDescription)",
-    "u": "fromDescription(commandLogic.CommandDescription)"
-}, {
-    "p": "databaseLogic.databaseUserLogic",
-    "c": "PasswordEncryption",
-    "l": "generateSalt()"
-}, {
-    "p": "databaseLogic.databaseUserLogic",
+    "u": "fromDescription(command.logic.CommandDescription)"
+}, {"p": "database.logic.user", "c": "PasswordEncryption", "l": "generateSalt()"}, {
+    "p": "database.logic.user",
     "c": "PasswordEncryptionImplSHA512",
     "l": "generateSalt()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "getAccessibleCollection(long, Supplier<T>)",
     "u": "getAccessibleCollection(long,java.util.function.Supplier)"
@@ -964,59 +952,55 @@ memberSearchIndex = [{
     "c": "CollectionUpdatedResponse",
     "l": "getAction()"
 }, {"p": "request.logic", "c": "CallerBack", "l": "getAddress()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "SessionHandler",
     "l": "getAllSessions()"
-}, {"p": "commandManager.commands", "c": "AddCommand", "l": "getArgs()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddCommand", "l": "getArgs()"}, {
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "getArgs()"
-}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "getArgs()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getArgs()"}, {
+    "p": "command.manager.commands",
     "c": "BaseCommand",
     "l": "getArgs()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getArgs()"
-}, {"p": "commandManager.commands", "c": "ExecuteScriptCommand", "l": "getArgs()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "ExecuteScriptCommand", "l": "getArgs()"}, {
+    "p": "command.manager.commands",
     "c": "RemoveByIdCommand",
     "l": "getArgs()"
-}, {"p": "commandManager.commands", "c": "RemoveGreaterCommand", "l": "getArgs()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "RemoveGreaterCommand", "l": "getArgs()"}, {
+    "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "getArgs()"
-}, {
-    "p": "commandManager.commands",
-    "c": "UpdateCommand",
-    "l": "getArgs()"
-}, {
-    "p": "commandLogic.commandReceiverLogic.receivers",
-    "c": "ExternalArgumentReceiver",
-    "l": "getArguemnt()"
-}, {
-    "p": "commandManager.external.recievers",
+}, {"p": "command.manager.commands", "c": "UpdateCommand", "l": "getArgs()"}, {
+    "p": "command.logic.external.recievers",
     "c": "ArgumentRouteCommandReceiver",
     "l": "getArguemnt()"
-}, {"p": "requests", "c": "ArgumentCommandClientRequest", "l": "getArgument()"}, {
-    "p": "file.logic.editors",
-    "c": "DateEditor",
-    "l": "getAsText()"
-}, {"p": "requests", "c": "AuthorizationRequest", "l": "getAuthenticationData()"}, {
-    "p": "responses",
-    "c": "AuthorizeResponse",
-    "l": "getAuthorizedAs()"
-}, {"p": "clientLogic", "c": "Session", "l": "getAuthorizedCallerBack()"}, {
+}, {"p": "command.logic.reciever.receivers", "c": "ExternalArgumentReceiver", "l": "getArguemnt()"}, {
+    "p": "requests",
+    "c": "ArgumentCommandClientRequest",
+    "l": "getArgument()"
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "getAsText()"}, {
+    "p": "requests",
+    "c": "AuthorizationRequest",
+    "l": "getAuthenticationData()"
+}, {"p": "responses", "c": "AuthorizeResponse", "l": "getAuthorizedAs()"}, {
+    "p": "client.logic",
+    "c": "Session",
+    "l": "getAuthorizedCallerBack()"
+}, {
     "p": "utils",
     "c": "RouteFieldComparators",
     "l": "getByField(RouteFields)",
     "u": "getByField(models.RouteFields)"
-}, {"p": "clientLogic", "c": "AuthorizedCallerBack", "l": "getCallerBack()"}, {
+}, {"p": "client.logic", "c": "AuthorizedCallerBack", "l": "getCallerBack()"}, {
     "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCallerBack()"
-}, {"p": "requestLogic.authentication", "c": "AuthDataHolder", "l": "getClientData()"}, {
+}, {"p": "request.logic.authentication", "c": "AuthDataHolder", "l": "getClientData()"}, {
     "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCode()"
@@ -1032,12 +1016,12 @@ memberSearchIndex = [{
     "p": "requests",
     "c": "CommandClientRequest",
     "l": "getCommandDescription()"
-}, {"p": "commandManager", "c": "CommandDescriptionHolder", "l": "getCommands()"}, {
-    "p": "commandManager",
+}, {"p": "command.logic", "c": "CommandDescriptionHolder", "l": "getCommands()"}, {
+    "p": "command.manager",
     "c": "CommandManager",
     "l": "getCommands()"
 }, {"p": "responses", "c": "CommandDescriptionsResponse", "l": "getCommands()"}, {
-    "p": "commandManager",
+    "p": "command.manager",
     "c": "CommandExporter",
     "l": "getCommandsToExport()"
 }, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getConnection()"}, {
@@ -1045,7 +1029,7 @@ memberSearchIndex = [{
     "c": "Route",
     "l": "getCoordinates()"
 }, {"p": "models", "c": "Route", "l": "getCreationDate()"}, {
-    "p": "serverLogic",
+    "p": "server.logic",
     "c": "ServerConnectionHandler",
     "l": "getCurrentConnection()"
 }, {"p": "file.logic.editors", "c": "DateEditor", "l": "getCustomEditor()"}, {
@@ -1053,98 +1037,90 @@ memberSearchIndex = [{
     "c": "ByteArrayPacketResponse",
     "l": "getDeliveryNumber()"
 }, {"p": "exceptions", "c": "NotAvailableException", "l": "getDeniedClient()"}, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "AddIfMaxCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddIfMaxCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "BaseCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "ClearCommand",
     "l": "getDescr()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "ExecuteScriptCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "ExecuteScriptCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "HelpCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "getDescr()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "getDescr()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "RemoveByIdCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "getDescr()"
-}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getDescr()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "SaveCommand", "l": "getDescr()"}, {
+    "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "getDescr()"
-}, {
-    "p": "commandManager.commands",
-    "c": "UpdateCommand",
+}, {"p": "command.manager.commands", "c": "UpdateCommand", "l": "getDescr()"}, {
+    "p": "command.manager.server.commands",
+    "c": "ShowSessions",
     "l": "getDescr()"
-}, {"p": "commandManager.serverCommands.commands", "c": "ShowSessions", "l": "getDescr()"}, {
-    "p": "models",
-    "c": "Route",
-    "l": "getDistance()"
-}, {"p": "models.collection.actions", "c": "UpdateCollectionAction", "l": "getElementId()"}, {
-    "p": "exceptions",
-    "c": "GotAnErrorResponseException",
-    "l": "getErrorResponse()"
-}, {"p": "requests", "c": "UpdateSingleFieldRequest", "l": "getField()"}, {
+}, {"p": "models", "c": "Route", "l": "getDistance()"}, {
+    "p": "models.collection.actions",
+    "c": "UpdateCollectionAction",
+    "l": "getElementId()"
+}, {"p": "exceptions", "c": "GotAnErrorResponseException", "l": "getErrorResponse()"}, {
+    "p": "requests",
+    "c": "UpdateSingleFieldRequest",
+    "l": "getField()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getFirstOrNew()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getFirstOrNew()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getFirstOrNew()"}, {
-    "p": "models",
-    "c": "Route",
+}, {"p": "models", "c": "Route", "l": "getFrom()"}, {
+    "p": "request.logic.requests",
+    "c": "ServerRequest",
     "l": "getFrom()"
-}, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getFrom()"}, {
+}, {"p": "models", "c": "Route", "l": "getId()"}, {
     "p": "models",
-    "c": "Route",
-    "l": "getId()"
-}, {"p": "models", "c": "RouteFields", "l": "getIndex()"}, {
+    "c": "RouteFields",
+    "l": "getIndex()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getInitDate()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getInitDate()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInitDate()"}, {
-    "p": "request.logic",
-    "c": "StatusRequest",
-    "l": "getInputStream()"
-}, {"p": "clientLogic", "c": "SessionHandler", "l": "getInstance()"}, {
-    "p": "commandManager",
-    "c": "CommandDescriptionHolder",
+}, {"p": "request.logic", "c": "StatusRequest", "l": "getInputStream()"}, {
+    "p": "client.logic",
+    "c": "SessionHandler",
     "l": "getInstance()"
-}, {
-    "p": "databaseLogic.databaseElementLogic",
+}, {"p": "command.logic", "c": "CommandDescriptionHolder", "l": "getInstance()"}, {
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "getInstance()"
 }, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInstance()"}, {
-    "p": "requestLogic.authentication",
+    "p": "request.logic.authentication",
     "c": "AuthDataHolder",
     "l": "getInstance()"
-}, {
-    "p": "file.logic.editors",
-    "c": "DateEditor",
-    "l": "getJavaInitializationString()"
-}, {
-    "p": "serverLogic.abstractLogic",
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "getJavaInitializationString()"}, {
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "getLargeResponseHandler()"
-}, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "getLargeResponseHandler()"}, {
+}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "getLargeResponseHandler()"}, {
     "p": "models.handlers",
     "c": "CollectionHandler",
     "l": "getLastElement()"
@@ -1153,10 +1129,10 @@ memberSearchIndex = [{
     "c": "CommandClientRequest",
     "l": "getLineArgs()"
 }, {"p": "models.handlers", "c": "RoutesHandler", "l": "getListeners()"}, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpConnectionBlockDecorator",
     "l": "getLockState()"
-}, {"p": "authorization.authCredentials", "c": "AuthenticationData", "l": "getLogin()"}, {
+}, {"p": "authorization.credentials", "c": "AuthenticationData", "l": "getLogin()"}, {
     "p": "gui.controllers.auth",
     "c": "AuthActionListener",
     "l": "getLoginField()"
@@ -1181,54 +1157,54 @@ memberSearchIndex = [{
     "l": "getMin(Comparator<Route>)",
     "u": "getMin(java.util.Comparator)"
 }, {"p": "responses", "c": "ErrorResponse", "l": "getMsg()"}, {
-    "p": "authorization.authCredentials",
+    "p": "authorization.credentials",
     "c": "RegistrationData",
     "l": "getName()"
-}, {"p": "commandLogic", "c": "CommandDescription", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.logic", "c": "CommandDescription", "l": "getName()"}, {
+    "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "getName()"
-}, {"p": "commandManager.commands", "c": "AddIfMaxCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddIfMaxCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "getName()"
-}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "BaseCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
     "c": "ClearCommand",
     "l": "getName()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getName()"
-}, {"p": "commandManager.commands", "c": "ExecuteScriptCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "ExecuteScriptCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "getName()"
-}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "HelpCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "getName()"
-}, {"p": "commandManager.commands", "c": "MinByCreationDateCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
-    "c": "PrintFieldDistanceAscendingCommand",
-    "l": "getName()"
-}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
-    "c": "RemoveGreaterCommand",
-    "l": "getName()"
-}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
-    "c": "ShowCommand",
+}, {
+    "p": "command.manager.commands",
+    "c": "MinByCreationDateCommand",
     "l": "getName()"
 }, {
-    "p": "commandManager.commands",
-    "c": "UpdateCommand",
+    "p": "command.manager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
     "l": "getName()"
-}, {"p": "commandManager.serverCommands.commands", "c": "ShowSessions", "l": "getName()"}, {
-    "p": "models",
-    "c": "Location",
+}, {"p": "command.manager.commands", "c": "RemoveByIdCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
+    "c": "RemoveGreaterCommand",
     "l": "getName()"
-}, {"p": "models", "c": "Route", "l": "getName()"}, {
+}, {"p": "command.manager.commands", "c": "SaveCommand", "l": "getName()"}, {
+    "p": "command.manager.commands",
+    "c": "ShowCommand",
+    "l": "getName()"
+}, {"p": "command.manager.commands", "c": "UpdateCommand", "l": "getName()"}, {
+    "p": "command.manager.server.commands",
+    "c": "ShowSessions",
+    "l": "getName()"
+}, {"p": "models", "c": "Location", "l": "getName()"}, {"p": "models", "c": "Route", "l": "getName()"}, {
     "p": "models",
     "c": "RouteFields",
     "l": "getName()"
@@ -1237,87 +1213,83 @@ memberSearchIndex = [{
     "c": "UpdateSingleFieldRequest",
     "l": "getObjId()"
 }, {"p": "responses", "c": "ByteArrayPacketResponse", "l": "getPacket()"}, {
-    "p": "authorization.authCredentials",
+    "p": "authorization.credentials",
     "c": "AuthenticationData",
     "l": "getPassword()"
-}, {
-    "p": "gui.controllers.auth",
-    "c": "AuthActionListener",
-    "l": "getPasswordField()"
-}, {"p": "databaseLogic.databaseUserLogic", "c": "PasswordEncryption", "l": "getPepper()"}, {
-    "p": "request.logic",
-    "c": "CallerBack",
-    "l": "getPort()"
-}, {
-    "p": "commandLogic",
+}, {"p": "gui.controllers.auth", "c": "AuthActionListener", "l": "getPasswordField()"}, {
+    "p": "database.logic.user",
+    "c": "PasswordEncryption",
+    "l": "getPepper()"
+}, {"p": "request.logic", "c": "CallerBack", "l": "getPort()"}, {
+    "p": "command.logic",
     "c": "CommandDescription",
     "l": "getReceiver()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "ArgumentReceiverHandler",
     "l": "getReceivers()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "NonArgReceiversHandler",
     "l": "getReceivers()"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.handlers",
     "c": "ReceiverHandler",
     "l": "getReceivers()"
 }, {
-    "p": "commandLogic.commandReceiverLogic",
+    "p": "command.logic.reciever",
     "c": "ReceiverManager",
     "l": "getReceivers(ReceiverType)",
-    "u": "getReceivers(commandLogic.commandReceiverLogic.enums.ReceiverType)"
+    "u": "getReceivers(command.logic.reciever.enums.ReceiverType)"
 }, {"p": "requests", "c": "RegistrationRequest", "l": "getRegData()"}, {
     "p": "models.collection.actions",
     "c": "RemoveCollectionAction",
     "l": "getRemoved_ids()"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "ResourceStreamLogic",
     "l": "getResourceStream()"
-}, {"p": "commandManager.commands", "c": "AddCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "BaseCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "ClearCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "ClearCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "ExecuteScriptCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
-    "c": "ExitCommand",
-    "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
-    "c": "InfoCommand",
-    "l": "getResponse()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
+    "c": "ExecuteScriptCommand",
+    "l": "getResponse()"
+}, {"p": "command.manager.commands", "c": "ExitCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
+    "c": "HelpCommand",
+    "l": "getResponse()"
+}, {"p": "command.manager.commands", "c": "InfoCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "getResponse()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "RemoveByIdCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getResponse()"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "SaveCommand", "l": "getResponse()"}, {
+    "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "getResponse()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "getResponse()"
-}, {"p": "commandManager.serverCommands.commands", "c": "ShowSessions", "l": "getResponse()"}, {
+}, {"p": "command.manager.server.commands", "c": "ShowSessions", "l": "getResponse()"}, {
     "p": "responses",
     "c": "CommandStatusResponse",
     "l": "getResponse()"
@@ -1326,11 +1298,11 @@ memberSearchIndex = [{
     "c": "IntermediateResponse",
     "l": "getResponseKey()"
 }, {"p": "gui.models", "c": "RouteTableModel", "l": "getRowCount()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "SessionHandler",
     "l": "getSession(CallerBack)",
     "u": "getSession(request.logic.CallerBack)"
-}, {"p": "clientLogic", "c": "Session", "l": "getSessionId()"}, {
+}, {"p": "client.logic", "c": "Session", "l": "getSessionId()"}, {
     "p": "models.handlers",
     "c": "CollectionHandler",
     "l": "getSorted()"
@@ -1347,14 +1319,14 @@ memberSearchIndex = [{
     "c": "UpdateCollectionAction",
     "l": "getUpdatedFiled()"
 }, {"p": "models.collection.actions", "c": "UpdateCollectionAction", "l": "getUpdatedValue()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizedCallerBack",
     "l": "getUserData()"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "DBUserManager",
     "l": "getUserFromDatabase(AuthenticationData)",
-    "u": "getUserFromDatabase(authorization.authCredentials.AuthenticationData)"
+    "u": "getUserFromDatabase(authorization.credentials.AuthenticationData)"
 }, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getUserRequest()"}, {
     "p": "file.logic.editors",
     "c": "DateEditor",
@@ -1393,10 +1365,10 @@ memberSearchIndex = [{
     "l": "handleUserInputID(String)",
     "u": "handleUserInputID(java.lang.String)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "hashCode()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizedCallerBack",
     "l": "hashCode()"
-}, {"p": "clientLogic", "c": "Session", "l": "hashCode()"}, {
+}, {"p": "client.logic", "c": "Session", "l": "hashCode()"}, {
     "p": "models",
     "c": "Coordinates",
     "l": "hashCode()"
@@ -1405,7 +1377,7 @@ memberSearchIndex = [{
     "c": "Route",
     "l": "hashCode()"
 }, {"p": "request.logic", "c": "CallerBack", "l": "hashCode()"}, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "StatusResponse",
     "l": "hashCode()"
 }, {
@@ -1413,25 +1385,25 @@ memberSearchIndex = [{
     "c": "Utilities",
     "l": "hasNextLineOrThrow(Scanner)",
     "u": "hasNextLineOrThrow(java.util.Scanner)"
-}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "HelpCommand()", "u": "%3Cinit%3E()"}, {
+}, {"p": "command.manager.commands", "c": "HelpCommand", "l": "HelpCommand()", "u": "%3Cinit%3E()"}, {
     "p": "models",
     "c": "RouteFields",
     "l": "ID"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "InfoCommand()",
     "u": "%3Cinit%3E()"
 }, {"p": "request.logic", "c": "StatusRequestBuilder", "l": "initialize()"}, {
-    "p": "commandManager",
+    "p": "command.logic",
     "c": "CommandDescriptionHolder",
     "l": "initialize(ArrayList<CommandDescription>)",
     "u": "initialize(java.util.ArrayList)"
-}, {"p": "commandManager", "c": "CommandLoaderUtility", "l": "initializeCommands()"}, {
-    "p": "serverLogic",
+}, {"p": "command.logic", "c": "CommandLoaderUtility", "l": "initializeCommands()"}, {
+    "p": "server.logic.datagram",
     "c": "DatagramServerConnectionFactory",
     "l": "initializeServer(int)"
-}, {"p": "serverLogic", "c": "ServerConnectionFactory", "l": "initializeServer(int)"}, {
+}, {
     "p": "gui.controllers.auth",
     "c": "AuthTextFieldsEditListener",
     "l": "insertUpdate(DocumentEvent)",
@@ -1442,12 +1414,12 @@ memberSearchIndex = [{
     "l": "IntermediateResponse(int, int)",
     "u": "%3Cinit%3E(int,int)"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "IntermediateResponseHandler",
     "l": "IntermediateResponseHandler(IntermediateResponse)",
     "u": "%3Cinit%3E(responses.IntermediateResponse)"
 }, {
-    "p": "responseLogic.responseSenders",
+    "p": "response.logic.senders",
     "c": "IntermediateResponseSender",
     "l": "IntermediateResponseSender()",
     "u": "%3Cinit%3E()"
@@ -1495,11 +1467,7 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "listenAdd(Collection<? extends Route>)",
     "u": "listenAdd(java.util.Collection)"
-}, {"p": "serverLogic", "c": "DatagramServerConnection", "l": "listenAndGetData()"}, {
-    "p": "serverLogic",
-    "c": "ServerConnection",
-    "l": "listenAndGetData()"
-}, {
+}, {"p": "server.logic.datagram", "c": "DatagramServerConnection", "l": "listenAndGetData()"}, {
     "p": "requests",
     "c": "ListenCollectionActionsRequest",
     "l": "ListenCollectionActionsRequest()",
@@ -1544,11 +1512,11 @@ memberSearchIndex = [{
     "c": "Loader",
     "l": "Loader(Class<T>, Class<E>)",
     "u": "%3Cinit%3E(java.lang.Class,java.lang.Class)"
-}, {
-    "p": "databaseLogic.databaseElementLogic",
+}, {"p": "database.logic.element", "c": "DBCollectionLoader", "l": "loadFromDB()"}, {
+    "p": "database.logic.element",
     "c": "DBCollectionLoader",
-    "l": "loadFromDB()"
-}, {"p": "databaseLogic.databaseElementLogic", "c": "DBCollectionLoader", "l": "loadFromDB(long)"}, {
+    "l": "loadFromDB(long)"
+}, {
     "p": "file.logic",
     "c": "Loader",
     "l": "loadFromFile(String, BaseReader)",
@@ -1579,30 +1547,30 @@ memberSearchIndex = [{
     "l": "LocationYZValidator()",
     "u": "%3Cinit%3E()"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "login()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizeManager",
     "l": "login(CallerBack)",
     "u": "login(request.logic.CallerBack)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "LoginRequestSender",
     "l": "LoginRequestSender()",
     "u": "%3Cinit%3E()"
-}, {
-    "p": "responseLogic",
-    "c": "IntermediateResponseHandler",
+}, {"p": "response.logic", "c": "IntermediateResponseHandler", "l": "loopEndAction()"}, {
+    "p": "server.logic.abstrct",
+    "c": "ListenLoopListener",
     "l": "loopEndAction()"
-}, {"p": "serverLogic.abstractLogic", "c": "ListenLoopListener", "l": "loopEndAction()"}, {
-    "p": "<Unnamed>",
+}, {"p": "<Unnamed>", "c": "Main", "l": "Main()", "u": "%3Cinit%3E()"}, {
+    "p": "main",
     "c": "Main",
     "l": "Main()",
     "u": "%3Cinit%3E()"
-}, {"p": "main", "c": "Main", "l": "Main()", "u": "%3Cinit%3E()"}, {
-    "p": "<Unnamed>",
+}, {"p": "<Unnamed>", "c": "Main", "l": "main(String[])", "u": "main(java.lang.String[])"}, {
+    "p": "main",
     "c": "Main",
     "l": "main(String[])",
     "u": "main(java.lang.String[])"
-}, {"p": "main", "c": "Main", "l": "main(String[])", "u": "main(java.lang.String[])"}, {
+}, {
     "p": "gui.frames",
     "c": "MainWindow",
     "l": "MainWindow(AuthorizedUserData)",
@@ -1617,12 +1585,8 @@ memberSearchIndex = [{
     "c": "SpringUtilities",
     "l": "makeGrid(Container, int, int, int, int, int, int)",
     "u": "makeGrid(java.awt.Container,int,int,int,int,int,int)"
-}, {
-    "p": "databaseLogic.databaseUserLogic",
-    "c": "DBUserManager",
-    "l": "MIN_PASSWORD_LENGTH"
-}, {
-    "p": "commandManager.commands",
+}, {"p": "database.logic.user", "c": "DBUserManager", "l": "MIN_PASSWORD_LENGTH"}, {
+    "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "MinByCreationDateCommand()",
     "u": "%3Cinit%3E()"
@@ -1635,21 +1599,17 @@ memberSearchIndex = [{
     "c": "NameValidator",
     "l": "NameValidator()",
     "u": "%3Cinit%3E()"
-}, {
-    "p": "commandLogic.commandReceiverLogic.enums",
-    "c": "ReceiverType",
-    "l": "NoArgs"
-}, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+}, {"p": "command.logic.reciever.enums", "c": "ReceiverType", "l": "NoArgs"}, {
+    "p": "command.logic.reciever.handlers",
     "c": "NonArgReceiversHandler",
     "l": "NonArgReceiversHandler()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "NonArgumentReceiver",
     "l": "NonArgumentReceiver()",
     "u": "%3Cinit%3E()"
-}, {"p": "commandManager", "c": "CommandMode", "l": "NonUserMode"}, {
+}, {"p": "command.logic", "c": "CommandMode", "l": "NonUserMode"}, {
     "p": "exceptions",
     "c": "NotAvailableException",
     "l": "NotAvailableException(CallerBack)",
@@ -1674,17 +1634,17 @@ memberSearchIndex = [{
     "c": "CommandStatusResponse",
     "l": "ofString(String)",
     "u": "ofString(java.lang.String)"
-}, {"p": "serverLogic.abstractLogic", "c": "ServerConnection", "l": "openConnection()"}, {
-    "p": "serverLogic.udp",
+}, {"p": "server.logic.abstrct", "c": "ServerConnection", "l": "openConnection()"}, {
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "openConnection()"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerConnectionFactory",
     "l": "openConnection(InetAddress, int)",
     "u": "openConnection(java.net.InetAddress,int)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnectionFactory",
     "l": "openConnection(InetAddress, int)",
     "u": "openConnection(java.net.InetAddress,int)"
@@ -1694,22 +1654,22 @@ memberSearchIndex = [{
     "l": "paintValue(Graphics, Rectangle)",
     "u": "paintValue(java.awt.Graphics,java.awt.Rectangle)"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "PasswordEncryptionImplSHA512",
     "l": "PasswordEncryptionImplSHA512()",
     "u": "%3Cinit%3E()"
 }, {"p": "<Unnamed>", "c": "Main", "l": "PORT"}, {
-    "p": "commandManager.commandPreProcessing",
+    "p": "command.manager.preprocessing",
     "c": "CommandPreProcessorManager",
     "l": "preProceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "preProceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "preProceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
     "p": "exceptions",
     "c": "PreProceedingFailedException",
     "l": "PreProceedingFailedException()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "PrintFieldDistanceAscendingCommand()",
     "u": "%3Cinit%3E()"
@@ -1719,15 +1679,15 @@ memberSearchIndex = [{
     "l": "printSizes(Component)",
     "u": "printSizes(java.awt.Component)"
 }, {
-    "p": "commandManager.commandPreProcessing.preProcessors",
+    "p": "command.manager.preprocessing.processors",
     "c": "CommandAuthorizePreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "proceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
-    "p": "commandManager.commandPreProcessing.preProcessors",
+    "p": "command.manager.preprocessing.processors",
     "c": "CommandPreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "proceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
     "p": "request.logic.requests.annotation",
     "c": "AnnotationProcessor",
@@ -1738,7 +1698,7 @@ memberSearchIndex = [{
     "l": "ProceedException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "IntermediateResponseHandler",
     "l": "proceedIntermediateResponse(ExceptionProvider...)",
     "u": "proceedIntermediateResponse(core.providers.ExceptionProvider...)"
@@ -1768,85 +1728,85 @@ memberSearchIndex = [{
     "l": "readFromFile(String)",
     "u": "readFromFile(java.lang.String)"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "LargeResponseHandler",
     "l": "readLargeObject(int, LargePacketProvider...)",
-    "u": "readLargeObject(int,serverLogic.abstractLogic.LargePacketProvider...)"
+    "u": "readLargeObject(int,server.logic.abstrct.LargePacketProvider...)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "readLargeObject(int, LargePacketProvider...)",
-    "u": "readLargeObject(int,serverLogic.abstractLogic.LargePacketProvider...)"
+    "u": "readLargeObject(int,server.logic.abstrct.LargePacketProvider...)"
 }, {"p": "request.logic", "c": "RequestReader", "l": "readObject()"}, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "ResponseReader",
     "l": "readObject(InputStream)",
     "u": "readObject(java.io.InputStream)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.receivers",
-    "c": "ExternalBaseReceiver",
-    "l": "receiveCommand(CommandDescription, String[])",
-    "u": "receiveCommand(commandLogic.CommandDescription,java.lang.String[])"
-}, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ArgumentRouteCommandReceiver",
     "l": "receiveCommand(CommandDescription, String[])",
-    "u": "receiveCommand(commandLogic.CommandDescription,java.lang.String[])"
+    "u": "receiveCommand(command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ExecuteScriptReceiver",
     "l": "receiveCommand(CommandDescription, String[])",
-    "u": "receiveCommand(commandLogic.CommandDescription,java.lang.String[])"
+    "u": "receiveCommand(command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "ExitReceiver",
     "l": "receiveCommand(CommandDescription, String[])",
-    "u": "receiveCommand(commandLogic.CommandDescription,java.lang.String[])"
+    "u": "receiveCommand(command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandManager.external.recievers",
+    "p": "command.logic.external.recievers",
     "c": "NonArgumentReceiver",
     "l": "receiveCommand(CommandDescription, String[])",
-    "u": "receiveCommand(commandLogic.CommandDescription,java.lang.String[])"
+    "u": "receiveCommand(command.logic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "commandLogic.commandReceiverLogic.handlers",
+    "p": "command.logic.reciever.receivers",
+    "c": "ExternalBaseReceiver",
+    "l": "receiveCommand(CommandDescription, String[])",
+    "u": "receiveCommand(command.logic.CommandDescription,java.lang.String[])"
+}, {
+    "p": "command.logic.reciever.handlers",
     "c": "ReceiverHandler",
     "l": "ReceiverHandler()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandLogic.commandReceiverLogic",
+    "p": "command.logic.reciever",
     "c": "ReceiverManager",
     "l": "ReceiverManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "AuthorizeManager",
     "l": "register(CallerBack, RegistrationData)",
-    "u": "register(request.logic.CallerBack,authorization.authCredentials.RegistrationData)"
+    "u": "register(request.logic.CallerBack,authorization.credentials.RegistrationData)"
 }, {
     "p": "gui.controllers.register",
     "c": "RegisterActionListener",
     "l": "RegisterActionListener(JTextField, JTextField, JPasswordField, AuthActionListenerCallback, ExceptionProvider)",
     "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JTextField,javax.swing.JPasswordField,gui.controllers.auth.callbacks.AuthActionListenerCallback,core.providers.ExceptionProvider)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "registerDate()"}, {
-    "p": "commandLogic.commandReceiverLogic",
+    "p": "command.logic.reciever",
     "c": "ReceiverManager",
     "l": "registerHandler(ReceiverType, ReceiverHandler)",
-    "u": "registerHandler(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.handlers.ReceiverHandler)"
+    "u": "registerHandler(command.logic.reciever.enums.ReceiverType,command.logic.reciever.handlers.ReceiverHandler)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "registerIP()"}, {
     "p": "models.collections",
     "c": "ObservableHashSet",
     "l": "registerListener(ObservableListener<T>...)",
     "u": "registerListener(models.collections.ObservableListener...)"
 }, {
-    "p": "commandLogic.commandReceiverLogic",
+    "p": "command.logic.reciever",
     "c": "ReceiverManager",
     "l": "registerReceiver(ReceiverType, ExternalBaseReceiver)",
-    "u": "registerReceiver(commandLogic.commandReceiverLogic.enums.ReceiverType,commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+    "u": "registerReceiver(command.logic.reciever.enums.ReceiverType,command.logic.reciever.receivers.ExternalBaseReceiver)"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "SessionHandler",
     "l": "registerSession(AuthorizedCallerBack)",
-    "u": "registerSession(clientLogic.AuthorizedCallerBack)"
+    "u": "registerSession(client.logic.AuthorizedCallerBack)"
 }, {
     "p": "gui.controllers.register",
     "c": "RegisterTextFieldsEditListener",
@@ -1863,12 +1823,12 @@ memberSearchIndex = [{
     "l": "RegisterWindowActionListener(AuthActionListenerCallback)",
     "u": "%3Cinit%3E(gui.controllers.auth.callbacks.AuthActionListenerCallback)"
 }, {
-    "p": "authorization.authCredentials",
+    "p": "authorization.credentials",
     "c": "RegistrationData",
     "l": "RegistrationData(String, String, char[])",
     "u": "%3Cinit%3E(java.lang.String,java.lang.String,char[])"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "RegistrationFailedException",
     "l": "RegistrationFailedException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
@@ -1876,9 +1836,9 @@ memberSearchIndex = [{
     "p": "requests",
     "c": "RegistrationRequest",
     "l": "RegistrationRequest(RegistrationData)",
-    "u": "%3Cinit%3E(authorization.authCredentials.RegistrationData)"
+    "u": "%3Cinit%3E(authorization.credentials.RegistrationData)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RegistrationRequestSender",
     "l": "RegistrationRequestSender()",
     "u": "%3Cinit%3E()"
@@ -1898,7 +1858,7 @@ memberSearchIndex = [{
     "l": "removeAll(Collection<?>)",
     "u": "removeAll(java.util.Collection)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveByIdCommand",
     "l": "RemoveByIdCommand()",
     "u": "%3Cinit%3E()"
@@ -1913,55 +1873,55 @@ memberSearchIndex = [{
     "l": "RemoveCollectionAction(Long[])",
     "u": "%3Cinit%3E(java.lang.Long[])"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "removeElementFromDatabase(Long)",
     "u": "removeElementFromDatabase(java.lang.Long)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "removeFromCollectionAndDB(long, long)",
     "u": "removeFromCollectionAndDB(long,long)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "RemoveGreaterCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "listenLogic",
+    "p": "listen.logic",
     "c": "ServerListener",
     "l": "removeListeners(ApplicationResponseProvider<BaseResponse>...)",
-    "u": "removeListeners(responseLogic.ApplicationResponseProvider...)"
+    "u": "removeListeners(response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "removeLoopListener(ListenLoopListener)",
-    "u": "removeLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
+    "u": "removeLoopListener(server.logic.abstrct.ListenLoopListener)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "removeLoopListener(ListenLoopListener)",
-    "u": "removeLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
+    "u": "removeLoopListener(server.logic.abstrct.ListenLoopListener)"
 }, {
     "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "removePropertyChangeListener(PropertyChangeListener)",
     "u": "removePropertyChangeListener(java.beans.PropertyChangeListener)"
 }, {
-    "p": "serverLogic.abstractLogic",
+    "p": "server.logic.abstrct",
     "c": "ServerConnection",
     "l": "removeResponseListeners(ServerResponseProvider...)",
-    "u": "removeResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)"
+    "u": "removeResponseListeners(server.logic.abstrct.ServerResponseProvider...)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "removeResponseListeners(ServerResponseProvider...)",
-    "u": "removeResponseListeners(serverLogic.abstractLogic.ServerResponseProvider...)"
-}, {"p": "clientLogic", "c": "SessionHandler", "l": "removeSession(long)"}, {
-    "p": "clientLogic",
+    "u": "removeResponseListeners(server.logic.abstrct.ServerResponseProvider...)"
+}, {"p": "client.logic", "c": "SessionHandler", "l": "removeSession(long)"}, {
+    "p": "client.logic",
     "c": "SessionHandler",
     "l": "removeSession(Session)",
-    "u": "removeSession(clientLogic.Session)"
+    "u": "removeSession(client.logic.Session)"
 }, {
     "p": "gui.controllers.auth",
     "c": "AuthTextFieldsEditListener",
@@ -1973,7 +1933,7 @@ memberSearchIndex = [{
     "l": "RequestReader(InputStream)",
     "u": "%3Cinit%3E(java.io.InputStream)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RequestSender",
     "l": "RequestSender()",
     "u": "%3Cinit%3E()"
@@ -1987,26 +1947,26 @@ memberSearchIndex = [{
     "c": "AuthActionListenerCallback",
     "l": "resetNotifications()"
 }, {"p": "gui.frames", "c": "AuthWindow", "l": "resetNotifications()"}, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "ResponseReader",
     "l": "resolveType(InputStream)",
     "u": "resolveType(java.io.InputStream)"
 }, {
-    "p": "databaseLogic.databaseUserLogic",
+    "p": "database.logic.user",
     "c": "ResourceStreamLogic",
     "l": "ResourceStreamLogic(String)",
     "u": "%3Cinit%3E(java.lang.String)"
-}, {"p": "responseLogic", "c": "StatusResponse", "l": "response()"}, {
-    "p": "responseLogic",
+}, {"p": "response.logic", "c": "StatusResponse", "l": "response()"}, {
+    "p": "response.logic",
     "c": "ResponseReader",
     "l": "ResponseReader()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "responseLogic.responseSenders",
+    "p": "response.logic.senders",
     "c": "ResponseSender",
     "l": "ResponseSender()",
     "u": "%3Cinit%3E()"
-}, {"p": "requests.requestAnnotations", "c": "Authorize", "l": "roles()"}, {
+}, {"p": "requests.annotations", "c": "Authorize", "l": "roles()"}, {
     "p": "models",
     "c": "Route",
     "l": "Route()",
@@ -2061,7 +2021,7 @@ memberSearchIndex = [{
     "c": "Saver",
     "l": "saveCollection(T, String)",
     "u": "saveCollection(T,java.lang.String)"
-}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "SaveCommand()", "u": "%3Cinit%3E()"}, {
+}, {"p": "command.manager.commands", "c": "SaveCommand", "l": "SaveCommand()", "u": "%3Cinit%3E()"}, {
     "p": "file.logic",
     "c": "Saver",
     "l": "Saver(Class<E>)",
@@ -2072,96 +2032,91 @@ memberSearchIndex = [{
     "l": "SaveStatusResponse()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ShowCollectionRequestSender",
     "l": "sendCollectionRequest(ApplicationResponseProvider<ShowCollectionResponse>...)",
-    "u": "sendCollectionRequest(responseLogic.ApplicationResponseProvider...)"
+    "u": "sendCollectionRequest(response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandRequestSender",
     "l": "sendCommand(CommandDescription, String[], ServerConnection, ApplicationResponseProvider<CommandStatusResponse>...)",
-    "u": "sendCommand(commandLogic.CommandDescription,java.lang.String[],serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
+    "u": "sendCommand(command.logic.CommandDescription,java.lang.String[],server.logic.abstrct.ServerConnection,response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ArgumentRequestSender",
     "l": "sendCommand(CommandDescription, String[], T, ServerConnection, ApplicationResponseProvider<CommandStatusResponse>...)",
-    "u": "sendCommand(commandLogic.CommandDescription,java.lang.String[],T,serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
-}, {"p": "serverLogic.abstractLogic", "c": "ServerConnection", "l": "sendData(byte[])"}, {
-    "p": "serverLogic.udp",
+    "u": "sendCommand(command.logic.CommandDescription,java.lang.String[],T,server.logic.abstrct.ServerConnection,response.logic.ApplicationResponseProvider...)"
+}, {"p": "server.logic.abstrct", "c": "ServerConnection", "l": "sendData(byte[])"}, {
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "sendData(byte[])"
 }, {
-    "p": "serverLogic",
+    "p": "server.logic.datagram",
     "c": "DatagramServerConnection",
     "l": "sendData(byte[], InetAddress, int)",
     "u": "sendData(byte[],java.net.InetAddress,int)"
 }, {
-    "p": "serverLogic",
-    "c": "ServerConnection",
-    "l": "sendData(byte[], InetAddress, int)",
-    "u": "sendData(byte[],java.net.InetAddress,int)"
-}, {
-    "p": "responseLogic.responseSenders",
+    "p": "response.logic.senders",
     "c": "IntermediateResponseSender",
     "l": "sendLargeResponse(ByteArrayOutputStream, CallerBack, ServerConnection)",
-    "u": "sendLargeResponse(java.io.ByteArrayOutputStream,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "sendLargeResponse(java.io.ByteArrayOutputStream,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "AuthorizationRequestSender",
     "l": "sendLoginRequest(AuthenticationData, ApplicationResponseProvider<AuthorizeResponse>...)",
-    "u": "sendLoginRequest(authorization.authCredentials.AuthenticationData,responseLogic.ApplicationResponseProvider...)"
+    "u": "sendLoginRequest(authorization.credentials.AuthenticationData,response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "LoginRequestSender",
     "l": "sendLoginRequest(BaseRequest, ApplicationResponseProvider<AuthorizeResponse>...)",
-    "u": "sendLoginRequest(requests.BaseRequest,responseLogic.ApplicationResponseProvider...)"
+    "u": "sendLoginRequest(requests.BaseRequest,response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RegistrationRequestSender",
     "l": "sendRegisterRequest(RegistrationData, ApplicationResponseProvider<AuthorizeResponse>...)",
-    "u": "sendRegisterRequest(authorization.authCredentials.RegistrationData,responseLogic.ApplicationResponseProvider...)"
+    "u": "sendRegisterRequest(authorization.credentials.RegistrationData,response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RequestSender",
     "l": "sendRequest(BaseRequest, ServerConnection, ApplicationResponseProvider<BaseResponse>...)",
-    "u": "sendRequest(requests.BaseRequest,serverLogic.abstractLogic.ServerConnection,responseLogic.ApplicationResponseProvider...)"
+    "u": "sendRequest(requests.BaseRequest,server.logic.abstrct.ServerConnection,response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "RequestSender",
     "l": "sendRequest(BaseRequest, ServerConnection, ProviderRuleSet[], ApplicationResponseProvider<BaseResponse>...)",
-    "u": "sendRequest(requests.BaseRequest,serverLogic.abstractLogic.ServerConnection,core.providers.ProviderRuleSet[],responseLogic.ApplicationResponseProvider...)"
+    "u": "sendRequest(requests.BaseRequest,server.logic.abstrct.ServerConnection,core.providers.ProviderRuleSet[],response.logic.ApplicationResponseProvider...)"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "CommandDescriptionsRequestSender",
     "l": "sendRequestForGetCommands(SingleElementProvider<ArrayList<CommandDescription>>...)",
     "u": "sendRequestForGetCommands(core.providers.SingleElementProvider...)"
 }, {
-    "p": "responseLogic.responseSenders",
+    "p": "response.logic.senders",
     "c": "ResponseSender",
     "l": "sendResponse(BaseResponse, ServerConnection, CallerBack)",
-    "u": "sendResponse(responses.BaseResponse,serverLogic.ServerConnection,request.logic.CallerBack)"
+    "u": "sendResponse(responses.BaseResponse,server.logic.abstrct.ServerConnection,request.logic.CallerBack)"
 }, {
-    "p": "responseLogic.responseSenders",
+    "p": "response.logic.senders",
     "c": "ResponseSender",
     "l": "sendSyncResponse(BaseResponse, ServerConnection, CallerBack)",
-    "u": "sendSyncResponse(responses.BaseResponse,serverLogic.ServerConnection,request.logic.CallerBack)"
+    "u": "sendSyncResponse(responses.BaseResponse,server.logic.abstrct.ServerConnection,request.logic.CallerBack)"
 }, {
     "p": "request.logic.workers",
     "c": "ListenCollectionChangeHubWorker",
     "l": "sendToAllCallers(CollectionUpdatedResponse)",
     "u": "sendToAllCallers(responses.CollectionUpdatedResponse)"
 }, {
-    "p": "commandManager.serverCommands",
+    "p": "command.manager.server",
     "c": "ServerCommandManager",
     "l": "ServerCommandManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "serverLogic",
+    "p": "server.logic",
     "c": "ServerConnectionHandler",
     "l": "ServerConnectionHandler()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "listenLogic",
+    "p": "listen.logic",
     "c": "ServerListener",
     "l": "ServerListener(Class<T>)",
     "u": "%3Cinit%3E(java.lang.Class)"
@@ -2169,12 +2124,12 @@ memberSearchIndex = [{
     "p": "request.logic.requests",
     "c": "ServerRequest",
     "l": "ServerRequest(BaseRequest, CallerBack, ServerConnection)",
-    "u": "%3Cinit%3E(requests.BaseRequest,request.logic.CallerBack,serverLogic.ServerConnection)"
+    "u": "%3Cinit%3E(requests.BaseRequest,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "Session",
     "l": "Session(AuthorizedCallerBack)",
-    "u": "%3Cinit%3E(clientLogic.AuthorizedCallerBack)"
+    "u": "%3Cinit%3E(client.logic.AuthorizedCallerBack)"
 }, {
     "p": "file.logic.editors",
     "c": "DateEditor",
@@ -2190,32 +2145,36 @@ memberSearchIndex = [{
     "c": "StatusRequestBuilder",
     "l": "setCallerBack(CallerBack)",
     "u": "setCallerBack(request.logic.CallerBack)"
-}, {"p": "commandManager.commands", "c": "AddCommand", "l": "setCallerID(long)"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "AddCommand", "l": "setCallerID(long)"}, {
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "setCallerID(long)"
-}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "setCallerID(long)"}, {
-    "p": "commandManager.commands",
+}, {
+    "p": "command.manager.commands",
+    "c": "AddIfMinCommand",
+    "l": "setCallerID(long)"
+}, {
+    "p": "command.manager.commands",
     "c": "AuthorizableCommand",
     "l": "setCallerID(long)"
-}, {"p": "commandManager.commands", "c": "ClearCommand", "l": "setCallerID(long)"}, {
-    "p": "commandManager.commands",
+}, {"p": "command.manager.commands", "c": "ClearCommand", "l": "setCallerID(long)"}, {
+    "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "setCallerID(long)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveByIdCommand",
     "l": "setCallerID(long)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "setCallerID(long)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "setCallerID(long)"
 }, {
-    "p": "requestLogic.authentication",
+    "p": "request.logic.authentication",
     "c": "AuthDataHolder",
     "l": "setClientData(String, char[])",
     "u": "setClientData(java.lang.String,char[])"
@@ -2258,40 +2217,40 @@ memberSearchIndex = [{
     "l": "setName(String)",
     "u": "setName(java.lang.String)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMaxCommand",
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
-}, {"p": "commandManager.commands", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
+}, {"p": "command.manager.commands", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
     "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "setObjectStream(InputStream)",
     "u": "setObjectStream(java.io.InputStream)"
 }, {
-    "p": "serverLogic",
+    "p": "server.logic",
     "c": "ServerConnectionHandler",
     "l": "setServerConnection(ServerConnection)",
-    "u": "setServerConnection(serverLogic.abstractLogic.ServerConnection)"
+    "u": "setServerConnection(server.logic.abstrct.ServerConnection)"
 }, {"p": "models", "c": "Route", "l": "setTo(Location)", "u": "setTo(models.Location)"}, {
     "p": "file.logic",
     "c": "Loader",
@@ -2322,7 +2281,7 @@ memberSearchIndex = [{
     "l": "ShowCollectionRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestSenders",
+    "p": "request.logic.senders",
     "c": "ShowCollectionRequestSender",
     "l": "ShowCollectionRequestSender()",
     "u": "%3Cinit%3E()"
@@ -2337,12 +2296,12 @@ memberSearchIndex = [{
     "l": "ShowCollectionResponse(HashSet<Route>)",
     "u": "%3Cinit%3E(java.util.HashSet)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "ShowCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.serverCommands.commands",
+    "p": "command.manager.server.commands",
     "c": "ShowSessions",
     "l": "ShowSessions()",
     "u": "%3Cinit%3E()"
@@ -2351,16 +2310,16 @@ memberSearchIndex = [{
     "c": "SpringUtilities",
     "l": "SpringUtilities()",
     "u": "%3Cinit%3E()"
-}, {"p": "commandManager", "c": "CommandExecutor", "l": "startExecuting()"}, {
-    "p": "listenLogic",
+}, {"p": "command.logic", "c": "CommandExecutor", "l": "startExecuting()"}, {
+    "p": "listen.logic",
     "c": "ServerListener",
     "l": "startListen()"
 }, {"p": "request.logic", "c": "StatusRequest", "l": "StatusRequest()", "u": "%3Cinit%3E()"}, {
-    "p": "responseLogic",
+    "p": "response.logic",
     "c": "StatusResponse",
     "l": "StatusResponse(String, int)",
     "u": "%3Cinit%3E(java.lang.String,int)"
-}, {"p": "listenLogic", "c": "ServerListener", "l": "stopListen()"}, {
+}, {"p": "listen.logic", "c": "ServerListener", "l": "stopListen()"}, {
     "p": "exceptions",
     "c": "StreamInterruptedException",
     "l": "StreamInterruptedException(String)",
@@ -2374,7 +2333,7 @@ memberSearchIndex = [{
     "c": "RegisterWindow",
     "l": "succeedAction()"
 }, {"p": "file.logic.editors", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
-    "p": "clientLogic",
+    "p": "client.logic",
     "c": "Session",
     "l": "TIMEOUT"
 }, {"p": "models", "c": "RouteFields", "l": "TO_NAME"}, {
@@ -2385,12 +2344,12 @@ memberSearchIndex = [{
     "p": "models",
     "c": "RouteFields",
     "l": "TO_Z"
-}, {"p": "responseLogic", "c": "StatusResponse", "l": "toCommandResponse()"}, {
+}, {"p": "response.logic", "c": "StatusResponse", "l": "toCommandResponse()"}, {
     "p": "authorization",
     "c": "AuthorizedUserData",
     "l": "toString()"
-}, {"p": "clientLogic", "c": "AuthorizedCallerBack", "l": "toString()"}, {
-    "p": "clientLogic",
+}, {"p": "client.logic", "c": "AuthorizedCallerBack", "l": "toString()"}, {
+    "p": "client.logic",
     "c": "Session",
     "l": "toString()"
 }, {"p": "models", "c": "Coordinates", "l": "toString()"}, {
@@ -2401,7 +2360,7 @@ memberSearchIndex = [{
     "p": "request.logic",
     "c": "CallerBack",
     "l": "toString()"
-}, {"p": "responseLogic", "c": "StatusResponse", "l": "toString()"}, {
+}, {"p": "response.logic", "c": "StatusResponse", "l": "toString()"}, {
     "p": "gui.controllers.auth",
     "c": "AuthTextFieldsEditListener",
     "l": "tryToUpdateTextFields()"
@@ -2410,22 +2369,22 @@ memberSearchIndex = [{
     "c": "RegisterTextFieldsEditListener",
     "l": "tryToUpdateTextFields()"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpConnectionBlockDecorator",
     "l": "UdpConnectionBlockDecorator(UdpServerConnection, boolean)",
-    "u": "%3Cinit%3E(serverLogic.udp.UdpServerConnection,boolean)"
+    "u": "%3Cinit%3E(server.logic.udp.UdpServerConnection,boolean)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnection",
     "l": "UdpServerConnection(DatagramChannel, SocketAddress)",
     "u": "%3Cinit%3E(java.nio.channels.DatagramChannel,java.net.SocketAddress)"
 }, {
-    "p": "serverLogic.udp",
+    "p": "server.logic.udp",
     "c": "UdpServerConnectionFactory",
     "l": "UdpServerConnectionFactory()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "UnauthorizedException",
     "l": "UnauthorizedException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
@@ -2435,7 +2394,7 @@ memberSearchIndex = [{
     "l": "UnknownCommandException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "UnregisteredException",
     "l": "UnregisteredException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
@@ -2469,17 +2428,17 @@ memberSearchIndex = [{
     "l": "UpdateCollectionAction(long, RouteFields, Object)",
     "u": "%3Cinit%3E(long,models.RouteFields,java.lang.Object)"
 }, {
-    "p": "commandManager.commands",
+    "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "UpdateCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "updateElementInDataBase(Route, Long)",
     "u": "updateElementInDataBase(models.Route,java.lang.Long)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "updateElementInDBAndCollection(Route, long, long)",
     "u": "updateElementInDBAndCollection(models.Route,long,long)"
@@ -2489,12 +2448,12 @@ memberSearchIndex = [{
     "l": "UpdateModelException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "updateNullableLocation(Location, ResultSet, int)",
     "u": "updateNullableLocation(models.Location,java.sql.ResultSet,int)"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "updateSingleField(long, Long, RouteFields, Object)",
     "u": "updateSingleField(long,java.lang.Long,models.RouteFields,java.lang.Object)"
@@ -2509,16 +2468,16 @@ memberSearchIndex = [{
     "l": "UpdateSingleFieldRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "databaseLogic.databaseElementLogic",
+    "p": "database.logic.element",
     "c": "DBCollectionManager",
     "l": "updateSingleObject(Long, int, Object)",
     "u": "updateSingleObject(java.lang.Long,int,java.lang.Object)"
-}, {"p": "clientLogic", "c": "Session", "l": "updateTimer()"}, {
+}, {"p": "client.logic", "c": "Session", "l": "updateTimer()"}, {
     "p": "authorization",
     "c": "UserRoles",
     "l": "User"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "userID()"}, {
-    "p": "requests.requestAnnotations",
+    "p": "requests.annotations",
     "c": "Authorize",
     "l": "users()"
 }, {"p": "models.handlers", "c": "Utilities", "l": "Utilities()", "u": "%3Cinit%3E()"}, {
@@ -2572,13 +2531,13 @@ memberSearchIndex = [{
     "l": "valueOf(String)",
     "u": "valueOf(java.lang.String)"
 }, {
-    "p": "commandLogic.commandReceiverLogic.enums",
-    "c": "ReceiverType",
+    "p": "command.logic",
+    "c": "CommandMode",
     "l": "valueOf(String)",
     "u": "valueOf(java.lang.String)"
 }, {
-    "p": "commandManager",
-    "c": "CommandMode",
+    "p": "command.logic.reciever.enums",
+    "c": "ReceiverType",
     "l": "valueOf(String)",
     "u": "valueOf(java.lang.String)"
 }, {
@@ -2595,9 +2554,9 @@ memberSearchIndex = [{
     "p": "authorization",
     "c": "UserRoles",
     "l": "values()"
-}, {"p": "commandLogic.commandReceiverLogic.enums", "c": "ReceiverType", "l": "values()"}, {
-    "p": "commandManager",
-    "c": "CommandMode",
+}, {"p": "command.logic", "c": "CommandMode", "l": "values()"}, {
+    "p": "command.logic.reciever.enums",
+    "c": "ReceiverType",
     "l": "values()"
 }, {"p": "core.providers", "c": "ProviderRuleSet", "l": "values()"}, {
     "p": "models.collection.actions",
@@ -2679,7 +2638,7 @@ memberSearchIndex = [{
     "l": "WrongAmountOfArgumentsException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
-    "p": "exceptions.authorizationExceptions",
+    "p": "exceptions.authorization",
     "c": "WrongPasswordException",
     "l": "WrongPasswordException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
