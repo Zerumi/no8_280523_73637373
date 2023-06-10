@@ -1,7 +1,7 @@
 package clientLogic;
 
 import exceptions.authorizationExceptions.UnauthorizedException;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 import java.util.HashSet;
 

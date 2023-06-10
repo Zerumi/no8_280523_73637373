@@ -6,7 +6,7 @@ import commandManager.commands.*;
 import exceptions.UnknownCommandException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 import requests.CommandClientRequest;
 import responseLogic.responseSenders.ResponseSender;
 import responses.CommandStatusResponse;

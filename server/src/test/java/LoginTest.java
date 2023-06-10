@@ -1,7 +1,7 @@
 import authorization.authCredentials.AuthenticationData;
 import clientLogic.AuthorizeManager;
 import exceptions.authorizationExceptions.AuthorizeException;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 import java.net.InetSocketAddress;
 

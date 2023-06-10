@@ -2,9 +2,9 @@ package serverLogic;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.CallerBack;
-import requestLogic.StatusRequest;
-import requestLogic.StatusRequestBuilder;
+import request.logic.CallerBack;
+import request.logic.StatusRequest;
+import request.logic.StatusRequestBuilder;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

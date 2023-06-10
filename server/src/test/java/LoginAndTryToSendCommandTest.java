@@ -3,9 +3,9 @@ import clientLogic.AuthorizeManager;
 import commandLogic.CommandDescription;
 import commandLogic.commandReceiverLogic.callers.ExternalBaseReceiverCaller;
 import exceptions.authorizationExceptions.AuthorizeException;
-import requestLogic.CallerBack;
-import requestLogic.requestWorkers.RequestWorkerManager;
-import requestLogic.requests.ServerRequest;
+import request.logic.CallerBack;
+import request.logic.workers.RequestWorkerManager;
+import request.logic.requests.ServerRequest;
 import requests.CommandClientRequest;
 import serverLogic.DatagramServerConnectionFactory;
 

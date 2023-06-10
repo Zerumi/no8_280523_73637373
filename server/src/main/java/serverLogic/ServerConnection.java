@@ -1,6 +1,6 @@
 package serverLogic;
 
-import requestLogic.StatusRequest;
+import request.logic.StatusRequest;
 
 import java.net.InetAddress;
 

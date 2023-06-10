@@ -6,7 +6,7 @@ import commandManager.commands.AuthorizableCommand;
 import commandManager.commands.BaseCommand;
 import exceptions.PreProceedingFailedException;
 import exceptions.ProcessionInterruptedException;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 import serverLogic.ServerConnection;
 
 import java.util.LinkedHashMap;

@@ -9,7 +9,7 @@ import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.requestWorkers.ListenCollectionChangeHubWorker;
+import request.logic.workers.ListenCollectionChangeHubWorker;
 import responseLogic.StatusResponse;
 import responses.CollectionUpdatedResponse;
 import utils.RouteFieldToRoute;

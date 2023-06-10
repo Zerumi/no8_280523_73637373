@@ -3,7 +3,7 @@ package commandManager.commandPreProcessing.preProcessors;
 import clientLogic.AuthorizedCallerBack;
 import commandManager.commands.AuthorizableCommand;
 import commandManager.commands.BaseCommand;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 import serverLogic.ServerConnection;
 
 public class CommandAuthorizePreProcessor implements CommandPreProcessor {

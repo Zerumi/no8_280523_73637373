@@ -299,7 +299,7 @@ memberSearchIndex = [{
     "l": "addLoopListener(ListenLoopListener)",
     "u": "addLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "addPropertyChangeListener(PropertyChangeListener)",
     "u": "addPropertyChangeListener(java.beans.PropertyChangeListener)"
@@ -337,12 +337,12 @@ memberSearchIndex = [{
     "p": "databaseLogic.databaseUserLogic",
     "c": "DBUserManager",
     "l": "addUserToDatabase(CallerBack, RegistrationData)",
-    "u": "addUserToDatabase(requestLogic.CallerBack,authorization.authCredentials.RegistrationData)"
+    "u": "addUserToDatabase(request.logic.CallerBack,authorization.authCredentials.RegistrationData)"
 }, {"p": "authorization", "c": "UserRoles", "l": "Admin"}, {
-    "p": "requestLogic.requestAnnotationProcessors",
+    "p": "request.logic.requests.annotation",
     "c": "AnnotationProcessor",
     "l": "AnnotationProcessor(ServerRequest)",
-    "u": "%3Cinit%3E(requestLogic.requests.ServerRequest)"
+    "u": "%3Cinit%3E(request.logic.requests.ServerRequest)"
 }, {
     "p": "exceptions",
     "c": "AreYouSeriousException",
@@ -354,7 +354,7 @@ memberSearchIndex = [{
     "l": "ArgumentCommandClientRequest(CommandDescription, String[], T)",
     "u": "%3Cinit%3E(commandLogic.CommandDescription,java.lang.String[],T)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ArgumentCommandClientRequestWorker",
     "l": "ArgumentCommandClientRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -403,7 +403,7 @@ memberSearchIndex = [{
     "l": "AuthorizationRequestSender()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "AuthorizationRequestWorker",
     "l": "AuthorizationRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -411,12 +411,12 @@ memberSearchIndex = [{
     "p": "clientLogic",
     "c": "AuthorizeManager",
     "l": "authorize(CallerBack, AuthenticationData)",
-    "u": "authorize(requestLogic.CallerBack,authorization.authCredentials.AuthenticationData)"
+    "u": "authorize(request.logic.CallerBack,authorization.authCredentials.AuthenticationData)"
 }, {
     "p": "clientLogic",
     "c": "AuthorizedCallerBack",
     "l": "AuthorizedCallerBack(AuthorizedUserData, CallerBack)",
-    "u": "%3Cinit%3E(authorization.AuthorizedUserData,requestLogic.CallerBack)"
+    "u": "%3Cinit%3E(authorization.AuthorizedUserData,request.logic.CallerBack)"
 }, {
     "p": "authorization",
     "c": "AuthorizedUserData",
@@ -438,7 +438,7 @@ memberSearchIndex = [{
     "l": "AuthorizeManager()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestAnnotationProcessors.processors",
+    "p": "request.logic.requests.annotation.processors",
     "c": "AuthorizeProcessor",
     "l": "AuthorizeProcessor()",
     "u": "%3Cinit%3E()"
@@ -458,7 +458,7 @@ memberSearchIndex = [{
     "l": "BaseRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "BaseRequestWorker",
     "l": "BaseRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -467,7 +467,7 @@ memberSearchIndex = [{
     "c": "DatagramServerConnection",
     "l": "BUFFER_SIZE"
 }, {"p": "serverLogic.udp", "c": "UdpServerConnection", "l": "BUFFER_SIZE"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "build()"
 }, {
@@ -493,7 +493,7 @@ memberSearchIndex = [{
     "l": "ByteArrayPacketResponse(int, int, byte[])",
     "u": "%3Cinit%3E(int,int,byte[])"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "CallerBack",
     "l": "CallerBack(InetAddress, int)",
     "u": "%3Cinit%3E(java.net.InetAddress,int)"
@@ -567,7 +567,7 @@ memberSearchIndex = [{
     "c": "StatusResponse",
     "l": "code()"
 }, {
-    "p": "listenProviders",
+    "p": "listen.providers",
     "c": "CollectionActionsListener",
     "l": "CollectionActionsListener()",
     "u": "%3Cinit%3E()"
@@ -587,12 +587,12 @@ memberSearchIndex = [{
     "l": "CommandClientRequest(CommandDescription, String[])",
     "u": "%3Cinit%3E(commandLogic.CommandDescription,java.lang.String[])"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "CommandClientRequestWorker",
     "l": "CommandClientRequestWorker()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "CommandConfigureRequestWorker",
     "l": "CommandConfigureRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -711,7 +711,7 @@ memberSearchIndex = [{
     "l": "DatagramServerConnectionFactory()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "DateEditor()",
     "u": "%3Cinit%3E()"
@@ -784,7 +784,7 @@ memberSearchIndex = [{
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "CallerBack",
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
@@ -892,7 +892,7 @@ memberSearchIndex = [{
     "p": "commandManager",
     "c": "CommandManager",
     "l": "executeCommand(CommandClientRequest, CallerBack, ServerConnection)",
-    "u": "executeCommand(requests.CommandClientRequest,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "executeCommand(requests.CommandClientRequest,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "commandManager.serverCommands",
     "c": "ServerCommandManager",
@@ -963,7 +963,7 @@ memberSearchIndex = [{
     "p": "responses",
     "c": "CollectionUpdatedResponse",
     "l": "getAction()"
-}, {"p": "requestLogic", "c": "CallerBack", "l": "getAddress()"}, {
+}, {"p": "request.logic", "c": "CallerBack", "l": "getAddress()"}, {
     "p": "clientLogic",
     "c": "SessionHandler",
     "l": "getAllSessions()"
@@ -1000,7 +1000,7 @@ memberSearchIndex = [{
     "c": "ArgumentRouteCommandReceiver",
     "l": "getArguemnt()"
 }, {"p": "requests", "c": "ArgumentCommandClientRequest", "l": "getArgument()"}, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "getAsText()"
 }, {"p": "requests", "c": "AuthorizationRequest", "l": "getAuthenticationData()"}, {
@@ -1013,11 +1013,11 @@ memberSearchIndex = [{
     "l": "getByField(RouteFields)",
     "u": "getByField(models.RouteFields)"
 }, {"p": "clientLogic", "c": "AuthorizedCallerBack", "l": "getCallerBack()"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCallerBack()"
 }, {"p": "requestLogic.authentication", "c": "AuthDataHolder", "l": "getClientData()"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCode()"
 }, {"p": "models.handlers", "c": "CollectionHandler", "l": "getCollection()"}, {
@@ -1040,7 +1040,7 @@ memberSearchIndex = [{
     "p": "commandManager",
     "c": "CommandExporter",
     "l": "getCommandsToExport()"
-}, {"p": "requestLogic.requests", "c": "ServerRequest", "l": "getConnection()"}, {
+}, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getConnection()"}, {
     "p": "models",
     "c": "Route",
     "l": "getCoordinates()"
@@ -1048,7 +1048,7 @@ memberSearchIndex = [{
     "p": "serverLogic",
     "c": "ServerConnectionHandler",
     "l": "getCurrentConnection()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getCustomEditor()"}, {
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "getCustomEditor()"}, {
     "p": "responses",
     "c": "ByteArrayPacketResponse",
     "l": "getDeliveryNumber()"
@@ -1112,7 +1112,7 @@ memberSearchIndex = [{
     "p": "models",
     "c": "Route",
     "l": "getFrom()"
-}, {"p": "requestLogic.requests", "c": "ServerRequest", "l": "getFrom()"}, {
+}, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getFrom()"}, {
     "p": "models",
     "c": "Route",
     "l": "getId()"
@@ -1121,7 +1121,7 @@ memberSearchIndex = [{
     "c": "CollectionHandler",
     "l": "getInitDate()"
 }, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInitDate()"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequest",
     "l": "getInputStream()"
 }, {"p": "clientLogic", "c": "SessionHandler", "l": "getInstance()"}, {
@@ -1137,7 +1137,7 @@ memberSearchIndex = [{
     "c": "AuthDataHolder",
     "l": "getInstance()"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "getJavaInitializationString()"
 }, {
@@ -1245,7 +1245,7 @@ memberSearchIndex = [{
     "c": "AuthActionListener",
     "l": "getPasswordField()"
 }, {"p": "databaseLogic.databaseUserLogic", "c": "PasswordEncryption", "l": "getPepper()"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "CallerBack",
     "l": "getPort()"
 }, {
@@ -1329,7 +1329,7 @@ memberSearchIndex = [{
     "p": "clientLogic",
     "c": "SessionHandler",
     "l": "getSession(CallerBack)",
-    "u": "getSession(requestLogic.CallerBack)"
+    "u": "getSession(request.logic.CallerBack)"
 }, {"p": "clientLogic", "c": "Session", "l": "getSessionId()"}, {
     "p": "models.handlers",
     "c": "CollectionHandler",
@@ -1338,7 +1338,7 @@ memberSearchIndex = [{
     "p": "responses",
     "c": "CommandStatusResponse",
     "l": "getStatusCode()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getTags()"}, {
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "getTags()"}, {
     "p": "models",
     "c": "Route",
     "l": "getTo()"
@@ -1355,8 +1355,8 @@ memberSearchIndex = [{
     "c": "DBUserManager",
     "l": "getUserFromDatabase(AuthenticationData)",
     "u": "getUserFromDatabase(authorization.authCredentials.AuthenticationData)"
-}, {"p": "requestLogic.requests", "c": "ServerRequest", "l": "getUserRequest()"}, {
-    "p": "fileLogic.editors",
+}, {"p": "request.logic.requests", "c": "ServerRequest", "l": "getUserRequest()"}, {
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "getValue()"
 }, {
@@ -1404,7 +1404,7 @@ memberSearchIndex = [{
     "p": "models",
     "c": "Route",
     "l": "hashCode()"
-}, {"p": "requestLogic", "c": "CallerBack", "l": "hashCode()"}, {
+}, {"p": "request.logic", "c": "CallerBack", "l": "hashCode()"}, {
     "p": "responseLogic",
     "c": "StatusResponse",
     "l": "hashCode()"
@@ -1422,7 +1422,7 @@ memberSearchIndex = [{
     "c": "InfoCommand",
     "l": "InfoCommand()",
     "u": "%3Cinit%3E()"
-}, {"p": "requestLogic", "c": "StatusRequestBuilder", "l": "initialize()"}, {
+}, {"p": "request.logic", "c": "StatusRequestBuilder", "l": "initialize()"}, {
     "p": "commandManager",
     "c": "CommandDescriptionHolder",
     "l": "initialize(ArrayList<CommandDescription>)",
@@ -1471,7 +1471,7 @@ memberSearchIndex = [{
     "c": "Utilities",
     "l": "isNotNumeric(String)",
     "u": "isNotNumeric(java.lang.String)"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "isPaintable()"}, {
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "isPaintable()"}, {
     "p": "authorization",
     "c": "AuthorizedUserData",
     "l": "lastLogin()"
@@ -1486,7 +1486,7 @@ memberSearchIndex = [{
     "l": "listenAdd(Collection<? extends E>)",
     "u": "listenAdd(java.util.Collection)"
 }, {
-    "p": "listenProviders",
+    "p": "listen.providers",
     "c": "CollectionActionsListener",
     "l": "listenAdd(Collection<? extends Route>)",
     "u": "listenAdd(java.util.Collection)"
@@ -1505,7 +1505,7 @@ memberSearchIndex = [{
     "l": "ListenCollectionActionsRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ListenCollectionChangeHubWorker",
     "l": "ListenCollectionChangeHubWorker()",
     "u": "%3Cinit%3E()"
@@ -1520,7 +1520,7 @@ memberSearchIndex = [{
     "l": "listenRemove(Collection<?>)",
     "u": "listenRemove(java.util.Collection)"
 }, {
-    "p": "listenProviders",
+    "p": "listen.providers",
     "c": "CollectionActionsListener",
     "l": "listenRemove(Long[])",
     "u": "listenRemove(java.lang.Long[])"
@@ -1530,7 +1530,7 @@ memberSearchIndex = [{
     "l": "listenRemove(Long[])",
     "u": "listenRemove(java.lang.Long[])"
 }, {
-    "p": "listenProviders",
+    "p": "listen.providers",
     "c": "CollectionActionsListener",
     "l": "listenUpdate(long, RouteFields, Object)",
     "u": "listenUpdate(long,models.RouteFields,java.lang.Object)"
@@ -1540,7 +1540,7 @@ memberSearchIndex = [{
     "l": "listenUpdate(long, RouteFields, Object)",
     "u": "listenUpdate(long,models.RouteFields,java.lang.Object)"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Loader",
     "l": "Loader(Class<T>, Class<E>)",
     "u": "%3Cinit%3E(java.lang.Class,java.lang.Class)"
@@ -1549,12 +1549,12 @@ memberSearchIndex = [{
     "c": "DBCollectionLoader",
     "l": "loadFromDB()"
 }, {"p": "databaseLogic.databaseElementLogic", "c": "DBCollectionLoader", "l": "loadFromDB(long)"}, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Loader",
     "l": "loadFromFile(String, BaseReader)",
-    "u": "loadFromFile(java.lang.String,fileLogic.BaseReader)"
+    "u": "loadFromFile(java.lang.String,file.logic.BaseReader)"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Loader",
     "l": "loadFromXMLbyEnvKey(String)",
     "u": "loadFromXMLbyEnvKey(java.lang.String)"
@@ -1582,7 +1582,7 @@ memberSearchIndex = [{
     "p": "clientLogic",
     "c": "AuthorizeManager",
     "l": "login(CallerBack)",
-    "u": "login(requestLogic.CallerBack)"
+    "u": "login(request.logic.CallerBack)"
 }, {
     "p": "requestLogic.requestSenders",
     "c": "LoginRequestSender",
@@ -1653,7 +1653,7 @@ memberSearchIndex = [{
     "p": "exceptions",
     "c": "NotAvailableException",
     "l": "NotAvailableException(CallerBack)",
-    "u": "%3Cinit%3E(requestLogic.CallerBack)"
+    "u": "%3Cinit%3E(request.logic.CallerBack)"
 }, {
     "p": "exceptions",
     "c": "NotEditableException",
@@ -1689,7 +1689,7 @@ memberSearchIndex = [{
     "l": "openConnection(InetAddress, int)",
     "u": "openConnection(java.net.InetAddress,int)"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "paintValue(Graphics, Rectangle)",
     "u": "paintValue(java.awt.Graphics,java.awt.Rectangle)"
@@ -1702,7 +1702,7 @@ memberSearchIndex = [{
     "p": "commandManager.commandPreProcessing",
     "c": "CommandPreProcessorManager",
     "l": "preProceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "preProceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "preProceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "exceptions",
     "c": "PreProceedingFailedException",
@@ -1722,14 +1722,14 @@ memberSearchIndex = [{
     "p": "commandManager.commandPreProcessing.preProcessors",
     "c": "CommandAuthorizePreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "proceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "commandManager.commandPreProcessing.preProcessors",
     "c": "CommandPreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(commandManager.commands.BaseCommand,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "proceed(commandManager.commands.BaseCommand,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
-    "p": "requestLogic.requestAnnotationProcessors",
+    "p": "request.logic.requests.annotation",
     "c": "AnnotationProcessor",
     "l": "proceedAnnotations()"
 }, {
@@ -1743,27 +1743,27 @@ memberSearchIndex = [{
     "l": "proceedIntermediateResponse(ExceptionProvider...)",
     "u": "proceedIntermediateResponse(core.providers.ExceptionProvider...)"
 }, {
-    "p": "requestLogic.requestAnnotationProcessors.processors",
+    "p": "request.logic.requests.annotation.processors",
     "c": "AuthorizeProcessor",
     "l": "proceedRequest(ServerRequest)",
-    "u": "proceedRequest(requestLogic.requests.ServerRequest)"
+    "u": "proceedRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestAnnotationProcessors.processors",
+    "p": "request.logic.requests.annotation.processors",
     "c": "RequestAnnotationProcessor",
     "l": "proceedRequest(ServerRequest)",
-    "u": "proceedRequest(requestLogic.requests.ServerRequest)"
+    "u": "proceedRequest(request.logic.requests.ServerRequest)"
 }, {
     "p": "exceptions",
     "c": "ProcessionInterruptedException",
     "l": "ProcessionInterruptedException()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "BaseReader",
     "l": "readFromFile(String)",
     "u": "readFromFile(java.lang.String)"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "XMLReader",
     "l": "readFromFile(String)",
     "u": "readFromFile(java.lang.String)"
@@ -1777,7 +1777,7 @@ memberSearchIndex = [{
     "c": "UdpServerConnection",
     "l": "readLargeObject(int, LargePacketProvider...)",
     "u": "readLargeObject(int,serverLogic.abstractLogic.LargePacketProvider...)"
-}, {"p": "requestLogic", "c": "RequestReader", "l": "readObject()"}, {
+}, {"p": "request.logic", "c": "RequestReader", "l": "readObject()"}, {
     "p": "responseLogic",
     "c": "ResponseReader",
     "l": "readObject(InputStream)",
@@ -1821,7 +1821,7 @@ memberSearchIndex = [{
     "p": "clientLogic",
     "c": "AuthorizeManager",
     "l": "register(CallerBack, RegistrationData)",
-    "u": "register(requestLogic.CallerBack,authorization.authCredentials.RegistrationData)"
+    "u": "register(request.logic.CallerBack,authorization.authCredentials.RegistrationData)"
 }, {
     "p": "gui.controllers.register",
     "c": "RegisterActionListener",
@@ -1883,7 +1883,7 @@ memberSearchIndex = [{
     "l": "RegistrationRequestSender()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "RegistrationRequestWorker",
     "l": "RegistrationRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -1903,10 +1903,10 @@ memberSearchIndex = [{
     "l": "RemoveByIdCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ListenCollectionChangeHubWorker",
     "l": "removeCallerBack(CallerBack)",
-    "u": "removeCallerBack(requestLogic.CallerBack)"
+    "u": "removeCallerBack(request.logic.CallerBack)"
 }, {
     "p": "models.collection.actions",
     "c": "RemoveCollectionAction",
@@ -1943,7 +1943,7 @@ memberSearchIndex = [{
     "l": "removeLoopListener(ListenLoopListener)",
     "u": "removeLoopListener(serverLogic.abstractLogic.ListenLoopListener)"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "removePropertyChangeListener(PropertyChangeListener)",
     "u": "removePropertyChangeListener(java.beans.PropertyChangeListener)"
@@ -1968,7 +1968,7 @@ memberSearchIndex = [{
     "l": "removeUpdate(DocumentEvent)",
     "u": "removeUpdate(javax.swing.event.DocumentEvent)"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "RequestReader",
     "l": "RequestReader(InputStream)",
     "u": "%3Cinit%3E(java.io.InputStream)"
@@ -1978,7 +1978,7 @@ memberSearchIndex = [{
     "l": "RequestSender()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "RequestWorkerManager",
     "l": "RequestWorkerManager()",
     "u": "%3Cinit%3E()"
@@ -2057,12 +2057,12 @@ memberSearchIndex = [{
     "l": "RouteTableModelUpdateFullCollectionListener(RouteTableModel)",
     "u": "%3Cinit%3E(gui.models.RouteTableModel)"
 }, {"p": "models.validators", "c": "RouteValidator", "l": "RouteValidator()", "u": "%3Cinit%3E()"}, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Saver",
     "l": "saveCollection(T, String)",
     "u": "saveCollection(T,java.lang.String)"
 }, {"p": "commandManager.commands", "c": "SaveCommand", "l": "SaveCommand()", "u": "%3Cinit%3E()"}, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Saver",
     "l": "Saver(Class<E>)",
     "u": "%3Cinit%3E(java.lang.Class)"
@@ -2104,7 +2104,7 @@ memberSearchIndex = [{
     "p": "responseLogic.responseSenders",
     "c": "IntermediateResponseSender",
     "l": "sendLargeResponse(ByteArrayOutputStream, CallerBack, ServerConnection)",
-    "u": "sendLargeResponse(java.io.ByteArrayOutputStream,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "sendLargeResponse(java.io.ByteArrayOutputStream,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "requestLogic.requestSenders",
     "c": "AuthorizationRequestSender",
@@ -2139,14 +2139,14 @@ memberSearchIndex = [{
     "p": "responseLogic.responseSenders",
     "c": "ResponseSender",
     "l": "sendResponse(BaseResponse, ServerConnection, CallerBack)",
-    "u": "sendResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
+    "u": "sendResponse(responses.BaseResponse,serverLogic.ServerConnection,request.logic.CallerBack)"
 }, {
     "p": "responseLogic.responseSenders",
     "c": "ResponseSender",
     "l": "sendSyncResponse(BaseResponse, ServerConnection, CallerBack)",
-    "u": "sendSyncResponse(responses.BaseResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
+    "u": "sendSyncResponse(responses.BaseResponse,serverLogic.ServerConnection,request.logic.CallerBack)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ListenCollectionChangeHubWorker",
     "l": "sendToAllCallers(CollectionUpdatedResponse)",
     "u": "sendToAllCallers(responses.CollectionUpdatedResponse)"
@@ -2166,30 +2166,30 @@ memberSearchIndex = [{
     "l": "ServerListener(Class<T>)",
     "u": "%3Cinit%3E(java.lang.Class)"
 }, {
-    "p": "requestLogic.requests",
+    "p": "request.logic.requests",
     "c": "ServerRequest",
     "l": "ServerRequest(BaseRequest, CallerBack, ServerConnection)",
-    "u": "%3Cinit%3E(requests.BaseRequest,requestLogic.CallerBack,serverLogic.ServerConnection)"
+    "u": "%3Cinit%3E(requests.BaseRequest,request.logic.CallerBack,serverLogic.ServerConnection)"
 }, {
     "p": "clientLogic",
     "c": "Session",
     "l": "Session(AuthorizedCallerBack)",
     "u": "%3Cinit%3E(clientLogic.AuthorizedCallerBack)"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "setAsText(String)",
     "u": "setAsText(java.lang.String)"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequest",
     "l": "setCallerBack(CallerBack)",
-    "u": "setCallerBack(requestLogic.CallerBack)"
+    "u": "setCallerBack(request.logic.CallerBack)"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "setCallerBack(CallerBack)",
-    "u": "setCallerBack(requestLogic.CallerBack)"
+    "u": "setCallerBack(request.logic.CallerBack)"
 }, {"p": "commandManager.commands", "c": "AddCommand", "l": "setCallerID(long)"}, {
     "p": "commandManager.commands",
     "c": "AddIfMaxCommand",
@@ -2219,8 +2219,8 @@ memberSearchIndex = [{
     "c": "AuthDataHolder",
     "l": "setClientData(String, char[])",
     "u": "setClientData(java.lang.String,char[])"
-}, {"p": "requestLogic", "c": "StatusRequest", "l": "setCode(int)"}, {
-    "p": "requestLogic",
+}, {"p": "request.logic", "c": "StatusRequest", "l": "setCode(int)"}, {
+    "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "setCode(int)"
 }, {
@@ -2248,7 +2248,7 @@ memberSearchIndex = [{
     "l": "setId(Long)",
     "u": "setId(java.lang.Long)"
 }, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequest",
     "l": "setInputStream(InputStream)",
     "u": "setInputStream(java.io.InputStream)"
@@ -2283,7 +2283,7 @@ memberSearchIndex = [{
     "l": "setObj(Route)",
     "u": "setObj(models.Route)"
 }, {"p": "commandManager.commands", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "setObjectStream(InputStream)",
     "u": "setObjectStream(java.io.InputStream)"
@@ -2293,12 +2293,12 @@ memberSearchIndex = [{
     "l": "setServerConnection(ServerConnection)",
     "u": "setServerConnection(serverLogic.abstractLogic.ServerConnection)"
 }, {"p": "models", "c": "Route", "l": "setTo(Location)", "u": "setTo(models.Location)"}, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "Loader",
     "l": "setupConverter(Class<?>, Class<? extends PropertyEditor>)",
     "u": "setupConverter(java.lang.Class,java.lang.Class)"
 }, {
-    "p": "fileLogic.editors",
+    "p": "file.logic.editors",
     "c": "DateEditor",
     "l": "setValue(Object)",
     "u": "setValue(java.lang.Object)"
@@ -2327,7 +2327,7 @@ memberSearchIndex = [{
     "l": "ShowCollectionRequestSender()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ShowCollectionRequestWorker",
     "l": "ShowCollectionRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -2355,7 +2355,7 @@ memberSearchIndex = [{
     "p": "listenLogic",
     "c": "ServerListener",
     "l": "startListen()"
-}, {"p": "requestLogic", "c": "StatusRequest", "l": "StatusRequest()", "u": "%3Cinit%3E()"}, {
+}, {"p": "request.logic", "c": "StatusRequest", "l": "StatusRequest()", "u": "%3Cinit%3E()"}, {
     "p": "responseLogic",
     "c": "StatusResponse",
     "l": "StatusResponse(String, int)",
@@ -2373,7 +2373,7 @@ memberSearchIndex = [{
     "p": "gui.frames",
     "c": "RegisterWindow",
     "l": "succeedAction()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
+}, {"p": "file.logic.editors", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
     "p": "clientLogic",
     "c": "Session",
     "l": "TIMEOUT"
@@ -2398,7 +2398,7 @@ memberSearchIndex = [{
     "c": "Location",
     "l": "toString()"
 }, {"p": "models", "c": "Route", "l": "toString()"}, {
-    "p": "requestLogic",
+    "p": "request.logic",
     "c": "CallerBack",
     "l": "toString()"
 }, {"p": "responseLogic", "c": "StatusResponse", "l": "toString()"}, {
@@ -2444,7 +2444,7 @@ memberSearchIndex = [{
     "c": "ProviderRuleSet",
     "l": "UNSUBSCRIBE_ON_EXCEPTION"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "UnsubscribeFromListenCollectionActionsWorker",
     "l": "UnsubscribeFromListenCollectionActionsWorker()",
     "u": "%3Cinit%3E()"
@@ -2504,7 +2504,7 @@ memberSearchIndex = [{
     "l": "UpdateSingleFieldRequest(Long, RouteFields, Object)",
     "u": "%3Cinit%3E(java.lang.Long,models.RouteFields,java.lang.Object)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "UpdateSingleFieldRequestWorker",
     "l": "UpdateSingleFieldRequestWorker()",
     "u": "%3Cinit%3E()"
@@ -2604,72 +2604,72 @@ memberSearchIndex = [{
     "c": "CollectionActions",
     "l": "values()"
 }, {"p": "models", "c": "RouteFields", "l": "values()"}, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ArgumentCommandClientRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "AuthorizationRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "BaseRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "CommandClientRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "CommandConfigureRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ListenCollectionChangeHubWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "RegistrationRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "RequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "RequestWorkerManager",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "ShowCollectionRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "UnsubscribeFromListenCollectionActionsWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "requestLogic.requestWorkers",
+    "p": "request.logic.workers",
     "c": "UpdateSingleFieldRequestWorker",
     "l": "workWithRequest(ServerRequest)",
-    "u": "workWithRequest(requestLogic.requests.ServerRequest)"
+    "u": "workWithRequest(request.logic.requests.ServerRequest)"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "BaseWriter",
     "l": "writeToFile(String, LinkedHashMap<String[], String>)",
     "u": "writeToFile(java.lang.String,java.util.LinkedHashMap)"
 }, {
-    "p": "fileLogic",
+    "p": "file.logic",
     "c": "XMLWriter",
     "l": "writeToFile(String, LinkedHashMap<String[], String>)",
     "u": "writeToFile(java.lang.String,java.util.LinkedHashMap)"
@@ -2683,8 +2683,8 @@ memberSearchIndex = [{
     "c": "WrongPasswordException",
     "l": "WrongPasswordException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
-}, {"p": "fileLogic", "c": "XMLReader", "l": "XMLReader()", "u": "%3Cinit%3E()"}, {
-    "p": "fileLogic",
+}, {"p": "file.logic", "c": "XMLReader", "l": "XMLReader()", "u": "%3Cinit%3E()"}, {
+    "p": "file.logic",
     "c": "XMLWriter",
     "l": "XMLWriter()",
     "u": "%3Cinit%3E()"

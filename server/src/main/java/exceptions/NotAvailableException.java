@@ -2,7 +2,7 @@ package exceptions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 public class NotAvailableException extends Exception {
 

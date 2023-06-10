@@ -8,7 +8,7 @@ import exceptions.authorizationExceptions.RegistrationFailedException;
 import exceptions.authorizationExceptions.UnregisteredException;
 import exceptions.authorizationExceptions.WrongPasswordException;
 import org.apache.commons.lang3.ArrayUtils;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 import java.io.Closeable;
 import java.io.IOException;

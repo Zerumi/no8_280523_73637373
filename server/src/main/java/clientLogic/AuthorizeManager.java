@@ -9,7 +9,7 @@ import exceptions.authorizationExceptions.AuthorizeException;
 import exceptions.authorizationExceptions.UnauthorizedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 import java.io.IOException;
 import java.sql.SQLException;

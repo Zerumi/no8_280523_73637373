@@ -73,7 +73,10 @@ loadScripts(document, 'script');</script>
 <h1 title="Class Loader" class="title">Class Loader&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;E&gt;,<wbr>E&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">fileLogic.Loader&lt;T,<wbr>E&gt;</div>
+<div class="inheritance">file.logic.Loader&lt;T,
+    <wbr>
+    E&gt;
+</div>
 </div>
     <section class="class-description" id="class-description">
         <dl class="notes">
@@ -129,7 +132,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="Loader.html" title="type parameter in Loader">E</a>&gt;&nbsp;eClass)</code></div>
 <div class="col-last even-row-color">
     <div class="block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block">Initializer of fileLogic.Loader class.</div>
+    <div class="block">Initializer of file.logic.Loader class.</div>
 </div>
 </div>
 </section>
@@ -172,7 +175,7 @@ loadScripts(document, 'script');</script>
         <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
             <code><a href="Loader.html" title="type parameter in Loader">T</a></code></div>
         <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-            <code><a href="#loadFromFile(java.lang.String,fileLogic.BaseReader)"
+            <code><a href="#loadFromFile(java.lang.String,file.logic.BaseReader)"
                      class="member-name-link">loadFromFile</a>
                 <wbr>
                 (<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
@@ -232,7 +235,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Loader</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="Loader.html" title="type parameter in Loader">T</a>&gt;&nbsp;tClass,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;<a href="Loader.html" title="type parameter in Loader">E</a>&gt;&nbsp;eClass)</span></div>
     <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block">Initializer of fileLogic.Loader class.</div>
+    <div class="block">Initializer of file.logic.Loader class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tClass</code> - Class of <code>T</code>. Should be provided due to Java's generic types restriction.</dd>
@@ -284,17 +287,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="loadFromFile(java.lang.String,fileLogic.BaseReader)">
-<h3>loadFromFile</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Loader.html" title="type parameter in Loader">T</a></span>&nbsp;<span class="element-name">loadFromFile</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
+    <section class="detail" id="loadFromFile(java.lang.String,file.logic.BaseReader)">
+        <h3>loadFromFile</h3>
+        <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a
+                href="Loader.html" title="type parameter in Loader">T</a></span>&nbsp;<span class="element-name">loadFromFile</span>
+            <wbr>
+            <span class="parameters">(<a
+                    href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
+                    title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
  <a href="BaseReader.html" title="interface in fileLogic">BaseReader</a>&nbsp;reader)</span></div>
-    <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block">Abstract method to read any collection from any file by any reader.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>path</code> - Path to file</dd>
-<dd><code>reader</code> - File reader</dd>
-<dt>Returns:</dt>
+        <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+        <div class="block">Abstract method to read any collection from any file by any reader.</div>
+        <dl class="notes">
+            <dt>Parameters:</dt>
+            <dd><code>path</code> - Path to file</dd>
+            <dd><code>reader</code> - File reader</dd>
+            <dt>Returns:</dt>
 <dd>Collection with elements matched by file</dd>
 </dl>
 </section>

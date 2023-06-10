@@ -8,167 +8,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: sorting final + auth notifications added">
-      <change afterPath="$PROJECT_DIR$/docs/core/providers/ProviderRuleSet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/exceptions/DenyOperationException.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterActionListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterTextFieldsEditListener.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/cli/CoordinatesCLIHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/cli/LocationCLIHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/cli/RouteCLIHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/cli/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/cli/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/gui/GUIRouteHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/gui/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/gui/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/stream/RouteNonCLIHandler.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/stream/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/models/handlers/mode/stream/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils/RouteFieldComparators.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils/SpringUtilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Main.html" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authentication/AuthLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authentication/AuthLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authentication/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authentication/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authentication/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authentication/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/AuthorizedUserData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/AuthorizedUserData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/UserRoles.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/UserRoles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/authCredentials/AuthenticationData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/authCredentials/AuthenticationData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/authCredentials/RegistrationData.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/authCredentials/RegistrationData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/authCredentials/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/authCredentials/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/authCredentials/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/authCredentials/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/authorization/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/authorization/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/clientLogic/AuthorizeManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/AuthorizeManager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/clientLogic/AuthorizedCallerBack.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/AuthorizedCallerBack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/clientLogic/Session.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/Session.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/clientLogic/ClientHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/ClientHandler.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/clientLogic/SessionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/SessionHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/clientLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/clientLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/clientLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/CommandDescription.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/CommandDescription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/ReceiverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/ReceiverManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalArgumentReceiverCaller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalArgumentReceiverCaller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalBaseReceiverCaller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalBaseReceiverCaller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalCaller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/ExternalCaller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/callers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/ReceiverType.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/ReceiverType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/enums/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/ArgumentReceiverHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/ArgumentReceiverHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/NonArgReceiversHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/NonArgReceiversHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/ReceiverHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/ReceiverHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/handlers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/ExternalArgumentReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/ExternalArgumentReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/ExternalBaseReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/ExternalBaseReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/commandReceiverLogic/receivers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandDescriptionHolder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandDescriptionHolder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandExecutor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandExporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandExporter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandLoaderUtility.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandLoaderUtility.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/CommandMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/CommandMode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/CommandPreProcessorManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/CommandPreProcessorManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/PreProcessingCommandInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/PreProcessingCommandInterface.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commandPreProcessing/preProcessors/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMaxCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMaxCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMinCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AddIfMinCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ArgumentConsumer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ArgumentConsumer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/AuthorizableCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/AuthorizableCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/BaseCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/BaseCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ClearCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ClearCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/CountGreaterThanDistanceCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/CountGreaterThanDistanceCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ExecuteScriptCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ExecuteScriptCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ExitCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ExitCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/HelpCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/HelpCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/InfoCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/InfoCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/MinByCreationDateCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/MinByCreationDateCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/PrintFieldDistanceAscendingCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/PrintFieldDistanceAscendingCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/RemoveByIdCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/RemoveByIdCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/RemoveGreaterCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/RemoveGreaterCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/SaveCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/SaveCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/ShowCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/ShowCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/UpdateCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/UpdateCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/commands/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/commands/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/ArgumentRouteCommandReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ArgumentRouteCommandReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExecuteScriptReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExecuteScriptReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExitReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/ExitReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/NonArgumentReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/NonArgumentReceiver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/external/recievers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/ServerCommandManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/ServerCommandManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/ShowSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/ShowSessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/commands/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commandManager/serverCommands/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core/providers/SingleElementProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/SingleElementProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core/providers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core/providers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBCollectionLoader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBCollectionLoader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBCollectionManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBCollectionManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBElementCreatorLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBElementCreatorLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBIntegrationUtility.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/DBIntegrationUtility.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseElementLogic/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/DBUserManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/DBUserManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/PasswordEncryption.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/PasswordEncryption.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/PasswordEncryptionImplSHA512.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/PasswordEncryptionImplSHA512.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/ResourceStreamLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/ResourceStreamLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUserLogic/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/DBUserManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/databaseLogic/databaseUsersLogic/DBUserManager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/editors/DateEditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editors/DateEditor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/editors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editors/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/editors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editors/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/AreYouSeriousException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/AreYouSeriousException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/BuildObjectException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/BuildObjectException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/CannotProceedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/CannotProceedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/CommandInterruptedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/CommandInterruptedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/CommandsNotLoadedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/CommandsNotLoadedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/ElementNotAddedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/ElementNotAddedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/GotAnErrorResponseException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/GotAnErrorResponseException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/InvalidRequestException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/InvalidRequestException.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/exceptions/NotAvailableException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/NotAvailableException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/NotEditableException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/NotEditableException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/PreProceedingFailedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/PreProceedingFailedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/ProceedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/ProceedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/ProcessionInterruptedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/ProcessionInterruptedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/StreamInterruptedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/StreamInterruptedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UnknownCommandException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/UnsupportedRequestException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UnsupportedRequestException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/UnsupportedResponseException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UnsupportedResponseException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/UpdateModelException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/UpdateModelException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/WrongAmountOfArgumentsException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/WrongAmountOfArgumentsException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/AuthorizeException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/AuthorizeException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/RegistrationFailedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/RegistrationFailedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/UnauthorizedException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/UnauthorizedException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/UnregisteredException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/UnregisteredException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/WrongPasswordException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/WrongPasswordException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/authorizationExceptions/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/exceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/exceptions/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/BaseReader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fileLogic/BaseWriter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/BaseWriter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/Loader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/Loader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/Saver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/Saver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/XMLReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/XMLReader.html" afterDir="false" />
@@ -177,132 +36,40 @@
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/editors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/editors/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/editors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/editors/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/fileLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fileLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/fileLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/RouteTableModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/RouteTableModel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/listeners/RouteTableModelChangeListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/listeners/RouteTableModelChangeListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/listeners/RouteTableModelUpdateFullCollectionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/listeners/RouteTableModelUpdateFullCollectionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/listeners/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/listeners/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/listeners/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/listeners/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/models/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/models/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-19.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-20.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-21.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-21.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/listenLogic/ServerListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenLogic/ServerListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/listenLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/listenLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenLogic/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/listenProviders/CollectionActionsListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenProviders/CollectionActionsListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/listenProviders/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenProviders/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/listenProviders/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/listenProviders/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/LibUtilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/LibUtilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/Coordinates.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Coordinates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/Location.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/Route.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/Route.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/RouteFields.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/RouteFields.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/AbstractCollectionAction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/AbstractCollectionAction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/AddCollectionAction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/AddCollectionAction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/CollectionActions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/CollectionActions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/RemoveCollectionAction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/RemoveCollectionAction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/UpdateCollectionAction.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/UpdateCollectionAction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collection/actions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collection/actions/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collections/ObservableHashSet.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collections/ObservableHashSet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collections/ObservableListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collections/ObservableListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collections/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collections/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/collections/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/collections/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteComparator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteCreationDateComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteCreationDateComparator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/RouteDistanceComparator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/RouteDistanceComparator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/comparators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/comparators/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CollectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CollectionHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/CollectionUpdateListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/CollectionUpdateListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/ModuleHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/ModuleHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/RoutesHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/RoutesHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/Utilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/Utilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/handlers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/handlers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/CoordXValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/CoordXValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/CoordYValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/CoordYValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/DistanceValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/DistanceValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/LocationNameValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/LocationNameValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/LocationXValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/LocationXValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/LocationYZValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/LocationYZValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/NameValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/NameValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/RouteValidator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/RouteValidator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/Validator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/Validator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/models/validators/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/models/validators/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/CallerBack.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/CallerBack.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/RequestReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/RequestReader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/StatusRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/StatusRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/StatusRequestBuilder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/StatusRequestBuilder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/authentication/AuthDataHolder.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/authentication/AuthDataHolder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/authentication/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/authentication/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/authentication/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/authentication/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/dataTransferObjects/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/dataTransferObjects/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/dtoMappers/RequestDTOMapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/dtoMappers/RequestDTOMapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/dtoMappers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/dtoMappers/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/AnnotationProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/AnnotationProcessor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/RequestAnnotationProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/RequestAnnotationProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestAnnotationProcessors/processors/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ArgumentRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ArgumentRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/AuthorizationRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/AuthorizationRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandDescriptionsRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandDescriptionsRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/CommandRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/LoginRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/LoginRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RegistrationRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RegistrationRequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/RequestSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ShowCollectionRequestSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/ShowCollectionRequestSender.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestSenders/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestSenders/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/AuthorizationRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/AuthorizationRequestWorker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/BaseRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/BaseRequestWorker.html" afterDir="false" />
@@ -315,75 +82,72 @@
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ShowCollectionRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ShowCollectionRequestWorker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/UnsubscribeFromListenCollectionActionsWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/UnsubscribeFromListenCollectionActionsWorker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/UpdateSingleFieldRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/UpdateSingleFieldRequestWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/ArgumentResolverManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/ArgumentResolverManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/Resolver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/Resolver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/RouteResolver.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/RouteResolver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/argumentTypeResolver/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/ServerRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/ServerRequest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/ArgumentCommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/ArgumentCommandClientRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/AuthorizationRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/AuthorizationRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/BaseRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/BaseRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/CommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/CommandClientRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/CommandDescriptionsRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/CommandDescriptionsRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/ListenCollectionActionsRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/ListenCollectionActionsRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/RegistrationRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/RegistrationRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/ShowCollectionRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/ShowCollectionRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/UnsubscribeListenCollectionActionsRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/UnsubscribeListenCollectionActionsRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/UpdateSingleFieldRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/UpdateSingleFieldRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/requestAnnotations/Authorize.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/requestAnnotations/Authorize.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/requestAnnotations/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/requestAnnotations/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requests/requestAnnotations/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requests/requestAnnotations/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/IntermediateResponseHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/IntermediateResponseHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/ResponseReader.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/ResponseReader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/StatusResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/StatusResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandConfigureResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandConfigureResponseSender.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/CommandResponseSender.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/IntermediateResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/IntermediateResponseSender.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/ResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/ResponseSender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/AuthorizeResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/AuthorizeResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/BaseResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/BaseResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/ByteArrayPacketResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/ByteArrayPacketResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/CollectionUpdatedResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/CollectionUpdatedResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/CommandDescriptionsResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/CommandDescriptionsResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/CommandStatusResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/CommandStatusResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/ErrorResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/ErrorResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/IntermediateResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/IntermediateResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/SaveStatusResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/SaveStatusResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/ShowCollectionResponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/ShowCollectionResponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responses/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responses/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/DatagramServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/ServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/ServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/ServerConnectionHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/LargePacketProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/LargePacketProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/LargeResponseHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/LargeResponseHandler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ListenLoopListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ListenLoopListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/ServerResponseProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/abstractLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/udp/UdpConnectionBlockDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/udp/UdpConnectionBlockDecorator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/udp/UdpServerConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/udp/UdpServerConnection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/udp/UdpServerConnectionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/udp/UdpServerConnectionFactory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/udp/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/udp/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serverLogic/udp/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serverLogic/udp/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tag-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tag-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/responseLogic/responseSenders/SuppressIOResponseSender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/responseSenders/SuppressIOResponseSender.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utils/RouteFieldToRoute.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/utils/RouteFieldToRoute.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utils/Utilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/utils/Utilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/utils/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utils/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/utils/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizedCallerBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/AuthorizedCallerBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/clientLogic/SessionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/CommandPreProcessorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/CommandPreProcessorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandAuthorizePreProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commandPreProcessing/preProcessors/CommandPreProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/commandManager/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseElementLogic/DBIntegrationUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/databaseLogic/databaseUserLogic/DBUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exceptions/NotAvailableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exceptions/NotAvailableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/BaseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/BaseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/BaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/BaseWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/Saver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/fileLogic/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/file/logic/editors/DateEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/listenProviders/CollectionActionsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/listen/providers/CollectionActionsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/CallerBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/CallerBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/RequestReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/StatusRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/StatusRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/StatusRequestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/StatusRequestBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/AnnotationProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/requests/annotation/AnnotationProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/AuthorizeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/requests/annotation/processors/AuthorizeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestAnnotationProcessors/processors/RequestAnnotationProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/requests/annotation/processors/RequestAnnotationProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/ArgumentCommandClientRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/AuthorizationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/AuthorizationRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/BaseRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/BaseRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/CommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/CommandClientRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/CommandConfigureRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/CommandConfigureRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/ListenCollectionChangeHubWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/ListenCollectionChangeHubWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RegistrationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/RegistrationRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/RequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/RequestWorkerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/ShowCollectionRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/ShowCollectionRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/UnsubscribeFromListenCollectionActionsWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/UnsubscribeFromListenCollectionActionsWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requestWorkers/UpdateSingleFieldRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/workers/UpdateSingleFieldRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/requestLogic/requests/ServerRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/requests/ServerRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/IntermediateResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/responseLogic/responseSenders/ResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/serverLogic/DatagramServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/serverLogic/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/LoginAndTryToSendCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/LoginAndTryToSendCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -723,14 +487,7 @@
       <workItem from="1683737079840" duration="1850000" />
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
-      <workItem from="1686269093681" duration="23761000" />
-    </task>
-    <task id="LOCAL-00013" summary="checkRecursion for script executing added + bug fixes, part 5">
-      <created>1676161182441</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161182441</updated>
+      <workItem from="1686269093681" duration="24278000" />
     </task>
     <task id="LOCAL-00014" summary="bug &amp; docs fixes, part 6">
       <created>1676162242594</created>
@@ -1068,7 +825,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686427821530</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="chore: rerun javadoc">
+      <created>1686428119959</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1686428119959</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1112,11 +876,11 @@
     <MESSAGE value="fix: reworked intermediate response handling" />
     <MESSAGE value="feat: updating single fields" />
     <MESSAGE value="fix: some fixes" />
-    <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="feat: sorting part 1" />
     <MESSAGE value="feat: sorting part 2" />
     <MESSAGE value="feat: sorting final + auth notifications added" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: sorting final + auth notifications added" />
+    <MESSAGE value="chore: rerun javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

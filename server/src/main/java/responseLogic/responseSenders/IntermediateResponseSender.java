@@ -1,6 +1,6 @@
 package responseLogic.responseSenders;
 
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 import responses.ByteArrayPacketResponse;
 import responses.IntermediateResponse;
 import serverLogic.ServerConnection;

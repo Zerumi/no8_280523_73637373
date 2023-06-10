@@ -1,7 +1,7 @@
 package clientLogic;
 
 import authorization.AuthorizedUserData;
-import requestLogic.CallerBack;
+import request.logic.CallerBack;
 
 import java.util.Objects;
 
