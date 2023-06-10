@@ -1,5 +1,3 @@
-package main;
-
 import exceptions.AreYouSeriousException;
 
 public class Main {

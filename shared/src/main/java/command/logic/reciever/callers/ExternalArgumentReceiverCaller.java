@@ -1,7 +1,7 @@
 package command.logic.reciever.callers;
 
-import command.logic.reciever.ReceiverManager;
 import command.logic.CommandDescription;
+import command.logic.reciever.ReceiverManager;
 import command.logic.reciever.enums.ReceiverType;
 import command.logic.reciever.receivers.ExternalArgumentReceiver;
 

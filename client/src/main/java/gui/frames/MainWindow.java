@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainWindow extends JFrame {
-    // todo: only one window
-
     private static boolean isExist = false;
 
     public MainWindow(AuthorizedUserData profile) throws DenyOperationException {

@@ -1,5 +1,3 @@
-package main;
-
 public class LibUtilities {
     public static boolean isNotNumeric(String str) {
         return !str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
