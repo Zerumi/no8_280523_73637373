@@ -15,13 +15,20 @@ public class ShowCollectionRequestSender implements ApplicationResponseProvider<
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab8");
 
+    private final RequestSender requestSender;
+
+    {
+        requestSender = new RequestSender();
+    }
+
     private ApplicationResponseProvider<ShowCollectionResponse>[] providers;
 
     @SafeVarargs
     public final void sendCollectionRequest(ApplicationResponseProvider<ShowCollectionResponse>... providers) {
         this.providers = providers;
         try {
-            new RequestSender().sendRequest(new ShowCollectionRequest(), ServerConnectionHandler.getCurrentConnection(), this);
+            requestSender.sendRequest
+                    (new ShowCollectionRequest(), ServerConnectionHandler.getCurrentConnection(), this);
         } catch (IOException e) {
             logger.error("Something went wrong during I/O ", e);
         }
@@ -37,6 +44,7 @@ public class ShowCollectionRequestSender implements ApplicationResponseProvider<
         if (response.getClass().equals(ShowCollectionResponse.class)) {
             ShowCollectionResponse acceptedResponse = (ShowCollectionResponse) response;
             Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+            requestSender.removeListener(this);
         }
     }
 }

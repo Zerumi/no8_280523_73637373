@@ -18,6 +18,12 @@ public class CommandDescriptionsRequestSender implements ApplicationResponseProv
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
+    private final RequestSender requestSender;
+
+    {
+        requestSender = new RequestSender();
+    }
+
     private SingleElementProvider<ArrayList<CommandDescription>>[] providers;
 
     @SafeVarargs
@@ -25,7 +31,7 @@ public class CommandDescriptionsRequestSender implements ApplicationResponseProv
         this.providers = providers;
         CommandDescriptionsRequest request = new CommandDescriptionsRequest();
         try {
-            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(), this);
+            requestSender.sendRequest(request, ServerConnectionHandler.getCurrentConnection(), this);
         } catch (IOException e) {
             logger.error("Something went wrong during I/O operations.", e);
         }
@@ -40,6 +46,7 @@ public class CommandDescriptionsRequestSender implements ApplicationResponseProv
 
             ArrayList<CommandDescription> finalResult = result;
             Arrays.stream(providers).forEach(x -> x.acceptElement(finalResult));
+            requestSender.removeListener(this);
         }
     }
     @Override
