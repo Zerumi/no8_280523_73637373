@@ -7,6 +7,7 @@ import gui.controllers.main.callbacks.RepaintCallback;
 import request.logic.senders.CommandDescriptionsRequestSender;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -29,13 +30,15 @@ public class CommandButtonFactory implements SingleElementProvider<ArrayList<Com
 
     @Override
     public void acceptElement(ArrayList<CommandDescription> descriptions) {
-        for (var description : descriptions) {
-            JButton commandButton = new JButton(description.getName());
-            commandButton.addActionListener(new CommandButtonAction());
-            panelToFill.add(commandButton);
-        }
-        panelToFill.invalidate();
-        callback.callRepaint();
+        EventQueue.invokeLater(() -> {
+            for (var description : descriptions) {
+                JButton commandButton = new JButton(description.getName());
+                commandButton.addActionListener(new CommandButtonAction());
+                panelToFill.add(commandButton);
+            }
+            panelToFill.invalidate();
+            callback.callRepaint();
+        });
     }
 
     public void fillAsync() {
