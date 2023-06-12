@@ -77,10 +77,10 @@ loadScripts(document, 'script');</script>
         <li><a href="exceptions/authorization/package-tree.html">exceptions.authorization</a>,</li>
         <li><a href="file/logic/package-tree.html">file.logic</a>,</li>
         <li><a href="file/logic/editors/package-tree.html">file.logic.editors</a>,</li>
-        <li><a href="gui/controllers/auth/package-tree.html">gui.controllers.auth</a>,</li>
-        <li><a href="gui/controllers/auth/callbacks/package-tree.html">gui.controllers.auth.callbacks</a>,</li>
-        <li><a href="gui/controllers/register/package-tree.html">gui.controllers.register</a>,</li>
-        <li><a href="gui/frames/package-tree.html">gui.frames</a>,</li>
+        <li><a href="gui/controllers/auth/package-tree.html">gui.controller.auth</a>,</li>
+        <li><a href="gui/controllers/auth/callbacks/package-tree.html">gui.controller.auth.callback</a>,</li>
+        <li><a href="gui/controllers/register/package-tree.html">gui.controller.register</a>,</li>
+        <li><a href="gui/frames/package-tree.html">gui.frame</a>,</li>
         <li><a href="gui/models/package-tree.html">gui.models</a>,</li>
         <li><a href="gui/models/listeners/package-tree.html">gui.models.listeners</a>,</li>
         <li><a href="listen/logic/package-tree.html">listen.logic</a>,</li>
@@ -237,19 +237,20 @@ loadScripts(document, 'script');</script>
             command.logic.reciever.receivers.<a href="command/logic/reciever/receivers/ExternalArgumentReceiver.html"
                                                 title="interface in command.logic.reciever.receivers">ExternalArgumentReceiver</a>&lt;T&gt;)
         </li>
-        <li class="circle">gui.controllers.auth.<a href="gui/controllers/auth/AuthActionListener.html"
-                                                   class="type-name-link" title="class in gui.controllers.auth">AuthActionListener</a>
+        <li class="circle">gui.controller.auth.<a class="type-name-link"
+                                                  href="gui/controllers/auth/AuthActionListener.html" title="class in gui.controller.auth">AuthActionListener</a>
             (implements java.awt.event.<a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/event/ActionListener.html"
                     title="class or interface in java.awt.event" class="external-link">ActionListener</a>,
             response.logic.<a href="response/logic/ApplicationResponseProvider.html"
                               title="interface in response.logic">ApplicationResponseProvider</a>&lt;T&gt;)
             <ul>
-                <li class="circle">gui.controllers.register.<a
+                <li class="circle">gui.controller.register.<a
                         href="gui/controllers/register/RegisterActionListener.html" class="type-name-link"
-                        title="class in gui.controllers.register">RegisterActionListener</a> (implements java.awt.event.<a
-                        href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/event/ActionListener.html"
-                        title="class or interface in java.awt.event" class="external-link">ActionListener</a>,
+                        title="class in gui.controller.register">RegisterActionListener</a> (implements
+                    java.awt.event.<a
+                            class="external-link"
+                            href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/event/ActionListener.html" title="class or interface in java.awt.event">ActionListener</a>,
                     response.logic.<a href="response/logic/ApplicationResponseProvider.html"
                                       title="interface in response.logic">ApplicationResponseProvider</a>&lt;T&gt;)
                 </li>
@@ -298,15 +299,15 @@ loadScripts(document, 'script');</script>
                     href="request/logic/requests/annotation/processors/RequestAnnotationProcessor.html"
                     title="interface in request.logic.requests.annotation.processors">RequestAnnotationProcessor</a>)
         </li>
-        <li class="circle">gui.controllers.auth.<a href="gui/controllers/auth/AuthTextFieldsEditListener.html"
-                                                   class="type-name-link" title="class in gui.controllers.auth">AuthTextFieldsEditListener</a>
+        <li class="circle">gui.controller.auth.<a class="type-name-link"
+                                                  href="gui/controllers/auth/AuthTextFieldsEditListener.html" title="class in gui.controller.auth">AuthTextFieldsEditListener</a>
             (implements javax.swing.event.<a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/event/DocumentListener.html"
                     title="class or interface in javax.swing.event" class="external-link">DocumentListener</a>)
             <ul>
-                <li class="circle">gui.controllers.register.<a
+                <li class="circle">gui.controller.register.<a
                         href="gui/controllers/register/RegisterTextFieldsEditListener.html" class="type-name-link"
-                        title="class in gui.controllers.register">RegisterTextFieldsEditListener</a></li>
+                        title="class in gui.controller.register">RegisterTextFieldsEditListener</a></li>
             </ul>
         </li>
         <li class="circle">requests.<a href="requests/BaseRequest.html" class="type-name-link"
@@ -479,24 +480,24 @@ loadScripts(document, 'script');</script>
                                                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/WindowConstants.html"
                                                     title="class or interface in javax.swing" class="external-link">WindowConstants</a>)
                                             <ul>
-                                                <li class="circle">gui.frames.<a href="gui/frames/AuthWindow.html"
-                                                                                 class="type-name-link"
-                                                                                 title="class in gui.frames">AuthWindow</a>
-                                                    (implements gui.controllers.auth.callbacks.<a
+                                                <li class="circle">gui.frame.<a class="type-name-link"
+                                                                                href="gui/frames/AuthWindow.html"
+                                                                                title="class in gui.frame">AuthWindow</a>
+                                                    (implements gui.controller.auth.callback.<a
                                                             href="gui/controllers/auth/callbacks/AuthActionListenerCallback.html"
-                                                            title="interface in gui.controllers.auth.callbacks">AuthActionListenerCallback</a>,
+                                                            title="interface in gui.controller.auth.callback">AuthActionListenerCallback</a>,
                                                     core.providers.<a href="core/providers/ExceptionProvider.html"
                                                                       title="interface in core.providers">ExceptionProvider</a>)
                                                     <ul>
-                                                        <li class="circle">gui.frames.<a
+                                                        <li class="circle">gui.frame.<a
                                                                 href="gui/frames/RegisterWindow.html"
-                                                                class="type-name-link" title="class in gui.frames">RegisterWindow</a>
+                                                                class="type-name-link" title="class in gui.frame">RegisterWindow</a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="circle">gui.frames.<a href="gui/frames/MainWindow.html"
-                                                                                 class="type-name-link"
-                                                                                 title="class in gui.frames">MainWindow</a>
+                                                <li class="circle">gui.frame.<a class="type-name-link"
+                                                                                href="gui/frames/MainWindow.html"
+                                                                                title="class in gui.frame">MainWindow</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -644,7 +645,7 @@ loadScripts(document, 'script');</script>
         <li class="circle">response.logic.senders.<a href="response/logic/senders/IntermediateResponseSender.html"
                                                      class="type-name-link" title="class in response.logic.senders">IntermediateResponseSender</a>
         </li>
-        <li class="circle">main.<a href="main/LibUtilities.html" class="type-name-link" title="class in main">LibUtilities</a>
+        <li class="circle">main.<a class="type-name-link" href="main/utils.LibUtilities.html" title="class in main">utils.LibUtilities</a>
         </li>
         <li class="circle">request.logic.workers.<a href="request/logic/workers/ListenCollectionChangeHubWorker.html"
                                                     class="type-name-link" title="class in request.logic.workers">ListenCollectionChangeHubWorker</a>
@@ -743,8 +744,8 @@ loadScripts(document, 'script');</script>
                                                      title="class in response.logic">StatusResponse</a></li>
             </ul>
         </li>
-        <li class="circle">gui.controllers.auth.<a href="gui/controllers/auth/RegisterWindowActionListener.html"
-                                                   class="type-name-link" title="class in gui.controllers.auth">RegisterWindowActionListener</a>
+        <li class="circle">gui.controller.auth.<a class="type-name-link"
+                                                  href="gui/controllers/auth/RegisterWindowActionListener.html" title="class in gui.controller.auth">RegisterWindowActionListener</a>
             (implements java.awt.event.<a
                     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/event/ActionListener.html"
                     title="class or interface in java.awt.event" class="external-link">ActionListener</a>)
@@ -1080,9 +1081,9 @@ loadScripts(document, 'script');</script>
                                                            class="type-name-link"
                                                            title="interface in command.manager.commands">ArgumentConsumer</a>&lt;T&gt;
             </li>
-            <li class="circle">gui.controllers.auth.callbacks.<a
+            <li class="circle">gui.controller.auth.callback.<a
                     href="gui/controllers/auth/callbacks/AuthActionListenerCallback.html" class="type-name-link"
-                    title="interface in gui.controllers.auth.callbacks">AuthActionListenerCallback</a></li>
+                    title="interface in gui.controller.auth.callback">AuthActionListenerCallback</a></li>
             <li class="circle">command.manager.commands.<a href="command/manager/commands/BaseCommand.html"
                                                            class="type-name-link"
                                                            title="interface in command.manager.commands">BaseCommand</a>

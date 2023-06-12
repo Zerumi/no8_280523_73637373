@@ -1,4 +1,4 @@
-import gui.frames.AuthWindow;
+import gui.frame.AuthWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import server.logic.ServerConnectionHandler;

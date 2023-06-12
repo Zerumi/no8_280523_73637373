@@ -23,10 +23,10 @@ exceptions
 exceptions.authorization
 file.logic
 file.logic.editors
-gui.controllers.auth
-gui.controllers.auth.callbacks
-gui.controllers.register
-gui.frames
+gui.controller.auth
+gui.controller.auth.callback
+gui.controller.register
+gui.frame
 gui.models
 gui.models.listeners
 listen.logic

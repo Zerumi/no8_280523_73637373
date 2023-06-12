@@ -1,5 +1,6 @@
 package authorization.credentials;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class AuthenticationData implements Serializable {

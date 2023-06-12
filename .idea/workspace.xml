@@ -8,23 +8,81 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: concurrency in layout">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/ScriptRecursionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/CommandWindow.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: remove resolved todo's">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/utils/ImageUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Biome_Map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Biome_Map.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandLoaderUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandLoaderUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ArgumentRouteCommandReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ExecuteScriptReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ExecuteScriptReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandDescriptionsRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/logic/CommandExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/logic/CommandExecutor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthTextFieldsEditListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthTextFieldsEditListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/RegisterWindowActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/callbacks/AuthActionListenerCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/callback/AuthActionListenerCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/callback/CommandCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/callbacks/RepaintCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/RepaintCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/register/RegisterActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/register/RegisterActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/register/RegisterTextFieldsEditListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/register/RegisterTextFieldsEditListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/AuthWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RegisterWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/database/logic/user/ResourceStreamLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/database/logic/user/ResourceStreamLogic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterTextFieldsEditListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterActionListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterTextFieldsEditListener.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/LibUtilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/LibUtilities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/response/logic/ApplicationResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/response/logic/ApplicationResponseProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/LibUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/utils/LibUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/authorization/credentials/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/authorization/credentials/AuthenticationData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +132,8 @@
         <option value="Tag Library Descriptor" />
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -149,11 +207,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/main/resources" />
       <recent name="$PROJECT_DIR$/shared/src/main/java" />
       <recent name="$PROJECT_DIR$/shared/src/main" />
       <recent name="$PROJECT_DIR$/client/src/main/java" />
       <recent name="$PROJECT_DIR$/client/src/main" />
-      <recent name="$PROJECT_DIR$/server/src/main/java" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="requestLogic.dtoMappers.DTOMapper" />
@@ -173,7 +231,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:server [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -314,8 +372,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
         <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
@@ -364,27 +422,6 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-    </task>
-    <task id="LOCAL-00018" summary="client-server part 3">
-      <created>1679832965918</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1679832965918</updated>
-    </task>
-    <task id="LOCAL-00019" summary="client-server part 4">
-      <created>1679862468655</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1679862468655</updated>
-    </task>
-    <task id="LOCAL-00020" summary="client-server part 5">
-      <created>1679874957682</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1679874957682</updated>
     </task>
     <task id="LOCAL-00021" summary="client-server part 6, final">
       <created>1679925810400</created>
@@ -708,7 +745,28 @@
       <option name="project" value="LOCAL" />
       <updated>1686441856821</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="feat: command gui logic">
+      <created>1686531016769</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1686531016769</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fix: text formatting in commands">
+      <created>1686531067507</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1686531067507</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fix: remove resolved todo's">
+      <created>1686531317737</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1686531317737</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -731,9 +789,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: restructured client + some inspections" />
-    <MESSAGE value="critical: reformed commands + authorization" />
-    <MESSAGE value="chore: inspection" />
     <MESSAGE value="feat: add multithreading" />
     <MESSAGE value="fix: remove static, redundant locks and updated command descriptions" />
     <MESSAGE value="feat: add logout" />
@@ -756,7 +811,10 @@
     <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
     <MESSAGE value="fix: concurrency in layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: concurrency in layout" />
+    <MESSAGE value="feat: command gui logic" />
+    <MESSAGE value="fix: text formatting in commands" />
+    <MESSAGE value="fix: remove resolved todo's" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove resolved todo's" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -788,7 +846,7 @@
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java</url>
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java</url>
           <line>37</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
