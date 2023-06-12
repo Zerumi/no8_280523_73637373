@@ -49,8 +49,6 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
 
         Arrays.stream(providers).forEach(x -> x.acceptException(e));
 
-        // todo: drop exception above (same as response)
-
         logger.error(e);
     }
 
@@ -58,8 +56,6 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
     public void acceptResponse(CommandStatusResponse response) {
 
         Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
-
-        // todo: drop response level above
 
         if (response != null) {
             logger.info("Status code: " + response.getStatusCode());
