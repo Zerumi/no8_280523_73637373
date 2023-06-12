@@ -1,13 +1,16 @@
 package command.logic.external.recievers;
 
-import command.logic.CommandDescriptionHolder;
 import command.logic.CommandDescription;
-import command.logic.reciever.receivers.ExternalBaseReceiver;
+import command.logic.CommandDescriptionHolder;
 import command.logic.CommandExecutor;
 import command.logic.CommandMode;
+import command.logic.reciever.receivers.ExternalBaseReceiver;
 import exceptions.CommandsNotLoadedException;
+import exceptions.ScriptRecursionException;
 import exceptions.WrongAmountOfArgumentsException;
 import models.handlers.Utilities;
+import response.logic.ApplicationResponseProvider;
+import responses.CommandStatusResponse;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,6 +20,7 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,6 +35,13 @@ import java.util.regex.Pattern;
 public class ExecuteScriptReceiver implements ExternalBaseReceiver {
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
+    private final ApplicationResponseProvider<CommandStatusResponse>[] providers;
+
+    @SafeVarargs
+    public ExecuteScriptReceiver(ApplicationResponseProvider<CommandStatusResponse>... providers) {
+        this.providers = providers;
+    }
+
     @Override
     public boolean receiveCommand(CommandDescription commandDescription, String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
 
@@ -39,8 +50,9 @@ public class ExecuteScriptReceiver implements ExternalBaseReceiver {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
         try {
-            CommandExecutor executor = new CommandExecutor(CommandDescriptionHolder.getInstance().getCommands(), new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
+            CommandExecutor executor = new CommandExecutor(CommandDescriptionHolder.getInstance().getCommands(), new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode, providers);
             if (checkRecursion(Path.of(args[1]), new ArrayDeque<>())) {
+                Arrays.stream(providers).forEach(x -> x.acceptException(new ScriptRecursionException()));
                 myLogger.log(Level.WARNING, "При анализе скрипта обнаружена рекурсия. Устраните ее перед исполнением.");
                 return false;
             }

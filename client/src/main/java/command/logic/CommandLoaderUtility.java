@@ -21,6 +21,6 @@ public class CommandLoaderUtility implements SingleElementProvider<ArrayList<Com
 
     @Override
     public void acceptElement(ArrayList<CommandDescription> descriptions) {
-        CommandDescriptionHolder.initialize(descriptions);
+        logger.info("maybe it's already accepted.....");
     }
 }

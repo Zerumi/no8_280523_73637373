@@ -8,10 +8,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: version update + load commands">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: concurrency in layout">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/exceptions/ScriptRecursionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frames/CommandWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandLoaderUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandLoaderUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ArgumentRouteCommandReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ExecuteScriptReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/ExecuteScriptReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandDescriptionsRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandDescriptionsRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/senders/CommandRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/command/logic/CommandExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/logic/CommandExecutor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,9 +135,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="exceptions" />
       <recent name="core.providers" />
       <recent name="gui.controllers.auth.callbacks" />
-      <recent name="exceptions" />
       <recent name="utils" />
       <recent name="serverLogic.abstractLogic" />
     </key>
@@ -160,7 +173,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373:server [run]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -301,8 +314,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
@@ -351,13 +364,6 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-    </task>
-    <task id="LOCAL-00017" summary="apply some fixes">
-      <created>1679526414908</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1679526414908</updated>
     </task>
     <task id="LOCAL-00018" summary="client-server part 3">
       <created>1679832965918</created>
@@ -695,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686441668543</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="fix: concurrency in layout">
+      <created>1686441856821</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1686441856821</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,7 +731,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: bug fixes with registration &amp; auth" />
     <MESSAGE value="chore: restructured client + some inspections" />
     <MESSAGE value="critical: reformed commands + authorization" />
     <MESSAGE value="chore: inspection" />
@@ -743,7 +755,8 @@
     <MESSAGE value="chore: remove unconventional package names, part 1" />
     <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: version update + load commands" />
+    <MESSAGE value="fix: concurrency in layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: concurrency in layout" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -775,32 +788,22 @@
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java</url>
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java</url>
           <line>37</line>
-          <option name="timeStamp" value="153" />
+          <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/request/logic/senders/RequestSender.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="154" />
+          <url>file://$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/main/java/server/logic/udp/UdpServerConnection.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/client/src/main/java/command/logic/external/recievers/NonArgumentReceiver.java</url>
+          <line>40</line>
           <properties>
-            <option name="lambda-ordinal" value="1" />
+            <option name="lambda-ordinal" value="-1" />
           </properties>
-          <option name="timeStamp" value="155" />
+          <option name="timeStamp" value="158" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -9,9 +9,17 @@ import response.logic.ApplicationResponseProvider;
 import responses.CommandStatusResponse;
 import server.logic.ServerConnectionHandler;
 
+import java.util.Arrays;
+
 public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationResponseProvider<CommandStatusResponse> {
 
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
+    private final ApplicationResponseProvider<CommandStatusResponse>[] providers;
+
+    @SafeVarargs
+    public NonArgumentReceiver(ApplicationResponseProvider<CommandStatusResponse>... providers) {
+        this.providers = providers;
+    }
 
     @Override
     public boolean receiveCommand(CommandDescription command, String[] args) {
@@ -22,7 +30,7 @@ public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationRes
     @Override
     public void acceptException(Exception e) {
 
-        // todo: same as argument command...
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
 
         logger.error(e);
     }
@@ -30,7 +38,7 @@ public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationRes
     @Override
     public void acceptResponse(CommandStatusResponse response) {
 
-        // todo: same thing...
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
 
         if (response != null) {
             logger.info("Status code: " + response.getStatusCode());

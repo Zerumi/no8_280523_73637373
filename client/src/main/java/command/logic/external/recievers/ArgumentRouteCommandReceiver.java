@@ -12,17 +12,23 @@ import response.logic.ApplicationResponseProvider;
 import responses.CommandStatusResponse;
 import server.logic.ServerConnectionHandler;
 
+import java.util.Arrays;
+
 public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Route>, ApplicationResponseProvider<CommandStatusResponse> {
 
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
-    ModuleHandler<Route> handler;
-    Route route;
+    private final ApplicationResponseProvider<CommandStatusResponse>[] providers;
+    private final ModuleHandler<Route> handler;
+    private Route route;
 
     {
         route = new Route();
     }
 
-    public ArgumentRouteCommandReceiver(ModuleHandler<Route> handler) {
+    @SafeVarargs
+    public ArgumentRouteCommandReceiver
+            (ModuleHandler<Route> handler, ApplicationResponseProvider<CommandStatusResponse>... providers) {
+        this.providers = providers;
         this.handler = handler;
     }
 
@@ -41,6 +47,8 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
     @Override
     public void acceptException(Exception e) {
 
+        Arrays.stream(providers).forEach(x -> x.acceptException(e));
+
         // todo: drop exception above (same as response)
 
         logger.error(e);
@@ -48,6 +56,8 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
 
     @Override
     public void acceptResponse(CommandStatusResponse response) {
+
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
 
         // todo: drop response level above
 

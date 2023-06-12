@@ -1,6 +1,7 @@
 package request.logic.senders;
 
 import command.logic.CommandDescription;
+import command.logic.CommandDescriptionHolder;
 import core.providers.SingleElementProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,6 +44,8 @@ public class CommandDescriptionsRequestSender implements ApplicationResponseProv
             ArrayList<CommandDescription> result;
             CommandDescriptionsResponse acceptedResponse = (CommandDescriptionsResponse) response;
             result = acceptedResponse.getCommands();
+
+            CommandDescriptionHolder.initialize(result);
 
             ArrayList<CommandDescription> finalResult = result;
             Arrays.stream(providers).forEach(x -> x.acceptElement(finalResult));

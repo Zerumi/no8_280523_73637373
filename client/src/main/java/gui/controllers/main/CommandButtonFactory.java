@@ -33,7 +33,7 @@ public class CommandButtonFactory implements SingleElementProvider<ArrayList<Com
         EventQueue.invokeLater(() -> {
             for (var description : descriptions) {
                 JButton commandButton = new JButton(description.getName());
-                commandButton.addActionListener(new CommandButtonAction());
+                commandButton.addActionListener(new CommandButtonAction(description));
                 panelToFill.add(commandButton);
             }
             panelToFill.invalidate();
