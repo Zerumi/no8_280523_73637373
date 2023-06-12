@@ -49,7 +49,7 @@ public class CommandWindow extends JFrame implements CommandCallback, ExceptionP
     public void writeResponse(CommandStatusResponse response) {
         textArea.setText(null);
         textArea.append("Status Code: " + response.getStatusCode() + "\n\n");
-        textArea.append("Response: " + response.getResponse());
+        textArea.append("Response: \n" + response.getResponse());
     }
 
     @Override
