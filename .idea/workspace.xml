@@ -8,81 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: remove resolved todo's">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/utils/ImageUtilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Biome_Map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Biome_Map.webp" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: visualization part 0.1">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableRender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/AuthTextFieldsEditListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthTextFieldsEditListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/RegisterWindowActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/RegisterWindowActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/auth/callbacks/AuthActionListenerCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/callback/AuthActionListenerCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/callback/CommandCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/command/CommandExecuteButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/CommandButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/main/callbacks/RepaintCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/RepaintCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/register/RegisterActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/register/RegisterActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controllers/register/RegisterTextFieldsEditListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/register/RegisterTextFieldsEditListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/AuthWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frames/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RegisterWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/core/providers/ExceptionProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/database/logic/user/ResourceStreamLogic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/database/logic/user/ResourceStreamLogic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/AuthActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/RegisterWindowActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/AuthTextFieldsEditListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterTextFieldsEditListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/RegisterWindowActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/AuthActionListenerCallback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/callbacks/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/auth/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/AuthActionListenerCallback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/callbacks/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterActionListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterActionListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterTextFieldsEditListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/RegisterTextFieldsEditListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/controllers/register/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/controllers/register/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/AuthWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/MainWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/RegisterWindow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/gui/frames/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/LibUtilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/LibUtilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/main/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/response/logic/ApplicationResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/response/logic/ApplicationResponseProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/responseLogic/ApplicationResponseProvider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/LibUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/utils/LibUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/authorization/credentials/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/authorization/credentials/AuthenticationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,36 +90,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exceptions" />
@@ -422,13 +351,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-    </task>
-    <task id="LOCAL-00021" summary="client-server part 6, final">
-      <created>1679925810400</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1679925810400</updated>
+      <workItem from="1686642215467" duration="7262000" />
     </task>
     <task id="LOCAL-00022" summary="add diagrams">
       <created>1679925824873</created>
@@ -766,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686531317737</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="feat: visualization part 0.1">
+      <created>1686638655222</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1686638655222</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -789,7 +719,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: add multithreading" />
     <MESSAGE value="fix: remove static, redundant locks and updated command descriptions" />
     <MESSAGE value="feat: add logout" />
     <MESSAGE value="fix: teacher's edits" />
@@ -814,7 +743,8 @@
     <MESSAGE value="feat: command gui logic" />
     <MESSAGE value="fix: text formatting in commands" />
     <MESSAGE value="fix: remove resolved todo's" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove resolved todo's" />
+    <MESSAGE value="feat: visualization part 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: visualization part 0.1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

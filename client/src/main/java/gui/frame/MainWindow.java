@@ -7,6 +7,7 @@ import gui.controller.main.CommandButtonFactory;
 import gui.controller.main.action.OpenVisualizationAction;
 import gui.controller.main.callback.RepaintCallback;
 import gui.models.RouteTableModel;
+import gui.view.render.RouteTableRender;
 import models.RouteFields;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -69,6 +70,7 @@ public class MainWindow extends JFrame implements ExceptionProvider, RepaintCall
 
         JTable table = new JTable(new RouteTableModel());
 
+        table.setDefaultRenderer(Object.class, new RouteTableRender());
         table.setPreferredScrollableViewportSize(new Dimension(500, 70));
         table.setFillsViewportHeight(true);
 
