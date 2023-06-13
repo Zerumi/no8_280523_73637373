@@ -1,12 +1,12 @@
 package command.manager.commands;
 
-import models.Route;
-import models.comparators.RouteCreationDateComparator;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import model.Route;
+import model.comparator.RouteCreationDateComparator;
+import model.handler.CollectionHandler;
+import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 import java.util.Date;
 import java.util.HashSet;

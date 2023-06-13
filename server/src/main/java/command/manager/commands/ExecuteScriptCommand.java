@@ -1,6 +1,6 @@
 package command.manager.commands;
 
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 public class ExecuteScriptCommand implements BaseCommand {
 

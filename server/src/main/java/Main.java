@@ -1,16 +1,16 @@
 import command.manager.server.ServerCommandManager;
 import database.logic.element.DBCollectionLoader;
-import exceptions.UnknownCommandException;
-import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import exception.UnknownCommandException;
+import model.Route;
+import model.handler.CollectionHandler;
+import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.RequestReader;
 import request.logic.StatusRequest;
-import request.logic.workers.RequestWorkerManager;
-import request.logic.requests.ServerRequest;
-import requests.BaseRequest;
+import request.logic.worker.RequestWorkerManager;
+import request.logic.request.ServerRequest;
+import request.BaseRequest;
 import server.logic.datagram.DatagramServerConnectionFactory;
 import server.logic.abstrct.ServerConnection;
 

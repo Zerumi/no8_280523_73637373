@@ -1,6 +1,6 @@
 package request.logic.authentication;
 
-import authorization.credentials.AuthenticationData;
+import authorization.credential.AuthenticationData;
 
 public class AuthDataHolder {
     private static final AuthDataHolder holder;

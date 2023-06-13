@@ -1,17 +1,17 @@
 package gui.frame;
 
 import authorization.AuthorizedUserData;
-import core.providers.ExceptionProvider;
-import exceptions.DenyOperationException;
+import core.provider.ExceptionProvider;
+import exception.DenyOperationException;
 import gui.controller.main.CommandButtonFactory;
 import gui.controller.main.action.OpenVisualizationAction;
 import gui.controller.main.callback.RepaintCallback;
-import gui.models.RouteTableModel;
+import gui.model.RouteTableModel;
 import gui.view.render.RouteTableRender;
-import models.RouteFields;
+import model.RouteFields;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import utils.RouteFieldComparators;
+import util.RouteFieldComparators;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;

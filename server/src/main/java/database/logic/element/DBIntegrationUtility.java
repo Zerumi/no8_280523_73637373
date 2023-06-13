@@ -1,18 +1,18 @@
 package database.logic.element;
 
-import exceptions.NotEditableException;
+import exception.NotEditableException;
 import javassist.NotFoundException;
-import models.Route;
-import models.RouteFields;
-import models.collection.actions.UpdateCollectionAction;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import model.Route;
+import model.RouteFields;
+import model.collection.actions.UpdateCollectionAction;
+import model.handler.CollectionHandler;
+import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import request.logic.workers.ListenCollectionChangeHubWorker;
+import request.logic.worker.ListenCollectionChangeHubWorker;
 import response.logic.StatusResponse;
-import responses.CollectionUpdatedResponse;
-import utils.RouteFieldToRoute;
+import response.CollectionUpdatedResponse;
+import util.RouteFieldToRoute;
 
 import java.io.IOException;
 import java.sql.SQLException;

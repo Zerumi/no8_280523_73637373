@@ -1,6 +1,6 @@
 package server.logic.abstrct;
 
-import core.providers.ExceptionProvider;
+import core.provider.ExceptionProvider;
 
 /**
  * Base observer interface for accepting responses

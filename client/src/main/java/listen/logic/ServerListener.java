@@ -1,12 +1,12 @@
 package listen.logic;
 
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
+import exception.GotAnErrorResponseException;
+import exception.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import response.logic.ApplicationResponseProvider;
 import response.logic.ResponseReader;
-import responses.BaseResponse;
+import response.BaseResponse;
 import server.logic.ServerConnectionHandler;
 import server.logic.abstrct.ServerResponseProvider;
 

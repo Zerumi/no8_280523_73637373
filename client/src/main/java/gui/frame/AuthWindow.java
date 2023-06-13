@@ -1,13 +1,13 @@
 package gui.frame;
 
-import core.providers.ExceptionProvider;
+import core.provider.ExceptionProvider;
 import gui.controller.auth.AuthActionListener;
 import gui.controller.auth.AuthTextFieldsEditListener;
 import gui.controller.auth.RegisterWindowActionListener;
 import gui.controller.auth.callback.AuthActionListenerCallback;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import utils.SpringUtilities;
+import util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;

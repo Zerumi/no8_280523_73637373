@@ -1,12 +1,12 @@
 package command.manager.commands;
 
-import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import model.Route;
+import model.handler.CollectionHandler;
+import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
-import utils.Utilities;
+import response.CommandStatusResponse;
+import util.Utilities;
 
 import java.util.HashSet;
 

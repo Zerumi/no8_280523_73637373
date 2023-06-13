@@ -1,23 +1,23 @@
 package command.logic;
 
-import command.logic.external.recievers.ArgumentRouteCommandReceiver;
-import command.logic.external.recievers.ExecuteScriptReceiver;
-import command.logic.external.recievers.ExitReceiver;
-import command.logic.external.recievers.NonArgumentReceiver;
+import command.logic.external.reciever.ArgumentRouteCommandReceiver;
+import command.logic.external.reciever.ExecuteScriptReceiver;
+import command.logic.external.reciever.ExitReceiver;
+import command.logic.external.reciever.NonArgumentReceiver;
 import command.logic.reciever.ReceiverManager;
-import command.logic.reciever.enums.ReceiverType;
-import command.logic.reciever.handlers.ArgumentReceiverHandler;
-import command.logic.reciever.handlers.NonArgReceiversHandler;
-import exceptions.*;
-import models.Route;
-import models.handlers.ModuleHandler;
-import models.handlers.mode.cli.RouteCLIHandler;
-import models.handlers.mode.gui.GUIRouteHandler;
-import models.handlers.mode.stream.RouteNonCLIHandler;
+import command.logic.reciever.enam.ReceiverType;
+import command.logic.reciever.handler.ArgumentReceiverHandler;
+import command.logic.reciever.handler.NonArgReceiversHandler;
+import exception.*;
+import model.Route;
+import model.handler.ModuleHandler;
+import model.handler.mode.cli.RouteCLIHandler;
+import model.handler.mode.gui.GUIRouteHandler;
+import model.handler.mode.stream.RouteNonCLIHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import response.logic.ApplicationResponseProvider;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

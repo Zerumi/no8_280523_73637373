@@ -1,10 +1,10 @@
 package response.logic;
 
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
-import responses.BaseResponse;
-import responses.ErrorResponse;
-import responses.IntermediateResponse;
+import exception.GotAnErrorResponseException;
+import exception.ProceedException;
+import response.BaseResponse;
+import response.ErrorResponse;
+import response.IntermediateResponse;
 
 import java.io.IOException;
 import java.io.InputStream;

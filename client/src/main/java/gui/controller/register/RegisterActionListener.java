@@ -1,12 +1,12 @@
 package gui.controller.register;
 
-import authorization.credentials.RegistrationData;
-import core.providers.ExceptionProvider;
+import authorization.credential.RegistrationData;
+import core.provider.ExceptionProvider;
 import gui.controller.auth.AuthActionListener;
 import gui.controller.auth.callback.AuthActionListenerCallback;
-import request.logic.senders.RegistrationRequestSender;
+import request.logic.sender.RegistrationRequestSender;
 import response.logic.ApplicationResponseProvider;
-import responses.AuthorizeResponse;
+import response.AuthorizeResponse;
 
 import javax.swing.*;
 import java.awt.*;

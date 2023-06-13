@@ -3,13 +3,13 @@ package command.manager;
 import command.logic.CommandDescription;
 import command.manager.preprocessing.CommandPreProcessorManager;
 import command.manager.commands.*;
-import exceptions.UnknownCommandException;
+import exception.UnknownCommandException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.CallerBack;
-import requests.CommandClientRequest;
-import response.logic.senders.ResponseSender;
-import responses.CommandStatusResponse;
+import request.CommandClientRequest;
+import response.logic.sender.ResponseSender;
+import response.CommandStatusResponse;
 import server.logic.abstrct.ServerConnection;
 
 import java.util.LinkedHashMap;

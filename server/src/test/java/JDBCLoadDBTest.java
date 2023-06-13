@@ -1,5 +1,5 @@
 import database.logic.element.DBCollectionLoader;
-import models.Route;
+import model.Route;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

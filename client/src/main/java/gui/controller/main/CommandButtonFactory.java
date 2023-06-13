@@ -1,10 +1,10 @@
 package gui.controller.main;
 
 import command.logic.CommandDescription;
-import core.providers.ExceptionProvider;
-import core.providers.SingleElementProvider;
+import core.provider.ExceptionProvider;
+import core.provider.SingleElementProvider;
 import gui.controller.main.callback.RepaintCallback;
-import request.logic.senders.CommandDescriptionsRequestSender;
+import request.logic.sender.CommandDescriptionsRequestSender;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,12 +1,12 @@
-import authorization.credentials.AuthenticationData;
+import authorization.credential.AuthenticationData;
 import client.logic.AuthorizeManager;
 import command.logic.CommandDescription;
-import command.logic.reciever.callers.ExternalBaseReceiverCaller;
-import exceptions.authorization.AuthorizeException;
+import command.logic.reciever.caller.ExternalBaseReceiverCaller;
+import exception.authorization.AuthorizeException;
 import request.logic.CallerBack;
-import request.logic.workers.RequestWorkerManager;
-import request.logic.requests.ServerRequest;
-import requests.CommandClientRequest;
+import request.logic.worker.RequestWorkerManager;
+import request.logic.request.ServerRequest;
+import request.CommandClientRequest;
 import server.logic.datagram.DatagramServerConnectionFactory;
 
 import java.net.InetSocketAddress;

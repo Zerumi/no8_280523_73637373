@@ -1,12 +1,12 @@
 package client.logic;
 
 import authorization.AuthorizedUserData;
-import authorization.credentials.AuthenticationData;
-import authorization.credentials.RegistrationData;
+import authorization.credential.AuthenticationData;
+import authorization.credential.RegistrationData;
 import database.logic.user.DBUserManager;
 import database.logic.user.PasswordEncryptionImplSHA512;
-import exceptions.authorization.AuthorizeException;
-import exceptions.authorization.UnauthorizedException;
+import exception.authorization.AuthorizeException;
+import exception.authorization.UnauthorizedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.CallerBack;

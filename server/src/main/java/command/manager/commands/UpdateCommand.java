@@ -1,11 +1,11 @@
 package command.manager.commands;
 
 import database.logic.element.DBIntegrationUtility;
-import models.Route;
+import model.Route;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
-import utils.Utilities;
+import response.CommandStatusResponse;
+import util.Utilities;
 
 import java.time.Instant;
 import java.util.Date;

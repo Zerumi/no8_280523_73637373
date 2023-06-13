@@ -1,9 +1,9 @@
 package database.logic.element;
 
-import exceptions.ElementNotAddedException;
-import models.Coordinates;
-import models.Location;
-import models.Route;
+import exception.ElementNotAddedException;
+import model.Coordinates;
+import model.Location;
+import model.Route;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,6 +1,6 @@
 package client.logic;
 
-import exceptions.authorization.UnauthorizedException;
+import exception.authorization.UnauthorizedException;
 import request.logic.CallerBack;
 
 import java.util.HashSet;

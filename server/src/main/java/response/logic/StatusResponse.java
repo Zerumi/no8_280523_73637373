@@ -1,6 +1,6 @@
 package response.logic;
 
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 public record StatusResponse(String response, int code) {
 

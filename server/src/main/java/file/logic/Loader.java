@@ -1,6 +1,6 @@
 package file.logic;
 
-import file.logic.editors.DateEditor;
+import file.logic.editor.DateEditor;
 
 import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;

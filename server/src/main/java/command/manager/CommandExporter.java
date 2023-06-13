@@ -1,9 +1,9 @@
 package command.manager;
 
 import command.logic.CommandDescription;
-import command.logic.reciever.callers.ExternalArgumentReceiverCaller;
-import command.logic.reciever.callers.ExternalBaseReceiverCaller;
-import models.Route;
+import command.logic.reciever.caller.ExternalArgumentReceiverCaller;
+import command.logic.reciever.caller.ExternalBaseReceiverCaller;
+import model.Route;
 
 import java.util.ArrayList;
 

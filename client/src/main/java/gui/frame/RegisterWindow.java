@@ -2,7 +2,7 @@ package gui.frame;
 
 import gui.controller.register.RegisterActionListener;
 import gui.controller.register.RegisterTextFieldsEditListener;
-import utils.SpringUtilities;
+import util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;

@@ -2,7 +2,7 @@ package command.manager.server;
 
 import command.manager.commands.BaseCommand;
 import command.manager.server.commands.ShowSessions;
-import exceptions.UnknownCommandException;
+import exception.UnknownCommandException;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;

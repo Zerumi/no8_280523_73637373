@@ -1,14 +1,14 @@
 package gui.controller.auth;
 
 import authentication.AuthLogic;
-import core.providers.ExceptionProvider;
-import exceptions.DenyOperationException;
+import core.provider.ExceptionProvider;
+import exception.DenyOperationException;
 import gui.controller.auth.callback.AuthActionListenerCallback;
 import gui.frame.MainWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import response.logic.ApplicationResponseProvider;
-import responses.AuthorizeResponse;
+import response.AuthorizeResponse;
 
 import javax.swing.*;
 import java.awt.*;

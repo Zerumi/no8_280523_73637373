@@ -1,13 +1,13 @@
 package command.manager.commands;
 
 import database.logic.element.DBIntegrationUtility;
-import models.Route;
-import models.comparators.RouteDistanceComparator;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
+import model.Route;
+import model.comparator.RouteDistanceComparator;
+import model.handler.CollectionHandler;
+import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 import java.time.Instant;
 import java.util.Date;

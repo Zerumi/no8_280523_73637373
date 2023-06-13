@@ -1,8 +1,8 @@
 package command.logic.reciever;
 
-import command.logic.reciever.enums.ReceiverType;
-import command.logic.reciever.handlers.ReceiverHandler;
-import command.logic.reciever.receivers.ExternalBaseReceiver;
+import command.logic.reciever.enam.ReceiverType;
+import command.logic.reciever.handler.ReceiverHandler;
+import command.logic.reciever.receiver.ExternalBaseReceiver;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

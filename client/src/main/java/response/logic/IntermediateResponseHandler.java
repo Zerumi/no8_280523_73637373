@@ -1,13 +1,13 @@
 package response.logic;
 
-import core.providers.ExceptionProvider;
-import exceptions.GotAnErrorResponseException;
-import exceptions.ProceedException;
+import core.provider.ExceptionProvider;
+import exception.GotAnErrorResponseException;
+import exception.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.BaseResponse;
-import responses.ByteArrayPacketResponse;
-import responses.IntermediateResponse;
+import response.BaseResponse;
+import response.ByteArrayPacketResponse;
+import response.IntermediateResponse;
 import server.logic.ServerConnectionHandler;
 import server.logic.abstrct.LargePacketProvider;
 import server.logic.abstrct.ListenLoopListener;

@@ -1,12 +1,12 @@
 package database.logic.user;
 
 import authorization.AuthorizedUserData;
-import authorization.credentials.AuthenticationData;
-import authorization.credentials.RegistrationData;
-import exceptions.authorization.AuthorizeException;
-import exceptions.authorization.RegistrationFailedException;
-import exceptions.authorization.UnregisteredException;
-import exceptions.authorization.WrongPasswordException;
+import authorization.credential.AuthenticationData;
+import authorization.credential.RegistrationData;
+import exception.authorization.AuthorizeException;
+import exception.authorization.RegistrationFailedException;
+import exception.authorization.UnregisteredException;
+import exception.authorization.WrongPasswordException;
 import org.apache.commons.lang3.ArrayUtils;
 import request.logic.CallerBack;
 

@@ -3,7 +3,7 @@ package command.manager.commands;
 import client.logic.SessionHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 /**
  * Terminates the application (without saving collection).

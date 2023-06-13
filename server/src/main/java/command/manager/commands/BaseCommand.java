@@ -1,7 +1,7 @@
 package command.manager.commands;
 
 import command.manager.CommandManager;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 /**
  * Base interface for command implementation. You should implement it before applying command in CommandManager

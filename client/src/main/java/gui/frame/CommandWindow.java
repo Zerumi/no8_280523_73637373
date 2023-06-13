@@ -1,11 +1,11 @@
 package gui.frame;
 
 import command.logic.CommandDescription;
-import core.providers.ExceptionProvider;
+import core.provider.ExceptionProvider;
 import gui.controller.command.callback.CommandCallback;
 import gui.controller.command.CommandExecuteButtonController;
-import responses.CommandStatusResponse;
-import utils.SpringUtilities;
+import response.CommandStatusResponse;
+import util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;

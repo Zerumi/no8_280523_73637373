@@ -4,8 +4,8 @@ import command.manager.preprocessing.processors.CommandAuthorizePreProcessor;
 import command.manager.preprocessing.processors.CommandPreProcessor;
 import command.manager.commands.AuthorizableCommand;
 import command.manager.commands.BaseCommand;
-import exceptions.PreProceedingFailedException;
-import exceptions.ProcessionInterruptedException;
+import exception.PreProceedingFailedException;
+import exception.ProcessionInterruptedException;
 import request.logic.CallerBack;
 import server.logic.abstrct.ServerConnection;
 

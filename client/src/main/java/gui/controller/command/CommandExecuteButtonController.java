@@ -1,11 +1,11 @@
 package gui.controller.command;
 
 import command.logic.*;
-import core.providers.ExceptionProvider;
-import exceptions.CommandsNotLoadedException;
+import core.provider.ExceptionProvider;
+import exception.CommandsNotLoadedException;
 import gui.controller.command.callback.CommandCallback;
 import response.logic.ApplicationResponseProvider;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

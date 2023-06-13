@@ -1,8 +1,8 @@
 package command.manager.preprocessing.processors;
 
 import command.manager.commands.BaseCommand;
-import exceptions.PreProceedingFailedException;
-import exceptions.ProcessionInterruptedException;
+import exception.PreProceedingFailedException;
+import exception.ProcessionInterruptedException;
 import request.logic.CallerBack;
 import server.logic.abstrct.ServerConnection;
 

@@ -1,7 +1,7 @@
 package gui.frame;
 
 
-import utils.ImageUtilities;
+import util.ImageUtilities;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

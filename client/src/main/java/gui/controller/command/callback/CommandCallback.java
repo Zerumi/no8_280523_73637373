@@ -1,6 +1,6 @@
 package gui.controller.command.callback;
 
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 public interface CommandCallback {
     void writeResponse(CommandStatusResponse response);

@@ -1,11 +1,11 @@
 package command.manager.commands;
 
 import database.logic.element.DBIntegrationUtility;
-import models.Route;
-import models.comparators.RouteDistanceComparator;
+import model.Route;
+import model.comparator.RouteDistanceComparator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 import java.io.IOException;
 import java.sql.SQLException;

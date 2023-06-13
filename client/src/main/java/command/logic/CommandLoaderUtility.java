@@ -1,9 +1,9 @@
 package command.logic;
 
-import core.providers.SingleElementProvider;
+import core.provider.SingleElementProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import request.logic.senders.CommandDescriptionsRequestSender;
+import request.logic.sender.CommandDescriptionsRequestSender;
 
 import java.util.ArrayList;
 

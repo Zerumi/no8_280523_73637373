@@ -1,6 +1,6 @@
 package command.logic;
 
-import command.logic.reciever.callers.ExternalCaller;
+import command.logic.reciever.caller.ExternalCaller;
 
 import java.io.Serializable;
 

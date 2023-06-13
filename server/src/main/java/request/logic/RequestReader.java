@@ -1,6 +1,6 @@
 package request.logic;
 
-import requests.BaseRequest;
+import request.BaseRequest;
 
 import java.io.IOException;
 import java.io.InputStream;

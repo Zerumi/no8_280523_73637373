@@ -3,7 +3,7 @@ package command.manager.commands;
 import database.logic.element.DBIntegrationUtility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responses.CommandStatusResponse;
+import response.CommandStatusResponse;
 
 /**
  * Removes element from collection by id.

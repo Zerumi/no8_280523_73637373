@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  <meta name="dc.created" content="2023-06-10">
- <meta name="description" content="declaration: package: request.logic.senders, class: AuthorizationRequestSender">
+ <meta name="description" content="declaration: package: request.logic.sender, class: AuthorizationRequestSender">
  <meta name="generator" content="javadoc/ClassWriterImpl">
  <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
  <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
@@ -69,31 +69,33 @@ loadScripts(document, 'script');</script>
   <main role="main">
    <!-- ======== START OF CLASS DATA ======== -->
    <div class="header">
-    <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">request.logic.senders</a>
-    </div>
+       <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">request.logic.sender</a>
+       </div>
     <h1 title="Class AuthorizationRequestSender" class="title">Class AuthorizationRequestSender</h1>
    </div>
    <div class="inheritance" title="Inheritance Tree"><a
            href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
            title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-    <div class="inheritance">request.logic.senders.AuthorizationRequestSender</div>
+       <div class="inheritance">request.logic.sender.AuthorizationRequestSender</div>
    </div>
    <section class="class-description" id="class-description">
     <dl class="notes">
      <dt>All Implemented Interfaces:</dt>
-     <dd><code><a href="../../../core/providers/ExceptionProvider.html" title="interface in core.providers">ExceptionProvider</a></code>,
-      <code><a href="../../../response/logic/ApplicationResponseProvider.html" title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
-              href="../../../responses/AuthorizeResponse.html"
-              title="class in responses">AuthorizeResponse</a>&gt;</code></dd>
+        <dd><code><a href="../../../core/providers/ExceptionProvider.html" title="interface in core.provider">ExceptionProvider</a></code>,
+            <code><a href="../../../response/logic/ApplicationResponseProvider.html"
+                     title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
+                    href="../../../responses/AuthorizeResponse.html"
+                    title="class in response">AuthorizeResponse</a>&gt;</code></dd>
     </dl>
     <hr>
-    <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AuthorizationRequestSender</span>
-     <span class="extends-implements">extends <a
-             href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
-             title="class or interface in java.lang" class="external-link">Object</a>
+       <div class="type-signature"><span class="modifiers">public class </span><span
+               class="element-name type-name-label">AuthorizationRequestSender</span>
+           <span class="extends-implements">extends <a
+                   href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html"
+                   title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../response/logic/ApplicationResponseProvider.html" title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
-              href="../../../responses/AuthorizeResponse.html"
-              title="class in responses">AuthorizeResponse</a>&gt;</span></div>
+                       href="../../../responses/AuthorizeResponse.html"
+                       title="class in response">AuthorizeResponse</a>&gt;</span></div>
    </section>
    <section class="summary">
     <ul class="summary-list">
@@ -150,9 +152,9 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
           <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
            <code>void</code></div>
           <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-           <code><a href="#acceptResponse(responses.AuthorizeResponse)" class="member-name-link">acceptResponse</a>
-            <wbr>
-            (<a href="../../../responses/AuthorizeResponse.html" title="class in responses">AuthorizeResponse</a>&nbsp;response)</code>
+              <code><a href="#acceptResponse(responses.AuthorizeResponse)" class="member-name-link">acceptResponse</a>
+                  <wbr>
+                  (<a href="../../../responses/AuthorizeResponse.html" title="class in response">AuthorizeResponse</a>&nbsp;response)</code>
           </div>
           <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
            &nbsp;
@@ -160,14 +162,16 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
           <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
            <code>final void</code></div>
           <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-           <code><a
-                   href="#sendLoginRequest(authorization.credentials.AuthenticationData,response.logic.ApplicationResponseProvider...)"
-                   class="member-name-link">sendLoginRequest</a>
-            <wbr>
-            (<a href="../../../authorization/credentials/AuthenticationData.html"
-                title="class in authorization.credentials">AuthenticationData</a>&nbsp;data,
-            <a href="../../../response/logic/ApplicationResponseProvider.html" title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
-                    href="../../../responses/AuthorizeResponse.html" title="class in responses">AuthorizeResponse</a>&gt;...&nbsp;providers)</code>
+              <code><a
+                      href="#sendLoginRequest(authorization.credentials.AuthenticationData,response.logic.ApplicationResponseProvider...)"
+                      class="member-name-link">sendLoginRequest</a>
+                  <wbr>
+                  (<a href="../../../authorization/credentials/AuthenticationData.html"
+                      title="class in authorization.credential">AuthenticationData</a>&nbsp;data,
+                  <a href="../../../response/logic/ApplicationResponseProvider.html"
+                     title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
+                          href="../../../responses/AuthorizeResponse.html"
+                          title="class in response">AuthorizeResponse</a>&gt;...&nbsp;providers)</code>
           </div>
           <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
            &nbsp;
@@ -237,10 +241,11 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
 </span><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span
                   class="element-name">sendLoginRequest</span>
            <wbr>
-           <span class="parameters">(<a href="../../../authorization/credentials/AuthenticationData.html"
-                                        title="class in authorization.credentials">AuthenticationData</a>&nbsp;data,
+              <span class="parameters">(<a href="../../../authorization/credentials/AuthenticationData.html"
+                                           title="class in authorization.credential">AuthenticationData</a>&nbsp;data,
  <a href="../../../response/logic/ApplicationResponseProvider.html" title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
-                    href="../../../responses/AuthorizeResponse.html" title="class in responses">AuthorizeResponse</a>&gt;...&nbsp;providers)</span>
+                          href="../../../responses/AuthorizeResponse.html"
+                          title="class in response">AuthorizeResponse</a>&gt;...&nbsp;providers)</span>
           </div>
          </section>
         </li>
@@ -255,9 +260,9 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
                    title="class or interface in java.lang" class="external-link">Exception</a>&nbsp;e)</span></div>
           <dl class="notes">
            <dt>Specified by:</dt>
-           <dd><code><a href="../../../core/providers/ExceptionProvider.html#acceptException(java.lang.Exception)">acceptException</a></code>&nbsp;in
-            interface&nbsp;<code><a href="../../../core/providers/ExceptionProvider.html"
-                                    title="interface in core.providers">ExceptionProvider</a></code></dd>
+              <dd><code><a href="../../../core/providers/ExceptionProvider.html#acceptException(java.lang.Exception)">acceptException</a></code>&nbsp;in
+                  interface&nbsp;<code><a href="../../../core/providers/ExceptionProvider.html"
+                                          title="interface in core.provider">ExceptionProvider</a></code></dd>
           </dl>
          </section>
         </li>
@@ -267,7 +272,7 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
           <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span
                   class="element-name">acceptResponse</span>
            <wbr>
-           <span class="parameters">(<a href="../../../responses/AuthorizeResponse.html" title="class in responses">AuthorizeResponse</a>&nbsp;response)</span>
+              <span class="parameters">(<a href="../../../responses/AuthorizeResponse.html" title="class in response">AuthorizeResponse</a>&nbsp;response)</span>
           </div>
           <dl class="notes">
            <dt>Specified by:</dt>
@@ -275,7 +280,7 @@ implements <a href="../../../response/logic/ApplicationResponseProvider.html" ti
                    href="../../../response/logic/ApplicationResponseProvider.html#acceptResponse(T)">acceptResponse</a></code>&nbsp;in
             interface&nbsp;<code><a href="../../../response/logic/ApplicationResponseProvider.html"
                                     title="interface in response.logic">ApplicationResponseProvider</a>&lt;<a
-                    href="../../../responses/AuthorizeResponse.html" title="class in responses">AuthorizeResponse</a>&gt;</code>
+                       href="../../../responses/AuthorizeResponse.html" title="class in response">AuthorizeResponse</a>&gt;</code>
            </dd>
           </dl>
          </section>

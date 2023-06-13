@@ -1,8 +1,8 @@
 package database.logic.element;
 
-import models.Coordinates;
-import models.Location;
-import models.Route;
+import model.Coordinates;
+import model.Location;
+import model.Route;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

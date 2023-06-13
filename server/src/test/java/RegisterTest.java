@@ -1,6 +1,6 @@
-import authorization.credentials.RegistrationData;
+import authorization.credential.RegistrationData;
 import client.logic.AuthorizeManager;
-import exceptions.authorization.AuthorizeException;
+import exception.authorization.AuthorizeException;
 import request.logic.CallerBack;
 
 import java.net.InetSocketAddress;
