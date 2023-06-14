@@ -4,9 +4,9 @@ import command.logic.CommandDescription;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.CommandClientRequest;
-import response.logic.ApplicationResponseProvider;
 import response.BaseResponse;
 import response.CommandStatusResponse;
+import response.logic.ApplicationResponseProvider;
 import server.logic.abstrct.ServerConnection;
 
 import java.io.IOException;
@@ -41,8 +41,9 @@ public class CommandRequestSender implements ApplicationResponseProvider<BaseRes
 
     @Override
     public void acceptResponse(BaseResponse response) {
-        var acceptedResponse = (CommandStatusResponse) response;
-        Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
-        requestSender.removeListener(this);
+        if (response instanceof CommandStatusResponse acceptedResponse) {
+            Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+            requestSender.removeListener(this);
+        }
     }
 }

@@ -61,10 +61,4 @@ public class RegisterWindow extends AuthWindow {
         this.add(southPanel, BorderLayout.SOUTH);
         this.pack();
     }
-
-    @Override
-    public void succeedAction() {
-        this.setVisible(false);
-        this.dispose();
-    }
 }

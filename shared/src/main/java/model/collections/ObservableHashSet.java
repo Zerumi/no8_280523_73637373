@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.function.Predicate;
 
 public class ObservableHashSet<T> extends HashSet<T> {
 
@@ -60,5 +61,14 @@ public class ObservableHashSet<T> extends HashSet<T> {
         if (listeners != null)
             listeners.forEach(x -> x.listenRemove(c));
         return super.removeAll(c);
+    }
+
+    @Override
+    public boolean removeIf(Predicate<? super T> filter) {
+        if (listeners != null) {
+            ArrayList<Object> removedObjects = new ArrayList<>(this.stream().filter(filter).toList());
+            listeners.forEach(x -> x.listenRemove(removedObjects));
+        }
+        return super.removeIf(filter);
     }
 }
