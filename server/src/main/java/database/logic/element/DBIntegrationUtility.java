@@ -10,8 +10,9 @@ import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.worker.ListenCollectionChangeHubWorker;
-import response.logic.StatusResponse;
 import response.CollectionUpdatedResponse;
+import response.logic.StatusResponse;
+import util.RouteFieldSetters;
 import util.RouteFieldToRoute;
 
 import java.io.IOException;
@@ -166,7 +167,12 @@ public class DBIntegrationUtility {
                 logger.warn("user has no access :(");
                 return new StatusResponse("User has no access to the element", 403);
             }
-            manager.updateSingleObject(objId, field.getIndex(), valueToSet);
+
+            Route route = RoutesHandler.getInstance().getCollection().stream().filter(x -> x.getId().equals(objId)).findAny().orElse(null);
+            RouteFieldSetters.setValue(route, field, valueToSet);
+            if (route != null)
+                manager.updateElementInDataBase(route, objId);
+
             RouteFieldToRoute.setField(
                     collectionHandler.getCollection().stream().filter(x -> x.getId().equals(objId))
                             .findAny().orElseThrow(() -> new NotFoundException("Object not found in cache!")),

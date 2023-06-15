@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
+import java.time.ZoneOffset;
 import java.util.Properties;
 
 public class DBCollectionManager implements Closeable {
@@ -57,7 +58,10 @@ public class DBCollectionManager implements Closeable {
                             "    distance = ? " +
                             "WHERE route_id = ?;");
             updateRouteStatement.setString(1, route.getName());
-            updateRouteStatement.setTimestamp(2, Timestamp.from(route.getCreationDate().toInstant()));
+            if (route.getCreationDate() instanceof java.sql.Date)
+                updateRouteStatement.setTimestamp(2, Timestamp.from(((java.sql.Date) route.getCreationDate()).toLocalDate().atStartOfDay(ZoneOffset.UTC).toInstant()));
+            else
+                updateRouteStatement.setTimestamp(2, Timestamp.from(route.getCreationDate().toInstant()));
             updateRouteStatement.setInt(3, route.getDistance());
             updateRouteStatement.setLong(4, id);
             updateRouteStatement.execute();
@@ -201,6 +205,7 @@ public class DBCollectionManager implements Closeable {
         } else return false;
     }
 
+    @Deprecated
     public void updateSingleObject(Long objId, int dbIndex, Object valueToSet) throws SQLException {
         Statement updateStat = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
         logger.info("updating objID " + objId);

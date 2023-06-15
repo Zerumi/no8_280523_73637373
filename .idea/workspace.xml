@@ -8,18 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: removed some commented code">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/GetCollectionFromModelCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/callback/VisualizationDisposeCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/component/VisualizationCollectionUpdatedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/component/callback/VisualisationCallback.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: scaling, axes, and synchronization between collection and visualization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldSetters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/util/RouteFieldSetters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBCollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBCollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +159,9 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="requestLogic.dtoMappers.DTOMapper" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="util" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="exceptions" />
       <recent name="main" />
@@ -180,7 +177,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373 [installDist]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -321,9 +318,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
-        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
         <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
+        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
@@ -371,14 +368,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="53917000" />
-    </task>
-    <task id="LOCAL-00027" summary="fix: update javadoc &amp; argument consumers">
-      <created>1681075707131</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1681075707131</updated>
+      <workItem from="1686642215467" duration="56350000" />
     </task>
     <task id="LOCAL-00028" summary="feat: simplification part 1">
       <created>1681224264013</created>
@@ -716,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686822599031</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="feat: scaling, axes, and synchronization between collection and visualization">
+      <created>1686856809952</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1686856809952</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +736,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: rename project" />
     <MESSAGE value="chore: remove old report" />
     <MESSAGE value="critical: rewrite server -&gt; client logic to callback chain of observers" />
     <MESSAGE value="feat: multi-window sync part 1 (fix required!)" />
@@ -764,7 +760,8 @@
     <MESSAGE value="feat: add model generator + handle clearing &amp; inspecting some bugs" />
     <MESSAGE value="feat: model generator enhanced" />
     <MESSAGE value="chore: removed some commented code" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: removed some commented code" />
+    <MESSAGE value="feat: scaling, axes, and synchronization between collection and visualization" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: scaling, axes, and synchronization between collection and visualization" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -810,7 +807,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java</url>
-          <line>117</line>
+          <line>144</line>
           <option name="timeStamp" value="160" />
         </line-breakpoint>
       </breakpoints>
