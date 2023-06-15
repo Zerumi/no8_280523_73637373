@@ -8,8 +8,8 @@ import model.handler.ModuleHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.sender.ArgumentRequestSender;
-import response.logic.ApplicationResponseProvider;
 import response.CommandStatusResponse;
+import response.logic.ApplicationResponseProvider;
 import server.logic.ServerConnectionHandler;
 
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
     public boolean receiveCommand(CommandDescription command, String[] args) throws BuildObjectException {
         route = handler.buildObject();
         new ArgumentRequestSender<Route>().sendCommand(command, args, route, ServerConnectionHandler.getCurrentConnection(), this);
-        return true; // todo: ??? return true? connect 2 logics between them
+        return true;
     }
 
     @Override

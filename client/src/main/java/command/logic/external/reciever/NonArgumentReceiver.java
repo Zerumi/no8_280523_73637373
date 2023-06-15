@@ -5,8 +5,8 @@ import command.logic.reciever.receiver.ExternalBaseReceiver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.logic.sender.CommandRequestSender;
-import response.logic.ApplicationResponseProvider;
 import response.CommandStatusResponse;
+import response.logic.ApplicationResponseProvider;
 import server.logic.ServerConnectionHandler;
 
 import java.util.Arrays;
@@ -24,7 +24,7 @@ public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationRes
     @Override
     public boolean receiveCommand(CommandDescription command, String[] args) {
         new CommandRequestSender().sendCommand(command, args, ServerConnectionHandler.getCurrentConnection(), this);
-        return true; // todo: ??? same problem
+        return true;
     }
 
     @Override

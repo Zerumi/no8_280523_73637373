@@ -7,15 +7,14 @@ import gui.controller.auth.callback.AuthActionListenerCallback;
 import gui.frame.MainWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import response.logic.ApplicationResponseProvider;
 import response.AuthorizeResponse;
+import response.logic.ApplicationResponseProvider;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-// todo: block operation during executing? ili i tak soidet...
 public class AuthActionListener implements ActionListener, ApplicationResponseProvider<AuthorizeResponse> {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
     private final JTextField usernameField;
