@@ -30,7 +30,8 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     private final Dimension preferredDim;
     private final HashSet<Route> collection;
     private final Image image;
-    private final double scale;
+    private final double scaleX;
+    private final double scaleY;
 
     private final double centerX;
     private final double centerY;
@@ -65,11 +66,13 @@ public class VisualisationComponent extends JComponent implements VisualisationC
 
         // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
 
-        scale = Math.min((preferredDim.width / 2d) / maxXFromCollection(), (preferredDim.height / 2d) / maxYFromCollection());
+        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
+        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
 
-        logger.info(maxXFromCollection());
-        logger.info(maxYFromCollection());
-        logger.info(scale);
+        //logger.trace(maxXFromCollection());
+        //logger.trace(maxYFromCollection());
+        logger.info(scaleX);
+        logger.info(scaleY);
 
         new VisualizationCollectionUpdatedController(this);
     }
@@ -171,13 +174,13 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     }
 
     private double getCenterX(double x) {
-        logger.trace("Calculated x " + (x * scale + centerX));
-        return x * scale + centerX;
+        logger.trace("Calculated x " + (x * scaleX + centerX));
+        return x * scaleX + centerX;
     }
 
     private double getCenterY(double y) {
-        logger.trace("Calculated y " + (centerY - y * scale));
-        return centerY - y * scale;
+        logger.trace("Calculated y " + (centerY - y * scaleY));
+        return centerY - y * scaleY;
     }
 
     @Override
