@@ -19,7 +19,7 @@ import request.logic.sender.ShowCollectionRequestSender;
 import response.CollectionUpdatedResponse;
 import response.ShowCollectionResponse;
 import server.logic.ServerConnectionHandler;
-import utils.RouteConvertUtil;
+import util.RouteConvertUtil;
 
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;

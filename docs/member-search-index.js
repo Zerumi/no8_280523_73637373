@@ -766,7 +766,7 @@ memberSearchIndex = [{
     "l": "compare(Route, Route)",
     "u": "compare(model.Route,model.Route)"
 }, {"p": "model", "c": "Route", "l": "compareTo(Route)", "u": "compareTo(model.Route)"}, {
-    "p": "utils",
+    "p": "util",
     "c": "RouteConvertUtil",
     "l": "convert(RouteFields, Object)",
     "u": "convert(model.RouteFields,java.lang.Object)"
@@ -2167,7 +2167,7 @@ memberSearchIndex = [{
     "l": "RouteCLIHandler()",
     "u": "%3Cinit%3E()"
 }, {"p": "model.comparator", "c": "RouteComparator", "l": "RouteComparator()", "u": "%3Cinit%3E()"}, {
-    "p": "utils",
+    "p": "util",
     "c": "RouteConvertUtil",
     "l": "RouteConvertUtil()",
     "u": "%3Cinit%3E()"
