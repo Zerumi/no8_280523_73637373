@@ -45,30 +45,13 @@ public class MainWindow extends JFrame implements ExceptionProvider, RepaintCall
         JRadioButtonMenuItem rbMenuItem;
         JCheckBoxMenuItem cbMenuItem;
 
-        //Create the menu bar.
-        menuBar = new JMenuBar();
-
-        //Build the first menu.
-        menu = new JMenu("Visualisation");
-        menu.setMnemonic(KeyEvent.VK_A);
-        menu.getAccessibleContext().setAccessibleDescription(
-                "Show visualisation");
-        menu.add(new OpenVisualizationAction());
-        menuBar.add(menu);
-
-        //Build second menu in the menu bar.
-        menu = new JMenu("Manage");
-        menu.setMnemonic(KeyEvent.VK_N);
-        menu.getAccessibleContext().setAccessibleDescription(
-                "Manage application");
-        menuBar.add(menu);
-
         JLabel label = new JLabel("Authorized as " + profile.login() + ". Welcome back, " + profile.name());
 
         JPanel northPanel = new JPanel();
         northPanel.add(label);
 
-        JTable table = new JTable(new RouteTableModel());
+        RouteTableModel model = new RouteTableModel();
+        JTable table = new JTable(model);
 
         table.setDefaultRenderer(Object.class, new RouteTableRender());
         table.setPreferredScrollableViewportSize(new Dimension(500, 70));
@@ -85,6 +68,24 @@ public class MainWindow extends JFrame implements ExceptionProvider, RepaintCall
             sorter.setComparator(field.getIndex(), RouteFieldComparators.getByField(field));
         }
         table.setRowSorter(sorter);
+
+        //Create the menu bar.
+        menuBar = new JMenuBar();
+
+        //Build the first menu.
+        menu = new JMenu("Visualisation");
+        menu.setMnemonic(KeyEvent.VK_A);
+        menu.getAccessibleContext().setAccessibleDescription(
+                "Show visualisation");
+        menu.add(new OpenVisualizationAction(model));
+        menuBar.add(menu);
+
+        //Build second menu in the menu bar.
+        menu = new JMenu("Manage");
+        menu.setMnemonic(KeyEvent.VK_N);
+        menu.getAccessibleContext().setAccessibleDescription(
+                "Manage application");
+        menuBar.add(menu);
 
         this.add(northPanel, BorderLayout.NORTH);
         this.add(scrollPane, BorderLayout.CENTER);

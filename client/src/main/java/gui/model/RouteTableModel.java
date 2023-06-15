@@ -1,6 +1,7 @@
 package gui.model;
 
 import exception.UpdateModelException;
+import gui.controller.main.callback.GetCollectionFromModelCallback;
 import gui.model.listener.RouteTableModelChangeListener;
 import gui.model.listener.RouteTableModelUpdateFullCollectionListener;
 import listen.logic.ServerListener;
@@ -11,13 +12,14 @@ import model.collection.actions.RemoveCollectionAction;
 import model.collection.actions.UpdateCollectionAction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import request.logic.sender.RequestSender;
-import request.logic.sender.ShowCollectionRequestSender;
 import request.ListenCollectionActionsRequest;
 import request.UpdateSingleFieldRequest;
+import request.logic.sender.RequestSender;
+import request.logic.sender.ShowCollectionRequestSender;
 import response.CollectionUpdatedResponse;
 import response.ShowCollectionResponse;
 import server.logic.ServerConnectionHandler;
+import util.RouteFieldSetters;
 
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;
@@ -25,10 +27,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class RouteTableModel extends AbstractTableModel {
+public class RouteTableModel extends AbstractTableModel implements GetCollectionFromModelCallback {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
 
     private final ArrayList<ArrayList<Object>> model = new ArrayList<>();
+    private HashSet<Route> collection;
 
     private final String[] columnNames = Arrays.stream(RouteFields.values())
             .map(RouteFields::getName)
@@ -97,7 +100,7 @@ public class RouteTableModel extends AbstractTableModel {
     }
 
     public void acceptFullCollectionResponse(ShowCollectionResponse response) {
-        HashSet<Route> collection = response.getCollection();
+        collection = response.getCollection();
 
         for (var element : collection) {
             addNewLine(element);
@@ -150,7 +153,7 @@ public class RouteTableModel extends AbstractTableModel {
 
         int col = updatedFiled.getIndex();
         model.get(row).set(updatedFiled.getIndex(), updatedValue);
-
+        RouteFieldSetters.setValue(collection.stream().filter(x -> x.getId().equals(elementId)).findAny().orElse(null), updatedFiled, updatedValue);
         fireTableCellUpdated(row, col);
     }
 
@@ -209,5 +212,10 @@ public class RouteTableModel extends AbstractTableModel {
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         return columnIndex > 0 && columnIndex != 4;
+    }
+
+    @Override
+    public HashSet<Route> getCollection() {
+        return collection;
     }
 }

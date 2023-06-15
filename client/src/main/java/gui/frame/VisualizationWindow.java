@@ -1,37 +1,22 @@
 package gui.frame;
 
 
-import util.ImageUtilities;
+import gui.component.VisualisationComponent;
+import gui.controller.main.callback.GetCollectionFromModelCallback;
+import gui.controller.visualization.callback.VisualizationDisposeCallback;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Objects;
 
 public class VisualizationWindow extends JFrame {
-    public VisualizationWindow() throws IOException {
 
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Dimension dimension = toolkit.getScreenSize();
+    private final VisualisationComponent component;
 
-        JPanel centerPanel = new JPanel();
+    public VisualizationWindow(GetCollectionFromModelCallback callback) throws IOException {
+        this.component = new VisualisationComponent(callback);
 
-        BufferedImage img = ImageIO.read
-                (Objects.requireNonNull(this.getClass().getResourceAsStream("/Biome_Map.png")));
-
-        Dimension resizedImageDim = ImageUtilities.getScaledDimension(new Dimension(img.getWidth(), img.getHeight()),
-                new Dimension((int) (dimension.width / 1.1), (int) (dimension.height / 1.1)));
-
-        Image image = img.getScaledInstance(resizedImageDim.width, resizedImageDim.height, 0);
-        ImageIcon imageIcon = new ImageIcon(image);
-
-        JLabel label = new JLabel(imageIcon);
-
-        centerPanel.add(label);
-
-        this.add(centerPanel);
+        this.add(component);
+        this.addWindowListener(new VisualizationDisposeCallback(this));
         this.setLocationByPlatform(true);
         this.pack();
     }

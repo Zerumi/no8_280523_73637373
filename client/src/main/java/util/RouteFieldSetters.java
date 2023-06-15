@@ -7,6 +7,7 @@ import model.RouteFields;
 
 public class RouteFieldSetters {
     public static void setValue(Route route, RouteFields routeField, Object value) {
+        if (route == null) return;
         handleNonNullValue(route, routeField);
         String objStr = String.valueOf(value);
         switch (routeField) {
