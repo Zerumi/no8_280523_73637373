@@ -44,6 +44,11 @@ memberSearchIndex = [{
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
     "p": "gui.controller.auth",
     "c": "AuthActionListener",
     "l": "acceptException(Exception)",
@@ -61,6 +66,11 @@ memberSearchIndex = [{
 }, {
     "p": "gui.controller.register",
     "c": "RegisterActionListener",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationCollectionUpdatedController",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
@@ -177,6 +187,11 @@ memberSearchIndex = [{
     "c": "RegistrationRequestSender",
     "l": "acceptResponse(AuthorizeResponse)",
     "u": "acceptResponse(response.AuthorizeResponse)"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationCollectionUpdatedController",
+    "l": "acceptResponse(BaseResponse)",
+    "u": "acceptResponse(response.BaseResponse)"
 }, {
     "p": "gui.model.listener",
     "c": "RouteTableModelChangeListener",
@@ -384,6 +399,15 @@ memberSearchIndex = [{
     "l": "addUserToDatabase(CallerBack, RegistrationData)",
     "u": "addUserToDatabase(request.logic.CallerBack,authorization.credential.RegistrationData)"
 }, {"p": "authorization", "c": "UserRoles", "l": "Admin"}, {
+    "p": "gui.controller.visualization",
+    "c": "VisualAnimation",
+    "l": "animate()"
+}, {
+    "p": "gui.controller.visualization",
+    "c": "VisualizationAnimator",
+    "l": "animate(VisualAnimation, int)",
+    "u": "animate(gui.controller.visualization.VisualAnimation,int)"
+}, {
     "p": "request.logic.request.annotation",
     "c": "AnnotationProcessor",
     "l": "AnnotationProcessor(ServerRequest)",
@@ -571,6 +595,11 @@ memberSearchIndex = [{
     "c": "AuthTextFieldsEditListener",
     "l": "changedUpdate(DocumentEvent)",
     "u": "changedUpdate(javax.swing.event.DocumentEvent)"
+}, {
+    "p": "gui.controller.filler",
+    "c": "FillTextDocumentListener",
+    "l": "changedUpdate(DocumentEvent)",
+    "u": "changedUpdate(javax.swing.event.DocumentEvent)"
 }, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "channel"}, {
     "p": "model.handler",
     "c": "Utilities",
@@ -737,15 +766,15 @@ memberSearchIndex = [{
     "l": "compare(Route, Route)",
     "u": "compare(model.Route,model.Route)"
 }, {"p": "model", "c": "Route", "l": "compareTo(Route)", "u": "compareTo(model.Route)"}, {
+    "p": "utils",
+    "c": "RouteConvertUtil",
+    "l": "convert(RouteFields, Object)",
+    "u": "convert(model.RouteFields,java.lang.Object)"
+}, {"p": "model", "c": "RouteFields", "l": "COORDINATES_X"}, {
     "p": "model",
     "c": "RouteFields",
-    "l": "COORDINATES_X"
-}, {"p": "model", "c": "RouteFields", "l": "COORDINATES_Y"}, {
-    "p": "model",
-    "c": "Coordinates",
-    "l": "Coordinates()",
-    "u": "%3Cinit%3E()"
-}, {
+    "l": "COORDINATES_Y"
+}, {"p": "model", "c": "Coordinates", "l": "Coordinates()", "u": "%3Cinit%3E()"}, {
     "p": "model.handler.mode.cli",
     "c": "CoordinatesCLIHandler",
     "l": "CoordinatesCLIHandler()",
@@ -1000,10 +1029,65 @@ memberSearchIndex = [{
     "l": "ExternalCaller()",
     "u": "%3Cinit%3E()"
 }, {"p": "gui.controller.main", "c": "CommandButtonFactory", "l": "fillAsync()"}, {
+    "p": "gui.controller.filler",
+    "c": "FillTextDocumentListener",
+    "l": "FillTextDocumentListener(JTextField, RouteFields, ValidationCallback)",
+    "u": "%3Cinit%3E(javax.swing.JTextField,model.RouteFields,gui.controller.filler.callback.ValidationCallback)"
+}, {
+    "p": "gui.controller.filler.callback",
+    "c": "ValidationCallback",
+    "l": "fireCorrectInput(JTextField, RouteFields)",
+    "u": "fireCorrectInput(javax.swing.JTextField,model.RouteFields)"
+}, {
+    "p": "gui.frame",
+    "c": "RouteFillWindow",
+    "l": "fireCorrectInput(JTextField, RouteFields)",
+    "u": "fireCorrectInput(javax.swing.JTextField,model.RouteFields)"
+}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "fireNewRoutes(AddCollectionAction)",
+    "u": "fireNewRoutes(model.collection.actions.AddCollectionAction)"
+}, {
+    "p": "gui.controller.visualization.component.callback",
+    "c": "VisualisationCallback",
+    "l": "fireNewRoutes(AddCollectionAction)",
+    "u": "fireNewRoutes(model.collection.actions.AddCollectionAction)"
+}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "fireRemoveRoutes(RemoveCollectionAction)",
+    "u": "fireRemoveRoutes(model.collection.actions.RemoveCollectionAction)"
+}, {
+    "p": "gui.controller.visualization.component.callback",
+    "c": "VisualisationCallback",
+    "l": "fireRemoveRoutes(RemoveCollectionAction)",
+    "u": "fireRemoveRoutes(model.collection.actions.RemoveCollectionAction)"
+}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "fireUpdateRoutes(UpdateCollectionAction)",
+    "u": "fireUpdateRoutes(model.collection.actions.UpdateCollectionAction)"
+}, {
+    "p": "gui.controller.visualization.component.callback",
+    "c": "VisualisationCallback",
+    "l": "fireUpdateRoutes(UpdateCollectionAction)",
+    "u": "fireUpdateRoutes(model.collection.actions.UpdateCollectionAction)"
+}, {
+    "p": "gui.controller.filler.callback",
+    "c": "ValidationCallback",
+    "l": "fireWrongInput(JTextField, RouteFields)",
+    "u": "fireWrongInput(javax.swing.JTextField,model.RouteFields)"
+}, {
+    "p": "gui.frame",
+    "c": "RouteFillWindow",
+    "l": "fireWrongInput(JTextField, RouteFields)",
+    "u": "fireWrongInput(javax.swing.JTextField,model.RouteFields)"
+}, {"p": "model", "c": "RouteFields", "l": "FROM_NAME"}, {
     "p": "model",
     "c": "RouteFields",
-    "l": "FROM_NAME"
-}, {"p": "model", "c": "RouteFields", "l": "FROM_X"}, {"p": "model", "c": "RouteFields", "l": "FROM_Y"}, {
+    "l": "FROM_X"
+}, {"p": "model", "c": "RouteFields", "l": "FROM_Y"}, {
     "p": "model",
     "c": "RouteFields",
     "l": "FROM_Z"
@@ -1078,51 +1162,55 @@ memberSearchIndex = [{
     "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCode()"
-}, {"p": "model.handler", "c": "CollectionHandler", "l": "getCollection()"}, {
-    "p": "model.handler",
-    "c": "RoutesHandler",
+}, {
+    "p": "gui.controller.main.callback",
+    "c": "GetCollectionFromModelCallback",
     "l": "getCollection()"
-}, {"p": "response", "c": "ShowCollectionResponse", "l": "getCollection()"}, {
+}, {"p": "gui.model", "c": "RouteTableModel", "l": "getCollection()"}, {
+    "p": "model.handler",
+    "c": "CollectionHandler",
+    "l": "getCollection()"
+}, {"p": "model.handler", "c": "RoutesHandler", "l": "getCollection()"}, {
+    "p": "response",
+    "c": "ShowCollectionResponse",
+    "l": "getCollection()"
+}, {"p": "gui.model", "c": "RouteTableModel", "l": "getColumnCount()"}, {
     "p": "gui.model",
     "c": "RouteTableModel",
-    "l": "getColumnCount()"
-}, {"p": "gui.model", "c": "RouteTableModel", "l": "getColumnName(int)"}, {
-    "p": "request",
-    "c": "CommandClientRequest",
-    "l": "getCommandDescription()"
-}, {"p": "command.logic", "c": "CommandDescriptionHolder", "l": "getCommands()"}, {
-    "p": "command.manager",
-    "c": "CommandManager",
+    "l": "getColumnName(int)"
+}, {"p": "request", "c": "CommandClientRequest", "l": "getCommandDescription()"}, {
+    "p": "command.logic",
+    "c": "CommandDescriptionHolder",
     "l": "getCommands()"
-}, {"p": "response", "c": "CommandDescriptionsResponse", "l": "getCommands()"}, {
-    "p": "command.manager",
-    "c": "CommandExporter",
-    "l": "getCommandsToExport()"
-}, {"p": "request.logic.request", "c": "ServerRequest", "l": "getConnection()"}, {
+}, {"p": "command.manager", "c": "CommandManager", "l": "getCommands()"}, {
+    "p": "response",
+    "c": "CommandDescriptionsResponse",
+    "l": "getCommands()"
+}, {"p": "command.manager", "c": "CommandExporter", "l": "getCommandsToExport()"}, {
+    "p": "request.logic.request",
+    "c": "ServerRequest",
+    "l": "getConnection()"
+}, {"p": "model", "c": "Route", "l": "getCoordinates()"}, {
     "p": "model",
     "c": "Route",
-    "l": "getCoordinates()"
-}, {"p": "model", "c": "Route", "l": "getCreationDate()"}, {
-    "p": "server.logic",
-    "c": "ServerConnectionHandler",
-    "l": "getCurrentConnection()"
-}, {"p": "file.logic.editor", "c": "DateEditor", "l": "getCustomEditor()"}, {
-    "p": "response",
-    "c": "ByteArrayPacketResponse",
-    "l": "getDeliveryNumber()"
-}, {"p": "exception", "c": "NotAvailableException", "l": "getDeniedClient()"}, {
+    "l": "getCreationDate()"
+}, {"p": "server.logic", "c": "ServerConnectionHandler", "l": "getCurrentConnection()"}, {
+    "p": "file.logic.editor",
+    "c": "DateEditor",
+    "l": "getCustomEditor()"
+}, {"p": "response", "c": "ByteArrayPacketResponse", "l": "getDeliveryNumber()"}, {
+    "p": "exception",
+    "c": "NotAvailableException",
+    "l": "getDeniedClient()"
+}, {"p": "command.manager.commands", "c": "AddCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
-    "c": "AddCommand",
+    "c": "AddIfMaxCommand",
     "l": "getDescr()"
-}, {"p": "command.manager.commands", "c": "AddIfMaxCommand", "l": "getDescr()"}, {
+}, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
-    "c": "AddIfMinCommand",
+    "c": "BaseCommand",
     "l": "getDescr()"
-}, {"p": "command.manager.commands", "c": "BaseCommand", "l": "getDescr()"}, {
-    "p": "command.manager.commands",
-    "c": "ClearCommand",
-    "l": "getDescr()"
-}, {
+}, {"p": "command.manager.commands", "c": "ClearCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getDescr()"
@@ -1295,10 +1383,10 @@ memberSearchIndex = [{
     "c": "PasswordEncryption",
     "l": "getPepper()"
 }, {"p": "request.logic", "c": "CallerBack", "l": "getPort()"}, {
-    "p": "command.logic",
-    "c": "CommandDescription",
-    "l": "getReceiver()"
-}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "getPreferredSize()"
+}, {"p": "command.logic", "c": "CommandDescription", "l": "getReceiver()"}, {
     "p": "command.logic.reciever.handler",
     "c": "ArgumentReceiverHandler",
     "l": "getReceivers()"
@@ -1371,7 +1459,11 @@ memberSearchIndex = [{
     "p": "response",
     "c": "IntermediateResponse",
     "l": "getResponseKey()"
-}, {"p": "gui.model", "c": "RouteTableModel", "l": "getRowCount()"}, {
+}, {"p": "gui.frame", "c": "RouteFillWindow", "l": "getRoute()"}, {
+    "p": "gui.model",
+    "c": "RouteTableModel",
+    "l": "getRowCount()"
+}, {
     "p": "util",
     "c": "ImageUtilities",
     "l": "getScaledDimension(Dimension, Dimension)",
@@ -1485,6 +1577,11 @@ memberSearchIndex = [{
 }, {
     "p": "gui.controller.auth",
     "c": "AuthTextFieldsEditListener",
+    "l": "insertUpdate(DocumentEvent)",
+    "u": "insertUpdate(javax.swing.event.DocumentEvent)"
+}, {
+    "p": "gui.controller.filler",
+    "c": "FillTextDocumentListener",
     "l": "insertUpdate(DocumentEvent)",
     "u": "insertUpdate(javax.swing.event.DocumentEvent)"
 }, {
@@ -1725,8 +1822,13 @@ memberSearchIndex = [{
 }, {
     "p": "gui.controller.main.action",
     "c": "OpenVisualizationAction",
-    "l": "OpenVisualizationAction()",
-    "u": "%3Cinit%3E()"
+    "l": "OpenVisualizationAction(GetCollectionFromModelCallback)",
+    "u": "%3Cinit%3E(gui.controller.main.callback.GetCollectionFromModelCallback)"
+}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "paintComponent(Graphics)",
+    "u": "paintComponent(java.awt.Graphics)"
 }, {
     "p": "file.logic.editor",
     "c": "DateEditor",
@@ -1962,6 +2064,11 @@ memberSearchIndex = [{
     "l": "RemoveGreaterCommand()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "model.collections",
+    "c": "ObservableHashSet",
+    "l": "removeIf(Predicate<? super T>)",
+    "u": "removeIf(java.util.function.Predicate)"
+}, {
     "p": "request.logic.sender",
     "c": "RequestSender",
     "l": "removeListener(ApplicationResponseProvider<BaseResponse>)",
@@ -2007,6 +2114,11 @@ memberSearchIndex = [{
     "l": "removeUpdate(DocumentEvent)",
     "u": "removeUpdate(javax.swing.event.DocumentEvent)"
 }, {
+    "p": "gui.controller.filler",
+    "c": "FillTextDocumentListener",
+    "l": "removeUpdate(DocumentEvent)",
+    "u": "removeUpdate(javax.swing.event.DocumentEvent)"
+}, {
     "p": "request.logic",
     "c": "RequestReader",
     "l": "RequestReader(InputStream)",
@@ -2045,20 +2157,19 @@ memberSearchIndex = [{
     "c": "ResponseSender",
     "l": "ResponseSender()",
     "u": "%3Cinit%3E()"
-}, {"p": "request.annotation", "c": "Authorize", "l": "roles()"}, {
-    "p": "model",
-    "c": "Route",
-    "l": "Route()",
-    "u": "%3Cinit%3E()"
-}, {
+}, {"p": "gui.frame", "c": "RouteFillWindow", "l": "RESTRICTED_FIELDS"}, {
+    "p": "request.annotation",
+    "c": "Authorize",
+    "l": "roles()"
+}, {"p": "model", "c": "Route", "l": "Route()", "u": "%3Cinit%3E()"}, {
     "p": "model.handler.mode.cli",
     "c": "RouteCLIHandler",
     "l": "RouteCLIHandler()",
     "u": "%3Cinit%3E()"
-}, {
-    "p": "model.comparator",
-    "c": "RouteComparator",
-    "l": "RouteComparator()",
+}, {"p": "model.comparator", "c": "RouteComparator", "l": "RouteComparator()", "u": "%3Cinit%3E()"}, {
+    "p": "utils",
+    "c": "RouteConvertUtil",
+    "l": "RouteConvertUtil()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "model.comparator",
@@ -2072,8 +2183,23 @@ memberSearchIndex = [{
     "u": "%3Cinit%3E()"
 }, {"p": "util", "c": "RouteFieldComparators", "l": "RouteFieldComparators()", "u": "%3Cinit%3E()"}, {
     "p": "util",
+    "c": "RouteFieldSetters",
+    "l": "RouteFieldSetters()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "util",
     "c": "RouteFieldToRoute",
     "l": "RouteFieldToRoute()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "model.validator.adapter",
+    "c": "RouteFieldValidateAdaptor",
+    "l": "RouteFieldValidateAdaptor()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.frame",
+    "c": "RouteFillWindow",
+    "l": "RouteFillWindow()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "model.handler.mode.stream",
@@ -2346,6 +2472,11 @@ memberSearchIndex = [{
     "l": "setValue(Object)",
     "u": "setValue(java.lang.Object)"
 }, {
+    "p": "util",
+    "c": "RouteFieldSetters",
+    "l": "setValue(Route, RouteFields, Object)",
+    "u": "setValue(model.Route,model.RouteFields,java.lang.Object)"
+}, {
     "p": "gui.model",
     "c": "RouteTableModel",
     "l": "setValueAt(Object, int, int)",
@@ -2360,6 +2491,11 @@ memberSearchIndex = [{
     "l": "setY(Long)",
     "u": "setY(java.lang.Long)"
 }, {"p": "model", "c": "Location", "l": "setZ(Long)", "u": "setZ(java.lang.Long)"}, {
+    "p": "gui.frame",
+    "c": "RouteFillWindow",
+    "l": "showAsDialog(String)",
+    "u": "showAsDialog(java.lang.String)"
+}, {
     "p": "request",
     "c": "ShowCollectionRequest",
     "l": "ShowCollectionRequest()",
@@ -2412,35 +2548,35 @@ memberSearchIndex = [{
     "p": "gui.frame",
     "c": "AuthWindow",
     "l": "succeedAction()"
-}, {"p": "gui.frame", "c": "RegisterWindow", "l": "succeedAction()"}, {
-    "p": "file.logic.editor",
-    "c": "DateEditor",
-    "l": "supportsCustomEditor()"
-}, {"p": "client.logic", "c": "Session", "l": "TIMEOUT"}, {
-    "p": "model",
-    "c": "RouteFields",
-    "l": "TO_NAME"
-}, {"p": "model", "c": "RouteFields", "l": "TO_X"}, {"p": "model", "c": "RouteFields", "l": "TO_Y"}, {
-    "p": "model",
-    "c": "RouteFields",
-    "l": "TO_Z"
-}, {"p": "response.logic", "c": "StatusResponse", "l": "toCommandResponse()"}, {
-    "p": "authorization",
-    "c": "AuthorizedUserData",
-    "l": "toString()"
-}, {"p": "client.logic", "c": "AuthorizedCallerBack", "l": "toString()"}, {
+}, {"p": "file.logic.editor", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
     "p": "client.logic",
     "c": "Session",
-    "l": "toString()"
-}, {"p": "model", "c": "Coordinates", "l": "toString()"}, {
+    "l": "TIMEOUT"
+}, {"p": "model", "c": "RouteFields", "l": "TO_NAME"}, {"p": "model", "c": "RouteFields", "l": "TO_X"}, {
     "p": "model",
-    "c": "Location",
+    "c": "RouteFields",
+    "l": "TO_Y"
+}, {"p": "model", "c": "RouteFields", "l": "TO_Z"}, {
+    "p": "response.logic",
+    "c": "StatusResponse",
+    "l": "toCommandResponse()"
+}, {"p": "authorization", "c": "AuthorizedUserData", "l": "toString()"}, {
+    "p": "client.logic",
+    "c": "AuthorizedCallerBack",
     "l": "toString()"
-}, {"p": "model", "c": "Route", "l": "toString()"}, {
-    "p": "request.logic",
-    "c": "CallerBack",
+}, {"p": "client.logic", "c": "Session", "l": "toString()"}, {
+    "p": "model",
+    "c": "Coordinates",
     "l": "toString()"
-}, {"p": "response.logic", "c": "StatusResponse", "l": "toString()"}, {
+}, {"p": "model", "c": "Location", "l": "toString()"}, {
+    "p": "model",
+    "c": "Route",
+    "l": "toString()"
+}, {"p": "request.logic", "c": "CallerBack", "l": "toString()"}, {
+    "p": "response.logic",
+    "c": "StatusResponse",
+    "l": "toString()"
+}, {
     "p": "gui.controller.auth",
     "c": "AuthTextFieldsEditListener",
     "l": "tryToUpdateTextFields()"
@@ -2532,7 +2668,7 @@ memberSearchIndex = [{
     "c": "DBCollectionManager",
     "l": "updateNullableLocation(Location, ResultSet, int)",
     "u": "updateNullableLocation(model.Location,java.sql.ResultSet,int)"
-}, {
+}, {"p": "gui.component", "c": "VisualisationComponent", "l": "UPDATES_COUNT"}, {
     "p": "database.logic.element",
     "c": "DBIntegrationUtility",
     "l": "updateSingleField(long, Long, RouteFields, Object)",
@@ -2596,6 +2732,11 @@ memberSearchIndex = [{
     "l": "validate(Route)",
     "u": "validate(model.Route)"
 }, {
+    "p": "model.validator.adapter",
+    "c": "RouteFieldValidateAdaptor",
+    "l": "validate(RouteFields, Object)",
+    "u": "validate(model.RouteFields,java.lang.Object)"
+}, {
     "p": "model.validator",
     "c": "LocationNameValidator",
     "l": "validate(String)",
@@ -2643,10 +2784,35 @@ memberSearchIndex = [{
     "c": "CollectionActions",
     "l": "values()"
 }, {"p": "model", "c": "RouteFields", "l": "values()"}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "VisualisationComponent(GetCollectionFromModelCallback)",
+    "u": "%3Cinit%3E(gui.controller.main.callback.GetCollectionFromModelCallback)"
+}, {
+    "p": "gui.controller.visualization",
+    "c": "VisualizationAnimator",
+    "l": "VisualizationAnimator(VisualisationComponent)",
+    "u": "%3Cinit%3E(gui.component.VisualisationComponent)"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationCollectionUpdatedController",
+    "l": "VisualizationCollectionUpdatedController(VisualisationCallback)",
+    "u": "%3Cinit%3E(gui.controller.visualization.component.callback.VisualisationCallback)"
+}, {
+    "p": "gui.controller.visualization.callback",
+    "c": "VisualizationDisposeCallback",
+    "l": "VisualizationDisposeCallback(VisualizationWindow)",
+    "u": "%3Cinit%3E(gui.frame.VisualizationWindow)"
+}, {
     "p": "gui.frame",
     "c": "VisualizationWindow",
-    "l": "VisualizationWindow()",
-    "u": "%3Cinit%3E()"
+    "l": "VisualizationWindow(GetCollectionFromModelCallback)",
+    "u": "%3Cinit%3E(gui.controller.main.callback.GetCollectionFromModelCallback)"
+}, {
+    "p": "gui.controller.visualization.callback",
+    "c": "VisualizationDisposeCallback",
+    "l": "windowClosing(WindowEvent)",
+    "u": "windowClosing(java.awt.event.WindowEvent)"
 }, {
     "p": "request.logic.worker",
     "c": "ArgumentCommandClientRequestWorker",
@@ -2717,6 +2883,16 @@ memberSearchIndex = [{
     "c": "CommandWindow",
     "l": "writeResponse(CommandStatusResponse)",
     "u": "writeResponse(response.CommandStatusResponse)"
+}, {
+    "p": "gui.controller.command.callback",
+    "c": "CommandCallback",
+    "l": "writeString(String)",
+    "u": "writeString(java.lang.String)"
+}, {
+    "p": "gui.frame",
+    "c": "CommandWindow",
+    "l": "writeString(String)",
+    "u": "writeString(java.lang.String)"
 }, {
     "p": "file.logic",
     "c": "BaseWriter",

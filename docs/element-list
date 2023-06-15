@@ -23,14 +23,21 @@ exception
 exception.authorization
 file.logic
 file.logic.editor
+gui.component
 gui.controller.auth
 gui.controller.auth.callback
 gui.controller.command
 gui.controller.command.callback
+gui.controller.filler
+gui.controller.filler.callback
 gui.controller.main
 gui.controller.main.action
 gui.controller.main.callback
 gui.controller.register
+gui.controller.visualization
+gui.controller.visualization.callback
+gui.controller.visualization.component
+gui.controller.visualization.component.callback
 gui.frame
 gui.model
 gui.model.listener
@@ -46,6 +53,7 @@ model.handler.mode.cli
 model.handler.mode.gui
 model.handler.mode.stream
 model.validator
+model.validator.adapter
 request
 request.annotation
 request.logic
@@ -63,3 +71,4 @@ server.logic.abstrct
 server.logic.datagram
 server.logic.udp
 util
+utils
