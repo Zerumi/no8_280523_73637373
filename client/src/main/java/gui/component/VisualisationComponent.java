@@ -1,6 +1,7 @@
 package gui.component;
 
 import gui.controller.main.callback.GetCollectionFromModelCallback;
+import gui.controller.visualization.VisualizationAnimator;
 import gui.controller.visualization.component.VisualizationCollectionUpdatedController;
 import gui.controller.visualization.component.callback.VisualisationCallback;
 import model.Location;
@@ -30,8 +31,8 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     private final Dimension preferredDim;
     private final HashSet<Route> collection;
     private final Image image;
-    private final double scaleX;
-    private final double scaleY;
+    public static final int UPDATES_COUNT = 100;
+    private double scaleX;
 
     private final double centerX;
     private final double centerY;
@@ -63,30 +64,14 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         this.centerX = preferredDim.width / 2d;
         this.centerY = preferredDim.height / 2d;
 
-
-        // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
-
-        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
-        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
-
-        //logger.trace(maxXFromCollection());
-        //logger.trace(maxYFromCollection());
-        logger.info(scaleX);
-        logger.info(scaleY);
-
         new VisualizationCollectionUpdatedController(this);
     }
 
-    private double maxXFromCollection() {
-        return Math.max(collection.stream().map(x -> Optional.ofNullable(x.getFrom()).orElse(new Location()).getX()).max(Float::compareTo).orElse(0f),
-                collection.stream().map(x -> Optional.ofNullable(x.getTo()).orElse(new Location()).getX()).max(Float::compareTo).orElse(0f));
-    }
+    private double scaleY;
 
-    private double maxYFromCollection() {
-        Location zeroLoc = new Location();
-        zeroLoc.setY(0L);
-        return Math.max(collection.stream().map(x -> Optional.ofNullable(x.getFrom()).orElse(zeroLoc).getY()).max(Long::compareTo).orElse(0L),
-                collection.stream().map(x -> Optional.ofNullable(x.getTo()).orElse(zeroLoc).getY()).max(Long::compareTo).orElse(0L));
+    private double maxXFromCollection() {
+        return Math.max(collection.stream().map(x -> Math.abs(Optional.ofNullable(x.getFrom()).orElse(new Location()).getX())).max(Float::compareTo).orElse(0f),
+                collection.stream().map(x -> Math.abs(Optional.ofNullable(x.getTo()).orElse(new Location()).getX())).max(Float::compareTo).orElse(0f));
     }
 
     private void drawArrow(Graphics g1, double x1, double y1, double x2, double y2) {
@@ -121,9 +106,48 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         ga.drawPolygon(arrowHead);
     }
 
+    private double maxYFromCollection() {
+        Location zeroLoc = new Location();
+        zeroLoc.setY(0L);
+        return Math.max(collection.stream().map(x -> Math.abs(Optional.ofNullable(x.getFrom()).orElse(zeroLoc).getY())).max(Long::compareTo).orElse(0L),
+                collection.stream().map(x -> Math.abs(Optional.ofNullable(x.getTo()).orElse(zeroLoc).getY())).max(Long::compareTo).orElse(0L));
+    }
+
+    private Ellipse2D getEllipseFromCenter(double x, double y, double width, double height) {
+        double newX = x - width / 2.0;
+        double newY = y - height / 2.0;
+
+        return new Ellipse2D.Double(newX, newY, width, height);
+    }
+
+    private double getCenterX(double x) {
+        logger.trace("Calculated x " + (x * scaleX + centerX));
+        return x * scaleX + centerX;
+    }
+
+    private double getCenterY(double y) {
+        logger.trace("Calculated y " + (centerY - y * scaleY));
+        return centerY - y * scaleY;
+    }
+
+    @Override
+    public void acceptException(Exception e) {
+        logger.error(e);
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         var g2 = (Graphics2D) g;
+
+        // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
+
+        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
+        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
+
+        //logger.trace(maxXFromCollection());
+        //logger.trace(maxYFromCollection());
+        logger.trace(scaleX);
+        logger.trace(scaleY);
 
         g2.drawImage(image, 0, 0, (img1, infoflags, x, y, width, height) -> false);
 
@@ -166,44 +190,52 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         super.paintComponent(g2);
     }
 
-    private Ellipse2D getEllipseFromCenter(double x, double y, double width, double height) {
-        double newX = x - width / 2.0;
-        double newY = y - height / 2.0;
-
-        return new Ellipse2D.Double(newX, newY, width, height);
-    }
-
-    private double getCenterX(double x) {
-        logger.trace("Calculated x " + (x * scaleX + centerX));
-        return x * scaleX + centerX;
-    }
-
-    private double getCenterY(double y) {
-        logger.trace("Calculated y " + (centerY - y * scaleY));
-        return centerY - y * scaleY;
-    }
-
-    @Override
-    public void acceptException(Exception e) {
-        logger.error(e);
-    }
-
     @Override
     public void fireNewRoutes(AddCollectionAction action) {
         collection.addAll(action.getNewElements());
-        logger.info("vizual repaint?");
+        logger.info("visual repaint?");
         this.repaint();
     }
 
     @Override
     public void fireUpdateRoutes(UpdateCollectionAction action) {
-        // run animation
+        Route routeToEdit = collection.stream()
+                .filter(x -> x.getId().equals(action.getElementId()))
+                .findAny().orElse(new Route());
+        String objStr = String.valueOf(action.getUpdatedValue());
+        VisualizationAnimator animator = new VisualizationAnimator(this);
+        switch (action.getUpdatedFiled()) {
+            case FROM_X -> {
+                float startX = routeToEdit.getFrom().getX();
+                float endX = Float.parseFloat(objStr);
+                float fade = (endX - startX) / UPDATES_COUNT;
+                animator.animate(() -> routeToEdit.getFrom().setX(routeToEdit.getFrom().getX() + fade), UPDATES_COUNT);
+            }
+            case FROM_Y -> {
+                long startY = routeToEdit.getFrom().getY();
+                long endY = Long.parseLong(objStr);
+                long fade = (endY - startY) / UPDATES_COUNT;
+                animator.animate(() -> routeToEdit.getFrom().setY(routeToEdit.getFrom().getY() + fade), UPDATES_COUNT);
+            }
+            case TO_X -> {
+                float startX = routeToEdit.getTo().getX();
+                float endX = Float.parseFloat(objStr);
+                float fade = (endX - startX) / UPDATES_COUNT;
+                animator.animate(() -> routeToEdit.getTo().setX(routeToEdit.getTo().getX() + fade), UPDATES_COUNT);
+            }
+            case TO_Y -> {
+                long startY = routeToEdit.getTo().getY();
+                long endY = Long.parseLong(objStr);
+                long fade = (endY - startY) / UPDATES_COUNT;
+                animator.animate(() -> routeToEdit.getTo().setY(routeToEdit.getTo().getY() + fade), UPDATES_COUNT);
+            }
+        }
     }
 
     @Override
     public void fireRemoveRoutes(RemoveCollectionAction action) {
         Arrays.stream(action.getRemoved_ids()).forEach(id -> collection.removeIf(x -> x.getId().equals(id)));
-        logger.info("vizual repaint?");
+        logger.info("visual repaint?");
         this.repaint();
     }
 

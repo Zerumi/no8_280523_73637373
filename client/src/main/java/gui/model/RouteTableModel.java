@@ -19,7 +19,7 @@ import request.logic.sender.ShowCollectionRequestSender;
 import response.CollectionUpdatedResponse;
 import response.ShowCollectionResponse;
 import server.logic.ServerConnectionHandler;
-import util.RouteFieldSetters;
+import utils.RouteConvertUtil;
 
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;
@@ -152,8 +152,8 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
                                 new UpdateModelException("Can't find object in model")));
 
         int col = updatedFiled.getIndex();
-        model.get(row).set(updatedFiled.getIndex(), updatedValue);
-        RouteFieldSetters.setValue(collection.stream().filter(x -> x.getId().equals(elementId)).findAny().orElse(null), updatedFiled, updatedValue);
+        model.get(row).set(updatedFiled.getIndex(), RouteConvertUtil.convert(updatedFiled, updatedValue));
+        //RouteFieldSetters.setValue(collection.stream().filter(x -> x.getId().equals(elementId)).findAny().orElse(null), updatedFiled, updatedValue);
         fireTableCellUpdated(row, col);
     }
 
