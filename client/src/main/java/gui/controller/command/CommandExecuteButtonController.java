@@ -2,10 +2,11 @@ package gui.controller.command;
 
 import command.logic.*;
 import core.provider.ExceptionProvider;
+import exception.CommandInterruptedException;
 import exception.CommandsNotLoadedException;
 import gui.controller.command.callback.CommandCallback;
-import response.logic.ApplicationResponseProvider;
 import response.CommandStatusResponse;
+import response.logic.ApplicationResponseProvider;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -38,6 +39,9 @@ public class CommandExecuteButtonController implements ActionListener, Applicati
             executor.executeSingleCommand(description.getName() + " " + argsField.getText());
         } catch (CommandsNotLoadedException ex) {
             CommandLoaderUtility.initializeCommands();
+            callback.writeResponse(new CommandStatusResponse("Something went wrong...", -3));
+        } catch (CommandInterruptedException ex) {
+            callback.writeString(ex.getCause().toString());
         }
     }
 

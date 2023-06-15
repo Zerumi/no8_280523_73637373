@@ -4,7 +4,6 @@ import exception.BuildObjectException;
 import gui.frame.RouteFillWindow;
 import model.Route;
 import model.handler.ModuleHandler;
-import model.validator.RouteValidator;
 
 public class GUIRouteHandler implements ModuleHandler<Route> {
 
@@ -13,13 +12,8 @@ public class GUIRouteHandler implements ModuleHandler<Route> {
 
         RouteFillWindow fillWindow = new RouteFillWindow();
         if (fillWindow.showAsDialog("route builder")) {
-            Route result = fillWindow.getRoute();
-            if (!new RouteValidator().validate(result)) {
-                return result;
-            }
-        }
-
-        throw new BuildObjectException("invalid obj");
+            return fillWindow.getRoute();
+        } else throw new BuildObjectException("interrupted by user");
 
     }
 }

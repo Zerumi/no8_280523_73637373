@@ -2,8 +2,8 @@ package gui.frame;
 
 import command.logic.CommandDescription;
 import core.provider.ExceptionProvider;
-import gui.controller.command.callback.CommandCallback;
 import gui.controller.command.CommandExecuteButtonController;
+import gui.controller.command.callback.CommandCallback;
 import response.CommandStatusResponse;
 import util.SpringUtilities;
 
@@ -53,7 +53,14 @@ public class CommandWindow extends JFrame implements CommandCallback, ExceptionP
             textArea.setText(null);
             textArea.append("Status Code: " + response.getStatusCode() + "\n\n");
             textArea.append("Response: \n" + response.getResponse());
+        });
+    }
 
+    @Override
+    public void writeString(String string) {
+        EventQueue.invokeLater(() -> {
+            textArea.setText(null);
+            textArea.append(string);
         });
     }
 

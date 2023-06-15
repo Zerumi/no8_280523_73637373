@@ -2,10 +2,9 @@ package gui.frame;
 
 import gui.controller.filler.FillTextDocumentListener;
 import gui.controller.filler.callback.ValidationCallback;
-import model.Coordinates;
-import model.Location;
 import model.Route;
 import model.RouteFields;
+import model.validator.RouteValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import util.RouteFieldSetters;
@@ -13,10 +12,13 @@ import util.SpringUtilities;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class RouteFillWindow extends JPanel implements ValidationCallback {
 
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
+
+    public static final RouteFields[] RESTRICTED_FIELDS = {RouteFields.ID, RouteFields.CREATION_DATE};
 
     private final Route route;
     private final JButton confirmButton;
@@ -25,15 +27,13 @@ public class RouteFillWindow extends JPanel implements ValidationCallback {
 
     public RouteFillWindow() {
         route = new Route();
-        route.setCoordinates(new Coordinates());
-        route.setFrom(new Location());
-        route.setTo(new Location());
         this.setLayout(new BorderLayout());
 
         JPanel fieldPanel = new JPanel();
         fieldPanel.setLayout(new SpringLayout());
 
         for (RouteFields routeField : RouteFields.values()) {
+            if (Arrays.asList(RESTRICTED_FIELDS).contains(routeField)) continue;
             JTextField field = new JTextField();
             field.setColumns(30);
             field.getDocument().addDocumentListener(new FillTextDocumentListener(field, routeField, this));
@@ -46,12 +46,16 @@ public class RouteFillWindow extends JPanel implements ValidationCallback {
 
         confirmButton = new JButton("Confirm");
         confirmButton.addActionListener(e -> {
+            if (new RouteValidator().validate(route)) {
+                JOptionPane.showMessageDialog(this, "Object is invalid. Try to fix all red fields before confirming.", "Warning", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
             ok = true;
             fillDialog.setVisible(false);
         });
         confirmButtonPanel.add(confirmButton);
 
-        SpringUtilities.makeCompactGrid(fieldPanel, RouteFields.values().length, 2, 3, 3, 0, 0);
+        SpringUtilities.makeCompactGrid(fieldPanel, RouteFields.values().length - RESTRICTED_FIELDS.length, 2, 3, 3, 0, 0);
 
         this.add(fieldPanel, BorderLayout.CENTER);
         this.add(confirmButtonPanel, BorderLayout.SOUTH);
