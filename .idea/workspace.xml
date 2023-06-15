@@ -8,16 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: add model generator + handle clearing &amp; inspecting some bugs">
-      <changelist_data name="zerumi" email="afanasyev09032005@gmail.com" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/callback/CommandCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/callback/CommandCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/model/handler/mode/gui/GUIRouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/model/handler/mode/gui/GUIRouteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldSetters.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: model generator enhanced">
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,14 +361,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="34596000" />
-    </task>
-    <task id="LOCAL-00025" summary="bug fix, part 1">
-      <created>1679963216012</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1679963216012</updated>
+      <workItem from="1686642215467" duration="34917000" />
     </task>
     <task id="LOCAL-00026" summary="bug fix, part 2.1">
       <created>1680023110842</created>
@@ -714,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686785466409</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="feat: model generator enhanced">
+      <created>1686822524350</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1686822524350</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,7 +729,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: authorization bug" />
     <MESSAGE value="fix: removed unusual field" />
     <MESSAGE value="chore: rename project" />
     <MESSAGE value="chore: remove old report" />
@@ -762,7 +753,8 @@
     <MESSAGE value="chore: remove unconventional package names, part 3" />
     <MESSAGE value="feat: add model generator + handle clearing" />
     <MESSAGE value="feat: add model generator + handle clearing &amp; inspecting some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add model generator + handle clearing &amp; inspecting some bugs" />
+    <MESSAGE value="feat: model generator enhanced" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: model generator enhanced" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
