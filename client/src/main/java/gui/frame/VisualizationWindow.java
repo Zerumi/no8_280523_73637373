@@ -14,10 +14,16 @@ import java.io.IOException;
 public class VisualizationWindow extends JFrame implements PrintObjInfoCallback {
 
     private final VisualisationComponent component;
+    private final JPanel infoPanel;
 
     public VisualizationWindow(GetCollectionFromModelCallback callback) throws IOException {
         this.component = new VisualisationComponent(callback);
 
+        infoPanel = new JPanel();
+        infoPanel.setLayout(new SpringLayout());
+        // todo
+
+        this.add(infoPanel, BorderLayout.WEST);
         this.add(component, BorderLayout.CENTER);
         this.addWindowListener(new VisualizationDisposeCallback(this));
         this.setLocationByPlatform(true);

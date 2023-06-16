@@ -9,9 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: server i18n &amp; l10n">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: update cmd i18n &amp; l10n">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/filter/ModelConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/OpenFilterWindowAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/FilterWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/filter/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/util/LocaleUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/filler/FillTextDocumentListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/filler/FillTextDocumentListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +190,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:server [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373 [installDist]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -319,9 +331,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
-        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
+        <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
@@ -369,14 +381,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="98184000" />
-    </task>
-    <task id="LOCAL-00036" summary="feat: authorisation part 3">
-      <created>1683331420014</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1683331420014</updated>
+      <workItem from="1686642215467" duration="113434000" />
     </task>
     <task id="LOCAL-00037" summary="fix: bug fixes with registration &amp; auth">
       <created>1683332453471</created>
@@ -714,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686901881807</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="fix: update cmd i18n &amp; l10n">
+      <created>1686902118937</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1686902118937</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,7 +749,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: sorting part 2" />
     <MESSAGE value="feat: sorting final + auth notifications added" />
     <MESSAGE value="chore: remove unconventional package names, part 1" />
     <MESSAGE value="chore: updated shared lib" />
@@ -762,7 +773,8 @@
     <MESSAGE value="chore: rerun javadoc + fix package name" />
     <MESSAGE value="feat: client i18n &amp; l10n" />
     <MESSAGE value="feat: server i18n &amp; l10n" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: server i18n &amp; l10n" />
+    <MESSAGE value="fix: update cmd i18n &amp; l10n" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update cmd i18n &amp; l10n" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -793,7 +805,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java</url>
-          <line>204</line>
+          <line>214</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -23,7 +23,10 @@ import util.RouteConvertUtil;
 
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.ResourceBundle;
 
 public class RouteTableModel extends AbstractTableModel implements GetCollectionFromModelCallback {
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("gui.l10n.table.RouteTable");
@@ -219,18 +222,6 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     public HashSet<Route> getCollection() {
         return collection;
     }
-
-    public void updateNamesLocale(Locale locale) {
-        columnNames = Arrays.stream(RouteFields.values())
-                .map(RouteFields::getName)
-                .map(x -> "c_" + x)
-                .map(resourceBundle::getString)
-                .toList()
-                .toArray(new String[0]);
-
-        fireTableRowsUpdated(0, Integer.MAX_VALUE);
-    }
-
     public void changeLocale() {
         ResourceBundle.clearCache();
         resourceBundle = ResourceBundle.getBundle("gui.l10n.table.RouteTable");

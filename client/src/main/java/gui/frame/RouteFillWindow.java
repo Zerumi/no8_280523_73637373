@@ -63,7 +63,6 @@ public class RouteFillWindow extends JPanel implements ValidationCallback {
         this.validate();
     }
 
-
     public boolean showAsDialog(String title) {
         ok = false;
 

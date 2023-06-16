@@ -1,11 +1,29 @@
 package util;
 
 import model.RouteFields;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Arrays;
 
 public class RouteConvertUtil {
+
+    public static final RouteFields[] NUMERIC_FIELDS =
+            {
+                    RouteFields.ID,
+                    RouteFields.COORDINATES_X,
+                    RouteFields.COORDINATES_Y,
+                    RouteFields.TO_X,
+                    RouteFields.TO_Y,
+                    RouteFields.TO_Z,
+                    RouteFields.FROM_X,
+                    RouteFields.FROM_Y,
+                    RouteFields.FROM_Z,
+                    RouteFields.DISTANCE
+            };
+
     public static Object convert(RouteFields field, Object obj) {
         String objVal = String.valueOf(obj);
         switch (field) {
@@ -35,5 +53,11 @@ public class RouteConvertUtil {
                 return obj;
             }
         }
+    }
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab8");
+
+    public static boolean isNumber(RouteFields routeField) {
+        logger.info("is " + routeField + " number?");
+        return Arrays.asList(NUMERIC_FIELDS).contains(routeField);
     }
 }

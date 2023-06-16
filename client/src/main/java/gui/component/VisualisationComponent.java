@@ -155,6 +155,16 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         drawArrow(g2, 0, preferredDim.height / 2d, preferredDim.width, preferredDim.height / 2d);
         drawArrow(g2, preferredDim.width / 2d, preferredDim.height, preferredDim.width / 2d, 0);
 
+        // draw single elem
+        var line1 = new Line2D.Double(3d / 2 * centerX, centerY - 10, 3d / 2 * centerX, centerY + 10);
+        var line2 = new Line2D.Double(centerX - 10, 1d / 2 * centerY, centerX + 10, 1d / 2 * centerY);
+
+        g2.drawString(String.valueOf(preferredDim.width / scaleX / 4), (int) (3f / 2 * centerX), (int) (centerY - 10));
+        g2.drawString(String.valueOf(preferredDim.height / scaleY / 4), (int) (centerX + 10), (int) (1d / 2 * centerY));
+
+        g2.draw(line1);
+        g2.draw(line2);
+
         for (Route route : collection) {
 
             Location from = route.getFrom();

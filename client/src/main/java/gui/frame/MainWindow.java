@@ -3,8 +3,10 @@ package gui.frame;
 import authorization.AuthorizedUserData;
 import core.provider.ExceptionProvider;
 import exception.DenyOperationException;
+import gui.controller.filter.ModelConnector;
 import gui.controller.main.CommandButtonFactory;
 import gui.controller.main.LocalizationActionListener;
+import gui.controller.main.OpenFilterWindowAction;
 import gui.controller.main.action.OpenVisualizationAction;
 import gui.controller.main.callback.LocalizationCallback;
 import gui.model.RouteTableModel;
@@ -12,6 +14,8 @@ import gui.view.render.RouteTableRender;
 import model.RouteFields;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import util.LocaleHolder;
+import util.LocaleUtil;
 import util.RouteFieldComparators;
 
 import javax.swing.*;
@@ -25,7 +29,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class MainWindow extends JFrame implements ExceptionProvider, LocalizationCallback {
+public class MainWindow extends JFrame implements ExceptionProvider, LocalizationCallback, ModelConnector {
 
     private final JLabel availableCommandsLabel = new JLabel();
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
@@ -38,6 +42,7 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
     private final JTable table;
     private final RouteTableModel model;
     private final CommandButtonFactory factory;
+    private final TableRowSorter<TableModel> sorter;
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("gui.l10n.main.MainWindow");
 
     public MainWindow(AuthorizedUserData profile) throws DenyOperationException {
@@ -72,7 +77,7 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
         JScrollPane scrollPane = new JScrollPane(table);
 
         // setup sorter
-        TableRowSorter<TableModel> sorter = new TableRowSorter<>(table.getModel());
+        sorter = new TableRowSorter<>(table.getModel());
         List<RowSorter.SortKey> sortKeys = new ArrayList<>();
         sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING));
         sorter.setSortKeys(sortKeys);
@@ -89,7 +94,11 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
         firstMenu = new JMenu(resourceBundle.getString("visualisation"));
         firstMenu.setMnemonic(KeyEvent.VK_A);
         firstMenu.getAccessibleContext().setAccessibleDescription(resourceBundle.getString("ct_visualisation"));
-        firstMenu.add(new OpenVisualizationAction(model));
+        JMenuItem openVisual = new JMenuItem();
+        openVisual.add(new JLabel(resourceBundle.getString("visualisation")));
+        openVisual.setPreferredSize(new Dimension(200, openVisual.getPreferredSize().height));
+        openVisual.addActionListener(new OpenVisualizationAction(model));
+        firstMenu.add(openVisual);
         menuBar.add(firstMenu);
 
         //Build second menu in the menu bar.
@@ -107,28 +116,38 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
 
         var radioButton1 = new JRadioButtonMenuItem("en_US");
         radioButton1.addActionListener(new LocalizationActionListener("en-US", this));
+        radioButton1.setSelected(LocaleUtil.isSelect(0, LocaleHolder.getLocale()));
         languageGroup.add(radioButton1);
         languageSubMenu.add(radioButton1);
 
         var radioButton2 = new JRadioButtonMenuItem("ru_RU");
         radioButton2.addActionListener(new LocalizationActionListener("ru-RU", this));
+        radioButton2.setSelected(LocaleUtil.isSelect(1, LocaleHolder.getLocale()));
         languageGroup.add(radioButton2);
         languageSubMenu.add(radioButton2);
 
         var radioButton3 = new JRadioButtonMenuItem("pt_BR");
         radioButton3.addActionListener(new LocalizationActionListener("pt-BR", this));
+        radioButton3.setSelected(LocaleUtil.isSelect(2, LocaleHolder.getLocale()));
         languageGroup.add(radioButton3);
         languageSubMenu.add(radioButton3);
 
         var radioButton4 = new JRadioButtonMenuItem("hu_HU");
         radioButton4.addActionListener(new LocalizationActionListener("hu-HU", this));
+        radioButton4.setSelected(LocaleUtil.isSelect(3, LocaleHolder.getLocale()));
         languageGroup.add(radioButton4);
         languageSubMenu.add(radioButton4);
 
         var radioButton5 = new JRadioButtonMenuItem("en_IN");
         radioButton5.addActionListener(new LocalizationActionListener("en-IN", this));
+        radioButton5.setSelected(LocaleUtil.isSelect(4, LocaleHolder.getLocale()));
         languageGroup.add(radioButton5);
         languageSubMenu.add(radioButton5);
+
+        JMenuItem filterMenu = new JMenuItem("Open Filter");
+        filterMenu.addActionListener(new OpenFilterWindowAction(this));
+        secondMenu.add(filterMenu);
+
 
         this.add(northPanel, BorderLayout.NORTH);
         this.add(scrollPane, BorderLayout.CENTER);
@@ -184,5 +203,10 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
     public void callRepaint() {
         this.revalidate();
         this.repaint();
+    }
+
+    @Override
+    public TableRowSorter<TableModel> getModelSorter() {
+        return sorter;
     }
 }
