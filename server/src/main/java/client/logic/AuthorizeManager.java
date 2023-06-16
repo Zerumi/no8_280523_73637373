@@ -5,6 +5,7 @@ import authorization.credential.AuthenticationData;
 import authorization.credential.RegistrationData;
 import database.logic.user.DBUserManager;
 import database.logic.user.PasswordEncryptionImplSHA512;
+import exception.authorization.UserAlreadyExistsException;
 import exception.authorization.AuthorizeException;
 import exception.authorization.UnauthorizedException;
 import org.apache.logging.log4j.LogManager;
@@ -20,7 +21,7 @@ public class AuthorizeManager {
         AuthorizedUserData userData;
         try (DBUserManager manager = new DBUserManager(new PasswordEncryptionImplSHA512())) {
             if (manager.checkExistence(regData.getLogin()))
-                throw new AuthorizeException("User with that login already exists.");
+                throw new UserAlreadyExistsException("User with that login already exists.");
             userData = manager.addUserToDatabase(requester, regData);
             AuthorizedCallerBack callerBack = new AuthorizedCallerBack(userData, requester);
             SessionHandler.getInstance().registerSession(callerBack);

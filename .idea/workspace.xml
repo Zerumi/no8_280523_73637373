@@ -8,13 +8,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: animation">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/VisualAnimation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/VisualizationAnimator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/utils/RouteConvertUtil.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc + fix package name">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/LocalizationActionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/LocalizationCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/callback/PrintObjInfoCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/auth/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/auth/Auth_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/auth/Auth_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/auth/Auth_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/auth/Auth_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/CommandWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/CommandWindow_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/CommandWindow_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/CommandWindow_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/CommandWindow_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/Commands_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/Commands_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/Commands_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/command/Commands_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/ExceptionLocalizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/main/MainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/main/MainWindow_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/main/MainWindow_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/main/MainWindow_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/main/MainWindow_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/register/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/register/Register_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/register/Register_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/register/Register_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/register/Register_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/table/RouteTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/table/RouteTable_en_IN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/table/RouteTable_hu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/table/RouteTable_pt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/table/RouteTable_ru.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/util/AuthUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/util/RouteConvertUtil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exception/authorization/NotEnoughPassLengthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/exception/authorization/UserAlreadyExistsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/CommandButtonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/AuthWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/AuthWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/RegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RegisterWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/model/handler/mode/gui/GUIRouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/model/handler/mode/gui/GUIRouteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/client/logic/AuthorizeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/client/logic/AuthorizeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/user/DBUserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/user/DBUserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/exception/CannotProceedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/exception/CannotProceedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/AuthorizationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/AuthorizationRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RegistrationRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RegistrationRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/response/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/response/ErrorResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +131,8 @@
         <option value="Tag Library Descriptor" />
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -137,11 +193,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="exception" />
       <recent name="utils" />
       <recent name="exceptions" />
       <recent name="core.providers" />
       <recent name="gui.controllers.auth.callbacks" />
-      <recent name="serverLogic.abstractLogic" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/responseLogic" />
@@ -164,8 +220,11 @@
       <recent name="util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="exceptions" />
-      <recent name="main" />
+      <recent name="gui.l10n.table" />
+      <recent name="gui.l10n.register" />
+      <recent name="gui.l10n.main" />
+      <recent name="gui.l10n.exception" />
+      <recent name="gui.l10n.command" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -320,8 +379,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
-        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
@@ -369,35 +428,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="65317000" />
-    </task>
-    <task id="LOCAL-00030" summary="bug fixes (approved version)">
-      <created>1681326282894</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1681326282894</updated>
-    </task>
-    <task id="LOCAL-00031" summary="chore: rerun javadoc">
-      <created>1681326368835</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1681326368835</updated>
-    </task>
-    <task id="LOCAL-00032" summary="feat: remove single client restriction, add database load logic, changed project folder structure">
-      <created>1682896091729</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1682896091729</updated>
-    </task>
-    <task id="LOCAL-00033" summary="feat: authorization part 1">
-      <created>1683295421001</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1683295421002</updated>
+      <workItem from="1686642215467" duration="83725000" />
     </task>
     <task id="LOCAL-00034" summary="feat: authorization part 2">
       <created>1683326787258</created>
@@ -714,7 +745,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686860726279</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="fix: animation">
+      <created>1686868996670</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1686868996670</updated>
+    </task>
+    <task id="LOCAL-00080" summary="chore: removed todos">
+      <created>1686869059893</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1686869059893</updated>
+    </task>
+    <task id="LOCAL-00081" summary="chore: rerun javadoc">
+      <created>1686869119798</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1686869119798</updated>
+    </task>
+    <task id="LOCAL-00082" summary="chore: rerun javadoc + fix package name">
+      <created>1686869308465</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1686869308465</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,13 +796,10 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: reworked intermediate response handling" />
-    <MESSAGE value="feat: updating single fields" />
     <MESSAGE value="fix: some fixes" />
     <MESSAGE value="feat: sorting part 1" />
     <MESSAGE value="feat: sorting part 2" />
     <MESSAGE value="feat: sorting final + auth notifications added" />
-    <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="chore: remove unconventional package names, part 1" />
     <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
@@ -762,7 +818,10 @@
     <MESSAGE value="fix: updating on server-side, visualization enhancement" />
     <MESSAGE value="fix: X and Y scale" />
     <MESSAGE value="fix: animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: animation" />
+    <MESSAGE value="chore: removed todos" />
+    <MESSAGE value="chore: rerun javadoc" />
+    <MESSAGE value="chore: rerun javadoc + fix package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc + fix package name" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -770,16 +829,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/model/collections/ObservableHashSet.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/model/collections/ObservableHashSet.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/response/logic/responseSenders/IntermediateResponseSender.java</url>
           <line>16</line>
@@ -808,8 +857,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java</url>
-          <line>203</line>
+          <line>204</line>
           <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/request/logic/worker/AuthorizationRequestWorker.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/client/logic/AuthorizeManager.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="163" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

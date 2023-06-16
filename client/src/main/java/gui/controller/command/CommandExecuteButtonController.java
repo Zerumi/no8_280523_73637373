@@ -5,6 +5,7 @@ import core.provider.ExceptionProvider;
 import exception.CommandInterruptedException;
 import exception.CommandsNotLoadedException;
 import gui.controller.command.callback.CommandCallback;
+import gui.l10n.exception.ExceptionLocalizer;
 import response.CommandStatusResponse;
 import response.logic.ApplicationResponseProvider;
 
@@ -12,9 +13,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class CommandExecuteButtonController implements ActionListener, ApplicationResponseProvider<CommandStatusResponse> {
-
+    private final ResourceBundle resourceBundle;
     private final CommandDescription description;
     private final JTextField argsField;
     private final CommandCallback callback;
@@ -25,6 +27,7 @@ public class CommandExecuteButtonController implements ActionListener, Applicati
         this.argsField = argsField;
         this.callback = callback;
         this.providers = providers;
+        this.resourceBundle = ResourceBundle.getBundle("gui.l10n.command.CommandWindow");
     }
 
     @Override
@@ -39,9 +42,9 @@ public class CommandExecuteButtonController implements ActionListener, Applicati
             executor.executeSingleCommand(description.getName() + " " + argsField.getText());
         } catch (CommandsNotLoadedException ex) {
             CommandLoaderUtility.initializeCommands();
-            callback.writeResponse(new CommandStatusResponse("Something went wrong...", -3));
+            callback.writeResponse(new CommandStatusResponse(resourceBundle.getString("sww"), -3));
         } catch (CommandInterruptedException ex) {
-            callback.writeString(ex.getCause().toString());
+            callback.writeString(ExceptionLocalizer.localizeException((Exception) ex.getCause()));
         }
     }
 

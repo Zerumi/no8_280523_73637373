@@ -3,10 +3,7 @@ package database.logic.user;
 import authorization.AuthorizedUserData;
 import authorization.credential.AuthenticationData;
 import authorization.credential.RegistrationData;
-import exception.authorization.AuthorizeException;
-import exception.authorization.RegistrationFailedException;
-import exception.authorization.UnregisteredException;
-import exception.authorization.WrongPasswordException;
+import exception.authorization.*;
 import org.apache.commons.lang3.ArrayUtils;
 import request.logic.CallerBack;
 
@@ -33,7 +30,7 @@ public class DBUserManager implements Closeable {
     public AuthorizedUserData addUserToDatabase(CallerBack callerBack, RegistrationData data) throws SQLException, RegistrationFailedException {
 
         if (data.getPassword().length < MIN_PASSWORD_LENGTH)
-            throw new RegistrationFailedException("Password should be more than " + MIN_PASSWORD_LENGTH + " symbols.");
+            throw new NotEnoughPassLengthException(MIN_PASSWORD_LENGTH);
 
         String login = data.getLogin();
         String name = data.getName();

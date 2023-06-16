@@ -12,6 +12,8 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Locale;
+import java.util.prefs.Preferences;
 
 /**
  * Program entry point class. Contains main() method.
@@ -31,6 +33,12 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
+            Preferences root = Preferences.userRoot();
+            Preferences node = root.node("/com/zerumi/github/lab8");
+            String defaultLocale = node.get("default_locale", null);
+            if (defaultLocale != null && !defaultLocale.isBlank())
+                Locale.setDefault(Locale.forLanguageTag(defaultLocale));
+
             ServerConnection connection = new UdpConnectionBlockDecorator(
                     (UdpServerConnection) new UdpServerConnectionFactory().openConnection(
                             InetAddress.getLocalHost(), PORT), true);

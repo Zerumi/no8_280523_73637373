@@ -13,7 +13,7 @@ public class GUIRouteHandler implements ModuleHandler<Route> {
         RouteFillWindow fillWindow = new RouteFillWindow();
         if (fillWindow.showAsDialog("route builder")) {
             return fillWindow.getRoute();
-        } else throw new BuildObjectException("interrupted by user");
+        } else throw new BuildObjectException("interrupted_by_user");
 
     }
 }

@@ -3,6 +3,7 @@ package request.logic.worker;
 import authorization.AuthorizedUserData;
 import client.logic.AuthorizeManager;
 import exception.authorization.AuthorizeException;
+import exception.authorization.NotEnoughPassLengthException;
 import request.logic.request.ServerRequest;
 import request.RegistrationRequest;
 import response.logic.sender.ResponseSender;
@@ -18,8 +19,10 @@ public class RegistrationRequestWorker implements RequestWorker {
         try {
             AuthorizedUserData userData = AuthorizeManager.register(request.getFrom(), requestToWork.getRegData());
             response = new AuthorizeResponse(userData);
+        } catch (NotEnoughPassLengthException e) {
+            response = new ErrorResponse("not_enough_passlen", String.valueOf(e.getEnoughLen()));
         } catch (AuthorizeException e) {
-            response = new ErrorResponse(e.getMessage());
+            response = new ErrorResponse("register_error", e.getMessage());
         } finally {
             ResponseSender.sendResponse(response, request.getConnection(), request.getFrom());
         }

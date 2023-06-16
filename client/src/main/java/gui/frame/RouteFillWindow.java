@@ -13,13 +13,14 @@ import util.SpringUtilities;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class RouteFillWindow extends JPanel implements ValidationCallback {
 
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
-
     public static final RouteFields[] RESTRICTED_FIELDS = {RouteFields.ID, RouteFields.CREATION_DATE};
 
+    private final ResourceBundle resourceBundle = ResourceBundle.getBundle("gui.l10n.table.RouteTable");
     private final Route route;
     private final JButton confirmButton;
     private JDialog fillDialog;
@@ -37,7 +38,7 @@ public class RouteFillWindow extends JPanel implements ValidationCallback {
             JTextField field = new JTextField();
             field.setColumns(30);
             field.getDocument().addDocumentListener(new FillTextDocumentListener(field, routeField, this));
-            JLabel label = new JLabel(routeField.getName(), SwingConstants.RIGHT);
+            JLabel label = new JLabel(resourceBundle.getString("c_" + routeField.getName()), SwingConstants.RIGHT);
             fieldPanel.add(label);
             fieldPanel.add(field);
         }
@@ -47,7 +48,7 @@ public class RouteFillWindow extends JPanel implements ValidationCallback {
         confirmButton = new JButton("Confirm");
         confirmButton.addActionListener(e -> {
             if (new RouteValidator().validate(route)) {
-                JOptionPane.showMessageDialog(this, "Object is invalid. Try to fix all red fields before confirming.", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, resourceBundle.getString("invalid_obj_warn"), "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             ok = true;
