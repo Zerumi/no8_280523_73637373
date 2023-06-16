@@ -1,8 +1,8 @@
 package command.manager.preprocessing.processors;
 
 import client.logic.AuthorizedCallerBack;
-import command.manager.commands.AuthorizableCommand;
-import command.manager.commands.BaseCommand;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
 import request.logic.CallerBack;
 import server.logic.abstrct.ServerConnection;
 

@@ -2,8 +2,8 @@ package command.manager.preprocessing;
 
 import command.manager.preprocessing.processors.CommandAuthorizePreProcessor;
 import command.manager.preprocessing.processors.CommandPreProcessor;
-import command.manager.commands.AuthorizableCommand;
-import command.manager.commands.BaseCommand;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
 import exception.PreProceedingFailedException;
 import exception.ProcessionInterruptedException;
 import request.logic.CallerBack;

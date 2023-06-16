@@ -1,5 +1,9 @@
 package command.manager.commands;
 
+import command.manager.commands.intrface.ArgumentConsumer;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
+import command.manager.commands.intrface.LocalizableCommand;
 import database.logic.element.DBIntegrationUtility;
 import model.Route;
 import org.apache.logging.log4j.LogManager;
@@ -8,6 +12,8 @@ import response.CommandStatusResponse;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Adds new element to collection.
@@ -15,11 +21,13 @@ import java.util.Date;
  * @author Zerumi
  * @since 1.0
  */
-public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
+public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand, LocalizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.add");
     private CommandStatusResponse response;
     private Route obj;
     private long callerID;
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", Locale.US);
+    private ResourceBundle commandBundle = ResourceBundle.getBundle("l10n.command.add.AddCommandBundle", Locale.US);
 
     @Override
     public void setObj(Route obj) {
@@ -29,23 +37,22 @@ public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, Authori
 
     @Override
     public String getName() {
-        return "add";
+        return resourceBundle.getString("add");
     }
 
     @Override
     public String getDescr() {
-        return "Adds new element to collection. It also attach created element with user " +
-                "who created it";
+        return resourceBundle.getString("d_add");
     }
 
     @Override
     public String getArgs() {
-        return "{element}";
+        return resourceBundle.getString("a_add");
     }
 
     @Override
     public void execute(String[] args) {
-        response = DBIntegrationUtility.getInstance().addRouteToDBAndCollection(obj, callerID).toCommandResponse();
+        response = DBIntegrationUtility.getInstance().addRouteToDBAndCollection(obj, callerID).toLocalizedCommandResponse(commandBundle);
         logger.info(response.getResponse());
     }
 
@@ -57,5 +64,13 @@ public class AddCommand implements BaseCommand, ArgumentConsumer<Route>, Authori
     @Override
     public void setCallerID(long id) {
         this.callerID = id;
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        ResourceBundle.clearCache();
+        Locale.setDefault(locale);
+        resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", locale);
+        commandBundle = ResourceBundle.getBundle("l10n.command.add.AddCommandBundle", locale);
     }
 }

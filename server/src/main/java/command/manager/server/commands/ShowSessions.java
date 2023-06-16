@@ -1,7 +1,7 @@
 package command.manager.server.commands;
 
 import client.logic.SessionHandler;
-import command.manager.commands.BaseCommand;
+import command.manager.commands.intrface.BaseCommand;
 import response.CommandStatusResponse;
 
 public class ShowSessions implements BaseCommand {

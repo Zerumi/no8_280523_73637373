@@ -147,7 +147,7 @@ public class DBIntegrationUtility {
                     }
                 }
             }
-            response = new StatusResponse("Removed " + count + " of " + accessibleCollection.size() + " available elements", 199);
+            response = new StatusResponse("removed elements", 199, count, accessibleCollection.size());
         } catch (SQLException | IOException e) {
             response = new StatusResponse("Something went wrong during removing elements. Ask server administrator for further information.", -63);
             logger.error("Something went wrong during removing elements! ", e);

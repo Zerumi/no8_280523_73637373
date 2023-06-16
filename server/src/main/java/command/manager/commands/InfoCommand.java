@@ -1,5 +1,7 @@
 package command.manager.commands;
 
+import command.manager.commands.intrface.BaseCommand;
+import command.manager.commands.intrface.LocalizableCommand;
 import model.Route;
 import model.handler.CollectionHandler;
 import model.handler.RoutesHandler;
@@ -7,7 +9,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import response.CommandStatusResponse;
 
+import java.text.MessageFormat;
 import java.util.HashSet;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Shows information about the collection.
@@ -15,18 +20,20 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class InfoCommand implements BaseCommand {
+public class InfoCommand implements BaseCommand, LocalizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.info");
     private CommandStatusResponse response;
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", Locale.US);
+    private ResourceBundle commandBundle = ResourceBundle.getBundle("l10n.command.info.InfoCommandBundle", Locale.US);
 
     @Override
     public String getName() {
-        return "info";
+        return resourceBundle.getString("info");
     }
 
     @Override
     public String getDescr() {
-        return "Shows information about the collection";
+        return resourceBundle.getString("d_info");
     }
 
     @Override
@@ -35,9 +42,12 @@ public class InfoCommand implements BaseCommand {
 
         HashSet<Route> collection = handler.getCollection();
 
-        String sb = "Now you are operating with collection of type " + collection.getClass().getName() + ", filled with elements of type " + handler.getFirstOrNew().getClass().getName() + '\n' +
-                "Size of the collection is " + collection.size() + '\n' +
-                "Init date: " + handler.getInitDate();
+        MessageFormat mf = new MessageFormat(commandBundle.getString("info"));
+        String sb = mf.format(new Object[]{collection.getClass().getName(),
+                handler.getFirstOrNew().getClass().getName(),
+                collection.size(),
+                handler.getInitDate()
+        });
 
         response = CommandStatusResponse.ofString(sb);
         logger.info(response.getResponse());
@@ -46,5 +56,13 @@ public class InfoCommand implements BaseCommand {
     @Override
     public CommandStatusResponse getResponse() {
         return response;
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        ResourceBundle.clearCache();
+        Locale.setDefault(locale);
+        resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", locale);
+        commandBundle = ResourceBundle.getBundle("l10n.command.info.InfoCommandBundle", locale);
     }
 }

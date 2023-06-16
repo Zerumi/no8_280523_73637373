@@ -1,6 +1,7 @@
 package command.manager;
 
 import command.logic.CommandDescription;
+import command.manager.commands.intrface.BaseCommand;
 import command.manager.preprocessing.CommandPreProcessorManager;
 import command.manager.commands.*;
 import exception.UnknownCommandException;
@@ -13,6 +14,7 @@ import response.CommandStatusResponse;
 import server.logic.abstrct.ServerConnection;
 
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Optional;
 
 /**
@@ -23,7 +25,7 @@ import java.util.Optional;
  */
 public class CommandManager {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab5");
-    final LinkedHashMap<String, BaseCommand> commands;
+    private final LinkedHashMap<String, BaseCommand> commands;
 
     /**
      * Setup command manager and all of its commands.
@@ -87,4 +89,5 @@ public class CommandManager {
     public BaseCommand fromDescription(CommandDescription description) {
         return commands.get(description.getName());
     }
+
 }

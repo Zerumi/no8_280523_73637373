@@ -1,6 +1,6 @@
 package command.manager.server;
 
-import command.manager.commands.BaseCommand;
+import command.manager.commands.intrface.BaseCommand;
 import command.manager.server.commands.ShowSessions;
 import exception.UnknownCommandException;
 

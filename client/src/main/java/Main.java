@@ -6,6 +6,7 @@ import server.logic.abstrct.ServerConnection;
 import server.logic.udp.UdpConnectionBlockDecorator;
 import server.logic.udp.UdpServerConnection;
 import server.logic.udp.UdpServerConnectionFactory;
+import util.LocaleHolder;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,8 +37,11 @@ public class Main {
             Preferences root = Preferences.userRoot();
             Preferences node = root.node("/com/zerumi/github/lab8");
             String defaultLocale = node.get("default_locale", null);
-            if (defaultLocale != null && !defaultLocale.isBlank())
-                Locale.setDefault(Locale.forLanguageTag(defaultLocale));
+            if (defaultLocale != null && !defaultLocale.isBlank()) {
+                Locale nowL = Locale.forLanguageTag(defaultLocale);
+                Locale.setDefault(nowL);
+                LocaleHolder.setLocale(nowL);
+            }
 
             ServerConnection connection = new UdpConnectionBlockDecorator(
                     (UdpServerConnection) new UdpServerConnectionFactory().openConnection(

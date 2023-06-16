@@ -1,4 +1,4 @@
-package command.manager.commands;
+package command.manager.commands.intrface;
 
 import command.manager.preprocessing.PreProcessingCommandInterface;
 

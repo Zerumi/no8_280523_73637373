@@ -1,5 +1,9 @@
 package command.manager.commands;
 
+import command.manager.commands.intrface.ArgumentConsumer;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
+import command.manager.commands.intrface.LocalizableCommand;
 import database.logic.element.DBIntegrationUtility;
 import model.Route;
 import org.apache.logging.log4j.LogManager;
@@ -9,7 +13,9 @@ import util.Utilities;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 /**
  * Updates element by its ID.
@@ -17,25 +23,27 @@ import java.util.Optional;
  * @author Zerumi
  * @since 1.0
  */
-public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
+public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand, LocalizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.update");
     private CommandStatusResponse response;
     private Route obj;
     private long callerID;
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", Locale.US);
+    private ResourceBundle commandBundle = ResourceBundle.getBundle("l10n.command.update.UpdateCommandBundle", Locale.US);
 
     @Override
     public String getName() {
-        return "update";
+        return resourceBundle.getString("update");
     }
 
     @Override
     public String getDescr() {
-        return "Updates element by it ID. N/B: you may only edit elements belongs to you";
+        return resourceBundle.getString("d_update");
     }
 
     @Override
     public String getArgs() {
-        return "id {element}";
+        return resourceBundle.getString("a_update");
     }
 
     @Override
@@ -44,7 +52,7 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
         if (id < 0) {
             response = new CommandStatusResponse("You must enter a valid ID", -7);
         }
-        response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, id, callerID).toCommandResponse();
+        response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, id, callerID).toLocalizedCommandResponse(commandBundle);
         logger.info(response.getResponse());
     }
 
@@ -62,5 +70,13 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
     @Override
     public void setCallerID(long id) {
         this.callerID = id;
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        ResourceBundle.clearCache();
+        Locale.setDefault(locale);
+        resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", locale);
+        commandBundle = ResourceBundle.getBundle("l10n.command.update.UpdateCommandBundle", locale);
     }
 }

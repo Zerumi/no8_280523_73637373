@@ -1,5 +1,9 @@
 package command.manager.commands;
 
+import command.manager.commands.intrface.ArgumentConsumer;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
+import command.manager.commands.intrface.LocalizableCommand;
 import database.logic.element.DBIntegrationUtility;
 import model.Route;
 import model.comparator.RouteDistanceComparator;
@@ -12,6 +16,8 @@ import response.CommandStatusResponse;
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Adds element if it's value lower than min value.
@@ -19,25 +25,27 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
+public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand, LocalizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.addIfMin");
     private CommandStatusResponse response;
     private Route obj;
     private long callerID;
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", Locale.US);
+    private ResourceBundle commandBundle = ResourceBundle.getBundle("l10n.command.addIfMin.AddIfMinCommandBundle", Locale.US);
 
     @Override
     public String getName() {
-        return "add_if_min";
+        return resourceBundle.getString("add_if_min");
     }
 
     @Override
     public String getDescr() {
-        return "Adds element if it's value lower than min value. Min value takes from full collection";
+        return resourceBundle.getString("d_add_if_min");
     }
 
     @Override
     public String getArgs() {
-        return "{element}";
+        return "a_add_if_min";
     }
 
     @Override
@@ -67,5 +75,13 @@ public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route>, Au
     @Override
     public void setCallerID(long id) {
         this.callerID = id;
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        ResourceBundle.clearCache();
+        Locale.setDefault(locale);
+        resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", locale);
+        commandBundle = ResourceBundle.getBundle("l10n.command.addIfMin.AddIfMinCommandBundle", locale);
     }
 }

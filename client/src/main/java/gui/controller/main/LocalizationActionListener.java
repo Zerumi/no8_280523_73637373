@@ -2,6 +2,7 @@ package gui.controller.main;
 
 import gui.controller.main.callback.LocalizationCallback;
 import gui.controller.main.callback.RepaintCallback;
+import util.LocaleHolder;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -25,6 +26,7 @@ public class LocalizationActionListener implements ActionListener {
         Preferences node = root.node("/com/zerumi/github/lab8");
         Locale newLocale = Locale.forLanguageTag(locale);
         node.put("default_locale", locale);
+        LocaleHolder.setLocale(newLocale);
         Locale.setDefault(newLocale);
         callback.changeLocale(newLocale);
         callback.callRepaint();

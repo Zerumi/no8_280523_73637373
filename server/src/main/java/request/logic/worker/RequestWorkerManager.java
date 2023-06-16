@@ -33,6 +33,11 @@ public class RequestWorkerManager {
         workers.put(ListenCollectionActionsRequest.class, new ListenCollectionChangeHubWorker());
         workers.put(UnsubscribeListenCollectionActionsRequest.class, new UnsubscribeFromListenCollectionActionsWorker());
         workers.put(UpdateSingleFieldRequest.class, new UpdateSingleFieldRequestWorker());
+        workers.put(LocalizedCommandClientRequest.class, new LocalizedCommandRequestWorker());
+    }
+
+    public RequestWorkerManager(LinkedHashMap<Class<?>, RequestWorker> preparedWorkers) {
+        this.workers.putAll(preparedWorkers);
     }
 
     public void workWithRequest(ServerRequest request) {

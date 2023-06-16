@@ -1,6 +1,6 @@
 package command.manager.preprocessing.processors;
 
-import command.manager.commands.BaseCommand;
+import command.manager.commands.intrface.BaseCommand;
 import exception.PreProceedingFailedException;
 import exception.ProcessionInterruptedException;
 import request.logic.CallerBack;

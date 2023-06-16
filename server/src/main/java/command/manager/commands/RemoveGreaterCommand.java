@@ -1,5 +1,9 @@
 package command.manager.commands;
 
+import command.manager.commands.intrface.ArgumentConsumer;
+import command.manager.commands.intrface.AuthorizableCommand;
+import command.manager.commands.intrface.BaseCommand;
+import command.manager.commands.intrface.LocalizableCommand;
 import database.logic.element.DBIntegrationUtility;
 import model.Route;
 import model.comparator.RouteDistanceComparator;
@@ -9,10 +13,9 @@ import response.CommandStatusResponse;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.MessageFormat;
 import java.time.Instant;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  * Removes elements from collection greater than given in argument.
@@ -20,26 +23,27 @@ import java.util.Iterator;
  * @author Zerumi
  * @since 1.0
  */
-public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand {
+public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route>, AuthorizableCommand, LocalizableCommand {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmGreater");
     private CommandStatusResponse response;
     private Route obj;
     private long callerID;
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", Locale.US);
+    private ResourceBundle commandBundle = ResourceBundle.getBundle("l10n.command.removeG.RemoveGreaterCommandBundle", Locale.US);
 
     @Override
     public String getName() {
-        return "remove_greater";
+        return resourceBundle.getString("remove_greater");
     }
 
     @Override
     public String getDescr() {
-        return "Removes elements from collection greater than given in argument. Comparing is set by distance. " +
-                "N/B: you may only remove elements belongs to you";
+        return resourceBundle.getString("d_remove_greater");
     }
 
     @Override
     public String getArgs() {
-        return "{element}";
+        return resourceBundle.getString("a_remove_greater");
     }
 
     @Override
@@ -70,7 +74,9 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
                 logger.debug(" -- Lower.");
             }
         }
-        response = CommandStatusResponse.ofString("Removed " + count + " elements");
+        MessageFormat mf = new MessageFormat(commandBundle.getString("executed"));
+        String res = mf.format(new Object[]{count});
+        response = CommandStatusResponse.ofString(res);
         logger.info(response.getResponse());
     }
 
@@ -88,5 +94,13 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
     @Override
     public void setCallerID(long id) {
         this.callerID = id;
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        ResourceBundle.clearCache();
+        Locale.setDefault(locale);
+        resourceBundle = ResourceBundle.getBundle("l10n.command.CommandResourceBundle", locale);
+        commandBundle = ResourceBundle.getBundle("l10n.command.removeG.RemoveGreaterCommandBundle", locale);
     }
 }

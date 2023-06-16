@@ -1,4 +1,4 @@
-package command.manager.commands;
+package command.manager.commands.intrface;
 
 /**
  * Provides Argument Consumer
