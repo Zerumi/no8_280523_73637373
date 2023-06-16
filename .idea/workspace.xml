@@ -9,140 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: client i18n &amp; l10n">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/util/LocaleHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/intrface/LocalizableCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/CommandResourceBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/CommandResourceBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/CommandResourceBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/CommandResourceBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/CommandResourceBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/add/AddCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/add/AddCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/add/AddCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/add/AddCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/add/AddCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMax/AddIfMaxCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMax/AddIfMaxCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMax/AddIfMaxCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMax/AddIfMaxCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMax/AddIfMaxCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMin/AddIfMinCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMin/AddIfMinCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMin/AddIfMinCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMin/AddIfMinCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/addIfMin/AddIfMinCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/clear/ClearCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/clear/ClearCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/clear/ClearCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/clear/ClearCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/clear/ClearCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/countGTD/CountGreaterThanDistanceCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/countGTD/CountGreaterThanDistanceCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/countGTD/CountGreaterThanDistanceCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/countGTD/CountGreaterThanDistanceCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/countGTD/CountGreaterThanDistanceCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/executeS/ExecuteScriptCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/executeS/ExecuteScriptCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/executeS/ExecuteScriptCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/executeS/ExecuteScriptCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/executeS/ExecuteScriptCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/exit/ExitCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/exit/ExitCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/exit/ExitCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/exit/ExitCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/exit/ExitCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/help/HelpCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/help/HelpCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/help/HelpCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/help/HelpCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/help/HelpCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/info/InfoCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/info/InfoCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/info/InfoCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/info/InfoCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/info/InfoCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/minBCD/MinByCreationDateCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/minBCD/MinByCreationDateCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/minBCD/MinByCreationDateCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/minBCD/MinByCreationDateCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/minBCD/MinByCreationDateCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/printFAD/PrintFieldAscendingDistanceCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/printFAD/PrintFieldAscendingDistanceCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/printFAD/PrintFieldAscendingDistanceCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/printFAD/PrintFieldAscendingDistanceCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/printFAD/PrintFieldAscendingDistanceCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/remove/RemoveByIdCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/remove/RemoveByIdCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/remove/RemoveByIdCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/remove/RemoveByIdCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/remove/RemoveByIdCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/removeG/RemoveGreaterCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/removeG/RemoveGreaterCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/removeG/RemoveGreaterCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/removeG/RemoveGreaterCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/removeG/RemoveGreaterCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/show/ShowCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/show/ShowCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/show/ShowCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/show/ShowCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/show/ShowCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/update/UpdateCommandBundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/update/UpdateCommandBundle_en_IN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/update/UpdateCommandBundle_hu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/update/UpdateCommandBundle_pt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/l10n/command/update/UpdateCommandBundle_ru.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/LocalizedCommandRequestWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/request/LocalizedCommandClientRequest.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: server i18n &amp; l10n">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/LocalizationActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/LocalizationActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/ArgumentRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/CommandRequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/ClearCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/ClearCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/ExitCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/ExitCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/HelpCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/HelpCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/InfoCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/InfoCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/MinByCreationDateCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/MinByCreationDateCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/PrintFieldDistanceAscendingCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/PrintFieldDistanceAscendingCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/commands/SaveCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/commands/SaveCommand.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/preprocessing/CommandPreProcessorManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/preprocessing/CommandPreProcessorManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/preprocessing/preProcessors/CommandAuthorizePreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/preprocessing/preProcessors/CommandAuthorizePreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/preprocessing/preProcessors/CommandPreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/preprocessing/preProcessors/CommandPreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/preprocessing/processors/CommandAuthorizePreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/preprocessing/processors/CommandAuthorizePreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/preprocessing/processors/CommandPreProcessor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/preprocessing/processors/CommandPreProcessor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/command/manager/server/commands/ShowSessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/command/manager/server/commands/ShowSessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ArgumentConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/intrface/ArgumentConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/AuthorizableCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/intrface/AuthorizableCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/intrface/BaseCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/MinByCreationDateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/CommandPreProcessorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/CommandPreProcessorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/processors/CommandAuthorizePreProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/processors/CommandAuthorizePreProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/processors/CommandPreProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/preprocessing/processors/CommandPreProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/server/commands/ShowSessions.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/commands/ShowSessions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ArgumentCommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ArgumentCommandClientRequestWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/CommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/CommandClientRequestWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/response/logic/StatusResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/response/logic/StatusResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -500,14 +369,7 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="97810000" />
-    </task>
-    <task id="LOCAL-00035" summary="fix: test class name">
-      <created>1683326802670</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1683326802670</updated>
+      <workItem from="1686642215467" duration="98184000" />
     </task>
     <task id="LOCAL-00036" summary="feat: authorisation part 3">
       <created>1683331420014</created>
@@ -845,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686887546252</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="feat: server i18n &amp; l10n">
+      <created>1686901881807</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1686901881807</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -868,7 +737,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: sorting part 1" />
     <MESSAGE value="feat: sorting part 2" />
     <MESSAGE value="feat: sorting final + auth notifications added" />
     <MESSAGE value="chore: remove unconventional package names, part 1" />
@@ -893,7 +761,8 @@
     <MESSAGE value="chore: rerun javadoc" />
     <MESSAGE value="chore: rerun javadoc + fix package name" />
     <MESSAGE value="feat: client i18n &amp; l10n" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: client i18n &amp; l10n" />
+    <MESSAGE value="feat: server i18n &amp; l10n" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: server i18n &amp; l10n" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

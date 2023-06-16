@@ -50,7 +50,7 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route>, Auth
     public void execute(String[] args) {
         long id = Optional.ofNullable(Utilities.handleUserInputID(args[1])).orElse(-1L);
         if (id < 0) {
-            response = new CommandStatusResponse("You must enter a valid ID", -7);
+            response = new CommandStatusResponse(commandBundle.getString("You must enter a valid ID"), -7);
         }
         response = DBIntegrationUtility.getInstance().updateElementInDBAndCollection(obj, id, callerID).toLocalizedCommandResponse(commandBundle);
         logger.info(response.getResponse());
