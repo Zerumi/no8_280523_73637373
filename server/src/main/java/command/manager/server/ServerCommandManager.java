@@ -1,6 +1,7 @@
 package command.manager.server;
 
 import command.manager.commands.intrface.BaseCommand;
+import command.manager.server.commands.RemoveSession;
 import command.manager.server.commands.ShowSessions;
 import exception.UnknownCommandException;
 
@@ -13,6 +14,7 @@ public class ServerCommandManager {
     public ServerCommandManager() {
         serverCommands = new LinkedHashMap<>();
         serverCommands.put("sessions", new ShowSessions());
+        serverCommands.put("rm_session", new RemoveSession());
     }
 
     public void executeCommand(String[] args) throws UnknownCommandException {

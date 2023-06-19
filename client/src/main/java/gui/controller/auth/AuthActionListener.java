@@ -14,6 +14,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class AuthActionListener implements ActionListener, ApplicationResponseProvider<AuthorizeResponse> {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
@@ -67,6 +68,8 @@ public class AuthActionListener implements ActionListener, ApplicationResponsePr
                 mainWindow.setVisible(true);
             } catch (DenyOperationException e) {
                 logger.warn("Denied new MainWindow");
+            } catch (IOException e) {
+                logger.warn("Something went wrong during I/O", e);
             }
         });
 

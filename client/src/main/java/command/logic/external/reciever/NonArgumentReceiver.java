@@ -13,6 +13,7 @@ import java.util.Arrays;
 
 public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationResponseProvider<CommandStatusResponse> {
 
+    private boolean flag = false;
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
     private final ApplicationResponseProvider<CommandStatusResponse>[] providers;
 
@@ -22,27 +23,39 @@ public class NonArgumentReceiver implements ExternalBaseReceiver, ApplicationRes
     }
 
     @Override
-    public boolean receiveCommand(CommandDescription command, String[] args) {
+    public synchronized boolean receiveCommand(CommandDescription command, String[] args) {
         new CommandRequestSender().sendCommand(command, args, ServerConnectionHandler.getCurrentConnection(), this);
+        try {
+            while (!flag)
+                wait();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return true;
     }
 
     @Override
-    public void acceptException(Exception e) {
+    public synchronized void acceptException(Exception e) {
 
         Arrays.stream(providers).forEach(x -> x.acceptException(e));
 
         logger.error(e);
+
+        this.flag = true;
+        notifyAll(); // жесть, ты как мог забыть это написать
     }
 
     @Override
-    public void acceptResponse(CommandStatusResponse response) {
+    public synchronized void acceptResponse(CommandStatusResponse response) {
 
-        Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
+        Arrays.stream(providers).forEach(x -> x.acceptResponse(response)); // опа кажется дубликат кода
 
         if (response != null) {
             logger.info("Status code: " + response.getStatusCode());
             logger.info("Response: \n" + response.getResponse());
         }
+
+        this.flag = true;
+        notifyAll();
     }
 }

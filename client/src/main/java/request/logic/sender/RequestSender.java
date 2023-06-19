@@ -6,9 +6,9 @@ import exception.ProceedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.BaseRequest;
+import response.BaseResponse;
 import response.logic.ApplicationResponseProvider;
 import response.logic.ResponseReader;
-import response.BaseResponse;
 import server.logic.abstrct.ServerConnection;
 import server.logic.abstrct.ServerResponseProvider;
 
@@ -54,6 +54,8 @@ public class RequestSender implements ServerResponseProvider {
 
     public void removeListener(ApplicationResponseProvider<BaseResponse> provider) {
         this.providers.remove(provider);
+        if (providers.size() == 0)
+            connection.removeResponseListeners(this);
     }
 
     @Override

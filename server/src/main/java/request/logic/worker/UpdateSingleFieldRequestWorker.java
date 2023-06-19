@@ -2,16 +2,12 @@ package request.logic.worker;
 
 import client.logic.AuthorizedCallerBack;
 import database.logic.element.DBIntegrationUtility;
-import model.Route;
-import model.handler.CollectionHandler;
-import model.handler.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import request.logic.request.ServerRequest;
 import request.UpdateSingleFieldRequest;
-
-import java.util.HashSet;
-import java.util.Optional;
+import request.logic.request.ServerRequest;
+import response.ErrorResponse;
+import response.logic.sender.ResponseSender;
 
 public class UpdateSingleFieldRequestWorker implements RequestWorker {
 
@@ -21,21 +17,16 @@ public class UpdateSingleFieldRequestWorker implements RequestWorker {
     public void workWithRequest(ServerRequest request) {
         UpdateSingleFieldRequest requestToWork = (UpdateSingleFieldRequest) request.getUserRequest();
 
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-
-        Optional<Route> changedObj = collectionHandler
-                .getCollection()
-                .stream()
-                .filter(x ->
-                        x.getId().equals(requestToWork.getObjId()))
-                .findAny();
-
         logger.info("working with update single element...");
 
-        DBIntegrationUtility.getInstance().updateSingleField(
+        var response = DBIntegrationUtility.getInstance().updateSingleField(
                 ((AuthorizedCallerBack) request.getFrom()).getUserData().userID(),
                 requestToWork.getObjId(),
                 requestToWork.getField(),
                 requestToWork.getValueToSet());
+
+        if (response.code() == 403) {
+            ResponseSender.sendResponse(new ErrorResponse("inaccessible", "can't access element"), request.getConnection(), request.getFrom());
+        }
     }
 }

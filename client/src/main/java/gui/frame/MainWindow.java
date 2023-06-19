@@ -9,7 +9,9 @@ import gui.controller.main.LocalizationActionListener;
 import gui.controller.main.OpenFilterWindowAction;
 import gui.controller.main.action.OpenVisualizationAction;
 import gui.controller.main.callback.LocalizationCallback;
+import gui.model.RouteTableButtonEditor;
 import gui.model.RouteTableModel;
+import gui.view.render.RouteTableButtonRender;
 import gui.view.render.RouteTableRender;
 import model.RouteFields;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +25,7 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +48,7 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
     private final TableRowSorter<TableModel> sorter;
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("gui.l10n.main.MainWindow");
 
-    public MainWindow(AuthorizedUserData profile) throws DenyOperationException {
+    public MainWindow(AuthorizedUserData profile) throws DenyOperationException, IOException {
 
         if (isExist) throw new DenyOperationException("Main window had already created.");
         isExist = true;
@@ -74,6 +77,9 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
         table.setPreferredScrollableViewportSize(new Dimension(500, 70));
         table.setFillsViewportHeight(true);
 
+        table.getColumn("rm").setCellRenderer(new RouteTableButtonRender());
+        table.getColumn("rm").setCellEditor(new RouteTableButtonEditor(new JCheckBox()));
+
         JScrollPane scrollPane = new JScrollPane(table);
 
         // setup sorter
@@ -87,16 +93,13 @@ public class MainWindow extends JFrame implements ExceptionProvider, Localizatio
         table.setRowSorter(sorter);
 
         //Create the menu bar.
-
         menuBar = new JMenuBar();
 
         //Build the first menu.
         firstMenu = new JMenu(resourceBundle.getString("visualisation"));
         firstMenu.setMnemonic(KeyEvent.VK_A);
         firstMenu.getAccessibleContext().setAccessibleDescription(resourceBundle.getString("ct_visualisation"));
-        JMenuItem openVisual = new JMenuItem();
-        openVisual.add(new JLabel(resourceBundle.getString("visualisation")));
-        openVisual.setPreferredSize(new Dimension(200, openVisual.getPreferredSize().height));
+        JMenuItem openVisual = new JMenuItem(resourceBundle.getString("visualisation"));
         openVisual.addActionListener(new OpenVisualizationAction(model));
         firstMenu.add(openVisual);
         menuBar.add(firstMenu);

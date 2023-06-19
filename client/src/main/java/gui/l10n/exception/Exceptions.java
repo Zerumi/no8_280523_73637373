@@ -30,6 +30,9 @@ public class Exceptions extends ListResourceBundle {
             },
             {
                     "interrupted_by_user", "Object building was interrupted by user."
+            },
+            {
+                    "inaccessible", "You have no access to element."
             }
     };
 

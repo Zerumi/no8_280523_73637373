@@ -5,11 +5,11 @@ import exception.UnsupportedRequestException;
 import exception.authorization.UnauthorizedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import request.logic.request.annotation.AnnotationProcessor;
-import request.logic.request.ServerRequest;
 import request.*;
-import response.logic.sender.ResponseSender;
+import request.logic.request.ServerRequest;
+import request.logic.request.annotation.AnnotationProcessor;
 import response.ErrorResponse;
+import response.logic.sender.ResponseSender;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -34,6 +34,7 @@ public class RequestWorkerManager {
         workers.put(UnsubscribeListenCollectionActionsRequest.class, new UnsubscribeFromListenCollectionActionsWorker());
         workers.put(UpdateSingleFieldRequest.class, new UpdateSingleFieldRequestWorker());
         workers.put(LocalizedCommandClientRequest.class, new LocalizedCommandRequestWorker());
+        workers.put(RemoveFromCollectionRequest.class, new RemoveFromCollectionRequestWorker());
     }
 
     public RequestWorkerManager(LinkedHashMap<Class<?>, RequestWorker> preparedWorkers) {

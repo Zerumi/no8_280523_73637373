@@ -15,7 +15,7 @@ import server.logic.ServerConnectionHandler;
 import java.util.Arrays;
 
 public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Route>, ApplicationResponseProvider<CommandStatusResponse> {
-
+    private boolean flag = false;
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
     private final ApplicationResponseProvider<CommandStatusResponse>[] providers;
     private final ModuleHandler<Route> handler;
@@ -33,27 +33,36 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
     }
 
     @Override
-    public boolean receiveCommand(CommandDescription command, String[] args) throws BuildObjectException {
+    public synchronized boolean receiveCommand(CommandDescription command, String[] args) throws BuildObjectException {
         route = handler.buildObject();
         new ArgumentRequestSender<Route>().sendCommand(command, args, route, ServerConnectionHandler.getCurrentConnection(), this);
+        try {
+            while (!flag)
+                wait();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return true;
     }
 
     @Override
-    public Route getArguemnt() {
+    public synchronized Route getArguemnt() {
         return route;
     }
 
     @Override
-    public void acceptException(Exception e) {
+    public synchronized void acceptException(Exception e) {
 
         Arrays.stream(providers).forEach(x -> x.acceptException(e));
 
         logger.error(e);
+
+        this.flag = true;
+        notifyAll();
     }
 
     @Override
-    public void acceptResponse(CommandStatusResponse response) {
+    public synchronized void acceptResponse(CommandStatusResponse response) {
 
         Arrays.stream(providers).forEach(x -> x.acceptResponse(response));
 
@@ -61,5 +70,8 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
             logger.info("Status code: " + response.getStatusCode());
             logger.info("Response: \n" + response.getResponse());
         }
+
+        this.flag = true;
+        notifyAll();
     }
 }

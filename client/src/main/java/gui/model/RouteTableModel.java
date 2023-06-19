@@ -1,7 +1,9 @@
 package gui.model;
 
+import core.provider.ExceptionProvider;
 import exception.UpdateModelException;
 import gui.controller.main.callback.GetCollectionFromModelCallback;
+import gui.l10n.exception.ExceptionLocalizer;
 import gui.model.listener.RouteTableModelChangeListener;
 import gui.model.listener.RouteTableModelUpdateFullCollectionListener;
 import listen.logic.ServerListener;
@@ -16,33 +18,37 @@ import request.ListenCollectionActionsRequest;
 import request.UpdateSingleFieldRequest;
 import request.logic.sender.RequestSender;
 import request.logic.sender.ShowCollectionRequestSender;
+import request.logic.sender.SuppressResponseRequestSender;
 import response.CollectionUpdatedResponse;
 import response.ShowCollectionResponse;
 import server.logic.ServerConnectionHandler;
 import util.RouteConvertUtil;
 
+import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.ResourceBundle;
+import java.util.*;
 
-public class RouteTableModel extends AbstractTableModel implements GetCollectionFromModelCallback {
+public class RouteTableModel extends AbstractTableModel implements GetCollectionFromModelCallback, ExceptionProvider {
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("gui.l10n.table.RouteTable");
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
-
+    private final SuppressResponseRequestSender requestSender;
     private final ArrayList<ArrayList<Object>> model = new ArrayList<>();
     private HashSet<Route> collection;
 
-    private String[] columnNames = Arrays.stream(RouteFields.values())
-            .map(RouteFields::getName)
-            .map(x -> "c_" + x)
-            .map(resourceBundle::getString)
-            .toList()
-            .toArray(new String[0]);
+    private String[] columnNames;
 
     public RouteTableModel() {
+
+        List<String> strs = new ArrayList<>(Arrays.stream(RouteFields.values())
+                .map(RouteFields::getName)
+                .map(x -> "c_" + x)
+                .map(resourceBundle::getString)
+                .toList());
+
+        strs.add("rm");
+        this.columnNames = strs.toArray(new String[0]);
+
         new ShowCollectionRequestSender().sendCollectionRequest(
                 new RouteTableModelUpdateFullCollectionListener(this));
         try {
@@ -55,6 +61,8 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
         new ServerListener<>(CollectionUpdatedResponse.class).addListeners(
                 new RouteTableModelChangeListener(this)
         ).startListen();
+
+        this.requestSender = new SuppressResponseRequestSender();
     }
 
 
@@ -162,6 +170,8 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     }
 
     public void acceptException(Exception e) {
+        JOptionPane.showMessageDialog(null, ExceptionLocalizer.localizeException(e));
+        requestSender.unsubscribeFromExceptions();
         logger.error("exception", e);
     }
 
@@ -196,21 +206,22 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
             line.add(null);
         }
         line.add(element.getDistance());
+        line.add("\uD83D\uDDD1");
         model.add(line);
     }
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        if (columnIndex == 14) return;
+
         UpdateSingleFieldRequest request = new UpdateSingleFieldRequest(
                 (Long) (model.get(rowIndex).get(RouteFields.ID.getIndex())),
                 RouteFields.byId(columnIndex),
                 aValue
         );
-        try {
-            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection());
-        } catch (IOException e) {
-            logger.error("ex ", e);
-        }
+        requestSender.sendRequestAndSuppressResponse(request,
+                ServerConnectionHandler.getCurrentConnection(),
+                this);
     }
 
     @Override
@@ -222,6 +233,7 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     public HashSet<Route> getCollection() {
         return collection;
     }
+
     public void changeLocale() {
         ResourceBundle.clearCache();
         resourceBundle = ResourceBundle.getBundle("gui.l10n.table.RouteTable");

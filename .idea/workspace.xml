@@ -9,21 +9,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: update cmd i18n &amp; l10n">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/filter/ModelConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/OpenFilterWindowAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/FilterWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/filter/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/util/LocaleUtil.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: visualization and locales">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableButtonEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableButtonRender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RemoveFromCollectionRequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/SuppressResponseRequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/response/logic/ApplicationPartialResponseProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Iconshock-Vista-General-Trash.256.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/commands/RemoveSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RemoveFromCollectionRequestWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/request/RemoveFromCollectionRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/filler/FillTextDocumentListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/filler/FillTextDocumentListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/ArgumentRouteCommandReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/NonArgumentReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/RouteFillWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableRender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/LoginRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateSingleFieldRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateSingleFieldRequestWorker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,36 +122,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.customizations",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Zerumi/ЛАБЫ ПРОГА 2022/no7_220423_863847963&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="exception" />
@@ -190,7 +198,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373 [installDist]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -331,9 +339,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
+        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
@@ -381,14 +389,8 @@
       <workItem from="1683810991856" duration="14837000" />
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
-      <workItem from="1686642215467" duration="113434000" />
-    </task>
-    <task id="LOCAL-00037" summary="fix: bug fixes with registration &amp; auth">
-      <created>1683332453471</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1683332453471</updated>
+      <workItem from="1686642215467" duration="115285000" />
+      <workItem from="1687003136148" duration="31698000" />
     </task>
     <task id="LOCAL-00038" summary="chore: restructured client + some inspections">
       <created>1683333436014</created>
@@ -726,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686902118937</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="fix: visualization and locales">
+      <created>1686946232258</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1686946232258</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -749,7 +758,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: sorting final + auth notifications added" />
     <MESSAGE value="chore: remove unconventional package names, part 1" />
     <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
@@ -774,7 +782,8 @@
     <MESSAGE value="feat: client i18n &amp; l10n" />
     <MESSAGE value="feat: server i18n &amp; l10n" />
     <MESSAGE value="fix: update cmd i18n &amp; l10n" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: update cmd i18n &amp; l10n" />
+    <MESSAGE value="fix: visualization and locales" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: visualization and locales" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -789,7 +798,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java</url>
-          <line>78</line>
+          <line>80</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -797,7 +806,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/NonArgumentReceiver.java</url>
-          <line>40</line>
+          <line>50</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -814,9 +823,19 @@
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/request/LocalizedCommandClientRequest.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="166" />
+          <url>file://$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="182" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

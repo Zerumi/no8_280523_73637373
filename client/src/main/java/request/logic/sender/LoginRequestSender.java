@@ -4,9 +4,9 @@ import core.provider.ProviderRuleSet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import request.BaseRequest;
-import response.logic.ApplicationResponseProvider;
 import response.AuthorizeResponse;
 import response.BaseResponse;
+import response.logic.ApplicationResponseProvider;
 import server.logic.ServerConnectionHandler;
 
 import java.io.IOException;
@@ -17,13 +17,15 @@ public class LoginRequestSender implements ApplicationResponseProvider<BaseRespo
 
     private ApplicationResponseProvider<AuthorizeResponse>[] providers;
 
+    private final RequestSender requestSender = new RequestSender();
+
     // костылииииии.............
     // upd. since 4.0: где?
     @SafeVarargs
     public final void sendLoginRequest(BaseRequest request, ApplicationResponseProvider<AuthorizeResponse>... providers) {
         this.providers = providers;
         try {
-            new RequestSender().sendRequest(request, ServerConnectionHandler.getCurrentConnection(),
+            requestSender.sendRequest(request, ServerConnectionHandler.getCurrentConnection(),
                     new ProviderRuleSet[]{ProviderRuleSet.UNSUBSCRIBE_ON_ERROR_RESPONSE,
                             ProviderRuleSet.UNSUBSCRIBE_ON_EXCEPTION},
                     this);
@@ -42,6 +44,7 @@ public class LoginRequestSender implements ApplicationResponseProvider<BaseRespo
         if (response.getClass().equals(AuthorizeResponse.class)) {
             var acceptedResponse = (AuthorizeResponse) response;
             Arrays.stream(providers).forEach(x -> x.acceptResponse(acceptedResponse));
+            requestSender.removeListener(this);
         }
     }
 }
