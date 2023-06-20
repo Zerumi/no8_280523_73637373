@@ -222,6 +222,8 @@ public class VisualisationComponent extends JComponent implements VisualisationC
 
     @Override
     public void fireUpdateRoutes(UpdateCollectionAction action) {
+        logger.info("FIRE UPDATE ROUTE!!");
+        logger.info(action.getUpdatedFiled() + " " + action.getUpdatedValue());
         Route routeToEdit = collection.stream()
                 .filter(x -> x.getId().equals(action.getElementId()))
                 .findAny().orElse(new Route());

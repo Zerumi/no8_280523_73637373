@@ -83,47 +83,57 @@ public class DBIntegrationUtility {
                     return new StatusResponse("User has no access to the element (or this element doesn't exists)", 403);
                 if (manager.updateElementInDataBase(route, elementID)) {
                     // я тоже себя ненавижу, малыш, я тоже...
-                    routeToEdit.setName(route.getName());
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.NAME, route.getName()
-                    )));
-                    routeToEdit.setCoordinates(route.getCoordinates());
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.COORDINATES_X, route.getCoordinates().getX()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.COORDINATES_Y, route.getCoordinates().getY()
-                    )));
-                    routeToEdit.setTo(route.getTo());
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.TO_X, route.getTo().getX()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.TO_Y, route.getTo().getY()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.TO_Z, route.getTo().getZ()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.TO_NAME, route.getTo().getName()
-                    )));
-                    routeToEdit.setFrom(route.getFrom());
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.FROM_X, route.getFrom().getX()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.FROM_Y, route.getFrom().getY()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.FROM_Z, route.getFrom().getZ()
-                    )));
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.FROM_NAME, route.getFrom().getName()
-                    )));
-                    routeToEdit.setDistance(route.getDistance());
-                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                            elementID, RouteFields.DISTANCE, route.getDistance()
-                    )));
+                    if (!routeToEdit.getName().equals(route.getName())) {
+                        routeToEdit.setName(route.getName());
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.NAME, route.getName()
+                        )));
+                    }
+                    if (!routeToEdit.getCoordinates().equals(route.getCoordinates())) {
+                        routeToEdit.setCoordinates(route.getCoordinates());
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.COORDINATES_X, route.getCoordinates().getX()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.COORDINATES_Y, route.getCoordinates().getY()
+                        )));
+                    }
+                    if (!routeToEdit.getTo().equals(route.getTo())) {
+                        routeToEdit.setTo(route.getTo());
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.TO_X, route.getTo().getX()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.TO_Y, route.getTo().getY()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.TO_Z, route.getTo().getZ()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.TO_NAME, route.getTo().getName()
+                        )));
+                    }
+                    if (!routeToEdit.getFrom().equals(route.getFrom())) {
+                        routeToEdit.setFrom(route.getFrom());
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.FROM_X, route.getFrom().getX()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.FROM_Y, route.getFrom().getY()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.FROM_Z, route.getFrom().getZ()
+                        )));
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.FROM_NAME, route.getFrom().getName()
+                        )));
+                    }
+                    if (routeToEdit.getDistance() != route.getDistance()) {
+                        routeToEdit.setDistance(route.getDistance());
+                        ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                                elementID, RouteFields.DISTANCE, route.getDistance()
+                        )));
+                    }
 
                     logger.info("Updated ID value: " + elementID);
                     response = new StatusResponse("Element updated!", 200);

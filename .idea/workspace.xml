@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: manage objects on visualization part 1">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/component/VisualizationComponentProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/component/VisualizationMouseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteFieldGetUtil.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: manage objects on visualization part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/action/OpenVisualizationAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/UpdateButtonActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/UpdateButtonActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/model/validator/adapter/RouteFieldValidateAdaptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/model/validator/adapter/RouteFieldValidateAdaptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/util/RouteFieldSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/util/RouteFieldSetters.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,14 +371,7 @@
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
       <workItem from="1686642215467" duration="115285000" />
-      <workItem from="1687003136148" duration="48754000" />
-    </task>
-    <task id="LOCAL-00042" summary="chore: rerun javadoc">
-      <created>1683499079544</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1683499079544</updated>
+      <workItem from="1687003136148" duration="51557000" />
     </task>
     <task id="LOCAL-00043" summary="feat: add multithreading">
       <created>1683507732661</created>
@@ -724,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687231736847</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="feat: manage objects on visualization part 2">
+      <created>1687234699507</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1687234699507</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,7 +739,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: command gui logic" />
     <MESSAGE value="fix: text formatting in commands" />
     <MESSAGE value="fix: remove resolved todo's" />
     <MESSAGE value="feat: visualization part 0.1" />
@@ -772,7 +763,8 @@
     <MESSAGE value="feat: reworked update mechanics" />
     <MESSAGE value="fix: client receive new owners" />
     <MESSAGE value="feat: manage objects on visualization part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: manage objects on visualization part 1" />
+    <MESSAGE value="feat: manage objects on visualization part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: manage objects on visualization part 2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
