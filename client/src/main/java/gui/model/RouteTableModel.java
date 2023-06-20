@@ -129,6 +129,8 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
                 for (var element : action.getNewElements()) {
                     addNewLine(element);
                 }
+                
+                ownerShip.putAll(action.getNewOwners());
 
                 fireTableRowsUpdated(0, Integer.MAX_VALUE);
             }

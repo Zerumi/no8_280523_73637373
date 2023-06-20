@@ -9,25 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: exception handling + removing by pressing button">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/util/ColorGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/UpdateButtonActionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/user/DBUserTableHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateElementRequestWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/request/UpdateElementRequest.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: reworked update mechanics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/GetCollectionFromModelCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/GetCollectionFromModelCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/listen/provider/CollectionActionsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/listen/provider/CollectionActionsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ShowCollectionRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ShowCollectionRequestWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/model/collection/actions/AddCollectionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/model/collection/actions/AddCollectionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/response/ShowCollectionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/response/ShowCollectionResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,14 +371,7 @@
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
       <workItem from="1686642215467" duration="115285000" />
-      <workItem from="1687003136148" duration="42724000" />
-    </task>
-    <task id="LOCAL-00039" summary="chore: rerun javadoc">
-      <created>1683333487464</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1683333487464</updated>
+      <workItem from="1687003136148" duration="43244000" />
     </task>
     <task id="LOCAL-00040" summary="critical: reformed commands + authorization">
       <created>1683498975434</created>
@@ -731,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687216663632</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="feat: reworked update mechanics">
+      <created>1687228399936</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1687228399936</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +739,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
     <MESSAGE value="fix: concurrency in layout" />
     <MESSAGE value="feat: command gui logic" />
@@ -779,7 +763,8 @@
     <MESSAGE value="fix: update cmd i18n &amp; l10n" />
     <MESSAGE value="fix: visualization and locales" />
     <MESSAGE value="feat: exception handling + removing by pressing button" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: exception handling + removing by pressing button" />
+    <MESSAGE value="feat: reworked update mechanics" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: reworked update mechanics" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

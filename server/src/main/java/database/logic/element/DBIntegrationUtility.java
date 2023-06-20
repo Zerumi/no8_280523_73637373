@@ -81,7 +81,7 @@ public class DBIntegrationUtility {
             if (logic.checkNonAccessory(creatorID, elementID))
                 return new StatusResponse("User has no access to the element (or this element doesn't exists)", 403);
             if (routeToEdit != null && manager.updateElementInDataBase(route, elementID)) {
-
+                // я тоже себя ненавижу, малыш, я тоже...
                 routeToEdit.setName(route.getName());
                 ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
                         elementID, RouteFields.NAME, route.getName()
