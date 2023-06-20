@@ -89,6 +89,11 @@ memberSearchIndex = [{
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
+    "p": "gui.frame",
+    "c": "RegisterWindow",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
     "p": "gui.model.listener",
     "c": "RouteTableModelChangeListener",
     "l": "acceptException(Exception)",
@@ -96,6 +101,11 @@ memberSearchIndex = [{
 }, {
     "p": "gui.model.listener",
     "c": "RouteTableModelUpdateFullCollectionListener",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
+    "p": "gui.model",
+    "c": "RouteTableButtonEditor",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
@@ -140,12 +150,22 @@ memberSearchIndex = [{
     "u": "acceptException(java.lang.Exception)"
 }, {
     "p": "request.logic.sender",
+    "c": "RemoveFromCollectionRequestSender",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
+    "p": "request.logic.sender",
     "c": "RequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
     "p": "request.logic.sender",
     "c": "ShowCollectionRequestSender",
+    "l": "acceptException(Exception)",
+    "u": "acceptException(java.lang.Exception)"
+}, {
+    "p": "request.logic.sender",
+    "c": "SuppressResponseRequestSender",
     "l": "acceptException(Exception)",
     "u": "acceptException(java.lang.Exception)"
 }, {
@@ -158,6 +178,11 @@ memberSearchIndex = [{
     "c": "RouteTableModel",
     "l": "acceptFullCollectionResponse(ShowCollectionResponse)",
     "u": "acceptFullCollectionResponse(response.ShowCollectionResponse)"
+}, {
+    "p": "response.logic",
+    "c": "ApplicationPartialResponseProvider",
+    "l": "acceptMessage(String)",
+    "u": "acceptMessage(java.lang.String)"
 }, {
     "p": "response.logic",
     "c": "IntermediateResponseHandler",
@@ -219,7 +244,17 @@ memberSearchIndex = [{
     "u": "acceptResponse(response.BaseResponse)"
 }, {
     "p": "request.logic.sender",
+    "c": "RemoveFromCollectionRequestSender",
+    "l": "acceptResponse(BaseResponse)",
+    "u": "acceptResponse(response.BaseResponse)"
+}, {
+    "p": "request.logic.sender",
     "c": "ShowCollectionRequestSender",
+    "l": "acceptResponse(BaseResponse)",
+    "u": "acceptResponse(response.BaseResponse)"
+}, {
+    "p": "request.logic.sender",
+    "c": "SuppressResponseRequestSender",
     "l": "acceptResponse(BaseResponse)",
     "u": "acceptResponse(response.BaseResponse)"
 }, {"p": "listen.logic", "c": "ServerListener", "l": "acceptResponse(byte[])"}, {
@@ -285,8 +320,23 @@ memberSearchIndex = [{
     "l": "actionPerformed(ActionEvent)",
     "u": "actionPerformed(java.awt.event.ActionEvent)"
 }, {
+    "p": "gui.controller.main",
+    "c": "LocalizationActionListener",
+    "l": "actionPerformed(ActionEvent)",
+    "u": "actionPerformed(java.awt.event.ActionEvent)"
+}, {
+    "p": "gui.controller.main",
+    "c": "OpenFilterWindowAction",
+    "l": "actionPerformed(ActionEvent)",
+    "u": "actionPerformed(java.awt.event.ActionEvent)"
+}, {
     "p": "gui.controller.register",
     "c": "RegisterActionListener",
+    "l": "actionPerformed(ActionEvent)",
+    "u": "actionPerformed(java.awt.event.ActionEvent)"
+}, {
+    "p": "gui.controller.visualization",
+    "c": "UpdateButtonActionListener",
     "l": "actionPerformed(ActionEvent)",
     "u": "actionPerformed(java.awt.event.ActionEvent)"
 }, {"p": "model.collection.actions", "c": "CollectionActions", "l": "ADD"}, {
@@ -301,8 +351,8 @@ memberSearchIndex = [{
 }, {
     "p": "model.collection.actions",
     "c": "AddCollectionAction",
-    "l": "AddCollectionAction(Collection<? extends Route>)",
-    "u": "%3Cinit%3E(java.util.Collection)"
+    "l": "AddCollectionAction(Collection<? extends Route>, HashMap<Long, Long>)",
+    "u": "%3Cinit%3E(java.util.Collection,java.util.HashMap)"
 }, {
     "p": "model.handler",
     "c": "CollectionHandler",
@@ -317,6 +367,31 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "AddCommand",
     "l": "AddCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_en_IN",
+    "l": "AddCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_hu",
+    "l": "AddCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_pt",
+    "l": "AddCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_ru",
+    "l": "AddCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle",
+    "l": "AddCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "database.logic.element",
@@ -339,9 +414,59 @@ memberSearchIndex = [{
     "l": "AddIfMaxCommand()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_en_IN",
+    "l": "AddIfMaxCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_hu",
+    "l": "AddIfMaxCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_pt",
+    "l": "AddIfMaxCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_ru",
+    "l": "AddIfMaxCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle",
+    "l": "AddIfMaxCommandBundle()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "AddIfMinCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_en_IN",
+    "l": "AddIfMinCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_hu",
+    "l": "AddIfMinCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_pt",
+    "l": "AddIfMinCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_ru",
+    "l": "AddIfMinCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle",
+    "l": "AddIfMinCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "listen.logic",
@@ -417,7 +542,7 @@ memberSearchIndex = [{
     "c": "AreYouSeriousException",
     "l": "AreYouSeriousException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
-}, {
+}, {"p": "response.logic", "c": "StatusResponse", "l": "args()"}, {
     "p": "request",
     "c": "ArgumentCommandClientRequest",
     "l": "ArgumentCommandClientRequest(CommandDescription, String[], T)",
@@ -427,6 +552,11 @@ memberSearchIndex = [{
     "c": "ArgumentCommandClientRequestWorker",
     "l": "ArgumentCommandClientRequestWorker()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "request.logic.worker",
+    "c": "ArgumentCommandClientRequestWorker",
+    "l": "ArgumentCommandClientRequestWorker(CommandManager)",
+    "u": "%3Cinit%3E(command.manager.CommandManager)"
 }, {
     "p": "command.logic.reciever.handler",
     "c": "ArgumentReceiverHandler",
@@ -446,7 +576,17 @@ memberSearchIndex = [{
     "c": "ArgumentRouteCommandReceiver",
     "l": "ArgumentRouteCommandReceiver(ModuleHandler<Route>, ApplicationResponseProvider<CommandStatusResponse>...)",
     "u": "%3Cinit%3E(model.handler.ModuleHandler,response.logic.ApplicationResponseProvider...)"
-}, {
+}, {"p": "gui.l10n.auth", "c": "Auth_en_IN", "l": "Auth_en_IN()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.auth",
+    "c": "Auth_hu",
+    "l": "Auth_hu()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.auth", "c": "Auth_pt", "l": "Auth_pt()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.auth",
+    "c": "Auth_ru",
+    "l": "Auth_ru()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.auth", "c": "Auth", "l": "Auth()", "u": "%3Cinit%3E()"}, {
     "p": "authentication",
     "c": "AuthLogic",
     "l": "auth(String, char[], ApplicationResponseProvider<AuthorizeResponse>...)",
@@ -521,12 +661,12 @@ memberSearchIndex = [{
     "c": "AuthTextFieldsEditListener",
     "l": "AuthTextFieldsEditListener(JTextField, JPasswordField, AuthActionListenerCallback, boolean)",
     "u": "%3Cinit%3E(javax.swing.JTextField,javax.swing.JPasswordField,gui.controller.auth.callback.AuthActionListenerCallback,boolean)"
-}, {"p": "gui.frame", "c": "AuthWindow", "l": "AuthWindow()", "u": "%3Cinit%3E()"}, {
-    "p": "request",
-    "c": "BaseRequest",
-    "l": "BaseRequest()",
+}, {"p": "util", "c": "AuthUtilities", "l": "AuthUtilities()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.frame",
+    "c": "AuthWindow",
+    "l": "AuthWindow()",
     "u": "%3Cinit%3E()"
-}, {
+}, {"p": "request", "c": "BaseRequest", "l": "BaseRequest()", "u": "%3Cinit%3E()"}, {
     "p": "request.logic.worker",
     "c": "BaseRequestWorker",
     "l": "BaseRequestWorker()",
@@ -556,7 +696,11 @@ memberSearchIndex = [{
     "c": "BuildObjectException",
     "l": "BuildObjectException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
-}, {"p": "model", "c": "RouteFields", "l": "byId(int)"}, {
+}, {"p": "gui.model", "c": "RouteTableButtonEditor", "l": "button"}, {
+    "p": "model",
+    "c": "RouteFields",
+    "l": "byId(int)"
+}, {
     "p": "response",
     "c": "ByteArrayPacketResponse",
     "l": "ByteArrayPacketResponse(int, int, byte[])",
@@ -600,6 +744,20 @@ memberSearchIndex = [{
     "c": "FillTextDocumentListener",
     "l": "changedUpdate(DocumentEvent)",
     "u": "changedUpdate(javax.swing.event.DocumentEvent)"
+}, {"p": "gui.controller.main", "c": "CommandButtonFactory", "l": "changeLocale()"}, {
+    "p": "gui.model",
+    "c": "RouteTableModel",
+    "l": "changeLocale()"
+}, {
+    "p": "gui.controller.main.callback",
+    "c": "LocalizationCallback",
+    "l": "changeLocale(Locale)",
+    "u": "changeLocale(java.util.Locale)"
+}, {
+    "p": "gui.frame",
+    "c": "MainWindow",
+    "l": "changeLocale(Locale)",
+    "u": "changeLocale(java.util.Locale)"
 }, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "channel"}, {
     "p": "model.handler",
     "c": "Utilities",
@@ -624,6 +782,31 @@ memberSearchIndex = [{
     "c": "ClearCommand",
     "l": "ClearCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_en_IN",
+    "l": "ClearCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_hu",
+    "l": "ClearCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_pt",
+    "l": "ClearCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_ru",
+    "l": "ClearCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle",
+    "l": "ClearCommandBundle()",
+    "u": "%3Cinit%3E()"
 }, {"p": "command.logic", "c": "CommandMode", "l": "CLI_UserMode"}, {
     "p": "database.logic.element",
     "c": "DBCollectionLoader",
@@ -633,14 +816,14 @@ memberSearchIndex = [{
     "c": "DBElementCreatorLogic",
     "l": "close()"
 }, {"p": "database.logic.user", "c": "DBUserManager", "l": "close()"}, {
-    "p": "server.logic.abstrct",
-    "c": "ServerConnection",
+    "p": "database.logic.user",
+    "c": "DBUserTableHandler",
+    "l": "close()"
+}, {"p": "server.logic.abstrct", "c": "ServerConnection", "l": "closeConnection()"}, {
+    "p": "server.logic.udp",
+    "c": "UdpServerConnection",
     "l": "closeConnection()"
-}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "closeConnection()"}, {
-    "p": "response.logic",
-    "c": "StatusResponse",
-    "l": "code()"
-}, {
+}, {"p": "response.logic", "c": "StatusResponse", "l": "code()"}, {
     "p": "listen.provider",
     "c": "CollectionActionsListener",
     "l": "CollectionActionsListener()",
@@ -650,6 +833,11 @@ memberSearchIndex = [{
     "c": "CollectionUpdatedResponse",
     "l": "CollectionUpdatedResponse(AbstractCollectionAction)",
     "u": "%3Cinit%3E(model.collection.actions.AbstractCollectionAction)"
+}, {
+    "p": "gui.component.util",
+    "c": "ColorGenerator",
+    "l": "ColorGenerator()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "command.manager.preprocessing.processors",
     "c": "CommandAuthorizePreProcessor",
@@ -675,6 +863,11 @@ memberSearchIndex = [{
     "c": "CommandClientRequestWorker",
     "l": "CommandClientRequestWorker()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "request.logic.worker",
+    "c": "CommandClientRequestWorker",
+    "l": "CommandClientRequestWorker(CommandManager)",
+    "u": "%3Cinit%3E(command.manager.CommandManager)"
 }, {
     "p": "request.logic.worker",
     "c": "CommandConfigureRequestWorker",
@@ -736,6 +929,46 @@ memberSearchIndex = [{
     "l": "CommandRequestSender()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_en_IN",
+    "l": "CommandResourceBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_hu",
+    "l": "CommandResourceBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_pt",
+    "l": "CommandResourceBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_ru",
+    "l": "CommandResourceBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle",
+    "l": "CommandResourceBundle()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.command",
+    "c": "Commands_en_IN",
+    "l": "Commands_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.command", "c": "Commands_hu", "l": "Commands_hu()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.command",
+    "c": "Commands_pt",
+    "l": "Commands_pt()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.command", "c": "Commands_ru", "l": "Commands_ru()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.command",
+    "c": "Commands",
+    "l": "Commands()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "exception",
     "c": "CommandsNotLoadedException",
     "l": "CommandsNotLoadedException()",
@@ -746,6 +979,26 @@ memberSearchIndex = [{
     "l": "CommandStatusResponse(String, int)",
     "u": "%3Cinit%3E(java.lang.String,int)"
 }, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_en_IN",
+    "l": "CommandWindow_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_hu",
+    "l": "CommandWindow_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_pt",
+    "l": "CommandWindow_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_ru",
+    "l": "CommandWindow_ru()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.command", "c": "CommandWindow", "l": "CommandWindow()", "u": "%3Cinit%3E()"}, {
     "p": "gui.frame",
     "c": "CommandWindow",
     "l": "CommandWindow(CommandDescription)",
@@ -794,6 +1047,31 @@ memberSearchIndex = [{
     "c": "CountGreaterThanDistanceCommand",
     "l": "CountGreaterThanDistanceCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_en_IN",
+    "l": "CountGreaterThanDistanceCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_hu",
+    "l": "CountGreaterThanDistanceCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_pt",
+    "l": "CountGreaterThanDistanceCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_ru",
+    "l": "CountGreaterThanDistanceCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle",
+    "l": "CountGreaterThanDistanceCommandBundle()",
+    "u": "%3Cinit%3E()"
 }, {"p": "model", "c": "RouteFields", "l": "CREATION_DATE"}, {
     "p": "server.logic.datagram",
     "c": "DatagramServerConnection",
@@ -834,6 +1112,21 @@ memberSearchIndex = [{
     "c": "DBUserManager",
     "l": "DBUserManager(PasswordEncryption)",
     "u": "%3Cinit%3E(database.logic.user.PasswordEncryption)"
+}, {
+    "p": "database.logic.user",
+    "c": "DBUserTableHandler",
+    "l": "DBUserTableHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.controller.visualization.callback",
+    "c": "PrintObjInfoCallback",
+    "l": "deliverObj(Route)",
+    "u": "deliverObj(model.Route)"
+}, {
+    "p": "gui.frame",
+    "c": "VisualizationWindow",
+    "l": "deliverObj(Route)",
+    "u": "deliverObj(model.Route)"
 }, {
     "p": "exception",
     "c": "DenyOperationException",
@@ -886,8 +1179,38 @@ memberSearchIndex = [{
 }, {
     "p": "response",
     "c": "ErrorResponse",
-    "l": "ErrorResponse(String)",
-    "u": "%3Cinit%3E(java.lang.String)"
+    "l": "ErrorResponse(String, String)",
+    "u": "%3Cinit%3E(java.lang.String,java.lang.String)"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "ExceptionLocalizer",
+    "l": "ExceptionLocalizer()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_en_IN",
+    "l": "Exceptions_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_hu",
+    "l": "Exceptions_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_pt",
+    "l": "Exceptions_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_ru",
+    "l": "Exceptions_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions",
+    "l": "Exceptions()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "command.manager.commands",
     "c": "AddCommand",
@@ -901,11 +1224,6 @@ memberSearchIndex = [{
 }, {
     "p": "command.manager.commands",
     "c": "AddIfMinCommand",
-    "l": "execute(String[])",
-    "u": "execute(java.lang.String[])"
-}, {
-    "p": "command.manager.commands",
-    "c": "BaseCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
@@ -936,6 +1254,11 @@ memberSearchIndex = [{
 }, {
     "p": "command.manager.commands",
     "c": "InfoCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "command.manager.commands.intrface",
+    "c": "BaseCommand",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
 }, {
@@ -975,6 +1298,11 @@ memberSearchIndex = [{
     "u": "execute(java.lang.String[])"
 }, {
     "p": "command.manager.server.commands",
+    "c": "RemoveSession",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "command.manager.server.commands",
     "c": "ShowSessions",
     "l": "execute(String[])",
     "u": "execute(java.lang.String[])"
@@ -994,6 +1322,31 @@ memberSearchIndex = [{
     "l": "ExecuteScriptCommand()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_en_IN",
+    "l": "ExecuteScriptCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_hu",
+    "l": "ExecuteScriptCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_pt",
+    "l": "ExecuteScriptCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_ru",
+    "l": "ExecuteScriptCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle",
+    "l": "ExecuteScriptCommandBundle()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "command.logic.external.reciever",
     "c": "ExecuteScriptReceiver",
     "l": "ExecuteScriptReceiver(ApplicationResponseProvider<CommandStatusResponse>...)",
@@ -1007,6 +1360,31 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "ExitCommand",
     "l": "ExitCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_en_IN",
+    "l": "ExitCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_hu",
+    "l": "ExitCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_pt",
+    "l": "ExitCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_ru",
+    "l": "ExitCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle",
+    "l": "ExitCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "command.logic.external.reciever",
@@ -1033,6 +1411,21 @@ memberSearchIndex = [{
     "c": "FillTextDocumentListener",
     "l": "FillTextDocumentListener(JTextField, RouteFields, ValidationCallback)",
     "u": "%3Cinit%3E(javax.swing.JTextField,model.RouteFields,gui.controller.filler.callback.ValidationCallback)"
+}, {"p": "gui.l10n.filter", "c": "Filter", "l": "Filter()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.frame",
+    "c": "FilterWindow",
+    "l": "FilterWindow(ModelConnector)",
+    "u": "%3Cinit%3E(gui.controller.filter.ModelConnector)"
+}, {
+    "p": "gui.component",
+    "c": "VisualisationComponent",
+    "l": "find(Point2D)",
+    "u": "find(java.awt.geom.Point2D)"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationComponentProvider",
+    "l": "find(Point2D)",
+    "u": "find(java.awt.geom.Point2D)"
 }, {
     "p": "gui.controller.filler.callback",
     "c": "ValidationCallback",
@@ -1044,6 +1437,11 @@ memberSearchIndex = [{
     "l": "fireCorrectInput(JTextField, RouteFields)",
     "u": "fireCorrectInput(javax.swing.JTextField,model.RouteFields)"
 }, {
+    "p": "gui.frame",
+    "c": "VisualizationWindow",
+    "l": "fireCorrectInput(JTextField, RouteFields)",
+    "u": "fireCorrectInput(javax.swing.JTextField,model.RouteFields)"
+}, {"p": "gui.model", "c": "RouteTableButtonEditor", "l": "fireEditingStopped()"}, {
     "p": "gui.component",
     "c": "VisualisationComponent",
     "l": "fireNewRoutes(AddCollectionAction)",
@@ -1081,6 +1479,11 @@ memberSearchIndex = [{
 }, {
     "p": "gui.frame",
     "c": "RouteFillWindow",
+    "l": "fireWrongInput(JTextField, RouteFields)",
+    "u": "fireWrongInput(javax.swing.JTextField,model.RouteFields)"
+}, {
+    "p": "gui.frame",
+    "c": "VisualizationWindow",
     "l": "fireWrongInput(JTextField, RouteFields)",
     "u": "fireWrongInput(javax.swing.JTextField,model.RouteFields)"
 }, {"p": "model", "c": "RouteFields", "l": "FROM_NAME"}, {
@@ -1119,13 +1522,13 @@ memberSearchIndex = [{
     "l": "getArgs()"
 }, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getArgs()"}, {
     "p": "command.manager.commands",
-    "c": "BaseCommand",
+    "c": "CountGreaterThanDistanceCommand",
     "l": "getArgs()"
 }, {
     "p": "command.manager.commands",
-    "c": "CountGreaterThanDistanceCommand",
+    "c": "ExecuteScriptCommand",
     "l": "getArgs()"
-}, {"p": "command.manager.commands", "c": "ExecuteScriptCommand", "l": "getArgs()"}, {
+}, {"p": "command.manager.commands.intrface", "c": "BaseCommand", "l": "getArgs()"}, {
     "p": "command.manager.commands",
     "c": "RemoveByIdCommand",
     "l": "getArgs()"
@@ -1158,11 +1561,11 @@ memberSearchIndex = [{
     "p": "request.logic",
     "c": "StatusRequest",
     "l": "getCallerBack()"
-}, {"p": "request.logic.authentication", "c": "AuthDataHolder", "l": "getClientData()"}, {
-    "p": "request.logic",
-    "c": "StatusRequest",
-    "l": "getCode()"
-}, {
+}, {"p": "gui.model", "c": "RouteTableButtonEditor", "l": "getCellEditorValue()"}, {
+    "p": "request.logic.authentication",
+    "c": "AuthDataHolder",
+    "l": "getClientData()"
+}, {"p": "request.logic", "c": "StatusRequest", "l": "getCode()"}, {
     "p": "gui.controller.main.callback",
     "c": "GetCollectionFromModelCallback",
     "l": "getCollection()"
@@ -1174,41 +1577,325 @@ memberSearchIndex = [{
     "p": "response",
     "c": "ShowCollectionResponse",
     "l": "getCollection()"
-}, {"p": "gui.model", "c": "RouteTableModel", "l": "getColumnCount()"}, {
+}, {"p": "gui.component.util", "c": "ColorGenerator", "l": "getColor(long)"}, {
     "p": "gui.model",
     "c": "RouteTableModel",
-    "l": "getColumnName(int)"
-}, {"p": "request", "c": "CommandClientRequest", "l": "getCommandDescription()"}, {
-    "p": "command.logic",
-    "c": "CommandDescriptionHolder",
+    "l": "getColumnCount()"
+}, {"p": "gui.model", "c": "RouteTableModel", "l": "getColumnName(int)"}, {
+    "p": "request",
+    "c": "CommandClientRequest",
+    "l": "getCommandDescription()"
+}, {"p": "command.logic", "c": "CommandDescriptionHolder", "l": "getCommands()"}, {
+    "p": "command.manager",
+    "c": "CommandManager",
     "l": "getCommands()"
-}, {"p": "command.manager", "c": "CommandManager", "l": "getCommands()"}, {
-    "p": "response",
-    "c": "CommandDescriptionsResponse",
-    "l": "getCommands()"
-}, {"p": "command.manager", "c": "CommandExporter", "l": "getCommandsToExport()"}, {
-    "p": "request.logic.request",
-    "c": "ServerRequest",
-    "l": "getConnection()"
-}, {"p": "model", "c": "Route", "l": "getCoordinates()"}, {
+}, {"p": "response", "c": "CommandDescriptionsResponse", "l": "getCommands()"}, {
+    "p": "command.manager",
+    "c": "CommandExporter",
+    "l": "getCommandsToExport()"
+}, {"p": "request.logic.request", "c": "ServerRequest", "l": "getConnection()"}, {
+    "p": "gui.l10n.auth",
+    "c": "Auth_en_IN",
+    "l": "getContents()"
+}, {"p": "gui.l10n.auth", "c": "Auth_hu", "l": "getContents()"}, {
+    "p": "gui.l10n.auth",
+    "c": "Auth_pt",
+    "l": "getContents()"
+}, {"p": "gui.l10n.auth", "c": "Auth_ru", "l": "getContents()"}, {
+    "p": "gui.l10n.auth",
+    "c": "Auth",
+    "l": "getContents()"
+}, {"p": "gui.l10n.command", "c": "Commands_en_IN", "l": "getContents()"}, {
+    "p": "gui.l10n.command",
+    "c": "Commands_hu",
+    "l": "getContents()"
+}, {"p": "gui.l10n.command", "c": "Commands_pt", "l": "getContents()"}, {
+    "p": "gui.l10n.command",
+    "c": "Commands_ru",
+    "l": "getContents()"
+}, {"p": "gui.l10n.command", "c": "Commands", "l": "getContents()"}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_en_IN",
+    "l": "getContents()"
+}, {"p": "gui.l10n.command", "c": "CommandWindow_hu", "l": "getContents()"}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow_pt",
+    "l": "getContents()"
+}, {"p": "gui.l10n.command", "c": "CommandWindow_ru", "l": "getContents()"}, {
+    "p": "gui.l10n.command",
+    "c": "CommandWindow",
+    "l": "getContents()"
+}, {"p": "gui.l10n.exception", "c": "Exceptions_en_IN", "l": "getContents()"}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_hu",
+    "l": "getContents()"
+}, {"p": "gui.l10n.exception", "c": "Exceptions_pt", "l": "getContents()"}, {
+    "p": "gui.l10n.exception",
+    "c": "Exceptions_ru",
+    "l": "getContents()"
+}, {"p": "gui.l10n.exception", "c": "Exceptions", "l": "getContents()"}, {
+    "p": "gui.l10n.filter",
+    "c": "Filter",
+    "l": "getContents()"
+}, {"p": "gui.l10n.main", "c": "MainWindow_en_IN", "l": "getContents()"}, {
+    "p": "gui.l10n.main",
+    "c": "MainWindow_hu",
+    "l": "getContents()"
+}, {"p": "gui.l10n.main", "c": "MainWindow_pt", "l": "getContents()"}, {
+    "p": "gui.l10n.main",
+    "c": "MainWindow_ru",
+    "l": "getContents()"
+}, {"p": "gui.l10n.main", "c": "MainWindow", "l": "getContents()"}, {
+    "p": "gui.l10n.register",
+    "c": "Register_en_IN",
+    "l": "getContents()"
+}, {"p": "gui.l10n.register", "c": "Register_hu", "l": "getContents()"}, {
+    "p": "gui.l10n.register",
+    "c": "Register_pt",
+    "l": "getContents()"
+}, {"p": "gui.l10n.register", "c": "Register_ru", "l": "getContents()"}, {
+    "p": "gui.l10n.register",
+    "c": "Register",
+    "l": "getContents()"
+}, {"p": "gui.l10n.table", "c": "RouteTable_en_IN", "l": "getContents()"}, {
+    "p": "gui.l10n.table",
+    "c": "RouteTable_hu",
+    "l": "getContents()"
+}, {"p": "gui.l10n.table", "c": "RouteTable_pt", "l": "getContents()"}, {
+    "p": "gui.l10n.table",
+    "c": "RouteTable_ru",
+    "l": "getContents()"
+}, {"p": "gui.l10n.table", "c": "RouteTable", "l": "getContents()"}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.add", "c": "AddCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.add", "c": "AddCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.add",
+    "c": "AddCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.addIfMax", "c": "AddIfMaxCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.addIfMax", "c": "AddIfMaxCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.addIfMax",
+    "c": "AddIfMaxCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.addIfMin", "c": "AddIfMinCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.addIfMin", "c": "AddIfMinCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.addIfMin",
+    "c": "AddIfMinCommandBundle",
+    "l": "getContents()"
+}, {"p": "l10n.command.clear", "c": "ClearCommandBundle_en_IN", "l": "getContents()"}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_hu",
+    "l": "getContents()"
+}, {"p": "l10n.command.clear", "c": "ClearCommandBundle_pt", "l": "getContents()"}, {
+    "p": "l10n.command.clear",
+    "c": "ClearCommandBundle_ru",
+    "l": "getContents()"
+}, {"p": "l10n.command.clear", "c": "ClearCommandBundle", "l": "getContents()"}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command", "c": "CommandResourceBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command", "c": "CommandResourceBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command",
+    "c": "CommandResourceBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_en_IN",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_hu",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_pt",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle_ru",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.countGTD",
+    "c": "CountGreaterThanDistanceCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_en_IN",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_hu",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_pt",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.executeS",
+    "c": "ExecuteScriptCommandBundle_ru",
+    "l": "getContents()"
+}, {"p": "l10n.command.executeS", "c": "ExecuteScriptCommandBundle", "l": "getContents()"}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.exit", "c": "ExitCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.exit", "c": "ExitCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.exit",
+    "c": "ExitCommandBundle",
+    "l": "getContents()"
+}, {"p": "l10n.command.help", "c": "HelpCommandBundle_en_IN", "l": "getContents()"}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_hu",
+    "l": "getContents()"
+}, {"p": "l10n.command.help", "c": "HelpCommandBundle_pt", "l": "getContents()"}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_ru",
+    "l": "getContents()"
+}, {"p": "l10n.command.help", "c": "HelpCommandBundle", "l": "getContents()"}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.info", "c": "InfoCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.info", "c": "InfoCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_en_IN",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_hu",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_pt",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_ru",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_en_IN",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_hu",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_pt",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_ru",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.remove", "c": "RemoveByIdCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.remove", "c": "RemoveByIdCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_en_IN",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_hu",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_pt",
+    "l": "getContents()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_ru",
+    "l": "getContents()"
+}, {"p": "l10n.command.removeG", "c": "RemoveGreaterCommandBundle", "l": "getContents()"}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_en_IN",
+    "l": "getContents()"
+}, {"p": "l10n.command.show", "c": "ShowCommandBundle_hu", "l": "getContents()"}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_pt",
+    "l": "getContents()"
+}, {"p": "l10n.command.show", "c": "ShowCommandBundle_ru", "l": "getContents()"}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle",
+    "l": "getContents()"
+}, {"p": "l10n.command.update", "c": "UpdateCommandBundle_en_IN", "l": "getContents()"}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_hu",
+    "l": "getContents()"
+}, {"p": "l10n.command.update", "c": "UpdateCommandBundle_pt", "l": "getContents()"}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_ru",
+    "l": "getContents()"
+}, {"p": "l10n.command.update", "c": "UpdateCommandBundle", "l": "getContents()"}, {
     "p": "model",
     "c": "Route",
-    "l": "getCreationDate()"
-}, {"p": "server.logic", "c": "ServerConnectionHandler", "l": "getCurrentConnection()"}, {
-    "p": "file.logic.editor",
-    "c": "DateEditor",
-    "l": "getCustomEditor()"
-}, {"p": "response", "c": "ByteArrayPacketResponse", "l": "getDeliveryNumber()"}, {
-    "p": "exception",
-    "c": "NotAvailableException",
-    "l": "getDeniedClient()"
-}, {"p": "command.manager.commands", "c": "AddCommand", "l": "getDescr()"}, {
+    "l": "getCoordinates()"
+}, {"p": "model", "c": "Route", "l": "getCreationDate()"}, {
+    "p": "server.logic",
+    "c": "ServerConnectionHandler",
+    "l": "getCurrentConnection()"
+}, {"p": "file.logic.editor", "c": "DateEditor", "l": "getCustomEditor()"}, {
+    "p": "response",
+    "c": "ByteArrayPacketResponse",
+    "l": "getDeliveryNumber()"
+}, {"p": "exception", "c": "NotAvailableException", "l": "getDeniedClient()"}, {
     "p": "command.manager.commands",
-    "c": "AddIfMaxCommand",
+    "c": "AddCommand",
     "l": "getDescr()"
-}, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getDescr()"}, {
+}, {"p": "command.manager.commands", "c": "AddIfMaxCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
-    "c": "BaseCommand",
+    "c": "AddIfMinCommand",
     "l": "getDescr()"
 }, {"p": "command.manager.commands", "c": "ClearCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
@@ -1222,7 +1909,7 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "getDescr()"
-}, {
+}, {"p": "command.manager.commands.intrface", "c": "BaseCommand", "l": "getDescr()"}, {
     "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "getDescr()"
@@ -1240,57 +1927,69 @@ memberSearchIndex = [{
     "l": "getDescr()"
 }, {"p": "command.manager.commands", "c": "UpdateCommand", "l": "getDescr()"}, {
     "p": "command.manager.server.commands",
-    "c": "ShowSessions",
+    "c": "RemoveSession",
     "l": "getDescr()"
-}, {"p": "model", "c": "Route", "l": "getDistance()"}, {
-    "p": "model.collection.actions",
-    "c": "UpdateCollectionAction",
-    "l": "getElementId()"
-}, {"p": "exception", "c": "GotAnErrorResponseException", "l": "getErrorResponse()"}, {
-    "p": "request",
-    "c": "UpdateSingleFieldRequest",
-    "l": "getField()"
-}, {"p": "model.handler", "c": "CollectionHandler", "l": "getFirstOrNew()"}, {
-    "p": "model.handler",
-    "c": "RoutesHandler",
-    "l": "getFirstOrNew()"
-}, {"p": "model", "c": "Route", "l": "getFrom()"}, {
-    "p": "request.logic.request",
-    "c": "ServerRequest",
-    "l": "getFrom()"
-}, {"p": "model", "c": "Route", "l": "getId()"}, {
+}, {"p": "command.manager.server.commands", "c": "ShowSessions", "l": "getDescr()"}, {
     "p": "model",
-    "c": "RouteFields",
-    "l": "getIndex()"
-}, {"p": "model.handler", "c": "CollectionHandler", "l": "getInitDate()"}, {
-    "p": "model.handler",
-    "c": "RoutesHandler",
-    "l": "getInitDate()"
-}, {"p": "request.logic", "c": "StatusRequest", "l": "getInputStream()"}, {
-    "p": "client.logic",
-    "c": "SessionHandler",
-    "l": "getInstance()"
-}, {"p": "command.logic", "c": "CommandDescriptionHolder", "l": "getInstance()"}, {
-    "p": "database.logic.element",
-    "c": "DBIntegrationUtility",
-    "l": "getInstance()"
-}, {"p": "model.handler", "c": "RoutesHandler", "l": "getInstance()"}, {
-    "p": "request.logic.authentication",
-    "c": "AuthDataHolder",
-    "l": "getInstance()"
-}, {"p": "file.logic.editor", "c": "DateEditor", "l": "getJavaInitializationString()"}, {
-    "p": "server.logic.abstrct",
-    "c": "ServerConnection",
-    "l": "getLargeResponseHandler()"
-}, {"p": "server.logic.udp", "c": "UdpServerConnection", "l": "getLargeResponseHandler()"}, {
+    "c": "Route",
+    "l": "getDistance()"
+}, {"p": "model.collection.actions", "c": "UpdateCollectionAction", "l": "getElementId()"}, {
+    "p": "request",
+    "c": "RemoveFromCollectionRequest",
+    "l": "getElementID()"
+}, {"p": "exception.authorization", "c": "NotEnoughPassLengthException", "l": "getEnoughLen()"}, {
+    "p": "exception",
+    "c": "GotAnErrorResponseException",
+    "l": "getErrorResponse()"
+}, {"p": "request", "c": "UpdateSingleFieldRequest", "l": "getField()"}, {
     "p": "model.handler",
     "c": "CollectionHandler",
+    "l": "getFirstOrNew()"
+}, {"p": "model.handler", "c": "RoutesHandler", "l": "getFirstOrNew()"}, {
+    "p": "model",
+    "c": "Route",
+    "l": "getFrom()"
+}, {"p": "request.logic.request", "c": "ServerRequest", "l": "getFrom()"}, {
+    "p": "model",
+    "c": "Route",
+    "l": "getId()"
+}, {"p": "model", "c": "RouteFields", "l": "getIndex()"}, {
+    "p": "model.handler",
+    "c": "CollectionHandler",
+    "l": "getInitDate()"
+}, {"p": "model.handler", "c": "RoutesHandler", "l": "getInitDate()"}, {
+    "p": "request.logic",
+    "c": "StatusRequest",
+    "l": "getInputStream()"
+}, {"p": "client.logic", "c": "SessionHandler", "l": "getInstance()"}, {
+    "p": "command.logic",
+    "c": "CommandDescriptionHolder",
+    "l": "getInstance()"
+}, {"p": "database.logic.element", "c": "DBIntegrationUtility", "l": "getInstance()"}, {
+    "p": "model.handler",
+    "c": "RoutesHandler",
+    "l": "getInstance()"
+}, {"p": "request.logic.authentication", "c": "AuthDataHolder", "l": "getInstance()"}, {
+    "p": "file.logic.editor",
+    "c": "DateEditor",
+    "l": "getJavaInitializationString()"
+}, {"p": "server.logic.abstrct", "c": "ServerConnection", "l": "getLargeResponseHandler()"}, {
+    "p": "server.logic.udp",
+    "c": "UdpServerConnection",
+    "l": "getLargeResponseHandler()"
+}, {"p": "model.handler", "c": "CollectionHandler", "l": "getLastElement()"}, {
+    "p": "model.handler",
+    "c": "RoutesHandler",
     "l": "getLastElement()"
-}, {"p": "model.handler", "c": "RoutesHandler", "l": "getLastElement()"}, {
-    "p": "request",
-    "c": "CommandClientRequest",
-    "l": "getLineArgs()"
-}, {"p": "model.handler", "c": "RoutesHandler", "l": "getListeners()"}, {
+}, {"p": "request", "c": "CommandClientRequest", "l": "getLineArgs()"}, {
+    "p": "model.handler",
+    "c": "RoutesHandler",
+    "l": "getListeners()"
+}, {"p": "request", "c": "LocalizedCommandClientRequest", "l": "getLocale()"}, {
+    "p": "util",
+    "c": "LocaleHolder",
+    "l": "getLocale()"
+}, {
     "p": "server.logic.udp",
     "c": "UdpConnectionBlockDecorator",
     "l": "getLockState()"
@@ -1318,6 +2017,10 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "getMin(Comparator<Route>)",
     "u": "getMin(java.util.Comparator)"
+}, {"p": "gui.controller.filter", "c": "ModelConnector", "l": "getModelSorter()"}, {
+    "p": "gui.frame",
+    "c": "MainWindow",
+    "l": "getModelSorter()"
 }, {"p": "response", "c": "ErrorResponse", "l": "getMsg()"}, {
     "p": "authorization.credential",
     "c": "RegistrationData",
@@ -1330,11 +2033,7 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "getName()"
-}, {"p": "command.manager.commands", "c": "BaseCommand", "l": "getName()"}, {
-    "p": "command.manager.commands",
-    "c": "ClearCommand",
-    "l": "getName()"
-}, {
+}, {"p": "command.manager.commands", "c": "ClearCommand", "l": "getName()"}, {
     "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getName()"
@@ -1346,7 +2045,7 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "getName()"
-}, {
+}, {"p": "command.manager.commands.intrface", "c": "BaseCommand", "l": "getName()"}, {
     "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "getName()"
@@ -1364,29 +2063,53 @@ memberSearchIndex = [{
     "l": "getName()"
 }, {"p": "command.manager.commands", "c": "UpdateCommand", "l": "getName()"}, {
     "p": "command.manager.server.commands",
-    "c": "ShowSessions",
+    "c": "RemoveSession",
     "l": "getName()"
-}, {"p": "model", "c": "Location", "l": "getName()"}, {"p": "model", "c": "Route", "l": "getName()"}, {
+}, {"p": "command.manager.server.commands", "c": "ShowSessions", "l": "getName()"}, {
+    "p": "model",
+    "c": "Location",
+    "l": "getName()"
+}, {"p": "model", "c": "Route", "l": "getName()"}, {
     "p": "model",
     "c": "RouteFields",
     "l": "getName()"
-}, {"p": "model.collection.actions", "c": "AddCollectionAction", "l": "getNewElements()"}, {
+}, {
+    "p": "model.collection.actions",
+    "c": "AddCollectionAction",
+    "l": "getNewElements()"
+}, {"p": "model.collection.actions", "c": "AddCollectionAction", "l": "getNewOwners()"}, {
     "p": "request",
-    "c": "UpdateSingleFieldRequest",
-    "l": "getObjId()"
-}, {"p": "response", "c": "ByteArrayPacketResponse", "l": "getPacket()"}, {
-    "p": "authorization.credential",
-    "c": "AuthenticationData",
-    "l": "getPassword()"
-}, {"p": "gui.controller.auth", "c": "AuthActionListener", "l": "getPasswordField()"}, {
+    "c": "UpdateElementRequest",
+    "l": "getNewRoute()"
+}, {"p": "request", "c": "UpdateSingleFieldRequest", "l": "getObjId()"}, {
     "p": "database.logic.user",
-    "c": "PasswordEncryption",
-    "l": "getPepper()"
-}, {"p": "request.logic", "c": "CallerBack", "l": "getPort()"}, {
-    "p": "gui.component",
-    "c": "VisualisationComponent",
-    "l": "getPreferredSize()"
-}, {"p": "command.logic", "c": "CommandDescription", "l": "getReceiver()"}, {
+    "c": "DBUserTableHandler",
+    "l": "getOwnership()"
+}, {
+    "p": "gui.controller.main.callback",
+    "c": "GetCollectionFromModelCallback",
+    "l": "getOwnership()"
+}, {"p": "gui.model", "c": "RouteTableModel", "l": "getOwnership()"}, {
+    "p": "response",
+    "c": "ShowCollectionResponse",
+    "l": "getOwnership()"
+}, {"p": "database.logic.user", "c": "DBUserTableHandler", "l": "getOwnership(long)"}, {
+    "p": "response",
+    "c": "ByteArrayPacketResponse",
+    "l": "getPacket()"
+}, {"p": "authorization.credential", "c": "AuthenticationData", "l": "getPassword()"}, {
+    "p": "gui.controller.auth",
+    "c": "AuthActionListener",
+    "l": "getPasswordField()"
+}, {"p": "database.logic.user", "c": "PasswordEncryption", "l": "getPepper()"}, {
+    "p": "request.logic",
+    "c": "CallerBack",
+    "l": "getPort()"
+}, {"p": "gui.component", "c": "VisualisationComponent", "l": "getPreferredSize()"}, {
+    "p": "command.logic",
+    "c": "CommandDescription",
+    "l": "getReceiver()"
+}, {
     "p": "command.logic.reciever.handler",
     "c": "ArgumentReceiverHandler",
     "l": "getReceivers()"
@@ -1407,7 +2130,7 @@ memberSearchIndex = [{
     "p": "model.collection.actions",
     "c": "RemoveCollectionAction",
     "l": "getRemoved_ids()"
-}, {
+}, {"p": "request", "c": "LocalizedCommandClientRequest", "l": "getRequest()"}, {
     "p": "database.logic.user",
     "c": "ResourceStreamLogic",
     "l": "getResourceStream()"
@@ -1417,9 +2140,9 @@ memberSearchIndex = [{
     "l": "getResponse()"
 }, {"p": "command.manager.commands", "c": "AddIfMinCommand", "l": "getResponse()"}, {
     "p": "command.manager.commands",
-    "c": "BaseCommand",
+    "c": "ClearCommand",
     "l": "getResponse()"
-}, {"p": "command.manager.commands", "c": "ClearCommand", "l": "getResponse()"}, {
+}, {
     "p": "command.manager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "getResponse()"
@@ -1431,7 +2154,15 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "HelpCommand",
     "l": "getResponse()"
-}, {"p": "command.manager.commands", "c": "InfoCommand", "l": "getResponse()"}, {
+}, {
+    "p": "command.manager.commands",
+    "c": "InfoCommand",
+    "l": "getResponse()"
+}, {
+    "p": "command.manager.commands.intrface",
+    "c": "BaseCommand",
+    "l": "getResponse()"
+}, {
     "p": "command.manager.commands",
     "c": "MinByCreationDateCommand",
     "l": "getResponse()"
@@ -1451,6 +2182,10 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "getResponse()"
+}, {
+    "p": "command.manager.server.commands",
+    "c": "RemoveSession",
+    "l": "getResponse()"
 }, {"p": "command.manager.server.commands", "c": "ShowSessions", "l": "getResponse()"}, {
     "p": "response",
     "c": "CommandStatusResponse",
@@ -1459,11 +2194,15 @@ memberSearchIndex = [{
     "p": "response",
     "c": "IntermediateResponse",
     "l": "getResponseKey()"
-}, {"p": "gui.frame", "c": "RouteFillWindow", "l": "getRoute()"}, {
-    "p": "gui.model",
-    "c": "RouteTableModel",
-    "l": "getRowCount()"
-}, {
+}, {"p": "gui.component.util", "c": "RoutePoint", "l": "getRoute()"}, {
+    "p": "gui.frame",
+    "c": "RouteFillWindow",
+    "l": "getRoute()"
+}, {"p": "gui.component.util", "c": "RoutePoint", "l": "getRouteFrom()"}, {
+    "p": "gui.component.util",
+    "c": "RoutePoint",
+    "l": "getRouteTo()"
+}, {"p": "gui.model", "c": "RouteTableModel", "l": "getRowCount()"}, {
     "p": "util",
     "c": "ImageUtilities",
     "l": "getScaledDimension(Dimension, Dimension)",
@@ -1474,13 +2213,28 @@ memberSearchIndex = [{
     "l": "getSession(CallerBack)",
     "u": "getSession(request.logic.CallerBack)"
 }, {"p": "client.logic", "c": "Session", "l": "getSessionId()"}, {
-    "p": "model.handler",
-    "c": "CollectionHandler",
-    "l": "getSorted()"
-}, {"p": "model.handler", "c": "RoutesHandler", "l": "getSorted()"}, {
     "p": "response",
-    "c": "CommandStatusResponse",
-    "l": "getStatusCode()"
+    "c": "ErrorResponse",
+    "l": "getShortMsg()"
+}, {"p": "model.handler", "c": "CollectionHandler", "l": "getSorted()"}, {
+    "p": "model.handler",
+    "c": "RoutesHandler",
+    "l": "getSorted()"
+}, {"p": "response", "c": "CommandStatusResponse", "l": "getStatusCode()"}, {
+    "p": "util",
+    "c": "RouteFieldGetUtil",
+    "l": "getStr(Route, RouteFields)",
+    "u": "getStr(model.Route,model.RouteFields)"
+}, {
+    "p": "gui.model",
+    "c": "RouteTableButtonEditor",
+    "l": "getTableCellEditorComponent(JTable, Object, boolean, int, int)",
+    "u": "getTableCellEditorComponent(javax.swing.JTable,java.lang.Object,boolean,int,int)"
+}, {
+    "p": "gui.view.render",
+    "c": "RouteTableButtonRender",
+    "l": "getTableCellRendererComponent(JTable, Object, boolean, boolean, int, int)",
+    "u": "getTableCellRendererComponent(javax.swing.JTable,java.lang.Object,boolean,boolean,int,int)"
 }, {
     "p": "gui.view.render",
     "c": "RouteTableRender",
@@ -1556,7 +2310,32 @@ memberSearchIndex = [{
     "c": "Utilities",
     "l": "hasNextLineOrThrow(Scanner)",
     "u": "hasNextLineOrThrow(java.util.Scanner)"
-}, {"p": "command.manager.commands", "c": "HelpCommand", "l": "HelpCommand()", "u": "%3Cinit%3E()"}, {
+}, {
+    "p": "command.manager.commands",
+    "c": "HelpCommand",
+    "l": "HelpCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_en_IN",
+    "l": "HelpCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_hu",
+    "l": "HelpCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_pt",
+    "l": "HelpCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.help",
+    "c": "HelpCommandBundle_ru",
+    "l": "HelpCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {"p": "l10n.command.help", "c": "HelpCommandBundle", "l": "HelpCommandBundle()", "u": "%3Cinit%3E()"}, {
     "p": "model",
     "c": "RouteFields",
     "l": "ID"
@@ -1564,6 +2343,31 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "InfoCommand",
     "l": "InfoCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_en_IN",
+    "l": "InfoCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_hu",
+    "l": "InfoCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_pt",
+    "l": "InfoCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle_ru",
+    "l": "InfoCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.info",
+    "c": "InfoCommandBundle",
+    "l": "InfoCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {"p": "request.logic", "c": "StatusRequestBuilder", "l": "initialize()"}, {
     "p": "command.logic",
@@ -1614,16 +2418,22 @@ memberSearchIndex = [{
     "c": "LibUtilities",
     "l": "isNotNumeric(String)",
     "u": "isNotNumeric(java.lang.String)"
-}, {
+}, {"p": "util", "c": "Utilities", "l": "isNotNumeric(String)", "u": "isNotNumeric(java.lang.String)"}, {
     "p": "util",
-    "c": "Utilities",
-    "l": "isNotNumeric(String)",
-    "u": "isNotNumeric(java.lang.String)"
+    "c": "RouteConvertUtil",
+    "l": "isNumber(RouteFields)",
+    "u": "isNumber(model.RouteFields)"
 }, {"p": "file.logic.editor", "c": "DateEditor", "l": "isPaintable()"}, {
-    "p": "authorization",
-    "c": "AuthorizedUserData",
-    "l": "lastLogin()"
-}, {"p": "util", "c": "LibUtilities", "l": "LibUtilities()", "u": "%3Cinit%3E()"}, {
+    "p": "util",
+    "c": "LocaleUtil",
+    "l": "isSelect(int, Locale)",
+    "u": "isSelect(int,java.util.Locale)"
+}, {"p": "authorization", "c": "AuthorizedUserData", "l": "lastLogin()"}, {
+    "p": "util",
+    "c": "LibUtilities",
+    "l": "LibUtilities()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "model.collections",
     "c": "ObservableListener",
     "l": "listenAdd(Collection<? extends E>)",
@@ -1702,6 +2512,30 @@ memberSearchIndex = [{
     "c": "Loader",
     "l": "loadFromXMLbyEnvKey(String)",
     "u": "loadFromXMLbyEnvKey(java.lang.String)"
+}, {"p": "util", "c": "LocaleHolder", "l": "LocaleHolder()", "u": "%3Cinit%3E()"}, {
+    "p": "util",
+    "c": "LocaleUtil",
+    "l": "LOCALES"
+}, {"p": "util", "c": "LocaleUtil", "l": "LocaleUtil()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.controller.main",
+    "c": "LocalizationActionListener",
+    "l": "LocalizationActionListener(String, LocalizationCallback)",
+    "u": "%3Cinit%3E(java.lang.String,gui.controller.main.callback.LocalizationCallback)"
+}, {
+    "p": "request",
+    "c": "LocalizedCommandClientRequest",
+    "l": "LocalizedCommandClientRequest(CommandClientRequest, Locale)",
+    "u": "%3Cinit%3E(request.CommandClientRequest,java.util.Locale)"
+}, {
+    "p": "request.logic.worker",
+    "c": "LocalizedCommandRequestWorker",
+    "l": "LocalizedCommandRequestWorker()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.l10n.exception",
+    "c": "ExceptionLocalizer",
+    "l": "localizeException(Exception)",
+    "u": "localizeException(java.lang.Exception)"
 }, {"p": "model", "c": "Location", "l": "Location()", "u": "%3Cinit%3E()"}, {
     "p": "model.handler.mode.cli",
     "c": "LocationCLIHandler",
@@ -1742,6 +2576,21 @@ memberSearchIndex = [{
     "l": "main(String[])",
     "u": "main(java.lang.String[])"
 }, {
+    "p": "gui.l10n.main",
+    "c": "MainWindow_en_IN",
+    "l": "MainWindow_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.main", "c": "MainWindow_hu", "l": "MainWindow_hu()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.main",
+    "c": "MainWindow_pt",
+    "l": "MainWindow_pt()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.main", "c": "MainWindow_ru", "l": "MainWindow_ru()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.main",
+    "c": "MainWindow",
+    "l": "MainWindow()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "gui.frame",
     "c": "MainWindow",
     "l": "MainWindow(AuthorizedUserData)",
@@ -1761,6 +2610,36 @@ memberSearchIndex = [{
     "c": "MinByCreationDateCommand",
     "l": "MinByCreationDateCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_en_IN",
+    "l": "MinByCreationDateCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_hu",
+    "l": "MinByCreationDateCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_pt",
+    "l": "MinByCreationDateCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle_ru",
+    "l": "MinByCreationDateCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.minBCD",
+    "c": "MinByCreationDateCommandBundle",
+    "l": "MinByCreationDateCommandBundle()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationMouseHandler",
+    "l": "mousePressed(MouseEvent)",
+    "u": "mousePressed(java.awt.event.MouseEvent)"
 }, {"p": "model", "c": "RouteFields", "l": "NAME"}, {
     "p": "authorization",
     "c": "AuthorizedUserData",
@@ -1791,6 +2670,11 @@ memberSearchIndex = [{
     "l": "NotEditableException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {
+    "p": "exception.authorization",
+    "c": "NotEnoughPassLengthException",
+    "l": "NotEnoughPassLengthException(int)",
+    "u": "%3Cinit%3E(int)"
+}, {"p": "util", "c": "RouteConvertUtil", "l": "NUMERIC_FIELDS"}, {
     "p": "model.collections",
     "c": "ObservableHashSet",
     "l": "ObservableHashSet()",
@@ -1820,6 +2704,11 @@ memberSearchIndex = [{
     "l": "openConnection(InetAddress, int)",
     "u": "openConnection(java.net.InetAddress,int)"
 }, {
+    "p": "gui.controller.main",
+    "c": "OpenFilterWindowAction",
+    "l": "OpenFilterWindowAction(ModelConnector)",
+    "u": "%3Cinit%3E(gui.controller.filter.ModelConnector)"
+}, {
     "p": "gui.controller.main.action",
     "c": "OpenVisualizationAction",
     "l": "OpenVisualizationAction(GetCollectionFromModelCallback)",
@@ -1843,11 +2732,36 @@ memberSearchIndex = [{
     "p": "command.manager.preprocessing",
     "c": "CommandPreProcessorManager",
     "l": "preProceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "preProceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
+    "u": "preProceed(command.manager.commands.intrface.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
     "p": "exception",
     "c": "PreProceedingFailedException",
     "l": "PreProceedingFailedException()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_en_IN",
+    "l": "PrintFieldAscendingDistanceCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_hu",
+    "l": "PrintFieldAscendingDistanceCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_pt",
+    "l": "PrintFieldAscendingDistanceCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle_ru",
+    "l": "PrintFieldAscendingDistanceCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.printFAD",
+    "c": "PrintFieldAscendingDistanceCommandBundle",
+    "l": "PrintFieldAscendingDistanceCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "command.manager.commands",
@@ -1863,12 +2777,12 @@ memberSearchIndex = [{
     "p": "command.manager.preprocessing.processors",
     "c": "CommandAuthorizePreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
+    "u": "proceed(command.manager.commands.intrface.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
     "p": "command.manager.preprocessing.processors",
     "c": "CommandPreProcessor",
     "l": "proceed(BaseCommand, CallerBack, ServerConnection)",
-    "u": "proceed(command.manager.commands.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
+    "u": "proceed(command.manager.commands.intrface.BaseCommand,request.logic.CallerBack,server.logic.abstrct.ServerConnection)"
 }, {
     "p": "request.logic.request.annotation",
     "c": "AnnotationProcessor",
@@ -1959,6 +2873,21 @@ memberSearchIndex = [{
     "l": "ReceiverManager()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "gui.l10n.register",
+    "c": "Register_en_IN",
+    "l": "Register_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.register", "c": "Register_hu", "l": "Register_hu()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.register",
+    "c": "Register_pt",
+    "l": "Register_pt()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.register", "c": "Register_ru", "l": "Register_ru()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.register",
+    "c": "Register",
+    "l": "Register()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "client.logic",
     "c": "AuthorizeManager",
     "l": "register(CallerBack, RegistrationData)",
@@ -2039,6 +2968,31 @@ memberSearchIndex = [{
     "l": "RemoveByIdCommand()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_en_IN",
+    "l": "RemoveByIdCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_hu",
+    "l": "RemoveByIdCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_pt",
+    "l": "RemoveByIdCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle_ru",
+    "l": "RemoveByIdCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.remove",
+    "c": "RemoveByIdCommandBundle",
+    "l": "RemoveByIdCommandBundle()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "request.logic.worker",
     "c": "ListenCollectionChangeHubWorker",
     "l": "removeCallerBack(CallerBack)",
@@ -2059,9 +3013,49 @@ memberSearchIndex = [{
     "l": "removeFromCollectionAndDB(long, long)",
     "u": "removeFromCollectionAndDB(long,long)"
 }, {
+    "p": "request",
+    "c": "RemoveFromCollectionRequest",
+    "l": "RemoveFromCollectionRequest(long)",
+    "u": "%3Cinit%3E(long)"
+}, {
+    "p": "request.logic.sender",
+    "c": "RemoveFromCollectionRequestSender",
+    "l": "RemoveFromCollectionRequestSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "request.logic.worker",
+    "c": "RemoveFromCollectionRequestWorker",
+    "l": "RemoveFromCollectionRequestWorker()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "command.manager.commands",
     "c": "RemoveGreaterCommand",
     "l": "RemoveGreaterCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_en_IN",
+    "l": "RemoveGreaterCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_hu",
+    "l": "RemoveGreaterCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_pt",
+    "l": "RemoveGreaterCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle_ru",
+    "l": "RemoveGreaterCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.removeG",
+    "c": "RemoveGreaterCommandBundle",
+    "l": "RemoveGreaterCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "model.collections",
@@ -2103,6 +3097,11 @@ memberSearchIndex = [{
     "c": "UdpServerConnection",
     "l": "removeResponseListeners(ServerResponseProvider...)",
     "u": "removeResponseListeners(server.logic.abstrct.ServerResponseProvider...)"
+}, {
+    "p": "command.manager.server.commands",
+    "c": "RemoveSession",
+    "l": "RemoveSession()",
+    "u": "%3Cinit%3E()"
 }, {"p": "client.logic", "c": "SessionHandler", "l": "removeSession(long)"}, {
     "p": "client.logic",
     "c": "SessionHandler",
@@ -2134,10 +3133,19 @@ memberSearchIndex = [{
     "l": "RequestWorkerManager()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "request.logic.worker",
+    "c": "RequestWorkerManager",
+    "l": "RequestWorkerManager(LinkedHashMap<Class<?>, RequestWorker>)",
+    "u": "%3Cinit%3E(java.util.LinkedHashMap)"
+}, {
     "p": "gui.controller.auth.callback",
     "c": "AuthActionListenerCallback",
     "l": "resetNotifications()"
 }, {"p": "gui.frame", "c": "AuthWindow", "l": "resetNotifications()"}, {
+    "p": "gui.frame",
+    "c": "RegisterWindow",
+    "l": "resetNotifications()"
+}, {
     "p": "response.logic",
     "c": "ResponseReader",
     "l": "resolveType(InputStream)",
@@ -2183,10 +3191,10 @@ memberSearchIndex = [{
     "u": "%3Cinit%3E()"
 }, {"p": "util", "c": "RouteFieldComparators", "l": "RouteFieldComparators()", "u": "%3Cinit%3E()"}, {
     "p": "util",
-    "c": "RouteFieldSetters",
-    "l": "RouteFieldSetters()",
+    "c": "RouteFieldGetUtil",
+    "l": "RouteFieldGetUtil()",
     "u": "%3Cinit%3E()"
-}, {
+}, {"p": "util", "c": "RouteFieldSetters", "l": "RouteFieldSetters()", "u": "%3Cinit%3E()"}, {
     "p": "util",
     "c": "RouteFieldToRoute",
     "l": "RouteFieldToRoute()",
@@ -2206,6 +3214,36 @@ memberSearchIndex = [{
     "c": "RouteNonCLIHandler",
     "l": "RouteNonCLIHandler(Scanner)",
     "u": "%3Cinit%3E(java.util.Scanner)"
+}, {
+    "p": "gui.component.util",
+    "c": "RoutePoint",
+    "l": "RoutePoint(Route, Ellipse2D, Ellipse2D)",
+    "u": "%3Cinit%3E(model.Route,java.awt.geom.Ellipse2D,java.awt.geom.Ellipse2D)"
+}, {
+    "p": "gui.l10n.table",
+    "c": "RouteTable_en_IN",
+    "l": "RouteTable_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.table", "c": "RouteTable_hu", "l": "RouteTable_hu()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.table",
+    "c": "RouteTable_pt",
+    "l": "RouteTable_pt()",
+    "u": "%3Cinit%3E()"
+}, {"p": "gui.l10n.table", "c": "RouteTable_ru", "l": "RouteTable_ru()", "u": "%3Cinit%3E()"}, {
+    "p": "gui.l10n.table",
+    "c": "RouteTable",
+    "l": "RouteTable()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "gui.model",
+    "c": "RouteTableButtonEditor",
+    "l": "RouteTableButtonEditor(JCheckBox)",
+    "u": "%3Cinit%3E(javax.swing.JCheckBox)"
+}, {
+    "p": "gui.view.render",
+    "c": "RouteTableButtonRender",
+    "l": "RouteTableButtonRender()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "gui.model",
     "c": "RouteTableModel",
@@ -2287,6 +3325,11 @@ memberSearchIndex = [{
     "u": "sendRegisterRequest(authorization.credential.RegistrationData,response.logic.ApplicationResponseProvider...)"
 }, {
     "p": "request.logic.sender",
+    "c": "RemoveFromCollectionRequestSender",
+    "l": "sendRemoveRequest(long, ExceptionProvider...)",
+    "u": "sendRemoveRequest(long,core.provider.ExceptionProvider...)"
+}, {
+    "p": "request.logic.sender",
     "c": "RequestSender",
     "l": "sendRequest(BaseRequest, ServerConnection, ApplicationResponseProvider<BaseResponse>...)",
     "u": "sendRequest(request.BaseRequest,server.logic.abstrct.ServerConnection,response.logic.ApplicationResponseProvider...)"
@@ -2295,6 +3338,11 @@ memberSearchIndex = [{
     "c": "RequestSender",
     "l": "sendRequest(BaseRequest, ServerConnection, ProviderRuleSet[], ApplicationResponseProvider<BaseResponse>...)",
     "u": "sendRequest(request.BaseRequest,server.logic.abstrct.ServerConnection,core.provider.ProviderRuleSet[],response.logic.ApplicationResponseProvider...)"
+}, {
+    "p": "request.logic.sender",
+    "c": "SuppressResponseRequestSender",
+    "l": "sendRequestAndSuppressResponse(BaseRequest, ServerConnection, ExceptionProvider...)",
+    "u": "sendRequestAndSuppressResponse(request.BaseRequest,server.logic.abstrct.ServerConnection,core.provider.ExceptionProvider...)"
 }, {
     "p": "request.logic.sender",
     "c": "CommandDescriptionsRequestSender",
@@ -2363,13 +3411,13 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "AddIfMinCommand",
     "l": "setCallerID(long)"
-}, {
-    "p": "command.manager.commands",
-    "c": "AuthorizableCommand",
-    "l": "setCallerID(long)"
 }, {"p": "command.manager.commands", "c": "ClearCommand", "l": "setCallerID(long)"}, {
     "p": "command.manager.commands",
     "c": "ExitCommand",
+    "l": "setCallerID(long)"
+}, {
+    "p": "command.manager.commands.intrface",
+    "c": "AuthorizableCommand",
     "l": "setCallerID(long)"
 }, {
     "p": "command.manager.commands",
@@ -2421,7 +3469,92 @@ memberSearchIndex = [{
     "c": "StatusRequest",
     "l": "setInputStream(InputStream)",
     "u": "setInputStream(java.io.InputStream)"
-}, {"p": "model", "c": "Location", "l": "setName(String)", "u": "setName(java.lang.String)"}, {
+}, {
+    "p": "command.manager.commands",
+    "c": "AddCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "AddIfMinCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "ClearCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "ExecuteScriptCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "ExitCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "HelpCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "InfoCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands.intrface",
+    "c": "LocalizableCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "MinByCreationDateCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "RemoveByIdCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "ShowCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {
+    "p": "command.manager.commands",
+    "c": "UpdateCommand",
+    "l": "setLocale(Locale)",
+    "u": "setLocale(java.util.Locale)"
+}, {"p": "util", "c": "LocaleHolder", "l": "setLocale(Locale)", "u": "setLocale(java.util.Locale)"}, {
+    "p": "model",
+    "c": "Location",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
+}, {
     "p": "model",
     "c": "Route",
     "l": "setName(String)",
@@ -2451,7 +3584,7 @@ memberSearchIndex = [{
     "c": "UpdateCommand",
     "l": "setObj(Route)",
     "u": "setObj(model.Route)"
-}, {"p": "command.manager.commands", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
+}, {"p": "command.manager.commands.intrface", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
     "p": "request.logic",
     "c": "StatusRequestBuilder",
     "l": "setObjectStream(InputStream)",
@@ -2513,13 +3646,38 @@ memberSearchIndex = [{
 }, {
     "p": "response",
     "c": "ShowCollectionResponse",
-    "l": "ShowCollectionResponse(HashSet<Route>)",
-    "u": "%3Cinit%3E(java.util.HashSet)"
+    "l": "ShowCollectionResponse(HashSet<Route>, HashMap<Long, Long>)",
+    "u": "%3Cinit%3E(java.util.HashSet,java.util.HashMap)"
 }, {
     "p": "command.manager.commands",
     "c": "ShowCommand",
     "l": "ShowCommand()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_en_IN",
+    "l": "ShowCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_hu",
+    "l": "ShowCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_pt",
+    "l": "ShowCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.show",
+    "c": "ShowCommandBundle_ru",
+    "l": "ShowCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {"p": "l10n.command.show", "c": "ShowCommandBundle", "l": "ShowCommandBundle()", "u": "%3Cinit%3E()"}, {
+    "p": "util",
+    "c": "AuthUtilities",
+    "l": "showError(Exception, ResourceBundle, ArrayList<Component>, JPanel)",
+    "u": "showError(java.lang.Exception,java.util.ResourceBundle,java.util.ArrayList,javax.swing.JPanel)"
 }, {
     "p": "command.manager.server.commands",
     "c": "ShowSessions",
@@ -2537,9 +3695,13 @@ memberSearchIndex = [{
 }, {"p": "request.logic", "c": "StatusRequest", "l": "StatusRequest()", "u": "%3Cinit%3E()"}, {
     "p": "response.logic",
     "c": "StatusResponse",
-    "l": "StatusResponse(String, int)",
-    "u": "%3Cinit%3E(java.lang.String,int)"
-}, {"p": "listen.logic", "c": "ServerListener", "l": "stopListen()"}, {
+    "l": "StatusResponse(String, int, Object...)",
+    "u": "%3Cinit%3E(java.lang.String,int,java.lang.Object...)"
+}, {"p": "gui.model", "c": "RouteTableButtonEditor", "l": "stopCellEditing()"}, {
+    "p": "listen.logic",
+    "c": "ServerListener",
+    "l": "stopListen()"
+}, {
     "p": "exception",
     "c": "StreamInterruptedException",
     "l": "StreamInterruptedException(String)",
@@ -2548,18 +3710,28 @@ memberSearchIndex = [{
     "p": "gui.frame",
     "c": "AuthWindow",
     "l": "succeedAction()"
-}, {"p": "file.logic.editor", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
-    "p": "client.logic",
-    "c": "Session",
-    "l": "TIMEOUT"
-}, {"p": "model", "c": "RouteFields", "l": "TO_NAME"}, {"p": "model", "c": "RouteFields", "l": "TO_X"}, {
+}, {"p": "gui.frame", "c": "RegisterWindow", "l": "succeedAction()"}, {
+    "p": "file.logic.editor",
+    "c": "DateEditor",
+    "l": "supportsCustomEditor()"
+}, {
+    "p": "request.logic.sender",
+    "c": "SuppressResponseRequestSender",
+    "l": "SuppressResponseRequestSender()",
+    "u": "%3Cinit%3E()"
+}, {"p": "client.logic", "c": "Session", "l": "TIMEOUT"}, {
     "p": "model",
     "c": "RouteFields",
-    "l": "TO_Y"
-}, {"p": "model", "c": "RouteFields", "l": "TO_Z"}, {
+    "l": "TO_NAME"
+}, {"p": "model", "c": "RouteFields", "l": "TO_X"}, {"p": "model", "c": "RouteFields", "l": "TO_Y"}, {
+    "p": "model",
+    "c": "RouteFields",
+    "l": "TO_Z"
+}, {"p": "response.logic", "c": "StatusResponse", "l": "toCommandResponse()"}, {
     "p": "response.logic",
     "c": "StatusResponse",
-    "l": "toCommandResponse()"
+    "l": "toLocalizedCommandResponse(ResourceBundle)",
+    "u": "toLocalizedCommandResponse(java.util.ResourceBundle)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "toString()"}, {
     "p": "client.logic",
     "c": "AuthorizedCallerBack",
@@ -2619,6 +3791,10 @@ memberSearchIndex = [{
     "c": "ProviderRuleSet",
     "l": "UNSUBSCRIBE_ON_EXCEPTION"
 }, {
+    "p": "request.logic.sender",
+    "c": "SuppressResponseRequestSender",
+    "l": "unsubscribeFromExceptions()"
+}, {
     "p": "request.logic.worker",
     "c": "UnsubscribeFromListenCollectionActionsWorker",
     "l": "UnsubscribeFromListenCollectionActionsWorker()",
@@ -2639,6 +3815,11 @@ memberSearchIndex = [{
     "l": "UnsupportedResponseException(String)",
     "u": "%3Cinit%3E(java.lang.String)"
 }, {"p": "model.collection.actions", "c": "CollectionActions", "l": "UPDATE"}, {
+    "p": "gui.controller.visualization",
+    "c": "UpdateButtonActionListener",
+    "l": "UpdateButtonActionListener(ArrayList<JTextField>)",
+    "u": "%3Cinit%3E(java.util.ArrayList)"
+}, {
     "p": "model.collection.actions",
     "c": "UpdateCollectionAction",
     "l": "UpdateCollectionAction(long, RouteFields, Object)",
@@ -2647,6 +3828,31 @@ memberSearchIndex = [{
     "p": "command.manager.commands",
     "c": "UpdateCommand",
     "l": "UpdateCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_en_IN",
+    "l": "UpdateCommandBundle_en_IN()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_hu",
+    "l": "UpdateCommandBundle_hu()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_pt",
+    "l": "UpdateCommandBundle_pt()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle_ru",
+    "l": "UpdateCommandBundle_ru()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "l10n.command.update",
+    "c": "UpdateCommandBundle",
+    "l": "UpdateCommandBundle()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "database.logic.element",
@@ -2658,6 +3864,16 @@ memberSearchIndex = [{
     "c": "DBIntegrationUtility",
     "l": "updateElementInDBAndCollection(Route, long, long)",
     "u": "updateElementInDBAndCollection(model.Route,long,long)"
+}, {
+    "p": "request",
+    "c": "UpdateElementRequest",
+    "l": "UpdateElementRequest(Route)",
+    "u": "%3Cinit%3E(model.Route)"
+}, {
+    "p": "request.logic.worker",
+    "c": "UpdateElementRequestWorker",
+    "l": "UpdateElementRequestWorker()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "exception",
     "c": "UpdateModelException",
@@ -2692,6 +3908,11 @@ memberSearchIndex = [{
     "p": "authorization",
     "c": "UserRoles",
     "l": "User"
+}, {
+    "p": "exception.authorization",
+    "c": "UserAlreadyExistsException",
+    "l": "UserAlreadyExistsException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
 }, {"p": "authorization", "c": "AuthorizedUserData", "l": "userID()"}, {
     "p": "request.annotation",
     "c": "Authorize",
@@ -2786,8 +4007,8 @@ memberSearchIndex = [{
 }, {"p": "model", "c": "RouteFields", "l": "values()"}, {
     "p": "gui.component",
     "c": "VisualisationComponent",
-    "l": "VisualisationComponent(GetCollectionFromModelCallback)",
-    "u": "%3Cinit%3E(gui.controller.main.callback.GetCollectionFromModelCallback)"
+    "l": "VisualisationComponent(GetCollectionFromModelCallback, PrintObjInfoCallback)",
+    "u": "%3Cinit%3E(gui.controller.main.callback.GetCollectionFromModelCallback,gui.controller.visualization.callback.PrintObjInfoCallback)"
 }, {
     "p": "gui.controller.visualization",
     "c": "VisualizationAnimator",
@@ -2803,6 +4024,11 @@ memberSearchIndex = [{
     "c": "VisualizationDisposeCallback",
     "l": "VisualizationDisposeCallback(VisualizationWindow)",
     "u": "%3Cinit%3E(gui.frame.VisualizationWindow)"
+}, {
+    "p": "gui.controller.visualization.component",
+    "c": "VisualizationMouseHandler",
+    "l": "VisualizationMouseHandler(VisualizationComponentProvider, PrintObjInfoCallback)",
+    "u": "%3Cinit%3E(gui.controller.visualization.component.VisualizationComponentProvider,gui.controller.visualization.callback.PrintObjInfoCallback)"
 }, {
     "p": "gui.frame",
     "c": "VisualizationWindow",
@@ -2845,7 +4071,17 @@ memberSearchIndex = [{
     "u": "workWithRequest(request.logic.request.ServerRequest)"
 }, {
     "p": "request.logic.worker",
+    "c": "LocalizedCommandRequestWorker",
+    "l": "workWithRequest(ServerRequest)",
+    "u": "workWithRequest(request.logic.request.ServerRequest)"
+}, {
+    "p": "request.logic.worker",
     "c": "RegistrationRequestWorker",
+    "l": "workWithRequest(ServerRequest)",
+    "u": "workWithRequest(request.logic.request.ServerRequest)"
+}, {
+    "p": "request.logic.worker",
+    "c": "RemoveFromCollectionRequestWorker",
     "l": "workWithRequest(ServerRequest)",
     "u": "workWithRequest(request.logic.request.ServerRequest)"
 }, {
@@ -2866,6 +4102,11 @@ memberSearchIndex = [{
 }, {
     "p": "request.logic.worker",
     "c": "UnsubscribeFromListenCollectionActionsWorker",
+    "l": "workWithRequest(ServerRequest)",
+    "u": "workWithRequest(request.logic.request.ServerRequest)"
+}, {
+    "p": "request.logic.worker",
+    "c": "UpdateElementRequestWorker",
     "l": "workWithRequest(ServerRequest)",
     "u": "workWithRequest(request.logic.request.ServerRequest)"
 }, {
