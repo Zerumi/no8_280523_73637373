@@ -1,6 +1,7 @@
 package gui.component;
 
 import gui.component.util.ColorGenerator;
+import gui.component.util.RoutePoint;
 import gui.controller.main.callback.GetCollectionFromModelCallback;
 import gui.controller.visualization.VisualizationAnimator;
 import gui.controller.visualization.component.VisualizationCollectionUpdatedController;
@@ -29,9 +30,11 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     private final Dimension preferredDim;
     private final HashSet<Route> collection;
     private final HashMap<Long, Long> ownership;
+    private final ArrayList<RoutePoint> routePoints;
     private final Image image;
     public static final int UPDATES_COUNT = 100;
     private double scaleX;
+    private double scaleY;
 
     private final double centerX;
     private final double centerY;
@@ -39,6 +42,7 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     public VisualisationComponent(GetCollectionFromModelCallback callback) {
         this.collection = callback.getCollection();
         this.ownership = callback.getOwnership();
+        this.routePoints = new ArrayList<>();
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
@@ -64,10 +68,78 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         this.centerX = preferredDim.width / 2d;
         this.centerY = preferredDim.height / 2d;
 
+        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
+        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
+
+        logger.info(collection.size());
+
+        fillCircles();
+
         new VisualizationCollectionUpdatedController(this);
     }
 
-    private double scaleY;
+    @Override
+    protected void paintComponent(Graphics g) {
+        var g2 = (Graphics2D) g;
+
+        //logger.info(collection.size());
+
+        // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
+        // by x and y
+
+        var lastScaleX = scaleX;
+        var lastScaleY = scaleY;
+
+        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
+        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
+
+        if (lastScaleX != scaleX || lastScaleY != scaleY)
+            fillCircles();
+
+        //logger.trace(maxXFromCollection());
+        //logger.trace(maxYFromCollection());
+        logger.trace(scaleX);
+        logger.trace(scaleY);
+
+        g2.drawImage(image, 0, 0, (img1, infoflags, x, y, width, height) -> false);
+
+        // draw axes
+        drawArrow(g2, 0, preferredDim.height / 2d, preferredDim.width, preferredDim.height / 2d);
+        drawArrow(g2, preferredDim.width / 2d, preferredDim.height, preferredDim.width / 2d, 0);
+
+        // draw single elem
+        var line1 = new Line2D.Double(3d / 2 * centerX, centerY - 10, 3d / 2 * centerX, centerY + 10);
+        var line2 = new Line2D.Double(centerX - 10, 1d / 2 * centerY, centerX + 10, 1d / 2 * centerY);
+
+        g2.drawString(String.valueOf(preferredDim.width / scaleX / 4), (int) (3f / 2 * centerX), (int) (centerY - 10));
+        g2.drawString(String.valueOf(preferredDim.height / scaleY / 4), (int) (centerX + 10), (int) (1d / 2 * centerY));
+
+        g2.draw(line1);
+        g2.draw(line2);
+
+        for (RoutePoint point : routePoints) {
+            var connectLine = new Line2D.Double(point.getRouteFrom().getCenterX(), point.getRouteFrom().getCenterY(), point.getRouteTo().getCenterX(), point.getRouteTo().getCenterY());
+            paintFillByOwner(g2, Optional.ofNullable(ownership.get(point.getRoute().getId())).orElse(1L), point.getRouteFrom(), point.getRouteTo(), connectLine);
+        }
+
+        super.paintComponent(g2);
+    }
+
+    private void fillCircles() {
+        routePoints.clear();
+        for (Route route : collection) {
+            addSingleCircle(route);
+        }
+    }
+
+    private void paintFillByOwner(Graphics2D g2, long id, Ellipse2D circleFrom, Ellipse2D circleTo, Line2D connectLine) {
+        g2.setPaint(ColorGenerator.getColor(id));
+        g2.draw(circleFrom);
+        g2.draw(circleTo);
+        g2.fill(circleFrom);
+        g2.fill(circleTo);
+        g2.draw(connectLine);
+    }
 
     private double maxXFromCollection() {
         return Math.max(collection.stream().map(x -> Math.abs(Optional.ofNullable(x.getFrom()).orElse(new Location()).getX())).max(Float::compareTo).orElse(0f),
@@ -136,73 +208,6 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
-        var g2 = (Graphics2D) g;
-
-        // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
-        // by x and y
-
-        scaleX = (preferredDim.width / 2d) / maxXFromCollection();
-        scaleY = (preferredDim.height / 2d) / maxYFromCollection();
-
-        //logger.trace(maxXFromCollection());
-        //logger.trace(maxYFromCollection());
-        logger.trace(scaleX);
-        logger.trace(scaleY);
-
-        g2.drawImage(image, 0, 0, (img1, infoflags, x, y, width, height) -> false);
-
-        // draw axes
-        drawArrow(g2, 0, preferredDim.height / 2d, preferredDim.width, preferredDim.height / 2d);
-        drawArrow(g2, preferredDim.width / 2d, preferredDim.height, preferredDim.width / 2d, 0);
-
-        // draw single elem
-        var line1 = new Line2D.Double(3d / 2 * centerX, centerY - 10, 3d / 2 * centerX, centerY + 10);
-        var line2 = new Line2D.Double(centerX - 10, 1d / 2 * centerY, centerX + 10, 1d / 2 * centerY);
-
-        g2.drawString(String.valueOf(preferredDim.width / scaleX / 4), (int) (3f / 2 * centerX), (int) (centerY - 10));
-        g2.drawString(String.valueOf(preferredDim.height / scaleY / 4), (int) (centerX + 10), (int) (1d / 2 * centerY));
-
-        g2.draw(line1);
-        g2.draw(line2);
-
-        for (Route route : collection) {
-
-            Location from = route.getFrom();
-            Location to = route.getTo();
-
-            if (from == null || to == null) continue;
-
-            double fromX = getCenterX(from.getX());
-            double fromY = getCenterY(from.getY());
-            double toX = getCenterX(to.getX());
-            double toY = getCenterY(to.getY());
-
-            double radius = 15;
-
-            var circleFrom = getEllipseFromCenter(fromX, fromY, radius, radius);
-            var circleTo = getEllipseFromCenter(toX, toY, radius, radius);
-
-            var connectLine = new Line2D.Double(circleFrom.getCenterX(), circleFrom.getCenterY(), circleTo.getCenterX(), circleTo.getCenterY());
-
-            logger.trace("Drawing from (" + fromX + ";" + fromY + ") to (" + toX + ";" + toY + ").");
-
-            paintFillByOwner(g2, Optional.ofNullable(ownership.get(route.getId())).orElse(1L), circleFrom, circleTo, connectLine);
-        }
-
-        super.paintComponent(g2);
-    }
-
-    private void paintFillByOwner(Graphics2D g2, long id, Ellipse2D circleFrom, Ellipse2D circleTo, Line2D connectLine) {
-        g2.setPaint(ColorGenerator.getColor(id));
-        g2.draw(circleFrom);
-        g2.draw(circleTo);
-        g2.fill(circleFrom);
-        g2.fill(circleTo);
-        g2.draw(connectLine);
-    }
-
-    @Override
     public void fireNewRoutes(AddCollectionAction action) {
         collection.addAll(action.getNewElements());
         logger.info("visual repaint?");
@@ -221,27 +226,63 @@ public class VisualisationComponent extends JComponent implements VisualisationC
                 float startX = routeToEdit.getFrom().getX();
                 float endX = Float.parseFloat(objStr);
                 float fade = (endX - startX) / UPDATES_COUNT;
-                animator.animate(() -> routeToEdit.getFrom().setX(routeToEdit.getFrom().getX() + fade), UPDATES_COUNT);
+                animator.animate(() -> {
+                    routePoints.removeIf(x -> x.getRoute().equals(routeToEdit));
+                    routeToEdit.getFrom().setX(routeToEdit.getFrom().getX() + fade);
+                    addSingleCircle(routeToEdit);
+                }, UPDATES_COUNT);
             }
             case FROM_Y -> {
                 long startY = routeToEdit.getFrom().getY();
                 long endY = Long.parseLong(objStr);
                 long fade = (endY - startY) / UPDATES_COUNT;
-                animator.animate(() -> routeToEdit.getFrom().setY(routeToEdit.getFrom().getY() + fade), UPDATES_COUNT);
+                animator.animate(() -> {
+                    routePoints.removeIf(x -> x.getRoute().equals(routeToEdit));
+                    routeToEdit.getFrom().setY(routeToEdit.getFrom().getY() + fade);
+                    addSingleCircle(routeToEdit);
+                }, UPDATES_COUNT);
             }
             case TO_X -> {
                 float startX = routeToEdit.getTo().getX();
                 float endX = Float.parseFloat(objStr);
                 float fade = (endX - startX) / UPDATES_COUNT;
-                animator.animate(() -> routeToEdit.getTo().setX(routeToEdit.getTo().getX() + fade), UPDATES_COUNT);
+                animator.animate(() -> {
+                    routePoints.removeIf(x -> x.getRoute().equals(routeToEdit));
+                    routeToEdit.getTo().setX(routeToEdit.getTo().getX() + fade);
+                    addSingleCircle(routeToEdit);
+                }, UPDATES_COUNT);
             }
             case TO_Y -> {
                 long startY = routeToEdit.getTo().getY();
                 long endY = Long.parseLong(objStr);
                 long fade = (endY - startY) / UPDATES_COUNT;
-                animator.animate(() -> routeToEdit.getTo().setY(routeToEdit.getTo().getY() + fade), UPDATES_COUNT);
+                animator.animate(() -> {
+                    routePoints.removeIf(x -> x.getRoute().equals(routeToEdit));
+                    routeToEdit.getTo().setY(routeToEdit.getTo().getY() + fade);
+                    addSingleCircle(routeToEdit);
+                }, UPDATES_COUNT);
             }
         }
+    }
+
+    private void addSingleCircle(Route route) {
+
+        Location from = route.getFrom();
+        Location to = route.getTo();
+
+        if (from == null || to == null) return;
+
+        double fromX = getCenterX(from.getX());
+        double fromY = getCenterY(from.getY());
+        double toX = getCenterX(to.getX());
+        double toY = getCenterY(to.getY());
+
+        double radius = 15;
+
+        var circleFrom = getEllipseFromCenter(fromX, fromY, radius, radius);
+        var circleTo = getEllipseFromCenter(toX, toY, radius, radius);
+
+        routePoints.add(new RoutePoint(route, circleTo, circleFrom));
     }
 
     @Override
