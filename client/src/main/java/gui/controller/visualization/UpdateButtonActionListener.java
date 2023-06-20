@@ -3,6 +3,9 @@ package gui.controller.visualization;
 import model.Route;
 import model.RouteFields;
 import model.validator.RouteValidator;
+import request.UpdateElementRequest;
+import request.logic.sender.SuppressResponseRequestSender;
+import server.logic.ServerConnectionHandler;
 import util.RouteFieldSetters;
 
 import javax.swing.*;
@@ -28,6 +31,8 @@ public class UpdateButtonActionListener implements ActionListener {
             RouteFieldSetters.setValue(route, RouteFields.byId(i), editFields.get(i).getText());
         }
         if (!new RouteValidator().validate(route)) {
+            new SuppressResponseRequestSender().sendRequestAndSuppressResponse(new UpdateElementRequest(route), ServerConnectionHandler.getCurrentConnection());
+        } else {
             JOptionPane.showMessageDialog(null, resourceBundle.getString("invalid_obj_warn"), "Warning", JOptionPane.WARNING_MESSAGE);
         }
 

@@ -24,7 +24,7 @@ public class RouteFieldValidateAdaptor {
                 case FROM_Y, TO_Y, FROM_Z, TO_Z -> validate = new LocationYZValidator().validate(Long.valueOf(objStr));
                 case FROM_NAME, TO_NAME -> validate = new LocationNameValidator().validate(objStr);
                 case DISTANCE -> validate = new DistanceValidator().validate(Integer.valueOf(objStr));
-                default -> validate = true;
+                default -> validate = false;
             }
 
         } catch (NumberFormatException ex) {

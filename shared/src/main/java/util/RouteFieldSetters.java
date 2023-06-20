@@ -11,6 +11,7 @@ public class RouteFieldSetters {
         handleNonNullValue(route, routeField);
         String objStr = String.valueOf(value);
         switch (routeField) {
+            case ID -> route.setId(Long.valueOf(objStr));
             case NAME -> route.setName(objStr);
             case COORDINATES_X -> route.getCoordinates().setX(Double.parseDouble(objStr));
             case COORDINATES_Y -> route.getCoordinates().setY(Float.valueOf(objStr));

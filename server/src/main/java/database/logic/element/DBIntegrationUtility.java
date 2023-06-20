@@ -70,74 +70,76 @@ public class DBIntegrationUtility {
     }
 
     public StatusResponse updateElementInDBAndCollection(Route route, long elementID, long creatorID) {
-        StatusResponse response;
+        StatusResponse response = new StatusResponse("Operation interrupted.", -243);
 
         writeLock.lock();
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
         Route routeToEdit = collectionHandler.getCollection().stream().filter(x -> x.getId().equals(elementID)).findFirst().orElse(null);
+        if (routeToEdit != null) {
+            route.setCreationDate(routeToEdit.getCreationDate());
+            try (DBCollectionManager manager = new DBCollectionManager();
+                 DBElementCreatorLogic logic = new DBElementCreatorLogic()) {
+                if (logic.checkNonAccessory(creatorID, elementID))
+                    return new StatusResponse("User has no access to the element (or this element doesn't exists)", 403);
+                if (manager.updateElementInDataBase(route, elementID)) {
+                    // я тоже себя ненавижу, малыш, я тоже...
+                    routeToEdit.setName(route.getName());
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.NAME, route.getName()
+                    )));
+                    routeToEdit.setCoordinates(route.getCoordinates());
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.COORDINATES_X, route.getCoordinates().getX()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.COORDINATES_Y, route.getCoordinates().getY()
+                    )));
+                    routeToEdit.setTo(route.getTo());
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.TO_X, route.getTo().getX()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.TO_Y, route.getTo().getY()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.TO_Z, route.getTo().getZ()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.TO_NAME, route.getTo().getName()
+                    )));
+                    routeToEdit.setFrom(route.getFrom());
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.FROM_X, route.getFrom().getX()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.FROM_Y, route.getFrom().getY()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.FROM_Z, route.getFrom().getZ()
+                    )));
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.FROM_NAME, route.getFrom().getName()
+                    )));
+                    routeToEdit.setDistance(route.getDistance());
+                    ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
+                            elementID, RouteFields.DISTANCE, route.getDistance()
+                    )));
 
-        try (DBCollectionManager manager = new DBCollectionManager();
-             DBElementCreatorLogic logic = new DBElementCreatorLogic()) {
-            if (logic.checkNonAccessory(creatorID, elementID))
-                return new StatusResponse("User has no access to the element (or this element doesn't exists)", 403);
-            if (routeToEdit != null && manager.updateElementInDataBase(route, elementID)) {
-                // я тоже себя ненавижу, малыш, я тоже...
-                routeToEdit.setName(route.getName());
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.NAME, route.getName()
-                )));
-                routeToEdit.setCoordinates(route.getCoordinates());
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.COORDINATES_X, route.getCoordinates().getX()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.COORDINATES_Y, route.getCoordinates().getY()
-                )));
-                routeToEdit.setTo(route.getTo());
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.TO_X, route.getTo().getX()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.TO_Y, route.getTo().getY()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.TO_Z, route.getTo().getZ()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.TO_NAME, route.getTo().getName()
-                )));
-                routeToEdit.setFrom(route.getFrom());
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.FROM_X, route.getFrom().getX()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.FROM_Y, route.getFrom().getY()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.FROM_Z, route.getFrom().getZ()
-                )));
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.FROM_NAME, route.getFrom().getName()
-                )));
-                routeToEdit.setDistance(route.getDistance());
-                ListenCollectionChangeHubWorker.sendToAllCallers(new CollectionUpdatedResponse(new UpdateCollectionAction(
-                        elementID, RouteFields.DISTANCE, route.getDistance()
-                )));
+                    logger.info("Updated ID value: " + elementID);
+                    response = new StatusResponse("Element updated!", 200);
 
-                logger.info("Updated ID value: " + elementID);
-                response = new StatusResponse("Element updated!", 200);
-
-            } else {
-                response = new StatusResponse("Element with that id doesn't exists.", 2);
-                logger.warn(response.response());
+                } else {
+                    response = new StatusResponse("Element with that id doesn't exists.", 2);
+                    logger.warn(response.response());
+                }
+            } catch (SQLException | IOException e) {
+                response = new StatusResponse("Something went wrong during updating element. Ask server administrator for further information.", -53);
+                logger.error("Something went wrong during updating element! ", e);
+            } finally {
+                writeLock.unlock();
             }
-        } catch (SQLException | IOException e) {
-            response = new StatusResponse("Something went wrong during updating element. Ask server administrator for further information.", -53);
-            logger.error("Something went wrong during updating element! ", e);
-        } finally {
-            writeLock.unlock();
-        }
 
+        }
         return response;
     }
 

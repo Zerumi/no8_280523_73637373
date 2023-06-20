@@ -10,6 +10,7 @@ import gui.controller.visualization.callback.PrintObjInfoCallback;
 import gui.controller.visualization.callback.VisualizationDisposeCallback;
 import model.Route;
 import model.RouteFields;
+import util.RouteFieldGetUtil;
 import util.SpringUtilities;
 
 import javax.swing.*;
@@ -27,7 +28,7 @@ public class VisualizationWindow extends JFrame implements PrintObjInfoCallback,
     private final JLabel label = new JLabel("Choose some point to get object information...");
 
     public VisualizationWindow(GetCollectionFromModelCallback callback) throws IOException {
-        this.component = new VisualisationComponent(callback);
+        this.component = new VisualisationComponent(callback, this);
         this.fields = new ArrayList<>();
 
         infoPanel = new JPanel();
@@ -64,9 +65,11 @@ public class VisualizationWindow extends JFrame implements PrintObjInfoCallback,
 
     @Override
     public void deliverObj(Route route) {
-        // todo
-        fields.forEach(x -> x.setEnabled(true));
-
+        for (int i = 0; i < fields.size(); i++) {
+            fields.get(i).setText(RouteFieldGetUtil.getStr(route, RouteFields.byId(i)));
+            if (RouteFields.byId(i) != RouteFields.ID && RouteFields.byId(i) != RouteFields.CREATION_DATE)
+                fields.get(i).setEnabled(true);
+        }
     }
 
     @Override

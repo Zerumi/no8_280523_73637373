@@ -4,7 +4,10 @@ import gui.component.util.ColorGenerator;
 import gui.component.util.RoutePoint;
 import gui.controller.main.callback.GetCollectionFromModelCallback;
 import gui.controller.visualization.VisualizationAnimator;
+import gui.controller.visualization.callback.PrintObjInfoCallback;
 import gui.controller.visualization.component.VisualizationCollectionUpdatedController;
+import gui.controller.visualization.component.VisualizationComponentProvider;
+import gui.controller.visualization.component.VisualizationMouseHandler;
 import gui.controller.visualization.component.callback.VisualisationCallback;
 import model.Location;
 import model.Route;
@@ -21,11 +24,12 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.*;
 
-public class VisualisationComponent extends JComponent implements VisualisationCallback {
+public class VisualisationComponent extends JComponent implements VisualisationCallback, VisualizationComponentProvider {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
     private final Dimension preferredDim;
     private final HashSet<Route> collection;
@@ -39,7 +43,7 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     private final double centerX;
     private final double centerY;
 
-    public VisualisationComponent(GetCollectionFromModelCallback callback) {
+    public VisualisationComponent(GetCollectionFromModelCallback callback, PrintObjInfoCallback windowCallback) {
         this.collection = callback.getCollection();
         this.ownership = callback.getOwnership();
         this.routePoints = new ArrayList<>();
@@ -76,6 +80,8 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         fillCircles();
 
         new VisualizationCollectionUpdatedController(this);
+
+        this.addMouseListener(new VisualizationMouseHandler(this, windowCallback));
     }
 
     @Override
@@ -290,6 +296,13 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         Arrays.stream(action.getRemoved_ids()).forEach(id -> collection.removeIf(x -> x.getId().equals(id)));
         logger.info("visual repaint?");
         this.repaint();
+    }
+
+    public RoutePoint find(Point2D point2D) {
+        for (var point : routePoints) {
+            if (point.getRouteFrom().contains(point2D) || point.getRouteTo().contains(point2D)) return point;
+        }
+        return null;
     }
 
     @Override
