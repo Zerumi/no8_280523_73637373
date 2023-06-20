@@ -54,7 +54,7 @@ public class RequestSender implements ServerResponseProvider {
 
     public void removeListener(ApplicationResponseProvider<BaseResponse> provider) {
         this.providers.remove(provider);
-        if (providers.size() == 0)
+        if (providers.size() == 0 && connection != null)
             connection.removeResponseListeners(this);
     }
 

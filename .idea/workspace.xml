@@ -9,29 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: visualization and locales">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableButtonEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/view/render/RouteTableButtonRender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RemoveFromCollectionRequestSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/SuppressResponseRequestSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/response/logic/ApplicationPartialResponseProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/Iconshock-Vista-General-Trash.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/commands/RemoveSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RemoveFromCollectionRequestWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/request/RemoveFromCollectionRequest.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="feat: exception handling + removing by pressing button">
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/util/ColorGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/UpdateButtonActionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/user/DBUserTableHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateElementRequestWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/request/UpdateElementRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/ArgumentRouteCommandReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/command/logic/external/reciever/NonArgumentReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/auth/AuthActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/CommandWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/l10n/exception/Exceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/GetCollectionFromModelCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/main/callback/GetCollectionFromModelCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/model/RouteTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/LoginRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/LoginRequestSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/request/logic/sender/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/command/manager/server/ServerCommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/util/RouteConvertUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/database/logic/element/DBIntegrationUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/listen/provider/CollectionActionsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/listen/provider/CollectionActionsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/RequestWorkerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateSingleFieldRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/UpdateSingleFieldRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ShowCollectionRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/request/logic/worker/ShowCollectionRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/model/collection/actions/AddCollectionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/model/collection/actions/AddCollectionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/response/ShowCollectionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/response/ShowCollectionResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,14 +386,7 @@
       <workItem from="1685266672150" duration="18801000" />
       <workItem from="1686269093681" duration="25056000" />
       <workItem from="1686642215467" duration="115285000" />
-      <workItem from="1687003136148" duration="31698000" />
-    </task>
-    <task id="LOCAL-00038" summary="chore: restructured client + some inspections">
-      <created>1683333436014</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1683333436014</updated>
+      <workItem from="1687003136148" duration="42724000" />
     </task>
     <task id="LOCAL-00039" summary="chore: rerun javadoc">
       <created>1683333487464</created>
@@ -735,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686946232258</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="feat: exception handling + removing by pressing button">
+      <created>1687216663631</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1687216663632</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -758,7 +754,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: remove unconventional package names, part 1" />
     <MESSAGE value="chore: updated shared lib" />
     <MESSAGE value="feat: version update + load commands" />
     <MESSAGE value="fix: concurrency in layout" />
@@ -783,7 +778,8 @@
     <MESSAGE value="feat: server i18n &amp; l10n" />
     <MESSAGE value="fix: update cmd i18n &amp; l10n" />
     <MESSAGE value="fix: visualization and locales" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: visualization and locales" />
+    <MESSAGE value="feat: exception handling + removing by pressing button" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: exception handling + removing by pressing button" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -814,7 +810,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java</url>
-          <line>214</line>
+          <line>216</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -836,6 +832,11 @@
           <url>file://$PROJECT_DIR$/client/src/main/java/gui/controller/command/CommandExecuteButtonController.java</url>
           <line>41</line>
           <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/request/logic/worker/ShowCollectionRequestWorker.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="183" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

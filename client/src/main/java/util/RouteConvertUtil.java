@@ -10,6 +10,7 @@ import java.util.Arrays;
 
 public class RouteConvertUtil {
 
+    // че за костыль, зачем я это открыл....
     public static final RouteFields[] NUMERIC_FIELDS =
             {
                     RouteFields.ID,

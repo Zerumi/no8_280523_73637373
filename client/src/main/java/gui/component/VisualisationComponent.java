@@ -1,5 +1,6 @@
 package gui.component;
 
+import gui.component.util.ColorGenerator;
 import gui.controller.main.callback.GetCollectionFromModelCallback;
 import gui.controller.visualization.VisualizationAnimator;
 import gui.controller.visualization.component.VisualizationCollectionUpdatedController;
@@ -21,15 +22,13 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class VisualisationComponent extends JComponent implements VisualisationCallback {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab8");
     private final Dimension preferredDim;
     private final HashSet<Route> collection;
+    private final HashMap<Long, Long> ownership;
     private final Image image;
     public static final int UPDATES_COUNT = 100;
     private double scaleX;
@@ -39,6 +38,7 @@ public class VisualisationComponent extends JComponent implements VisualisationC
 
     public VisualisationComponent(GetCollectionFromModelCallback callback) {
         this.collection = callback.getCollection();
+        this.ownership = callback.getOwnership();
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
@@ -140,6 +140,7 @@ public class VisualisationComponent extends JComponent implements VisualisationC
         var g2 = (Graphics2D) g;
 
         // scale = max((width / 2) / maxXFromCollection(), (height / 2) / maxYFromCollection())
+        // by x and y
 
         scaleX = (preferredDim.width / 2d) / maxXFromCollection();
         scaleY = (preferredDim.height / 2d) / maxYFromCollection();
@@ -186,18 +187,19 @@ public class VisualisationComponent extends JComponent implements VisualisationC
 
             logger.trace("Drawing from (" + fromX + ";" + fromY + ") to (" + toX + ";" + toY + ").");
 
-            g2.draw(circleFrom);
-            g2.draw(circleTo);
-            g2.draw(connectLine);
-
-            g2.setPaint(Color.GREEN);
-            g2.fill(circleFrom);
-
-            g2.setPaint(Color.BLUE);
-            g2.fill(circleTo);
+            paintFillByOwner(g2, Optional.ofNullable(ownership.get(route.getId())).orElse(1L), circleFrom, circleTo, connectLine);
         }
 
         super.paintComponent(g2);
+    }
+
+    private void paintFillByOwner(Graphics2D g2, long id, Ellipse2D circleFrom, Ellipse2D circleTo, Line2D connectLine) {
+        g2.setPaint(ColorGenerator.getColor(id));
+        g2.draw(circleFrom);
+        g2.draw(circleTo);
+        g2.fill(circleFrom);
+        g2.fill(circleTo);
+        g2.draw(connectLine);
     }
 
     @Override

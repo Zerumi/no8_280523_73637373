@@ -35,6 +35,7 @@ public class RequestWorkerManager {
         workers.put(UpdateSingleFieldRequest.class, new UpdateSingleFieldRequestWorker());
         workers.put(LocalizedCommandClientRequest.class, new LocalizedCommandRequestWorker());
         workers.put(RemoveFromCollectionRequest.class, new RemoveFromCollectionRequestWorker());
+        workers.put(UpdateElementRequest.class, new UpdateElementRequestWorker());
     }
 
     public RequestWorkerManager(LinkedHashMap<Class<?>, RequestWorker> preparedWorkers) {

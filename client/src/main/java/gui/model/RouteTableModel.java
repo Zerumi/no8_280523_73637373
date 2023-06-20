@@ -35,6 +35,7 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     private final SuppressResponseRequestSender requestSender;
     private final ArrayList<ArrayList<Object>> model = new ArrayList<>();
     private HashSet<Route> collection;
+    private HashMap<Long, Long> ownerShip;
 
     private String[] columnNames;
 
@@ -112,8 +113,8 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     }
 
     public void acceptFullCollectionResponse(ShowCollectionResponse response) {
-        collection = response.getCollection();
-
+        this.collection = response.getCollection();
+        this.ownerShip = response.getOwnership();
         for (var element : collection) {
             addNewLine(element);
         }
@@ -232,6 +233,11 @@ public class RouteTableModel extends AbstractTableModel implements GetCollection
     @Override
     public HashSet<Route> getCollection() {
         return collection;
+    }
+
+    @Override
+    public HashMap<Long, Long> getOwnership() {
+        return ownerShip;
     }
 
     public void changeLocale() {
