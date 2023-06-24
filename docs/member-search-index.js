@@ -336,6 +336,11 @@ memberSearchIndex = [{
     "u": "actionPerformed(java.awt.event.ActionEvent)"
 }, {
     "p": "gui.controller.visualization",
+    "c": "RemoveButtonActionListener",
+    "l": "actionPerformed(ActionEvent)",
+    "u": "actionPerformed(java.awt.event.ActionEvent)"
+}, {
+    "p": "gui.controller.visualization",
     "c": "UpdateButtonActionListener",
     "l": "actionPerformed(ActionEvent)",
     "u": "actionPerformed(java.awt.event.ActionEvent)"
@@ -2962,6 +2967,11 @@ memberSearchIndex = [{
     "c": "ObservableHashSet",
     "l": "removeAll(Collection<?>)",
     "u": "removeAll(java.util.Collection)"
+}, {
+    "p": "gui.controller.visualization",
+    "c": "RemoveButtonActionListener",
+    "l": "RemoveButtonActionListener(ArrayList<JTextField>)",
+    "u": "%3Cinit%3E(java.util.ArrayList)"
 }, {
     "p": "command.manager.commands",
     "c": "RemoveByIdCommand",

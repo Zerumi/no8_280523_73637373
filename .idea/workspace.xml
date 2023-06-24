@@ -8,11 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/gui/controller/visualization/RemoveButtonActionListener.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="fix: teacher fixes (final)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/component/VisualisationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/gui/frame/VisualizationWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +176,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no8_280523_73637373:client [run]">
+  <component name="RunManager" selected="Gradle.no8_280523_73637373 [installDist]">
     <configuration name="no8_280523_73637373 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -320,9 +317,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [run]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [run]" />
-        <item itemvalue="Gradle.no8_280523_73637373 [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:client [installDist]" />
         <item itemvalue="Gradle.no8_280523_73637373:server [installDist]" />
       </list>
@@ -375,14 +372,7 @@
       <workItem from="1687281618300" duration="707000" />
       <workItem from="1687293601219" duration="609000" />
       <workItem from="1687561565418" duration="554000" />
-      <workItem from="1687600068671" duration="1534000" />
-    </task>
-    <task id="LOCAL-00045" summary="fix: remove static, redundant locks and updated command descriptions">
-      <created>1683677465369</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1683677465369</updated>
+      <workItem from="1687600068671" duration="2191000" />
     </task>
     <task id="LOCAL-00046" summary="feat: add logout">
       <created>1683678348707</created>
@@ -720,7 +710,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687281727046</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="fix: teacher fixes (final)">
+      <created>1687609797608</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1687609797609</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -743,7 +740,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: remove resolved todo's" />
     <MESSAGE value="feat: visualization part 0.1" />
     <MESSAGE value="feat: table painting" />
     <MESSAGE value="chore: remove unconventional package names, part 3" />
@@ -768,7 +764,8 @@
     <MESSAGE value="feat: manage objects on visualization part 2" />
     <MESSAGE value="fix: double listening on visualization, part 0" />
     <MESSAGE value="chore: rerun javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
+    <MESSAGE value="fix: teacher fixes (final)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: teacher fixes (final)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
