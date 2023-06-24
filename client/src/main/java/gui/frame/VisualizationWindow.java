@@ -5,6 +5,7 @@ import gui.component.VisualisationComponent;
 import gui.controller.filler.FillTextDocumentListener;
 import gui.controller.filler.callback.ValidationCallback;
 import gui.controller.main.callback.GetCollectionFromModelCallback;
+import gui.controller.visualization.RemoveButtonActionListener;
 import gui.controller.visualization.UpdateButtonActionListener;
 import gui.controller.visualization.callback.PrintObjInfoCallback;
 import gui.controller.visualization.callback.VisualizationDisposeCallback;
@@ -48,10 +49,12 @@ public class VisualizationWindow extends JFrame implements PrintObjInfoCallback,
             infoPanel.add(field);
         }
 
+        JButton delButt = new JButton("Remove");
         JButton updButt = new JButton("Update");
         updButt.addActionListener(new UpdateButtonActionListener(fields));
+        delButt.addActionListener(new RemoveButtonActionListener(fields));
 
-        infoPanel.add(new JLabel());
+        infoPanel.add(delButt);
         infoPanel.add(updButt);
 
         SpringUtilities.makeCompactGrid(infoPanel, RouteFields.values().length + 2, 2, 3, 3, 0, 0);

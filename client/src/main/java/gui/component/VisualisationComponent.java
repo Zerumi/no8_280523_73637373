@@ -297,6 +297,7 @@ public class VisualisationComponent extends JComponent implements VisualisationC
     public void fireRemoveRoutes(RemoveCollectionAction action) {
         Arrays.stream(action.getRemoved_ids()).forEach(id -> collection.removeIf(x -> x.getId().equals(id)));
         logger.info("visual repaint?");
+        fillCircles();
         this.repaint();
     }
 
